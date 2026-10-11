@@ -354,9 +354,6 @@
 #jd .dcard h3{color:var(--ink);position:relative;z-index:1;font-size:32px;max-width:350px}
 #jd .dcard p{position:relative;z-index:1;max-width:340px}
 #jd .dcard .code,#jd .dcard ul,#jd .dcard>.link{position:relative;z-index:1}
-#jd .dcard-art{position:absolute;z-index:-1;right:-20%;bottom:-8%;width:73%;height:78%;border-radius:50%;background-size:cover;background-position:center;opacity:.19;filter:saturate(.6);mask-image:linear-gradient(90deg,transparent,#000 50%)}
-#jd .pro-art{background-image:url('https://static.tildacdn.com/tild6330-6136-4433-a134-336463336138/Copilot_20260526_132.png')}
-#jd .home-art{background-image:url('https://static.tildacdn.com/tild3165-3032-4134-b535-643638636430/optimized_skincare_i.jpg')}
 #jd .dcard li a,#jd .dcard.pro li a{border:1px solid #e5e0dc;background:rgba(255,255,255,.86);color:#454041;border-radius:2px}
 #jd .dcard li a:hover{background:#29282a;color:#fff}
 /* line catalogue turns into art-direction layout, preserving 7 colors */
@@ -442,6 +439,34 @@
   #jd .ct-b p{font-size:14px}
 }
 @media (prefers-reduced-motion:reduce){#jd .ct,#jd .ct img,#jd .ct-b{transition:none}}
+/* ===== Картинки из репозитория ===== */
+#jd .pill-art{right:6px;top:8px;width:150px;height:150px;border-radius:0;opacity:.6;filter:none;background:center/contain no-repeat}
+#jd .art-lab{background-image:url('https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/decor/molecule-hex.webp')}
+#jd .art-skin{background-image:url('https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/decor/sphere-pearl.webp')}
+#jd .art-cell{background-image:url('https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/decor/molecule-dna.webp')}
+#jd .dcard{padding-top:0}
+#jd .dcard-img{margin:0 -42px 34px;aspect-ratio:16/9;overflow:hidden;border-bottom:1px solid var(--line)}
+#jd .dcard-img img{width:100%;height:100%;object-fit:cover;object-position:50% 100%;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+#jd .dcard:hover .dcard-img img{transform:scale(1.03)}
+#jd .wc .band{height:190px;background:#eee center/cover no-repeat;background-image:var(--img)}
+#jd .wc .band:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,color-mix(in srgb,var(--c) 10%,transparent) 30%,color-mix(in srgb,var(--c) 72%,transparent) 100%)}
+#jd .wc .band:before{display:none}
+#jd .res-g{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+#jd .res{margin:0;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+#jd .res img{width:100%;aspect-ratio:1/1;object-fit:cover}
+#jd .res figcaption{padding:16px 18px 18px;font-size:14px;line-height:1.45;color:var(--ink)}
+#jd .res figcaption .code{display:block;margin-bottom:6px}
+#jd .res-note{margin-top:18px;font-size:12.5px;color:var(--gray)}
+#jd .cta{position:relative;isolation:isolate}
+#jd .cta-art{position:absolute;right:4%;top:50%;width:min(280px,30%);aspect-ratio:1;transform:translateY(-50%);background:url('https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/decor/molecule-atom.webp') center/contain no-repeat;opacity:.55;pointer-events:none;z-index:0}
+@media(max-width:1100px){#jd .res-g{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+ #jd .dcard-img{margin:0 -24px 26px}
+ #jd .wc .band{height:170px}
+ #jd .res-g{grid-template-columns:1fr 1fr;gap:10px}
+ #jd .res figcaption{padding:12px;font-size:13px}
+ #jd .cta-art{display:none}
+}
 </style>
 
 <div id="jd">
@@ -539,7 +564,7 @@
 <section style="padding-top:0">
   <div class="w">
     <div class="dir">
-      <div class="dcard pro rv"><div class="dcard-art pro-art" aria-hidden="true"></div>
+      <div class="dcard pro rv"><div class="dcard-img"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/home/banner-professional.webp" alt="Профессиональный уход ЖеДерм: средства для процедур в кабинете" loading="lazy"></div>
         <span class="code">Серия · Professional</span>
         <h3>Профессиональный уход</h3>
         <p>Средства для процедур с пептидами и пробиотиками: восстанавливают, увлажняют и омолаживают кожу, усиливают результат аппаратных и ручных методик.</p>
@@ -553,7 +578,7 @@
         </ul>
         <a class="link" href="https://jeuderm-russia.ru/pro-jeuderm">Смотреть линейки</a>
       </div>
-      <div class="dcard home rv d1"><div class="dcard-art home-art" aria-hidden="true"></div>
+      <div class="dcard home rv d1"><div class="dcard-img"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/home/banner-homecare.webp" alt="Домашний уход ЖеДерм: кремы, эмульсии и сыворотка для волос" loading="lazy"></div>
         <span class="code">Серия · Homecare</span>
         <h3>Домашний уход</h3>
         <p>Профессиональные формулы в формате ежедневного ухода: очищение, увлажнение и антивозрастной эффект, которые продлевают результат процедуры дома.</p>
@@ -581,13 +606,33 @@
       <p class="lead rv d2">Средства ЖеДерм сгруппированы по потребности кожи. Внутри каждого направления — препараты для процедуры, протоколы и домашний уход.</p>
     </div>
     <div class="cats rv">
-      <a class="ct" style="--c:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@e2e73ae/images/products/acno-active-emulsion-150ml.webp" alt="Уход за проблемной кожей — ЖеДерм Acno Active" loading="lazy"><span class="ct-t">Проблем&shy;ная кожа</span><div class="ct-b"><span class="code">01 · Acno Active</span><h3>Уход за проблемной кожей</h3><p>Пептидный уход за жирной и проблемной кожей, склонной к акне.</p><span class="link">Смотреть средства</span></div></a>
-      <a class="ct" style="--c:#76bc21" href="https://jeuderm-russia.ru/atocare-pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@e2e73ae/images/products/ato-care-mild-cleanser.webp" alt="Чувствительная и реактивная кожа — ЖеДерм Ato Care" loading="lazy"><span class="ct-t">Чувстви&shy;тельная кожа</span><div class="ct-b"><span class="code">02 · Ato Care</span><h3>Чувствительная и реактивная кожа</h3><p>Пептидный уход за чувствительной и реактивной кожей. Подходит для кожи, склонной к дерматитам, и при дерматитах.</p><span class="link">Смотреть средства</span></div></a>
-      <a class="ct" style="--c:#cd555b" href="https://jeuderm-russia.ru/reformage-pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@e2e73ae/images/products/reform-age-o2-boto-fluid-50ml.webp" alt="Возрастной уход — ЖеДерм Reform Age" loading="lazy"><span class="ct-t">Возраст&shy;ной уход</span><div class="ct-b"><span class="code">03 · Reform Age</span><h3>Возрастной уход</h3><p>Противовозрастной уход и активное омоложение кожи 30+.</p><span class="link">Смотреть средства</span></div></a>
-      <a class="ct" style="--c:#ae57b9" href="https://jeuderm-russia.ru/hairgenesis"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@e2e73ae/images/products/hair-growth-concentrate.webp" alt="Уход за кожей головы — ЖеДерм Hairgenesis" loading="lazy"><span class="ct-t">Кожа головы</span><div class="ct-b"><span class="code">04 · Hairgenesis</span><h3>Уход за кожей головы</h3><p>Восстановление волос и кожи головы — в кабинете и дома.</p><span class="link">Смотреть средства</span></div></a>
-      <a class="ct" style="--c:#000000" href="https://jeuderm-russia.ru/novazymo-exfoliation"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@e2e73ae/images/products/nova-complex.webp" alt="Обновление кожи — ЖеДерм Nova · Zymo" loading="lazy"><span class="ct-t">Обнов&shy;ление</span><div class="ct-b"><span class="code">05 · Nova · Zymo</span><h3>Обновление кожи</h3><p>Трёхуровневые системы обновления Нова Комплекс и Зимо Комплекс — без агрессивного повреждения и долгой реабилитации.</p><span class="link">Смотреть средства</span></div></a>
-      <a class="ct" style="--c:#65666b" href="https://jeuderm-russia.ru/pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@e2e73ae/images/products/lift-intense-viso-contour.webp" alt="Профессиональный уход — ЖеДерм ПРО" loading="lazy"><span class="ct-t">ПРО-уход</span><div class="ct-b"><span class="code">06 · ПРО</span><h3>Профессиональный уход</h3><p>Препараты для кабинета вне линеек: маски, массажное масло, эксфолиант и дренажный гель. Косметолог подбирает их под задачу.</p><span class="link">Смотреть средства</span></div></a>
+      <a class="ct" style="--c:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/products/acno-active-emulsion-150ml.webp" alt="Уход за проблемной кожей — ЖеДерм Acno Active" loading="lazy"><span class="ct-t">Проблем&shy;ная кожа</span><div class="ct-b"><span class="code">01 · Acno Active</span><h3>Уход за проблемной кожей</h3><p>Пептидный уход за жирной и проблемной кожей, склонной к акне.</p><span class="link">Смотреть средства</span></div></a>
+      <a class="ct" style="--c:#76bc21" href="https://jeuderm-russia.ru/atocare-pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/products/ato-care-mild-cleanser.webp" alt="Чувствительная и реактивная кожа — ЖеДерм Ato Care" loading="lazy"><span class="ct-t">Чувстви&shy;тельная кожа</span><div class="ct-b"><span class="code">02 · Ato Care</span><h3>Чувствительная и реактивная кожа</h3><p>Пептидный уход за чувствительной и реактивной кожей. Подходит для кожи, склонной к дерматитам, и при дерматитах.</p><span class="link">Смотреть средства</span></div></a>
+      <a class="ct" style="--c:#cd555b" href="https://jeuderm-russia.ru/reformage-pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/products/reform-age-o2-boto-fluid-50ml.webp" alt="Возрастной уход — ЖеДерм Reform Age" loading="lazy"><span class="ct-t">Возраст&shy;ной уход</span><div class="ct-b"><span class="code">03 · Reform Age</span><h3>Возрастной уход</h3><p>Противовозрастной уход и активное омоложение кожи 30+.</p><span class="link">Смотреть средства</span></div></a>
+      <a class="ct" style="--c:#ae57b9" href="https://jeuderm-russia.ru/hairgenesis"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/products/hair-growth-concentrate.webp" alt="Уход за кожей головы — ЖеДерм Hairgenesis" loading="lazy"><span class="ct-t">Кожа головы</span><div class="ct-b"><span class="code">04 · Hairgenesis</span><h3>Уход за кожей головы</h3><p>Восстановление волос и кожи головы — в кабинете и дома.</p><span class="link">Смотреть средства</span></div></a>
+      <a class="ct" style="--c:#000000" href="https://jeuderm-russia.ru/novazymo-exfoliation"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/products/nova-complex.webp" alt="Обновление кожи — ЖеДерм Nova · Zymo" loading="lazy"><span class="ct-t">Обнов&shy;ление</span><div class="ct-b"><span class="code">05 · Nova · Zymo</span><h3>Обновление кожи</h3><p>Трёхуровневые системы обновления Нова Комплекс и Зимо Комплекс — без агрессивного повреждения и долгой реабилитации.</p><span class="link">Смотреть средства</span></div></a>
+      <a class="ct" style="--c:#65666b" href="https://jeuderm-russia.ru/pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/products/lift-intense-viso-contour.webp" alt="Профессиональный уход — ЖеДерм ПРО" loading="lazy"><span class="ct-t">ПРО-уход</span><div class="ct-b"><span class="code">06 · ПРО</span><h3>Профессиональный уход</h3><p>Препараты для кабинета вне линеек: маски, массажное масло, эксфолиант и дренажный гель. Косметолог подбирает их под задачу.</p><span class="link">Смотреть средства</span></div></a>
     </div>
+  </div>
+</section>
+
+<!-- ================= РЕЗУЛЬТАТЫ ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab rv"><i></i>Результаты процедур</span>
+        <h2 class="rv d1">До и после — <em>фото специалистов</em></h2>
+      </div>
+      <p class="lead rv d2">Результаты процедур на препаратах ЖеДерм из практики косметологов.</p>
+    </div>
+    <div class="res-g">
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/results/lift-intense-front.webp" alt="Lift Intense Viso Contour: до и после, анфас" loading="lazy"><figcaption><span class="code">ПРО · Lift Intense</span>Лифтинг и контур лица, анфас</figcaption></figure>
+      <figure class="res rv d1"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/results/lift-intense-profile.webp" alt="Lift Intense Viso Contour: до и после, профиль" loading="lazy"><figcaption><span class="code">ПРО · Lift Intense</span>Лифтинг и контур лица, профиль</figcaption></figure>
+      <figure class="res rv d2"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/results/molecular-twin-exfoliant-cheek.webp" alt="Molecular Twin Exfoliant: до и после, тон и текстура кожи" loading="lazy"><figcaption><span class="code">ПРО · Molecular Twin</span>Ровный тон и текстура кожи</figcaption></figure>
+      <figure class="res rv d3"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/results/molecular-twin-exfoliant-profile.webp" alt="Molecular Twin Exfoliant: до и после, профиль" loading="lazy"><figcaption><span class="code">ПРО · Molecular Twin</span>Обновление кожи, профиль</figcaption></figure>
+    </div>
+    <p class="res-note rv">Результат зависит от состояния кожи и протокола, который подбирает специалист.</p>
   </div>
 </section>
 
@@ -624,19 +669,19 @@
     </div>
     <div class="web">
       <a class="wc rv" style="--c:var(--mol)" href="https://rutube.ru/video/d7302347806e412731e8452d92509b13/" target="_blank" rel="noopener">
-        <div class="band dots"><span class="code">Вебинар 01</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
+        <div class="band" style="--img:url('https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/products/nova-complex.webp')"><span class="code">Вебинар 01</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
         <div class="bd"><h3>Обновляющая система Нова Комплекс</h3><p>Механизм действия, показания и ограничения, выбор пациента и ключевые этапы процедуры.</p><span class="link">Смотреть</span></div>
       </a>
       <a class="wc rv d1" style="--c:var(--acno)" href="https://rutube.ru/video/c266156ecd63023ff5dcac2c25901baf/" target="_blank" rel="noopener">
-        <div class="band dots"><span class="code">Вебинар 02</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
+        <div class="band" style="--img:url('https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/products/zymo-complex.webp')"><span class="code">Вебинар 02</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
         <div class="bd"><h3>Обновляющая система Зимо Комплекс</h3><p>Действие Zymo, протокол и нюансы для разного возраста и типа кожи, включая чувствительную и реактивную.</p><span class="link">Смотреть</span></div>
       </a>
       <a class="wc rv d2" style="--c:var(--reform)" href="https://rutube.ru/video/be7dc7a49613fefc73a1bb21cc9b99ec/" target="_blank" rel="noopener">
-        <div class="band dots"><span class="code">Вебинар 03</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
+        <div class="band" style="--img:url('https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/products/reform-age-o2-boto-fluid-110ml.webp')"><span class="code">Вебинар 03</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
         <div class="bd"><h3>Пептидные решения для здоровья и молодости кожи</h3><p>Для специалистов, которые хотят расширить арсенал проверенными и безопасными препаратами.</p><span class="link">Смотреть</span></div>
       </a>
       <a class="wc rv d3" style="--c:var(--lift)" href="https://rutube.ru/video/ecc180120e27f8f7743990dc621770f4/" target="_blank" rel="noopener">
-        <div class="band dots"><span class="code">Вебинар 04</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
+        <div class="band" style="--img:url('https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/products/molecular-twin-oil.webp')"><span class="code">Вебинар 04</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
         <div class="bd"><h3>Ангельское совершенство кожи</h3><p>Система мягкого молекулярного обновления: гладкость, ровный тон и сияние без раздражения и реабилитации.</p><span class="link">Смотреть</span></div>
       </a>
     </div>
@@ -727,7 +772,7 @@
 <!-- ================= ФИНАЛ ================= -->
 <section class="final">
   <div class="w">
-    <div class="cta dots rv">
+    <div class="cta dots rv"><span class="cta-art" aria-hidden="true"></span>
       <div>
         <span class="lab"><i></i>Сотрудничество</span>
         <h2>Станьте партнёром <em>ЖеДерм</em> в вашем регионе</h2>
