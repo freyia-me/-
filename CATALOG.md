@@ -181,3 +181,44 @@ Reform Age: пенка 150, тоник 250, флюид 50/110, крем для �
 Acno: пады 50 шт (ПРО и дом), маска с глиной — только ПРО. Ato Care: Mild Cleanser 250, Toner Mousse 150, Intensive Cream 50 — только домашний.
 PRO: O2 Therapy 250, Drainage 470, Repair Mask 250, Detox Mask 250, Molecular Twin 150 + 150.
 Hair Genesis: Stimulator 140 — домашний, Concentrate 20 — ПРО.
+
+## Сверка с протоколами производителя (`docs/jeuderm-protocols.pdf`, 26 стр.)
+
+Названия линеек в России отличаются от оригинальных из-за патентов на имена — это не ошибка.
+В протоколах 7 линеек со своими цветами: Acno Active, Ato Care, Adaptive Skin, Молекулярное обновление кожи (`#623a2c`), Renew, Reform Age, Lift Intense Viso Contour.
+
+### Процедуры (пригодятся для страниц и «Обучения»)
+
+| Линейка | Процедура | Время |
+|---|---|---|
+| Acno Active | Атравматичная чистка | 60 мин |
+| Ato Care | Детокс-чистка сухой, чувствительной кожи при куперозе, розацеа | 70 мин |
+| Adaptive Skin | Экстренный детокс — «SOS» для кожи | 65 мин |
+| Молекулярное обновление | Молекулярное обновление кожи | 60 мин |
+| Молекулярное обновление | Ангельское совершенство кожи (как вебинар 04) | 60 мин |
+| Renew | Возрождение кожи (Zymo) | 75 мин |
+| Renew | Nova Complex | 40 мин |
+| Renew | Zymo Complex | 40 мин |
+| Reform Age | Моментальное преображение | 70 мин |
+| Reform Age | Гидробаланс лифт (с микротоками, Drainage Physio Gel) | 80 мин |
+| Lift Intense | Viso-Sculpt — активный лифтинг 40+ | 80 мин |
+
+### Расхождения — уточнить
+
+1. **Reform Age DNA Cream** — на групповом фото линейки (стр. 19) есть «REFORM AGE DNA CREAM» (airless и красная баночка). В PDF-каталоге и на сайте его нет. Фото нет.
+2. **Объёмы на новых фото упаковок.** В протоколах Lift Intense — 110 мл (как в PDF-каталоге), на нашем фото — 130 мл.
+   Вместе с расхождениями из сверки PDF (Micro Touch Mask 285/250, Acno Mild Cleanser 264/250, Clay Mask 204/250, Zymo 5/10 мл)
+   похоже, что на части новых фото подписи объёмов неверные — уточнить, рендеры ли это.
+   Ato Care Moist Emulsion: в протоколах на фото туба 120 мл — совпадает с нашим фото (в PDF-каталоге 100 мл).
+3. **Названия средств.** В протоколе Acno: «ACNO TREATMENT GEL / TREATMENT EMULSION», на упаковке и в каталоге — Active Gel / Active Emulsion.
+4. **Описание Renew.** На стр. 14–16 подзаголовок «Многоуровневое увлажнение и оксигенация кожи» (так же в старой палитре на главной),
+   на стр. 17–18 и в PDF-каталоге — «интеллектуальная система / многоуровневое обновление». Для эксфолиантов верно второе.
+5. **Опечатки:** Reform Age Intensive Eye Cream подписан «крем для лица»; «VISO COUNTOUR»; «ACNOMULTI-ACID PAD».
+6. **Формулировки:** шаг «Активное лечение» (Acno), «SOS-терапия», «кислородная терапия» — на сайте пишем как уход.
+
+### Совпадает
+
+Состав протоколов совпадает с каталогом: Acno — Mild Cleanser, Multi-Acid Pad, Clay Mask, Active Gel 150, Active Emulsion;
+Ato Care — Mild Cleanser 250, Moist Emulsion, Toner Mousse; Adaptive Skin — O2 Therapy Gel, Repair Mask, Detox Mask (250 мл);
+Molecular Twin Oil и Exfoliant 150 мл (pH 2,9); Nova (pH 1,5) и Zymo (pH 2,5): AHA Primer 10 % pH 3,5 → Active → Reductant pH 5,0;
+Reform Age — Mild Cleanser, Collagen Tonic, O2 Boto Fluid, Micro Touch Mask, Intensive Cream, Eye Cream; Lift Intense Viso Contour.
