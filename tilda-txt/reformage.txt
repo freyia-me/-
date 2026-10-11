@@ -1,7 +1,6 @@
-<!-- ЖеДерм · линейка Reform Age · блок T123 «HTML-код».
-     Один и тот же код ставится на /reformage-pro и /reformage-homecare:
-     фильтр «Профессиональный / Домашний» выбирается сам по адресу страницы (или ?care=pro / ?care=home).
-     Карточка товара открывается окном внутри страницы, ссылка на товар: адрес#p-<id>, например #p-collagen-tonic. -->
+<!-- ЖеДерм · линейка Reform Age · блок T123 «HTML-код». Собрано tools/build_lines.py — правки текстов вносите там.
+     Код ставится на /reformage-pro и /reformage-homecare: фильтр «Профессиональный / Домашний» выбирается сам по адресу страницы (или ?care=pro / ?care=home).
+     Карточка товара открывается окном внутри страницы, ссылка на товар: адрес#p-<id>, например #p-mild-cleanser. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -44,6 +43,7 @@
 #jdl .top-g{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,96px);align-items:start}
 #jdl .top h1{margin:22px 0 22px}
 #jdl .top .lead{margin-bottom:34px}
+#jdl .note{margin:-14px 0 30px;padding:12px 16px;border-left:3px solid var(--c);background:var(--c-soft);font-size:13.5px;line-height:1.5;color:var(--ink);max-width:600px}
 #jdl .bar{height:3px;width:120px;background:var(--c);margin-bottom:28px}
 #jdl .keys{border-top:1px solid var(--line)}
 #jdl .keys details{border-bottom:1px solid var(--line)}
@@ -62,6 +62,10 @@
 #jdl .seg button{padding:10px 18px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);transition:background .3s,color .3s}
 #jdl .seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
 #jdl .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+#jdl .grid.g4{grid-template-columns:repeat(4,1fr)}
+#jdl .grid.g2{grid-template-columns:repeat(2,1fr);max-width:900px}
+#jdl .pr-g.p1{grid-template-columns:minmax(0,760px)}
+#jdl .pr-g.p2{grid-template-columns:repeat(2,1fr)}
 #jdl .card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
 #jdl .card:hover{transform:translateY(-4px);box-shadow:0 22px 50px -40px rgba(60,40,40,.45)}
 #jdl .card[hidden]{display:none}
@@ -90,7 +94,7 @@
 #jdl .pr ol{list-style:none;counter-reset:s;margin-top:18px;border-top:1px solid var(--line)}
 #jdl .pr li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;color:var(--ink)}
 #jdl .pr li:before{content:counter(s,decimal-leading-zero);color:var(--c);font-weight:600;font-size:12px;padding-top:1px}
-#jdl .pr li a{border-bottom:1px solid rgba(205,85,91,.35)}
+#jdl .pr li a{border-bottom:1px solid color-mix(in srgb,var(--c) 40%,transparent)}
 #jdl .pr li a:hover{color:var(--c)}
 #jdl .pr li span{color:var(--gray)}
 #jdl .pr-f{margin-top:26px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
@@ -134,7 +138,7 @@
 /* ===== Адаптив ===== */
 @media (max-width:1000px){
   #jdl .top-g,#jdl .cta{grid-template-columns:1fr}
-  #jdl .grid,#jdl .pr-g{grid-template-columns:repeat(2,1fr)}
+  #jdl .grid,#jdl .grid.g4,#jdl .pr-g,#jdl .pr-g.p2{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:760px){
   #jdl .dlg{grid-template-columns:1fr}
@@ -144,8 +148,8 @@
 @media (max-width:640px){
   #jdl{font-size:16px}
   #jdl .lead{font-size:16.5px}
-  #jdl .grid{grid-template-columns:1fr 1fr;gap:12px}
-  #jdl .pr-g{grid-template-columns:1fr}
+  #jdl .grid,#jdl .grid.g4,#jdl .grid.g2{grid-template-columns:1fr 1fr;gap:12px}
+  #jdl .pr-g,#jdl .pr-g.p1,#jdl .pr-g.p2{grid-template-columns:1fr}
   #jdl .card .bd{padding:14px 14px 16px}
   #jdl .card h3{font-size:16px}
   #jdl .card p{display:none}
@@ -214,7 +218,7 @@
     <div class="grid">
 
       <a class="card rv" href="#p-mild-cleanser" data-id="mild-cleanser" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@6b7d45e/images/products/reform-age-mild-cleanser.webp" alt="Reform Age Mild Cleanser — омолаживающая нежная пенка" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/reform-age-mild-cleanser.webp" alt="Reform Age Mild Cleanser — омолаживающая нежная пенка" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Mild Cleanser</span><h3>Омолаживающая нежная пенка</h3><p>Мягко очищает, поддерживает микробиом, сохраняет влагу и баланс pH.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Пробиотики, пептиды, центелла, витамин E.</p>
@@ -222,9 +226,8 @@
           <p data-k="В процедурах">Моментальное преображение, Гидробаланс лифт, Viso-Sculpt.</p>
         </div>
       </a>
-
       <a class="card rv" href="#p-collagen-tonic" data-id="collagen-tonic" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@6b7d45e/images/products/reform-age-collagen-tonic.webp" alt="Reform Age Collagen Tonic — омолаживающий коллагеновый тоник" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/reform-age-collagen-tonic.webp" alt="Reform Age Collagen Tonic — омолаживающий коллагеновый тоник" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Collagen Tonic</span><h3>Омолаживающий коллагеновый тоник</h3><p>Восстанавливает pH, насыщает влагой и придаёт коже тонус и гладкость.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Трипептид меди, гиалуроновый комплекс MOIST-HA5, центелла, ниацинамид.</p>
@@ -232,9 +235,8 @@
           <p data-k="В процедурах">Моментальное преображение, Гидробаланс лифт, Viso-Sculpt.</p>
         </div>
       </a>
-
       <a class="card rv" href="#p-micro-touch-mask" data-id="micro-touch-mask" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@6b7d45e/images/products/reform-age-micro-touch-mask.webp" alt="Reform Age Micro Touch Mask — омолаживающая маска со спикулами" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/reform-age-micro-touch-mask.webp" alt="Reform Age Micro Touch Mask — омолаживающая маска со спикулами" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Micro Touch Mask</span><h3>Омолаживающая маска со спикулами</h3><p>Активирует обновление клеток, улучшает тонус и сияние уже после первого применения.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный уход">
           <p data-k="Что такое спикулы">Микроскопические минеральные «иголочки» из морских губок: мягко стимулируют обновление кожи.</p>
@@ -243,9 +245,8 @@
           <p data-k="В процедурах">Гидробаланс лифт.</p>
         </div>
       </a>
-
       <a class="card rv" href="#p-intensive-cream" data-id="intensive-cream" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@6b7d45e/images/products/reform-age-intensive-cream.webp" alt="Reform Age Intensive Cream — омолаживающий интенсивный крем" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/reform-age-intensive-cream.webp" alt="Reform Age Intensive Cream — омолаживающий интенсивный крем" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Intensive Cream</span><h3>Омолаживающий интенсивный крем</h3><p>Уплотняет кожу, сокращает морщины, возвращает мягкость и сияние.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="50 мл" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Матриксил®, улиточный муцин, конское масло, витамины E и B3, Dermaflux.</p>
@@ -253,9 +254,8 @@
           <p data-k="В процедурах">Viso-Sculpt.</p>
         </div>
       </a>
-
       <a class="card rv" href="#p-intensive-eye-cream" data-id="intensive-eye-cream" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@6b7d45e/images/products/reform-age-intensive-eye-cream.webp" alt="Reform Age Intensive Eye Cream — омолаживающий крем для кожи вокруг глаз" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/reform-age-intensive-eye-cream.webp" alt="Reform Age Intensive Eye Cream — омолаживающий крем для кожи вокруг глаз" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Intensive Eye Cream</span><h3>Омолаживающий крем для кожи вокруг глаз</h3><p>Уменьшает отёчность и морщины, повышает эластичность, придаёт свежесть взгляду.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="30 мл" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Пептиды, BOTANICEUTICAL Plus 10, Pheohydrane, Dermaflux, гиалуронат натрия.</p>
@@ -263,9 +263,8 @@
           <p data-k="В процедурах">Моментальное преображение, Гидробаланс лифт, Viso-Sculpt.</p>
         </div>
       </a>
-
       <a class="card rv" href="#p-o2-boto-fluid" data-id="o2-boto-fluid" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@6b7d45e/images/products/reform-age-o2-boto-fluid-110ml.webp" alt="Reform Age O2 Boto Fluid — кислородный омолаживающий флюид" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/reform-age-o2-boto-fluid-110ml.webp" alt="Reform Age O₂ Boto Fluid — кислородный омолаживающий флюид" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">O₂ Boto Fluid</span><h3>Кислородный омолаживающий флюид</h3><p>Активирует клеточное дыхание, разглаживает мимические морщины.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="50 мл · дом / 110 мл · ПРО" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Перфторуглероды, Syn®-Ake, Argireline, трипептид меди, ниацинамид.</p>
@@ -394,7 +393,7 @@
   function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
   function fill(card){
     var pd=card.querySelector('.pd'), img=card.querySelector('.ph img');
-    var ph=dlg.querySelector('.dlg-ph img'); ph.src=img.src; ph.alt=img.alt;
+    var ph=dlg.querySelector('.dlg-ph img'); ph.src=img.src; ph.alt=img.alt; ph.style.objectPosition=img.style.objectPosition||'';
     dlg.querySelector('.en').textContent=card.querySelector('.en').textContent;
     dlg.querySelector('h3').textContent=card.querySelector('h3').textContent;
     dlg.querySelector('.desc').textContent=card.querySelector('.bd p').textContent;

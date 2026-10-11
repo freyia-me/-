@@ -1,0 +1,407 @@
+<!-- ЖеДерм · линейка Ato Care · блок T123 «HTML-код». Собрано tools/build_lines.py — правки текстов вносите там.
+     Код ставится на /atocare-pro и /atocare-home: фильтр «Профессиональный / Домашний» выбирается сам по адресу страницы (или ?care=pro / ?care=home).
+     Карточка товара открывается окном внутри страницы, ссылка на товар: адрес#p-<id>, например #p-mild-cleanser. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+#jdl{
+  --c:#76bc21;          /* цвет линейки */
+  --c-soft:#f1f8e8;
+  --ink:#201f20;--text:#595959;--gray:#65666b;--soft:#faf9f7;--line:#ebe8e4;
+  --hf:'Tenor Sans',Georgia,serif;--tf:'Montserrat',Arial,sans-serif;
+  font-family:var(--tf);color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.68;font-size:17px;overflow:hidden
+}
+#jdl *{box-sizing:border-box;margin:0;padding:0}
+#jdl a{color:inherit;text-decoration:none}
+#jdl img{display:block;max-width:100%}
+#jdl button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+#jdl .w{max-width:1320px;margin:0 auto;padding:0 clamp(20px,4vw,58px)}
+#jdl section{padding:clamp(64px,7vw,110px) 0}
+#jdl h1,#jdl h2,#jdl h3{font-family:var(--hf);color:var(--ink);font-weight:400;line-height:1.15;letter-spacing:-.03em}
+#jdl h1{font-size:clamp(34px,4.4vw,62px)}
+#jdl h2{font-size:clamp(28px,3.2vw,46px)}
+#jdl h3{font-size:clamp(19px,1.5vw,22px);line-height:1.3}
+#jdl h1 em,#jdl h2 em{font-style:normal;color:var(--c)}
+#jdl .lead{font-size:18px;max-width:600px}
+#jdl .lab{display:inline-flex;align-items:center;gap:12px;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#807578}
+#jdl .lab:before{content:"";width:28px;height:1px;background:#b4a5a9}
+#jdl .lab i{display:inline-block;width:6px;height:6px;background:var(--c);margin-left:-12px;margin-right:2px}
+#jdl .code{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+#jdl .btns{display:flex;gap:12px;flex-wrap:wrap}
+#jdl .btn{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;height:54px;padding:0 26px;border-radius:3px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:background .3s,color .3s,border-color .3s}
+#jdl .btn-a{background:#29282a;color:#fff}
+#jdl .btn-a:hover{background:var(--c)}
+#jdl .btn-o{border:1px solid #c8c1bf;color:var(--ink)}
+#jdl .btn-o:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+#jdl .btn svg{width:16px;height:16px;transition:transform .3s}
+#jdl .btn:hover svg{transform:translateX(4px)}
+
+/* ===== Шапка линейки ===== */
+#jdl .top{padding-top:clamp(48px,6vw,88px)}
+#jdl .top-g{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,96px);align-items:start}
+#jdl .top h1{margin:22px 0 22px}
+#jdl .top .lead{margin-bottom:34px}
+#jdl .note{margin:-14px 0 30px;padding:12px 16px;border-left:3px solid var(--c);background:var(--c-soft);font-size:13.5px;line-height:1.5;color:var(--ink);max-width:600px}
+#jdl .bar{height:3px;width:120px;background:var(--c);margin-bottom:28px}
+#jdl .keys{border-top:1px solid var(--line)}
+#jdl .keys details{border-bottom:1px solid var(--line)}
+#jdl .keys summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 2px;font-weight:500;font-size:16px;color:var(--c)}
+#jdl .keys summary::-webkit-details-marker{display:none}
+#jdl .keys summary i{position:relative;flex:none;width:14px;height:14px}
+#jdl .keys summary i:before,#jdl .keys summary i:after{content:"";position:absolute;left:0;right:0;top:50%;height:1.5px;background:var(--gray);transition:transform .3s,opacity .3s}
+#jdl .keys summary i:after{transform:rotate(90deg)}
+#jdl .keys details[open] summary i:after{opacity:0;transform:none}
+#jdl .keys .a{padding:0 2px 22px;font-size:15px}
+
+/* ===== Фильтр и сетка товаров ===== */
+#jdl .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+#jdl .head h2{margin-top:18px}
+#jdl .seg{display:inline-flex;padding:4px;border:1px solid var(--line);border-radius:999px;background:#fff}
+#jdl .seg button{padding:10px 18px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);transition:background .3s,color .3s}
+#jdl .seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+#jdl .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+#jdl .grid.g4{grid-template-columns:repeat(4,1fr)}
+#jdl .grid.g2{grid-template-columns:repeat(2,1fr);max-width:900px}
+#jdl .pr-g.p1{grid-template-columns:minmax(0,760px)}
+#jdl .pr-g.p2{grid-template-columns:repeat(2,1fr)}
+#jdl .card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+#jdl .card:hover{transform:translateY(-4px);box-shadow:0 22px 50px -40px rgba(60,40,40,.45)}
+#jdl .card[hidden]{display:none}
+#jdl .card .ph{display:block;position:relative;aspect-ratio:1/1;background:var(--soft);overflow:hidden}
+#jdl .card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+#jdl .card:hover .ph img{transform:scale(1.04)}
+#jdl .tags{position:absolute;left:14px;top:14px;display:flex;gap:6px;flex-wrap:wrap}
+#jdl .tag{padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.88);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+#jdl .card .bd{display:flex;flex-direction:column;flex:1;padding:22px 22px 24px}
+#jdl .card .en{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--c)}
+#jdl .card h3{margin:8px 0 10px}
+#jdl .card p{font-size:14.5px;line-height:1.55;flex:1}
+#jdl .card .more{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+#jdl .card .more:after{content:"→";color:var(--c);transition:transform .3s}
+#jdl .card:hover .more:after{transform:translateX(4px)}
+#jdl .pd{display:none}
+
+/* ===== Процедуры ===== */
+#jdl .procs{background:var(--soft)}
+#jdl .pr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+#jdl .pr{background:#fff;border:1px solid var(--line);border-radius:4px;padding:30px 28px}
+#jdl .pr .t{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#jdl .pr .min{font-family:var(--hf);font-size:28px;color:var(--c);white-space:nowrap}
+#jdl .pr h3{margin:14px 0 10px}
+#jdl .pr>p{font-size:14.5px}
+#jdl .pr ol{list-style:none;counter-reset:s;margin-top:18px;border-top:1px solid var(--line)}
+#jdl .pr li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;color:var(--ink)}
+#jdl .pr li:before{content:counter(s,decimal-leading-zero);color:var(--c);font-weight:600;font-size:12px;padding-top:1px}
+#jdl .pr li a{border-bottom:1px solid color-mix(in srgb,var(--c) 40%,transparent)}
+#jdl .pr li a:hover{color:var(--c)}
+#jdl .pr li span{color:var(--gray)}
+#jdl .pr-f{margin-top:26px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+#jdl .pr-f p{font-size:15px;max-width:640px}
+
+/* ===== CTA ===== */
+#jdl .cta{background:var(--ink);color:rgba(255,255,255,.82);border-radius:4px;padding:clamp(40px,5vw,72px) clamp(24px,5vw,64px);display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+#jdl .cta h2{color:#fff;margin-bottom:12px}
+#jdl .cta .btn-a{background:var(--c)}
+#jdl .cta .btn-a:hover{background:#fff;color:var(--ink)}
+#jdl .cta .btn-o{border-color:rgba(255,255,255,.45);color:#fff}
+#jdl .cta .btn-o:hover{background:#fff;color:var(--ink)}
+
+/* ===== Окно товара ===== */
+#jdl dialog{margin:auto;width:min(980px,calc(100% - 32px));max-height:calc(100% - 32px);border:0;border-radius:6px;padding:0;background:#fff;color:var(--text);box-shadow:0 40px 120px -40px rgba(0,0,0,.45);overflow:auto}
+#jdl dialog::backdrop{background:rgba(25,22,23,.55);backdrop-filter:blur(3px)}
+#jdl dialog[open]{animation:jdlIn .35s cubic-bezier(.2,.7,.2,1)}
+@keyframes jdlIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+#jdl .dlg{display:grid;grid-template-columns:.95fr 1.05fr}
+#jdl .dlg-ph{background:var(--soft);position:relative}
+#jdl .dlg-ph img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover}
+#jdl .dlg-bd{padding:40px 40px 36px;position:relative}
+#jdl .x{position:absolute;right:14px;top:14px;width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;z-index:2;transition:background .3s}
+#jdl .x:hover{background:var(--soft)}
+#jdl .x svg{width:14px;height:14px}
+#jdl .dlg-bd .en{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--c)}
+#jdl .dlg-bd h3{font-size:clamp(24px,2.4vw,32px);margin:10px 0 14px;padding-right:40px}
+#jdl .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+#jdl .meta span{padding:6px 12px;border-radius:999px;background:var(--c-soft);font-size:12px;font-weight:600;color:var(--ink)}
+#jdl .dlg-bd p{font-size:15.5px}
+#jdl .dlg-bd dl{margin-top:22px;border-top:1px solid var(--line)}
+#jdl .dlg-bd dt{margin-top:16px;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+#jdl .dlg-bd dd{margin-top:6px;font-size:15px;color:var(--ink)}
+#jdl .dlg-bd .btns{margin-top:28px}
+
+/* ===== Анимация появления ===== */
+#jdl .rv{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+#jdl .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){#jdl .rv{opacity:1;transform:none;transition:none}#jdl dialog[open]{animation:none}}
+
+/* ===== Адаптив ===== */
+@media (max-width:1000px){
+  #jdl .top-g,#jdl .cta{grid-template-columns:1fr}
+  #jdl .grid,#jdl .grid.g4,#jdl .pr-g,#jdl .pr-g.p2{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  #jdl .dlg{grid-template-columns:1fr}
+  #jdl .dlg-ph img{aspect-ratio:4/3}
+  #jdl .dlg-bd{padding:26px 22px 28px}
+}
+@media (max-width:640px){
+  #jdl{font-size:16px}
+  #jdl .lead{font-size:16.5px}
+  #jdl .grid,#jdl .grid.g4,#jdl .grid.g2{grid-template-columns:1fr 1fr;gap:12px}
+  #jdl .pr-g,#jdl .pr-g.p1,#jdl .pr-g.p2{grid-template-columns:1fr}
+  #jdl .card .bd{padding:14px 14px 16px}
+  #jdl .card h3{font-size:16px}
+  #jdl .card p{display:none}
+  #jdl .card .more{margin-top:12px;font-size:11px}
+  #jdl .tags{left:8px;top:8px}
+  #jdl .tag{font-size:9px;padding:4px 7px}
+  #jdl .seg{width:100%}
+  #jdl .seg button{flex:1;padding:10px 8px;font-size:11px}
+  #jdl .btns{flex-direction:column}
+  #jdl .btn{width:100%}
+  #jdl dialog{width:100%;max-width:100%;max-height:100%;height:100%;border-radius:0}
+}
+</style>
+
+<div id="jdl">
+
+<!-- ================= ШАПКА ================= -->
+<section class="top">
+  <div class="w top-g">
+    <div>
+      <span class="lab rv"><i></i>Чувствительная и реактивная кожа</span>
+      <h1 class="rv">Ato Care — уход за <em>сухой и чувствительной</em> кожей</h1>
+      <div class="bar rv"></div>
+      <p class="lead rv">Негормональная линия для сухой, чувствительной и повреждённой кожи. Восстанавливает барьер, успокаивает раздражение и зуд, увлажняет и защищает. Формулы без гормонов и глюкокортикоидов подходят и для кожи при атопическом и себорейном дерматите, псориазе и куперозе.</p>
+      <p class="note rv">Средства Ato Care — это уход за кожей. Они не заменяют лечение у врача и при заболеваниях кожи применяются по согласованию с лечащим врачом.</p>
+      <div class="btns rv">
+        <a class="btn btn-a" href="#getprice_main">Запросить цены <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="#getprotocol">Получить протоколы</a>
+      </div>
+    </div>
+    <div class="keys rv">
+      <details open>
+        <summary>Комплекс пептидов<i></i></summary>
+        <div class="a">Triple M Complex™, трипептид меди-1 и Serilesine™ — восстанавливают барьер, поддерживают упругость и защитные свойства кожи.</div>
+      </details>
+      <details>
+        <summary>β-глюкан<i></i></summary>
+        <div class="a">Успокаивает кожу, снижает раздражение и помогает ей восстанавливаться.</div>
+      </details>
+      <details>
+        <summary>Церамиды и ниацинамид<i></i></summary>
+        <div class="a">Восстанавливают липидный барьер, удерживают влагу и уменьшают сухость.</div>
+      </details>
+      <details>
+        <summary>Фито комплекс<i></i></summary>
+        <div class="a">Экстракты лекарственных растений — шлемника, коптиса, хауттюйнии — снимают покраснение и раздражение.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= СРЕДСТВА ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab"><i></i>Средства линии</span>
+        <h2>Четыре средства <em>Ato Care</em></h2>
+      </div>
+      <div class="seg" role="group" aria-label="Показать средства">
+        <button type="button" data-care="all" aria-pressed="true">Все</button>
+        <button type="button" data-care="pro" aria-pressed="false">Профессиональный</button>
+        <button type="button" data-care="home" aria-pressed="false">Домашний</button>
+      </div>
+    </div>
+
+    <div class="grid g4">
+
+      <a class="card rv" href="#p-mild-cleanser" data-id="mild-cleanser" data-care="pro home">
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/ato-care-mild-cleanser.webp" alt="Ato Care Mild Cleanser — очищающий гель для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <div class="bd"><span class="en">Ato Care Mild Cleanser</span><h3>Очищающий гель для всех типов чувствительной кожи</h3><p>Деликатно очищает, не нарушая барьер и микрофлору, поддерживает pH-баланс, увлажняет и освежает.</p><span class="more">Подробнее</span></div>
+        <div class="pd" data-vol="250 мл" data-care-t="Профессиональный и домашний уход">
+          <p data-k="Активные ингредиенты">Мягкие ПАВ, β-глюкан, фитокомплекс успокаивающих экстрактов, ниацинамид.</p>
+          <p data-k="Как применять">Нанесите 1,0–1,5 мл на кожу, вспеньте с водой нежными массирующими движениями и тщательно смойте.</p>
+          <p data-k="В процедурах">Детокс-чистка, Экстренный детокс, а также процедуры Molecular Twin и Nova · Zymo.</p>
+        </div>
+      </a>
+      <a class="card rv" href="#p-toner-mousse" data-id="toner-mousse" data-care="pro home">
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/ato-care-toner-mousse.webp" alt="Ato Care Toner Mousse — тонер-мусс для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <div class="bd"><span class="en">Ato Care Toner Mousse</span><h3>Тонер-мусс для всех типов чувствительной кожи</h3><p>Мягко тонизирует и увлажняет, укрепляет сосуды, уменьшает покраснение и восстанавливает pH-баланс.</p><span class="more">Подробнее</span></div>
+        <div class="pd" data-vol="150 мл" data-care-t="Профессиональный и домашний уход">
+          <p data-k="Активные ингредиенты">Пантенол, трипептид меди-1, аллантоин, фитоэкстракты.</p>
+          <p data-k="Как применять">Нанесите 1,0–1,5 мл и помассируйте до полного впитывания.</p>
+          <p data-k="В процедурах">Детокс-чистка, Экстренный детокс.</p>
+        </div>
+      </a>
+      <a class="card rv" href="#p-moist-emulsion" data-id="moist-emulsion" data-care="pro home">
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/ato-care-moist-emulsion-150ml.webp" alt="Ato Care Moist Emulsion — увлажняющая эмульсия для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <div class="bd"><span class="en">Ato Care Moist Emulsion</span><h3>Увлажняющая эмульсия для всех типов чувствительной кожи</h3><p>Интенсивно увлажняет, питает и восстанавливает липидный барьер, снимает раздражение и зуд.</p><span class="more">Подробнее</span></div>
+        <div class="pd" data-vol="150 мл · ПРО / 100 мл · дом" data-care-t="Профессиональный и домашний уход">
+          <p data-k="Активные ингредиенты">Triple M Complex™, трипептид меди-1, Serilesine™, β-глюкан, церамиды, фитокомплекс шлемника, коптиса и хауттюйнии.</p>
+          <p data-k="Как применять">Нанесите 1,0 мл массажными движениями до полного впитывания.</p>
+          <p data-k="В процедурах">Завершающий уход почти во всех процедурах ЖеДерм.</p>
+        </div>
+      </a>
+      <a class="card rv" href="#p-intensive-cream" data-id="intensive-cream" data-care="home">
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/ato-care-intensive-cream.webp" alt="Ato Care Intensive Cream — интенсивный крем для сухой и чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">Дом</span></span></span>
+        <div class="bd"><span class="en">Ato Care Intensive Cream</span><h3>Интенсивный крем для сухой и чувствительной кожи</h3><p>Питает и защищает очень сухую, раздражённую и повреждённую кожу, снижает зуд, предотвращает шелушение.</p><span class="more">Подробнее</span></div>
+        <div class="pd" data-vol="50 мл" data-care-t="Домашний уход">
+          <p data-k="Активные ингредиенты">Пантенол, трипептид меди-1, аллантоин, фитоэкстракты, Triple M Complex™, Serilesine™, β-глюкан, витамин E.</p>
+          <p data-k="Особенности">Без парабенов и отдушек, гипоаллергенно, одобрено дерматологами и педиатрами.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПРОЦЕДУРЫ ================= -->
+<section class="procs">
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab"><i></i>Протоколы для кабинета</span>
+        <h2>Процедуры с <em>Ato Care</em></h2>
+      </div>
+    </div>
+    <div class="pr-g p2">
+      <div class="pr rv">
+        <div class="t"><span class="code">Ato Care</span><span class="min">70 мин</span></div>
+        <h3>Детокс-чистка сухой и чувствительной кожи</h3>
+        <p>Деликатная чистка для сухой и чувствительной кожи, в том числе при куперозе и розацеа.</p>
+        <ol>
+          <li><div><a href="#p-mild-cleanser">Mild Cleanser</a> <span>— очищение</span></div></li>
+          <li><div>Molecular Twin Exfoliant <span>— эксфолиация, pH 2,9</span></div></li>
+          <li><div>Чистка кожи <span>— санация пор</span></div></li>
+          <li><div>Repair Mask Post-Procedure <span>— восстанавливающая маска</span></div></li>
+          <li><div><a href="#p-toner-mousse">Toner Mousse</a> <span>— тонизация</span></div></li>
+          <li><div><a href="#p-moist-emulsion">Moist Emulsion</a> <span>— завершающий уход</span></div></li>
+        </ol>
+      </div>
+      <div class="pr rv">
+        <div class="t"><span class="code">С Adaptive Skin</span><span class="min">65 мин</span></div>
+        <h3>Экстренный детокс — SOS для кожи</h3>
+        <p>Детокс-маска с водорослями и кислородный гель — когда коже нужна быстрая помощь.</p>
+        <ol>
+          <li><div><a href="#p-mild-cleanser">Mild Cleanser</a> <span>— очищение</span></div></li>
+          <li><div>Molecular Twin Exfoliant <span>— эксфолиация</span></div></li>
+          <li><div>Adaptive Skin Detox Mask <span>— детокс-маска</span></div></li>
+          <li><div>O₂ Therapy Active Gel <span>— кислородный гель</span></div></li>
+          <li><div><a href="#p-toner-mousse">Toner Mousse</a> <span>— тонизация</span></div></li>
+          <li><div><a href="#p-moist-emulsion">Moist Emulsion</a> <span>— завершающий уход</span></div></li>
+        </ol>
+      </div>
+    </div>
+    <div class="pr-f rv">
+      <p>Полные протоколы с дозировками и временем каждого шага — для косметологов по запросу. Научим работать с линией на бесплатном обучении.</p>
+      <div class="btns">
+        <a class="btn btn-a" href="#getprotocol">Получить протоколы <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="https://jeuderm-russia.ru/study">Обучение</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section>
+  <div class="w">
+    <div class="cta rv">
+      <div>
+        <h2>Работаете с чувствительной кожей?</h2>
+        <p>Пришлём прайс и протоколы, подберём средства Ato Care для кабинета и домашнего ухода клиентов.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-a" href="#getprice_main">Запросить цены</a>
+        <a class="btn btn-o" href="#getconsult">Консультация</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ОКНО ТОВАРА ================= -->
+<dialog aria-labelledby="jdl-dt">
+  <div class="dlg">
+    <div class="dlg-ph"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw="></div>
+    <div class="dlg-bd">
+      <button type="button" class="x" aria-label="Закрыть"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      <span class="en"></span>
+      <h3 id="jdl-dt"></h3>
+      <div class="meta"></div>
+      <p class="desc"></p>
+      <dl></dl>
+      <div class="btns">
+        <a class="btn btn-a" href="#getprice_main">Запросить цену <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="#getprotocol">Протокол</a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('jdl'); if(!root) return;
+  var cards=[].slice.call(root.querySelectorAll('.card'));
+  var segs=[].slice.call(root.querySelectorAll('.seg button'));
+  var dlg=root.querySelector('dialog');
+
+  /* --- фильтр ПРО / дом: по ?care=, по адресу страницы, по клику --- */
+  function setCare(c){
+    segs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.care===c?'true':'false');});
+    cards.forEach(function(el){el.hidden=!(c==='all'||el.dataset.care.split(' ').indexOf(c)>-1);});
+  }
+  segs.forEach(function(b){b.addEventListener('click',function(){setCare(b.dataset.care);});});
+  var q=(location.search.match(/[?&]care=(pro|home)/)||[])[1];
+  var page=location.pathname.replace(/\/+$/,'').split('/').pop(); /* reformage-pro, reformage-homecare… */
+  setCare(q||(/home/.test(page)?'home':/pro/.test(page)?'pro':'all'));
+
+  /* --- окно товара --- */
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+  function fill(card){
+    var pd=card.querySelector('.pd'), img=card.querySelector('.ph img');
+    var ph=dlg.querySelector('.dlg-ph img'); ph.src=img.src; ph.alt=img.alt; ph.style.objectPosition=img.style.objectPosition||'';
+    dlg.querySelector('.en').textContent=card.querySelector('.en').textContent;
+    dlg.querySelector('h3').textContent=card.querySelector('h3').textContent;
+    dlg.querySelector('.desc').textContent=card.querySelector('.bd p').textContent;
+    dlg.querySelector('.meta').innerHTML='<span>'+esc(pd.dataset.vol)+'</span><span>'+esc(pd.dataset.careT)+'</span>';
+    dlg.querySelector('dl').innerHTML=[].map.call(pd.querySelectorAll('[data-k]'),function(r){
+      return '<dt>'+esc(r.dataset.k)+'</dt><dd>'+esc(r.textContent)+'</dd>';}).join('');
+  }
+  function open(id,push){
+    var card=root.querySelector('.card[data-id="'+id+'"]'); if(!card) return;
+    fill(card);
+    if(!dlg.open){ if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open',''); }
+    dlg.scrollTop=0;
+    if(push && location.hash!=='#p-'+id) history.pushState({jdl:id},'','#p-'+id);
+  }
+  function close(){
+    if(dlg.open){ if(dlg.close) dlg.close(); else dlg.removeAttribute('open'); }
+  }
+  root.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#p-"]'); if(!a) return;
+    e.preventDefault(); open(a.getAttribute('href').slice(3),true);
+  });
+  dlg.querySelector('.x').addEventListener('click',function(){ if(/^#p-/.test(location.hash)) history.back(); else close(); });
+  dlg.addEventListener('click',function(e){ if(e.target===dlg) dlg.querySelector('.x').click(); });
+  dlg.addEventListener('cancel',function(e){ e.preventDefault(); dlg.querySelector('.x').click(); });
+  /* кнопки окна ведут на формы Tilda (#getprice_main…) — закрываем окно, чтобы форма была видна */
+  [].forEach.call(dlg.querySelectorAll('.btns a'),function(a){a.addEventListener('click',function(){
+    if(/^#p-/.test(location.hash)) history.replaceState(null,'',location.pathname+location.search);
+    close();
+  });});
+  function sync(){ var m=location.hash.match(/^#p-([\w-]+)/); if(m) open(m[1],false); else close(); }
+  window.addEventListener('popstate',sync);
+  window.addEventListener('hashchange',sync);
+  sync();
+
+  /* --- появление при прокрутке --- */
+  var items=root.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){[].forEach.call(items,function(el){el.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -30px 0px'});
+  [].forEach.call(items,function(el){io.observe(el);});
+})();
+</script>

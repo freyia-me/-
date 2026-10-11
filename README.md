@@ -27,3 +27,19 @@
 Не взяли из архива элементов: уголки с жемчугом, звёзды, радужные пузыри и кольца (выбиваются из строгого стиля),
 подиумы (у фото продуктов уже свои подиумы), стеклянные плашки/баннеры (слишком мелкие для фона — делаются в CSS),
 поля поиска/выбора и чипсы (на сайте не нужны).
+
+## Страницы линеек
+
+Собираются скриптом: `python3 tools/build_lines.py` → `tilda/<slug>.html` и `tilda-txt/<slug>.txt`.
+Тексты и товары — в `tools/build_lines.py` (LINES), дизайн и скрипт — в `tools/line_template.html`.
+
+| Файл | Куда ставить в Tilda |
+|---|---|
+| `reformage` | /reformage-pro и /reformage-homecare |
+| `acno` | /acnopro-jeuderm и /acnohome |
+| `atocare` | /atocare-pro и /atocare-home |
+| `pro` | /pro |
+| `renew` | /novazymo-exfoliation |
+| `hairgenesis` | /hairgenesis |
+
+Фильтр «Профессиональный / Домашний» выбирается сам по адресу страницы. Ссылка на товар: `адрес#p-<id>`.
