@@ -69,7 +69,7 @@ Adaptive Skin, «Молекулярное обновление» и Lift Intense
 |---|---|---|
 | Омолаживающая нежная пенка | Reform Age Mild Cleanser, туба 150 мл | `reform-age-mild-cleanser.webp` |
 | Тоник для лица с гиалуроновой кислотой | Reform Age Collagen Tonic, 250 мл | `reform-age-collagen-tonic.webp` |
-| Омолаживающая маска со спикулами | Reform Age (маска) | — нет |
+| Омолаживающая маска со спикулами | Reform Age Micro Touch Mask, 285 мл | `reform-age-micro-touch-mask.webp` |
 | Омолаживающий интенсивный крем | Reform Age Intensive Cream, 50 мл | `reform-age-intensive-cream.webp` |
 | Омолаживающий крем для кожи вокруг глаз | Reform Age Intensive Eye Cream, 30 мл | `reform-age-intensive-eye-cream.webp` |
 | Кислородный флюид с эффектом расслабления мимических морщин | Reform Age O2 Boto Fluid, airless 110 мл | `reform-age-o2-boto-fluid-110ml.webp` |
@@ -112,7 +112,7 @@ Adaptive Skin, «Молекулярное обновление» и Lift Intense
 | Омолаживающий крем для кожи вокруг глаз | Reform Age Intensive Eye Cream, 30 мл | `reform-age-intensive-eye-cream.webp` | да |
 | Кислородный омолаживающий флюид | Reform Age O2 Boto Fluid, 50 мл | `reform-age-o2-boto-fluid-50ml.webp` | да, в ПРО — airless 110 мл |
 
-Только в ПРО: омолаживающая маска со спикулами.
+Только в ПРО: омолаживающая маска со спикулами (Micro Touch Mask).
 
 ### Acno · домашний (/acnohome)
 
@@ -149,5 +149,4 @@ Adaptive Skin, «Молекулярное обновление» и Lift Intense
 
 ## Нет отдельных фото (нужны для страниц)
 
-- Reform Age: маска со спикулами
 - Hair Genesis Hair Growth Stimulator
