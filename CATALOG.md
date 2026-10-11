@@ -2,6 +2,19 @@
 
 Состав фиксируется по скриншотам текущего сайта jeuderm-russia.ru.
 
+## Линейки (фактически 6)
+
+| Линейка | Страница | Что внутри |
+|---|---|---|
+| Acno Active | /acnopro-jeuderm, /acnohome | проблемная кожа |
+| Ato Care | /atocare-pro, /atocare-home | чувствительная кожа |
+| Reform Age | /reformage-pro, /reformage-homecare | возрастная кожа 30+ |
+| ПРО | /pro | профессиональные препараты вне линеек (см. ниже) |
+| Renew · обновление | /novazymo-exfoliation | эксфолианты Nova и Zymo |
+| Уход за волосами | /hairgenesis | Hair Genesis, Hair-Growth Concentrate |
+
+Adaptive Skin, «Молекулярное обновление» и Lift Intense — не отдельные линейки, а препараты серии ПРО.
+
 ## Серия ПРО (jeuderm-russia.ru/pro)
 
 Только профессиональные препараты, которые не входят в линейки Acno, Ato Care и Reform Age:
@@ -18,3 +31,13 @@
 | Лимфодренажный гель для аппаратных процедур и массажа | Drainage Physio Gel | `images/products/drainage-physio-gel.webp` |
 
 На текущем сайте в англ. названии опечатка: «Viso Countur», правильно Viso Contour (как на упаковке).
+
+## Серия Renew · обновление (jeuderm-russia.ru/novazymo-exfoliation)
+
+Нова (Nova) и Зимо (Zymo) — эксфолианты нового поколения. Трёхуровневые системы обновления кожи
+(AHA Primer → Active → pH Reductant). Ключевые компоненты на странице: комплекс пептидов, β-глюкан, Синк-Аке, фито комплекс.
+
+| Название на сайте | Англ. название | Фото в репозитории |
+|---|---|---|
+| Нова Комплекс | Nova Complex | `images/products/nova-complex.webp` |
+| Зимо Комплекс | Zymo Complex | `images/products/zymo-complex.webp` |
