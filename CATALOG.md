@@ -12,9 +12,9 @@
 | 01 | Уход за проблемной кожей | Acno Active | `#ab0a3d` | /acnopro-jeuderm |
 | 02 | Чувствительная и реактивная кожа (склонная к дерматитам и с дерматитами) | Ato Care | `#76bc21` | /atocare-pro |
 | 03 | Возрастной уход | Reform Age | `#cd555b` | /reformage-pro |
-| 04 | Уход за кожей головы | Hairgenesis | `#6b3a8c` (предварительно) | /hairgenesis |
+| 04 | Уход за кожей головы | Hairgenesis | `#ae57b9` | /hairgenesis |
 | 05 | Обновление | Nova · Zymo (Renew) | `#000000` | /novazymo-exfoliation |
-| 06 | Профессиональный уход — косметолог выбирает | ПРО | `#65666b` (предварительно) | /pro |
+| 06 | Профессиональный уход — косметолог выбирает | ПРО | `#65666b` | /pro |
 
 ## Линейки (фактически 6)
 
@@ -150,3 +150,34 @@ Adaptive Skin, «Молекулярное обновление» и Lift Intense
 ## Нет отдельных фото (нужны для страниц)
 
 - Hair Genesis Hair Growth Stimulator
+
+## Сверка с PDF-каталогом (`docs/jeuderm-catalog.pdf`, 25 стр.)
+
+Цвета серий в PDF: Reform Age `#cd555b`, Renew `#000000`, Adaptive Skin `#2a7de1`, Acno `#ab0a3d`,
+Ato Care `#76bc21`, Lift Intense `#7f2346`, PRO `#65666b`, Hair Genesis `#ae57b9`, Мезо `#ff66c4`.
+
+### Расхождения — уточнить
+
+1. **МЕЗО — PDRN** (стерильный коктейль, 5 ампул × 5 мл): есть в PDF, нет на сайте и в нашей схеме. Фото нет.
+2. **Состав серий.** В PDF Molecular Twin Exfoliant и Molecular Twin Oil — в Renew, Adaptive Skin Detox Mask и Lift Intense — отдельные разделы,
+   а в PRO только O2 Therapy Active Gel, Drainage Physio Gel и Repair Post-Procedure Mask. На сайте все семь — на странице /pro.
+3. **Объёмы: PDF ↔ фото упаковки**
+   | Препарат | PDF | На фото |
+   |---|---|---|
+   | Reform Age Micro Touch Mask | 250 мл | 285 мл |
+   | Acno Mild Cleanser | 250 мл | 264 мл |
+   | Acno Clay Mask | 250 мл | 204 мл |
+   | Acno Active Gel (дом.) | 100 мл | туба 120 мл |
+   | Ato Care Moist Emulsion (дом.) | 100 мл | туба 120 мл |
+   | Lift Intense Viso Contour | 110 мл | 130 мл |
+   | Zymo Complex | 3 × 10 мл | флаконы 5 мл |
+4. **Опечатки в PDF:** «VISO COUNTOUR / COUNTUR» (верно Contour); «Cooper» вместо Copper (Hair Genesis);
+   на последней странице концентрат подписан «HAIR GROWTH STIMULATOR», а это Hair-Growth Concentrate; «фолликул» → «фолликулов».
+5. **Формулировки:** в PDF «пептидная терапия», «для лечения акне» — для сайта переписываем как уход (см. правило вверху).
+
+### Совпадает
+
+Reform Age: пенка 150, тоник 250, флюид 50/110, крем для век 30, крем 50; маска со спикулами — только ПРО.
+Acno: пады 50 шт (ПРО и дом), маска с глиной — только ПРО. Ato Care: Mild Cleanser 250, Toner Mousse 150, Intensive Cream 50 — только домашний.
+PRO: O2 Therapy 250, Drainage 470, Repair Mask 250, Detox Mask 250, Molecular Twin 150 + 150.
+Hair Genesis: Stimulator 140 — домашний, Concentrate 20 — ПРО.
