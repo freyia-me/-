@@ -1,0 +1,438 @@
+<!-- ЖеДерм · линейка Reform Age · блок T123 «HTML-код».
+     Один и тот же код ставится на /reformage-pro и /reformage-homecare:
+     фильтр «Профессиональный / Домашний» выбирается сам по адресу страницы (или ?care=pro / ?care=home).
+     Карточка товара открывается окном внутри страницы, ссылка на товар: адрес#p-<id>, например #p-collagen-tonic. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+#jdl{
+  --c:#cd555b;          /* цвет линейки */
+  --c-soft:#fbf1f1;
+  --ink:#201f20;--text:#595959;--gray:#65666b;--soft:#faf9f7;--line:#ebe8e4;
+  --hf:'Tenor Sans',Georgia,serif;--tf:'Montserrat',Arial,sans-serif;
+  font-family:var(--tf);color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.68;font-size:17px;overflow:hidden
+}
+#jdl *{box-sizing:border-box;margin:0;padding:0}
+#jdl a{color:inherit;text-decoration:none}
+#jdl img{display:block;max-width:100%}
+#jdl button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+#jdl .w{max-width:1320px;margin:0 auto;padding:0 clamp(20px,4vw,58px)}
+#jdl section{padding:clamp(64px,7vw,110px) 0}
+#jdl h1,#jdl h2,#jdl h3{font-family:var(--hf);color:var(--ink);font-weight:400;line-height:1.15;letter-spacing:-.03em}
+#jdl h1{font-size:clamp(34px,4.4vw,62px)}
+#jdl h2{font-size:clamp(28px,3.2vw,46px)}
+#jdl h3{font-size:clamp(19px,1.5vw,22px);line-height:1.3}
+#jdl h1 em,#jdl h2 em{font-style:normal;color:var(--c)}
+#jdl .lead{font-size:18px;max-width:600px}
+#jdl .lab{display:inline-flex;align-items:center;gap:12px;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#807578}
+#jdl .lab:before{content:"";width:28px;height:1px;background:#b4a5a9}
+#jdl .lab i{display:inline-block;width:6px;height:6px;background:var(--c);margin-left:-12px;margin-right:2px}
+#jdl .code{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+#jdl .btns{display:flex;gap:12px;flex-wrap:wrap}
+#jdl .btn{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;height:54px;padding:0 26px;border-radius:3px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:background .3s,color .3s,border-color .3s}
+#jdl .btn-a{background:#29282a;color:#fff}
+#jdl .btn-a:hover{background:var(--c)}
+#jdl .btn-o{border:1px solid #c8c1bf;color:var(--ink)}
+#jdl .btn-o:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+#jdl .btn svg{width:16px;height:16px;transition:transform .3s}
+#jdl .btn:hover svg{transform:translateX(4px)}
+
+/* ===== Шапка линейки ===== */
+#jdl .top{padding-top:clamp(48px,6vw,88px)}
+#jdl .top-g{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,96px);align-items:start}
+#jdl .top h1{margin:22px 0 22px}
+#jdl .top .lead{margin-bottom:34px}
+#jdl .bar{height:3px;width:120px;background:var(--c);margin-bottom:28px}
+#jdl .keys{border-top:1px solid var(--line)}
+#jdl .keys details{border-bottom:1px solid var(--line)}
+#jdl .keys summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 2px;font-weight:500;font-size:16px;color:var(--c)}
+#jdl .keys summary::-webkit-details-marker{display:none}
+#jdl .keys summary i{position:relative;flex:none;width:14px;height:14px}
+#jdl .keys summary i:before,#jdl .keys summary i:after{content:"";position:absolute;left:0;right:0;top:50%;height:1.5px;background:var(--gray);transition:transform .3s,opacity .3s}
+#jdl .keys summary i:after{transform:rotate(90deg)}
+#jdl .keys details[open] summary i:after{opacity:0;transform:none}
+#jdl .keys .a{padding:0 2px 22px;font-size:15px}
+
+/* ===== Фильтр и сетка товаров ===== */
+#jdl .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+#jdl .head h2{margin-top:18px}
+#jdl .seg{display:inline-flex;padding:4px;border:1px solid var(--line);border-radius:999px;background:#fff}
+#jdl .seg button{padding:10px 18px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);transition:background .3s,color .3s}
+#jdl .seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+#jdl .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+#jdl .card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+#jdl .card:hover{transform:translateY(-4px);box-shadow:0 22px 50px -40px rgba(60,40,40,.45)}
+#jdl .card[hidden]{display:none}
+#jdl .card .ph{display:block;position:relative;aspect-ratio:1/1;background:var(--soft);overflow:hidden}
+#jdl .card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+#jdl .card:hover .ph img{transform:scale(1.04)}
+#jdl .tags{position:absolute;left:14px;top:14px;display:flex;gap:6px;flex-wrap:wrap}
+#jdl .tag{padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.88);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+#jdl .card .bd{display:flex;flex-direction:column;flex:1;padding:22px 22px 24px}
+#jdl .card .en{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--c)}
+#jdl .card h3{margin:8px 0 10px}
+#jdl .card p{font-size:14.5px;line-height:1.55;flex:1}
+#jdl .card .more{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+#jdl .card .more:after{content:"→";color:var(--c);transition:transform .3s}
+#jdl .card:hover .more:after{transform:translateX(4px)}
+#jdl .pd{display:none}
+
+/* ===== Процедуры ===== */
+#jdl .procs{background:var(--soft)}
+#jdl .pr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+#jdl .pr{background:#fff;border:1px solid var(--line);border-radius:4px;padding:30px 28px}
+#jdl .pr .t{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#jdl .pr .min{font-family:var(--hf);font-size:28px;color:var(--c);white-space:nowrap}
+#jdl .pr h3{margin:14px 0 10px}
+#jdl .pr>p{font-size:14.5px}
+#jdl .pr ol{list-style:none;counter-reset:s;margin-top:18px;border-top:1px solid var(--line)}
+#jdl .pr li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;color:var(--ink)}
+#jdl .pr li:before{content:counter(s,decimal-leading-zero);color:var(--c);font-weight:600;font-size:12px;padding-top:1px}
+#jdl .pr li a{border-bottom:1px solid rgba(205,85,91,.35)}
+#jdl .pr li a:hover{color:var(--c)}
+#jdl .pr li span{color:var(--gray)}
+#jdl .pr-f{margin-top:26px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+#jdl .pr-f p{font-size:15px;max-width:640px}
+
+/* ===== CTA ===== */
+#jdl .cta{background:var(--ink);color:rgba(255,255,255,.82);border-radius:4px;padding:clamp(40px,5vw,72px) clamp(24px,5vw,64px);display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+#jdl .cta h2{color:#fff;margin-bottom:12px}
+#jdl .cta .btn-a{background:var(--c)}
+#jdl .cta .btn-a:hover{background:#fff;color:var(--ink)}
+#jdl .cta .btn-o{border-color:rgba(255,255,255,.45);color:#fff}
+#jdl .cta .btn-o:hover{background:#fff;color:var(--ink)}
+
+/* ===== Окно товара ===== */
+#jdl dialog{margin:auto;width:min(980px,calc(100% - 32px));max-height:calc(100% - 32px);border:0;border-radius:6px;padding:0;background:#fff;color:var(--text);box-shadow:0 40px 120px -40px rgba(0,0,0,.45);overflow:auto}
+#jdl dialog::backdrop{background:rgba(25,22,23,.55);backdrop-filter:blur(3px)}
+#jdl dialog[open]{animation:jdlIn .35s cubic-bezier(.2,.7,.2,1)}
+@keyframes jdlIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+#jdl .dlg{display:grid;grid-template-columns:.95fr 1.05fr}
+#jdl .dlg-ph{background:var(--soft);position:relative}
+#jdl .dlg-ph img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover}
+#jdl .dlg-bd{padding:40px 40px 36px;position:relative}
+#jdl .x{position:absolute;right:14px;top:14px;width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;z-index:2;transition:background .3s}
+#jdl .x:hover{background:var(--soft)}
+#jdl .x svg{width:14px;height:14px}
+#jdl .dlg-bd .en{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--c)}
+#jdl .dlg-bd h3{font-size:clamp(24px,2.4vw,32px);margin:10px 0 14px;padding-right:40px}
+#jdl .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+#jdl .meta span{padding:6px 12px;border-radius:999px;background:var(--c-soft);font-size:12px;font-weight:600;color:var(--ink)}
+#jdl .dlg-bd p{font-size:15.5px}
+#jdl .dlg-bd dl{margin-top:22px;border-top:1px solid var(--line)}
+#jdl .dlg-bd dt{margin-top:16px;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+#jdl .dlg-bd dd{margin-top:6px;font-size:15px;color:var(--ink)}
+#jdl .dlg-bd .btns{margin-top:28px}
+
+/* ===== Анимация появления ===== */
+#jdl .rv{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+#jdl .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){#jdl .rv{opacity:1;transform:none;transition:none}#jdl dialog[open]{animation:none}}
+
+/* ===== Адаптив ===== */
+@media (max-width:1000px){
+  #jdl .top-g,#jdl .cta{grid-template-columns:1fr}
+  #jdl .grid,#jdl .pr-g{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  #jdl .dlg{grid-template-columns:1fr}
+  #jdl .dlg-ph img{aspect-ratio:4/3}
+  #jdl .dlg-bd{padding:26px 22px 28px}
+}
+@media (max-width:640px){
+  #jdl{font-size:16px}
+  #jdl .lead{font-size:16.5px}
+  #jdl .grid{grid-template-columns:1fr 1fr;gap:12px}
+  #jdl .pr-g{grid-template-columns:1fr}
+  #jdl .card .bd{padding:14px 14px 16px}
+  #jdl .card h3{font-size:16px}
+  #jdl .card p{display:none}
+  #jdl .card .more{margin-top:12px;font-size:11px}
+  #jdl .tags{left:8px;top:8px}
+  #jdl .tag{font-size:9px;padding:4px 7px}
+  #jdl .seg{width:100%}
+  #jdl .seg button{flex:1;padding:10px 8px;font-size:11px}
+  #jdl .btns{flex-direction:column}
+  #jdl .btn{width:100%}
+  #jdl dialog{width:100%;max-width:100%;max-height:100%;height:100%;border-radius:0}
+}
+</style>
+
+<div id="jdl">
+
+<!-- ================= ШАПКА ================= -->
+<section class="top">
+  <div class="w top-g">
+    <div>
+      <span class="lab rv"><i></i>Возрастной уход · 30+</span>
+      <h1 class="rv">Reform Age — <em>антивозрастной уход</em> с&nbsp;пептидами</h1>
+      <div class="bar rv"></div>
+      <p class="lead rv">Линия для омоложения и восстановления плотности кожи. Высокие концентрации пептидов, нейропептидов, факторов роста и антиоксидантов поддерживают синтез коллагена, повышают упругость и выравнивают микрорельеф. Подходит для зрелой, чувствительной и обезвоженной кожи — в кабинете и дома.</p>
+      <div class="btns rv">
+        <a class="btn btn-a" href="#getprice_main">Запросить цены <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="#getprotocol">Получить протоколы</a>
+      </div>
+    </div>
+    <div class="keys rv">
+      <details open>
+        <summary>Пептиды и факторы роста<i></i></summary>
+        <div class="a">Acetyl Hexapeptide-8 (Argireline), Syn®-Ake, Matrixyl®, трипептид меди-1 и факторы роста EGF, IGF, bFGF, TGF-β. Разглаживают мимические морщины, поддерживают выработку коллагена и плотность кожи.</div>
+      </details>
+      <details>
+        <summary>Пробиотики<i></i></summary>
+        <div class="a">Поддерживают микробиом и защитный барьер кожи, помогают сохранить влагу и баланс pH.</div>
+      </details>
+      <details>
+        <summary>Запатентованные комплексы<i></i></summary>
+        <div class="a">Oligo AWP &amp; CBP, гиалуроновый комплекс MOIST HA5, MultiEX (7 трав), BOTANICEUTICAL Plus 10, Pheohydrane, Dermaflux — увлажнение, упругость и восстановление.</div>
+      </details>
+      <details>
+        <summary>Кислоты и масла<i></i></summary>
+        <div class="a">Гиалуроновая кислота и гиалуронат натрия, ниацинамид, конское масло, улиточный муцин, витамин E — питание, мягкость и сияние кожи.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= СРЕДСТВА ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab"><i></i>Средства линии</span>
+        <h2>Шесть средств <em>Reform Age</em></h2>
+      </div>
+      <div class="seg" role="group" aria-label="Показать средства">
+        <button type="button" data-care="all" aria-pressed="true">Все</button>
+        <button type="button" data-care="pro" aria-pressed="false">Профессиональный</button>
+        <button type="button" data-care="home" aria-pressed="false">Домашний</button>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <a class="card rv" href="#p-mild-cleanser" data-id="mild-cleanser" data-care="pro home">
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@6b7d45e/images/products/reform-age-mild-cleanser.webp" alt="Reform Age Mild Cleanser — омолаживающая нежная пенка" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <div class="bd"><span class="en">Mild Cleanser</span><h3>Омолаживающая нежная пенка</h3><p>Мягко очищает, поддерживает микробиом, сохраняет влагу и баланс pH.</p><span class="more">Подробнее</span></div>
+        <div class="pd" data-vol="150 мл" data-care-t="Профессиональный и домашний уход">
+          <p data-k="Активные ингредиенты">Пробиотики, пептиды, центелла, витамин E.</p>
+          <p data-k="Как применять">Нанесите 1,5 мл на влажную кожу, помассируйте и тщательно смойте водой.</p>
+          <p data-k="В процедурах">Моментальное преображение, Гидробаланс лифт, Viso-Sculpt.</p>
+        </div>
+      </a>
+
+      <a class="card rv" href="#p-collagen-tonic" data-id="collagen-tonic" data-care="pro home">
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@6b7d45e/images/products/reform-age-collagen-tonic.webp" alt="Reform Age Collagen Tonic — омолаживающий коллагеновый тоник" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <div class="bd"><span class="en">Collagen Tonic</span><h3>Омолаживающий коллагеновый тоник</h3><p>Восстанавливает pH, насыщает влагой и придаёт коже тонус и гладкость.</p><span class="more">Подробнее</span></div>
+        <div class="pd" data-vol="250 мл" data-care-t="Профессиональный и домашний уход">
+          <p data-k="Активные ингредиенты">Трипептид меди, гиалуроновый комплекс MOIST-HA5, центелла, ниацинамид.</p>
+          <p data-k="Как применять">Одно нажатие на ватный диск — протрите кожу для тонизации.</p>
+          <p data-k="В процедурах">Моментальное преображение, Гидробаланс лифт, Viso-Sculpt.</p>
+        </div>
+      </a>
+
+      <a class="card rv" href="#p-micro-touch-mask" data-id="micro-touch-mask" data-care="pro">
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@6b7d45e/images/products/reform-age-micro-touch-mask.webp" alt="Reform Age Micro Touch Mask — омолаживающая маска со спикулами" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <div class="bd"><span class="en">Micro Touch Mask</span><h3>Омолаживающая маска со спикулами</h3><p>Активирует обновление клеток, улучшает тонус и сияние уже после первого применения.</p><span class="more">Подробнее</span></div>
+        <div class="pd" data-vol="250 мл" data-care-t="Профессиональный уход">
+          <p data-k="Что такое спикулы">Микроскопические минеральные «иголочки» из морских губок: мягко стимулируют обновление кожи.</p>
+          <p data-k="Активные ингредиенты">Пептиды, морские минералы, HERBAL Complex, жемчуг, ламинария.</p>
+          <p data-k="Как применять">Нанесите видимым слоем (5,0 мл) на 15–20 минут, затем тщательно смойте водой.</p>
+          <p data-k="В процедурах">Гидробаланс лифт.</p>
+        </div>
+      </a>
+
+      <a class="card rv" href="#p-intensive-cream" data-id="intensive-cream" data-care="pro home">
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@6b7d45e/images/products/reform-age-intensive-cream.webp" alt="Reform Age Intensive Cream — омолаживающий интенсивный крем" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <div class="bd"><span class="en">Intensive Cream</span><h3>Омолаживающий интенсивный крем</h3><p>Уплотняет кожу, сокращает морщины, возвращает мягкость и сияние.</p><span class="more">Подробнее</span></div>
+        <div class="pd" data-vol="50 мл" data-care-t="Профессиональный и домашний уход">
+          <p data-k="Активные ингредиенты">Матриксил®, улиточный муцин, конское масло, витамины E и B3, Dermaflux.</p>
+          <p data-k="Как применять">Нанесите 1,0 мл на кожу лица и помассируйте до полного впитывания.</p>
+          <p data-k="В процедурах">Viso-Sculpt.</p>
+        </div>
+      </a>
+
+      <a class="card rv" href="#p-intensive-eye-cream" data-id="intensive-eye-cream" data-care="pro home">
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@6b7d45e/images/products/reform-age-intensive-eye-cream.webp" alt="Reform Age Intensive Eye Cream — омолаживающий крем для кожи вокруг глаз" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <div class="bd"><span class="en">Intensive Eye Cream</span><h3>Омолаживающий крем для кожи вокруг глаз</h3><p>Уменьшает отёчность и морщины, повышает эластичность, придаёт свежесть взгляду.</p><span class="more">Подробнее</span></div>
+        <div class="pd" data-vol="30 мл" data-care-t="Профессиональный и домашний уход">
+          <p data-k="Активные ингредиенты">Пептиды, BOTANICEUTICAL Plus 10, Pheohydrane, Dermaflux, гиалуронат натрия.</p>
+          <p data-k="Как применять">Нанесите 0,2 мл на кожу вокруг глаз и помассируйте до полного впитывания.</p>
+          <p data-k="В процедурах">Моментальное преображение, Гидробаланс лифт, Viso-Sculpt.</p>
+        </div>
+      </a>
+
+      <a class="card rv" href="#p-o2-boto-fluid" data-id="o2-boto-fluid" data-care="pro home">
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@6b7d45e/images/products/reform-age-o2-boto-fluid-110ml.webp" alt="Reform Age O2 Boto Fluid — кислородный омолаживающий флюид" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <div class="bd"><span class="en">O₂ Boto Fluid</span><h3>Кислородный омолаживающий флюид</h3><p>Активирует клеточное дыхание, разглаживает мимические морщины.</p><span class="more">Подробнее</span></div>
+        <div class="pd" data-vol="50 мл · дом / 110 мл · ПРО" data-care-t="Профессиональный и домашний уход">
+          <p data-k="Активные ингредиенты">Перфторуглероды, Syn®-Ake, Argireline, трипептид меди, ниацинамид.</p>
+          <p data-k="Как применять">Нанесите 1,0 мл на кожу: через несколько секунд начнётся «пузырение» и образуется «облако». Помассируйте до полного впитывания.</p>
+          <p data-k="В процедурах">Моментальное преображение, Гидробаланс лифт.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПРОЦЕДУРЫ ================= -->
+<section class="procs">
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab"><i></i>Протоколы для кабинета</span>
+        <h2>Процедуры с <em>Reform Age</em></h2>
+      </div>
+    </div>
+    <div class="pr-g">
+      <div class="pr rv">
+        <div class="t"><span class="code">Reform Age</span><span class="min">70 мин</span></div>
+        <h3>Моментальное преображение</h3>
+        <p>Энзимно-кислотное обновление и кислородный флюид — свежесть и сияние за одну процедуру.</p>
+        <ol>
+          <li><div><a href="#p-mild-cleanser">Mild Cleanser</a> <span>— очищение</span></div></li>
+          <li><div>Zymo Complex <span>— энзимно-кислотное обновление, pH 2,5</span></div></li>
+          <li><div>Repair Mask Post-Procedure <span>— восстанавливающая маска</span></div></li>
+          <li><div><a href="#p-collagen-tonic">Collagen Tonic</a> <span>— тонизация</span></div></li>
+          <li><div><a href="#p-o2-boto-fluid">O₂ Boto Fluid</a> и <a href="#p-intensive-eye-cream">Eye Cream</a> <span>— завершающий уход</span></div></li>
+        </ol>
+      </div>
+      <div class="pr rv">
+        <div class="t"><span class="code">Reform Age</span><span class="min">80 мин</span></div>
+        <h3>Гидробаланс лифт</h3>
+        <p>Молекулярный эксфолиант, микротоки и маска со спикулами — увлажнение и подтянутый контур.</p>
+        <ol>
+          <li><div><a href="#p-mild-cleanser">Mild Cleanser</a> <span>— очищение</span></div></li>
+          <li><div>Molecular Twin Exfoliant <span>— эксфолиация, pH 2,9</span></div></li>
+          <li><div><a href="#p-collagen-tonic">Collagen Tonic</a> <span>— тонизация</span></div></li>
+          <li><div>Drainage Physio Gel <span>— микротоки по протоколу</span></div></li>
+          <li><div><a href="#p-micro-touch-mask">Micro Touch Mask</a> <span>— маска со спикулами</span></div></li>
+          <li><div><a href="#p-collagen-tonic">Collagen Tonic</a>, <a href="#p-o2-boto-fluid">O₂ Boto Fluid</a>, <a href="#p-intensive-eye-cream">Eye Cream</a> <span>— завершение</span></div></li>
+        </ol>
+      </div>
+      <div class="pr rv">
+        <div class="t"><span class="code">С Lift Intense</span><span class="min">80 мин</span></div>
+        <h3>Viso-Sculpt — активный лифтинг 40+</h3>
+        <p>Миофасциальный массаж и лифтинг-маска Viso Contour с завершающим уходом Reform Age.</p>
+        <ol>
+          <li><div><a href="#p-mild-cleanser">Mild Cleanser</a> <span>— очищение</span></div></li>
+          <li><div>Molecular Twin Exfoliant и Oil <span>— пилинг и массаж</span></div></li>
+          <li><div><a href="#p-collagen-tonic">Collagen Tonic</a> <span>— тонизация</span></div></li>
+          <li><div>Lift Intense Viso Contour <span>— лифтинг-маска</span></div></li>
+          <li><div><a href="#p-intensive-cream">Intensive Cream</a> и <a href="#p-intensive-eye-cream">Eye Cream</a> <span>— завершающий уход</span></div></li>
+        </ol>
+      </div>
+    </div>
+    <div class="pr-f rv">
+      <p>Полные протоколы с дозировками и временем каждого шага — для косметологов по запросу. Научим работать с линией на бесплатном обучении.</p>
+      <div class="btns">
+        <a class="btn btn-a" href="#getprotocol">Получить протоколы <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="https://jeuderm-russia.ru/study">Обучение</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section>
+  <div class="w">
+    <div class="cta rv">
+      <div>
+        <h2>Работаете с возрастной кожей?</h2>
+        <p>Пришлём прайс, протоколы и подберём средства Reform Age для вашего кабинета и домашнего ухода клиентов.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-a" href="#getprice_main">Запросить цены</a>
+        <a class="btn btn-o" href="#getconsult">Консультация</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ОКНО ТОВАРА ================= -->
+<dialog aria-labelledby="jdl-dt">
+  <div class="dlg">
+    <div class="dlg-ph"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw="></div>
+    <div class="dlg-bd">
+      <button type="button" class="x" aria-label="Закрыть"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      <span class="en"></span>
+      <h3 id="jdl-dt"></h3>
+      <div class="meta"></div>
+      <p class="desc"></p>
+      <dl></dl>
+      <div class="btns">
+        <a class="btn btn-a" href="#getprice_main">Запросить цену <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="#getprotocol">Протокол</a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('jdl'); if(!root) return;
+  var cards=[].slice.call(root.querySelectorAll('.card'));
+  var segs=[].slice.call(root.querySelectorAll('.seg button'));
+  var dlg=root.querySelector('dialog');
+
+  /* --- фильтр ПРО / дом: по ?care=, по адресу страницы, по клику --- */
+  function setCare(c){
+    segs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.care===c?'true':'false');});
+    cards.forEach(function(el){el.hidden=!(c==='all'||el.dataset.care.split(' ').indexOf(c)>-1);});
+  }
+  segs.forEach(function(b){b.addEventListener('click',function(){setCare(b.dataset.care);});});
+  var q=(location.search.match(/[?&]care=(pro|home)/)||[])[1];
+  var page=location.pathname.replace(/\/+$/,'').split('/').pop(); /* reformage-pro, reformage-homecare… */
+  setCare(q||(/home/.test(page)?'home':/pro/.test(page)?'pro':'all'));
+
+  /* --- окно товара --- */
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+  function fill(card){
+    var pd=card.querySelector('.pd'), img=card.querySelector('.ph img');
+    var ph=dlg.querySelector('.dlg-ph img'); ph.src=img.src; ph.alt=img.alt;
+    dlg.querySelector('.en').textContent=card.querySelector('.en').textContent;
+    dlg.querySelector('h3').textContent=card.querySelector('h3').textContent;
+    dlg.querySelector('.desc').textContent=card.querySelector('.bd p').textContent;
+    dlg.querySelector('.meta').innerHTML='<span>'+esc(pd.dataset.vol)+'</span><span>'+esc(pd.dataset.careT)+'</span>';
+    dlg.querySelector('dl').innerHTML=[].map.call(pd.querySelectorAll('[data-k]'),function(r){
+      return '<dt>'+esc(r.dataset.k)+'</dt><dd>'+esc(r.textContent)+'</dd>';}).join('');
+  }
+  function open(id,push){
+    var card=root.querySelector('.card[data-id="'+id+'"]'); if(!card) return;
+    fill(card);
+    if(!dlg.open){ if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open',''); }
+    dlg.scrollTop=0;
+    if(push && location.hash!=='#p-'+id) history.pushState({jdl:id},'','#p-'+id);
+  }
+  function close(){
+    if(dlg.open){ if(dlg.close) dlg.close(); else dlg.removeAttribute('open'); }
+  }
+  root.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#p-"]'); if(!a) return;
+    e.preventDefault(); open(a.getAttribute('href').slice(3),true);
+  });
+  dlg.querySelector('.x').addEventListener('click',function(){ if(/^#p-/.test(location.hash)) history.back(); else close(); });
+  dlg.addEventListener('click',function(e){ if(e.target===dlg) dlg.querySelector('.x').click(); });
+  dlg.addEventListener('cancel',function(e){ e.preventDefault(); dlg.querySelector('.x').click(); });
+  /* кнопки окна ведут на формы Tilda (#getprice_main…) — закрываем окно, чтобы форма была видна */
+  [].forEach.call(dlg.querySelectorAll('.btns a'),function(a){a.addEventListener('click',function(){
+    if(/^#p-/.test(location.hash)) history.replaceState(null,'',location.pathname+location.search);
+    close();
+  });});
+  function sync(){ var m=location.hash.match(/^#p-([\w-]+)/); if(m) open(m[1],false); else close(); }
+  window.addEventListener('popstate',sync);
+  window.addEventListener('hashchange',sync);
+  sync();
+
+  /* --- появление при прокрутке --- */
+  var items=root.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){[].forEach.call(items,function(el){el.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -30px 0px'});
+  [].forEach.call(items,function(el){io.observe(el);});
+})();
+</script>
