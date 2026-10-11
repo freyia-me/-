@@ -290,6 +290,125 @@
   #jd .final{padding-bottom:64px}
   #jd .offer b{font-size:60px}
 }
+
+/* ================================================================
+   PREMIUM EDITORIAL REFINEMENT • JeuDérm | visual enhancement
+   All existing text, routes, line colors, forms and JS are preserved.
+   ================================================================ */
+#jd{--soft:#faf9f7;--line:#ebe8e4;--text:#595959;--ink:#201f20;line-height:1.68}
+#jd .w{max-width:1320px;padding-left:clamp(20px,4vw,58px);padding-right:clamp(20px,4vw,58px)}
+#jd section{padding-top:clamp(76px,8vw,128px);padding-bottom:clamp(76px,8vw,128px)}
+#jd h1,#jd h2,#jd h3{letter-spacing:-.037em}
+#jd h1{font-size:clamp(40px,5.1vw,76px);line-height:1.105;max-width:680px}
+#jd h2{font-size:clamp(32px,3.75vw,53px)}
+#jd h3{font-size:clamp(19px,1.6vw,24px)}
+#jd .head{margin-bottom:60px;grid-template-columns:1fr minmax(250px,370px)}
+#jd .lab{font-size:10px;letter-spacing:.23em;color:#807578}
+#jd .lab:before{background:#b4a5a9}
+#jd .lab i{background:var(--acc)}
+#jd .btn{border-radius:3px;font-size:11px;letter-spacing:.1em;height:54px}
+#jd .btn-a{background:#29282a}
+#jd .btn-a:hover{background:var(--reform)}
+#jd .btn-o{border-color:#c8c1bf}
+#jd .link{letter-spacing:.08em}
+#jd .hero{padding-top:92px;padding-bottom:38px}
+#jd .hero-g{grid-template-columns:1.03fr .97fr;gap:clamp(40px,6vw,100px)}
+#jd .hero .lead{max-width:510px}
+#jd .hero-v{padding:40px 0 35px 34px}
+#jd .hero-v .tab{background:#e9e0df;border-radius:180px 180px 12px 12px;left:5px;bottom:0;width:43%;height:78%;opacity:.65}
+#jd .hero-img{border-radius:220px 220px 8px 8px;aspect-ratio:4/4.85;background:#f6f8fa}
+#jd .hero-img img{object-position:52% 50%}
+#jd .spec{right:-8px;top:auto;bottom:68px;width:min(290px,75%);border:1px solid rgba(255,255,255,.9);background:rgba(255,255,255,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:3px;box-shadow:0 12px 48px -32px rgba(0,0,0,.32)}
+#jd .spec .t span:last-child{border-radius:50%}
+#jd .spectrum{gap:10px;margin-top:88px}
+#jd .spectrum i{height:3px;border-radius:0}
+#jd .stat{padding-top:36px}
+#jd .stat+.stat{padding-left:42px}
+#jd .num{font-size:clamp(37px,4.1vw,58px)}
+/* three understated editorial tiles, with light abstract artwork */
+#jd .pillars{gap:18px}
+#jd .pill{position:relative;isolation:isolate;overflow:hidden;min-height:390px;padding:0 34px 35px;border:1px solid var(--line);background:#fff;border-radius:5px;box-shadow:0 16px 60px -54px #574f4d}
+#jd .pill .sw{height:36px;width:68px;font-size:14px;margin-top:26px;margin-left:-34px;border-radius:0 2px 2px 0;background:color-mix(in srgb,var(--c) 70%,white);z-index:1}
+#jd .pill h3{margin-top:89px;position:relative;z-index:1;max-width:270px}
+#jd .pill p,#jd .pill .link{position:relative;z-index:1}
+#jd .pill-art{position:absolute;right:-12px;top:-14px;width:205px;height:180px;border-radius:50%;opacity:.72;filter:saturate(.68);pointer-events:none}
+#jd .art-lab{background:radial-gradient(circle at 45% 45%,transparent 21%,rgba(123,167,188,.24) 22%,transparent 25%),radial-gradient(circle at 52% 46%,rgba(255,255,255,.2) 0 27%,rgba(196,218,227,.38) 28% 37%,transparent 39%),radial-gradient(circle at 62% 48%,rgba(155,197,211,.3),transparent 65%)}
+#jd .art-skin{background:radial-gradient(circle at 48% 42%,rgba(255,250,249,.9),rgba(229,191,186,.42) 34%,transparent 61%),radial-gradient(circle at 73% 30%,rgba(201,92,101,.26),transparent 42%)}
+#jd .art-cell{background:radial-gradient(circle at 45% 45%,transparent 27%,rgba(120,63,86,.22) 28% 29%,transparent 30%),radial-gradient(circle at 45% 45%,rgba(220,199,207,.34),transparent 64%)}
+/* a single powerful scientific photography story, instead of many boxes */
+#jd .editorial-science{padding:58px 0 110px}
+#jd .science-layout{display:grid;grid-template-columns:.88fr 1.12fr;align-items:center;column-gap:clamp(50px,9vw,150px)}
+#jd .science-copy{position:relative;padding:80px 0 70px}
+#jd .science-copy .science-index{display:block;margin:48px 0 22px;color:#b2a9a9;font-size:10px;letter-spacing:.24em}
+#jd .science-copy h2{max-width:450px;margin-bottom:28px}
+#jd .science-copy p{max-width:425px;margin-bottom:36px}
+#jd .science-photo{margin:0;position:relative}
+#jd .science-photo img{width:100%;height:510px;object-fit:cover;object-position:63% center;border-radius:2px;filter:saturate(.75)}
+#jd .science-photo figcaption{position:absolute;left:-20px;bottom:24px;display:flex;align-items:center;gap:22px;background:#fff;padding:14px 24px;color:#1c1c1c;font-family:var(--hf);font-size:18px}
+#jd .science-photo figcaption span{font:500 10px var(--tf);letter-spacing:.17em;color:#797274}
+/* product/consumer directions: large text, one art crop per card */
+#jd .dir{gap:24px}
+#jd .dcard{position:relative;isolation:isolate;min-height:480px;padding:46px 42px;background:#faf9f8!important;color:#504c4c!important;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+#jd .dcard.pro h3,#jd .dcard.pro .link{color:var(--ink)}
+#jd .dcard.pro .code{color:#9b868a}
+#jd .dcard h3{color:var(--ink);position:relative;z-index:1;font-size:32px;max-width:350px}
+#jd .dcard p{position:relative;z-index:1;max-width:340px}
+#jd .dcard .code,#jd .dcard ul,#jd .dcard>.link{position:relative;z-index:1}
+#jd .dcard-art{position:absolute;z-index:-1;right:-20%;bottom:-8%;width:73%;height:78%;border-radius:50%;background-size:cover;background-position:center;opacity:.19;filter:saturate(.6);mask-image:linear-gradient(90deg,transparent,#000 50%)}
+#jd .pro-art{background-image:url('https://static.tildacdn.com/tild6330-6136-4433-a134-336463336138/Copilot_20260526_132.png')}
+#jd .home-art{background-image:url('https://static.tildacdn.com/tild3165-3032-4134-b535-643638636430/optimized_skincare_i.jpg')}
+#jd .dcard li a,#jd .dcard.pro li a{border:1px solid #e5e0dc;background:rgba(255,255,255,.86);color:#454041;border-radius:2px}
+#jd .dcard li a:hover{background:#29282a;color:#fff}
+/* line catalogue turns into art-direction layout, preserving 7 colors */
+#jd .cat{gap:0;border-top:1px solid var(--line)}
+#jd .ln{grid-template-columns:46px 1.08fr 1.4fr 66px 40px;gap:clamp(14px,2.6vw,35px);padding:27px 8px;border-bottom:1px solid var(--line);transition:background .35s,padding .35s}
+#jd .ln:hover{background:#faf8f7;padding-left:20px;padding-right:20px}
+#jd .ln .sw{height:43px;width:4px;border-radius:0;box-shadow:0 0 0 10px color-mix(in srgb,var(--c) 9%,white)}
+#jd .ln .en{font-family:var(--hf);font-size:clamp(22px,2.2vw,29px);font-weight:400;letter-spacing:-.035em;text-transform:none}
+#jd .ln .ru{letter-spacing:.1em}
+#jd .ln .rule{font-family:var(--hf);font-size:16px}
+#jd .ln .rule:after{display:none}
+#jd .ln .arr,#jd .ex .arr{border-radius:50%;background:#fff;border:1px solid var(--line)}
+#jd .ex{background:#fff;border:1px solid var(--line);border-radius:4px}
+/* understate the big blocks */
+#jd .why{background:#f9f8f7}
+#jd .row{border:1px solid var(--line);border-radius:3px;min-height:220px}
+#jd .offer b{color:#ac5965}
+#jd .wc{background:#fff;border:1px solid var(--line);border-radius:4px}
+#jd .wc .band{height:105px;position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(122deg,color-mix(in srgb,var(--c) 48%,white),color-mix(in srgb,var(--c) 15%,white))}
+#jd .wc .band:before{content:'';position:absolute;width:155px;height:155px;border:1px solid rgba(255,255,255,.75);box-shadow:0 0 0 15px rgba(255,255,255,.09),inset 0 0 35px rgba(255,255,255,.45);border-radius:50%;right:-35px;top:-60px;z-index:-1}
+#jd .quote{background:#4b343b;border-radius:4px}
+#jd .study{background:#f9f8f7;border-radius:4px}
+#jd details{background:#faf9f8;border-radius:3px}
+#jd .partner{border-radius:3px;border:1px solid var(--line);background:#fff}
+#jd .cta{background:#6c3c47;border-radius:4px}
+@media(max-width:960px){
+ #jd .science-layout{grid-template-columns:1fr;gap:0}
+ #jd .science-copy{padding:15px 0 42px}
+ #jd .science-photo img{height:420px}
+ #jd .ln{grid-template-columns:24px 1fr 1.2fr 40px}
+ #jd .ln .rule{display:none}
+ #jd .hero{padding-top:50px}
+}
+@media(max-width:640px){
+ #jd .w{padding-left:20px;padding-right:20px}
+ #jd section{padding-top:72px;padding-bottom:72px}
+ #jd .head{grid-template-columns:1fr;margin-bottom:38px}
+ #jd .hero-v{padding-left:15px}
+ #jd .hero-img{border-radius:120px 120px 4px 4px;aspect-ratio:4/4.5}
+ #jd .spec{right:8px;bottom:5px;width:90%;padding:15px}
+ #jd .spectrum{margin-top:52px}
+ #jd .pill{min-height:340px}
+ #jd .science-photo img{height:320px}
+ #jd .science-photo figcaption{left:10px;bottom:10px}
+ #jd .dcard{min-height:450px;padding:34px 24px}
+ #jd .ln{grid-template-columns:5px 1fr 40px;gap:10px 18px;padding:24px 4px}
+ #jd .ln .sw{grid-row:1/3;min-height:50px;height:100%;box-shadow:none}
+ #jd .ln p{grid-column:2;grid-row:2}
+ #jd .ln .arr{grid-column:3;grid-row:1/3}
+ #jd .pill .sw{min-height:0;height:36px}
+}
+
 </style>
 
 <div id="jd">
@@ -345,19 +464,19 @@
     </div>
     <div class="pillars">
       <div class="pill rv" style="--c:var(--adapt)">
-        <span class="sw dots">01</span>
+        <span class="sw dots">01</span><span class="pill-art art-lab" aria-hidden="true"></span>
         <h3>Клинически протестированные формулы</h3>
         <p>Эффективность подтверждена исследованиями в Дерматологическом центре Национального университета Чунгнам и в Университете Ханнам.</p>
         <a class="link" href="#getprice_main">Получить каталог</a>
       </div>
       <div class="pill rv d1" style="--c:var(--reform)">
-        <span class="sw dots">02</span>
+        <span class="sw dots">02</span><span class="pill-art art-skin" aria-hidden="true"></span>
         <h3>Решение для каждого типа кожи</h3>
         <p>Чувствительная, возрастная, склонная к акне — у косметолога под рукой полный набор средств для процедуры и домашнего ухода между визитами.</p>
         <a class="link" href="#getprotocol">Получить протоколы</a>
       </div>
       <div class="pill rv d2" style="--c:var(--lift)">
-        <span class="sw dots">03</span>
+        <span class="sw dots">03</span><span class="pill-art art-cell" aria-hidden="true"></span>
         <h3>Проверено на практике</h3>
         <p>Более 50 000 процедур в клиниках и косметологических центрах более чем 20 стран — и стабильно высокие отзывы специалистов и пациентов.</p>
         <a class="link" href="#getconsult">Стать партнёром</a>
@@ -366,11 +485,28 @@
   </div>
 </section>
 
+<!-- ================= EDITORIAL SCIENCE ================= -->
+<section class="editorial-science">
+  <div class="w science-layout">
+    <div class="science-copy rv">
+      <span class="lab"><i></i>Эстетика и биотехнологии</span>
+      <span class="science-index">JEUDÉRM / SCIENCE 01</span>
+      <h2>Красота начинается <em>с понимания кожи.</em></h2>
+      <p>Продуманные формулы, комплексный профессиональный подход и ежедневная забота о коже — единая философия JeuDérm.</p>
+      <a class="link" href="https://jeuderm-russia.ru/pro-jeuderm">О профессиональном уходе</a>
+    </div>
+    <figure class="science-photo rv d1">
+      <img src="https://static.tildacdn.com/tild3165-3032-4134-b535-643638636430/optimized_skincare_i.jpg" alt="Визуализация пептидной косметологии и кожи — изображение с сайта JeuDérm" loading="lazy">
+      <figcaption>01 <span>PEPTIDE SCIENCE / SKINCARE</span></figcaption>
+    </figure>
+  </div>
+</section>
+
 <!-- ================= ДВА НАПРАВЛЕНИЯ ================= -->
 <section style="padding-top:0">
   <div class="w">
     <div class="dir">
-      <div class="dcard pro dots rv">
+      <div class="dcard pro rv"><div class="dcard-art pro-art" aria-hidden="true"></div>
         <span class="code">Серия · Professional</span>
         <h3>Профессиональный уход</h3>
         <p>Средства для процедур с пептидами и пробиотиками: восстанавливают, увлажняют и омолаживают кожу, усиливают результат аппаратных и ручных методик.</p>
@@ -383,7 +519,7 @@
         </ul>
         <a class="link" href="https://jeuderm-russia.ru/pro-jeuderm">Смотреть линейки</a>
       </div>
-      <div class="dcard home rv d1">
+      <div class="dcard home rv d1"><div class="dcard-art home-art" aria-hidden="true"></div>
         <span class="code">Серия · Homecare</span>
         <h3>Домашний уход</h3>
         <p>Профессиональные формулы в формате ежедневного ухода: очищение, увлажнение и антивозрастной эффект, которые продлевают результат процедуры дома.</p>
@@ -582,7 +718,7 @@
 (function(){
   var root=document.getElementById('jd'); if(!root) return;
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
+  function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
   function count(el){
     var to=+el.getAttribute('data-count'); if(reduce){el.textContent=fmt(to);return;}
     var t0=null,d=1600;

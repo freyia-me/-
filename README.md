@@ -9,5 +9,6 @@
 
 | Файл | Где на странице | Сейчас |
 |---|---|---|
-| `hero.webp` | Первый экран, фото справа (формат 4:5) | static.tildacdn.com · Copilot_20260526_132.png |
+| `hero.webp` | Первый экран, фото справа (формат 4:5, арка сверху) + фон карточки «Профессиональный уход» | static.tildacdn.com · Copilot_20260526_132.png |
+| `science.webp` | Блок «Красота начинается с понимания кожи» (широкое фото) + фон карточки «Домашний уход» | static.tildacdn.com · optimized_skincare_i.jpg |
 | `partner-drk.webp` | Блок «Наши партнёры», логотип ДРК (квадрат) | static.tildacdn.com · 1.jpg |
