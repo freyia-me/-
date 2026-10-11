@@ -67,12 +67,12 @@ Adaptive Skin, «Молекулярное обновление» и Lift Intense
 
 | Название на сайте | Препарат | Фото в репозитории |
 |---|---|---|
-| Омолаживающая нежная пенка | Reform Age (пенка, туба) | — нет |
-| Тоник для лица с гиалуроновой кислотой | Reform Age Collagen Tonic, 250 мл | — нет отдельного (есть на баннере «Профессиональный уход») |
+| Омолаживающая нежная пенка | Reform Age Mild Cleanser, туба 150 мл | `reform-age-mild-cleanser.webp` |
+| Тоник для лица с гиалуроновой кислотой | Reform Age Collagen Tonic, 250 мл | `reform-age-collagen-tonic.webp` |
 | Омолаживающая маска со спикулами | Reform Age (маска) | — нет |
-| Омолаживающий интенсивный крем | Reform Age Intensive Cream, 50 мл | — нет отдельного (есть на баннере «Домашний уход») |
-| Омолаживающий крем для кожи вокруг глаз | Reform Age Intensive Eye Cream, 30 мл | — нет отдельного (есть на баннере «Домашний уход») |
-| Кислородный флюид с эффектом расслабления мимических морщин | Reform Age O2 Boto Fluid (на сайте высокий флакон-airless — проф. объём) | — нет отдельного; `reform-age-o2-boto-fluid.webp` — домашний 50 мл |
+| Омолаживающий интенсивный крем | Reform Age Intensive Cream, 50 мл | `reform-age-intensive-cream.webp` |
+| Омолаживающий крем для кожи вокруг глаз | Reform Age Intensive Eye Cream, 30 мл | `reform-age-intensive-eye-cream.webp` |
+| Кислородный флюид с эффектом расслабления мимических морщин | Reform Age O2 Boto Fluid, airless 110 мл | `reform-age-o2-boto-fluid-110ml.webp` |
 
 ### Acno · ПРО (/acnopro-jeuderm)
 
@@ -106,11 +106,11 @@ Adaptive Skin, «Молекулярное обновление» и Lift Intense
 
 | Название на сайте | Препарат | Фото | Есть в ПРО |
 |---|---|---|---|
-| Омолаживающая нежная пенка | Reform Age Mild Cleanser (туба) | — нет | да |
-| Омолаживающий коллагеновый тоник | Reform Age Collagen Tonic | — нет отдельного (баннер) | да (в ПРО — «тоник с гиалуроновой кислотой») |
-| Омолаживающий интенсивный крем | Reform Age Intensive Cream, 50 мл | — нет отдельного (баннер) | да |
-| Омолаживающий крем для кожи вокруг глаз | Reform Age Intensive Eye Cream, 30 мл | — нет отдельного (баннер) | да |
-| Кислородный омолаживающий флюид | Reform Age O2 Boto Fluid, 50 мл | `reform-age-o2-boto-fluid.webp` | да, в ПРО — больший флакон |
+| Омолаживающая нежная пенка | Reform Age Mild Cleanser, туба 150 мл | `reform-age-mild-cleanser.webp` | да |
+| Омолаживающий коллагеновый тоник | Reform Age Collagen Tonic, 250 мл | `reform-age-collagen-tonic.webp` | да (в ПРО — «тоник с гиалуроновой кислотой») |
+| Омолаживающий интенсивный крем | Reform Age Intensive Cream, 50 мл | `reform-age-intensive-cream.webp` | да |
+| Омолаживающий крем для кожи вокруг глаз | Reform Age Intensive Eye Cream, 30 мл | `reform-age-intensive-eye-cream.webp` | да |
+| Кислородный омолаживающий флюид | Reform Age O2 Boto Fluid, 50 мл | `reform-age-o2-boto-fluid-50ml.webp` | да, в ПРО — airless 110 мл |
 
 Только в ПРО: омолаживающая маска со спикулами.
 
@@ -149,5 +149,5 @@ Adaptive Skin, «Молекулярное обновление» и Lift Intense
 
 ## Нет отдельных фото (нужны для страниц)
 
-- Reform Age: пенка, коллагеновый тоник, интенсивный крем, крем для век, маска со спикулами, флюид в проф. объёме
+- Reform Age: маска со спикулами
 - Hair Genesis Hair Growth Stimulator
