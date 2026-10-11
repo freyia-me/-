@@ -124,7 +124,7 @@ Adaptive Skin, «Молекулярное обновление» и Lift Intense
 |---|---|---|---|
 | Очищающий гель для жирной и проблемной кожи | Acno Mild Cleanser | `acno-mild-cleanser.webp` | да |
 | Мульти кислотные ватные диски | Acno Multi-Acid Pad | `acno-multi-acid-pad.webp` | да |
-| Противовоспалительный гель | Acno Active Gel, туба 120 мл | `acno-active-gel-120ml.webp` | да, в ПРО — флакон 150 мл |
+| Противовоспалительный гель | Acno Active Gel, туба 100 мл | `acno-active-gel-120ml.webp` | да, в ПРО — флакон 150 мл |
 | Противовоспалительная эмульсия | Acno Active Emulsion, туба 100 мл | `acno-active-emulsion-100ml.webp` | да, в ПРО — флакон 150 мл |
 
 Только в ПРО: очищающая маска с глиной.
@@ -169,7 +169,7 @@ Ato Care `#76bc21`, Lift Intense `#7f2346`, PRO `#65666b`, Hair Genesis `#ae57b9
    | Reform Age Micro Touch Mask | 250 мл | 285 мл |
    | Acno Mild Cleanser | 250 мл | 264 мл |
    | Acno Clay Mask | 250 мл | 204 мл |
-   | Acno Active Gel (дом.) | 100 мл | туба 120 мл |
+   | Acno Active Gel (дом.) | 100 мл | туба 120 мл → **100 мл** (по каталогу) |
    | Ato Care Moist Emulsion (дом.) | 100 мл | туба 120 мл → **100 мл** (решено) |
    | Lift Intense Viso Contour | 110 мл | 130 мл |
    | Zymo Complex | 3 × 10 мл | флаконы 5 мл |
