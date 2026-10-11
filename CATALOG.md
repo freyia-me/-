@@ -160,9 +160,8 @@ Ato Care `#76bc21`, Lift Intense `#7f2346`, PRO `#65666b`, Hair Genesis `#ae57b9
 
 ### Расхождения — уточнить
 
-1. **МЕЗО — PDRN** (стерильный коктейль, 5 ампул × 5 мл): есть в PDF, нет на сайте и в нашей схеме. Фото нет.
-2. **Состав серий.** В PDF Molecular Twin Exfoliant и Molecular Twin Oil — в Renew, Adaptive Skin Detox Mask и Lift Intense — отдельные разделы,
-   а в PRO только O2 Therapy Active Gel, Drainage Physio Gel и Repair Post-Procedure Mask. На сайте все семь — на странице /pro.
+1. ~~МЕЗО — PDRN~~ — на сайт не ставим (решено).
+2. **Состав серий** (решено): Molecular Twin (Exfoliant, Oil), Adaptive Skin Detox Mask и Lift Intense Viso Contour показываем в серии ПРО, как на сайте.
 3. **Объёмы: PDF ↔ фото упаковки**
    | Препарат | PDF | На фото |
    |---|---|---|
