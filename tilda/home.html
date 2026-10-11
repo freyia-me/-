@@ -1,0 +1,605 @@
+<!-- ЖеДерм · главная · блок T123 «HTML-код». Меню, футер и поп-апы остаются в Tilda. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+#jd{
+  /* ===== Палитра каталога ЖеДерм ===== */
+  --acno:#ab0a3d;     /* Acno Active */
+  --ato:#76bc21;      /* Ato Care */
+  --adapt:#2a7de1;    /* Adaptive Skin */
+  --mol:#623a2c;      /* Молекулярное обновление */
+  --renew:#000000;    /* Renew */
+  --reform:#cd555b;   /* Reform Age — главный акцент */
+  --lift:#7f2346;     /* Lift Intense */
+  --gray:#65666b;
+  /* интерфейс */
+  --acc:var(--reform);
+  --acc-h:var(--acno);
+  --ink:#000000;
+  --text:#65666b;
+  --soft:#f6f3f2;
+  --line:#e8e3e1;
+  --hf:'Tenor Sans',Georgia,serif;
+  --tf:'Montserrat',Arial,sans-serif;
+  font-family:var(--tf);color:var(--text);background:#fff;
+  -webkit-font-smoothing:antialiased;line-height:1.65;font-size:17px;overflow:hidden
+}
+#jd *{box-sizing:border-box;margin:0;padding:0}
+#jd a{color:inherit;text-decoration:none}
+#jd img{display:block;max-width:100%}
+#jd .w{max-width:1240px;margin:0 auto;padding:0 32px}
+#jd section{padding:110px 0}
+#jd h1,#jd h2,#jd h3{font-family:var(--hf);color:var(--ink);font-weight:400;line-height:1.15}
+#jd h1{font-size:clamp(34px,4.3vw,58px)}
+#jd h2{font-size:clamp(28px,3.1vw,42px)}
+#jd h3{font-size:21px;line-height:1.3}
+#jd h1 em,#jd h2 em{font-style:normal;color:var(--acc)}
+#jd .lead{font-size:18px;max-width:600px}
+
+/* метка в стиле каталога: линия с квадратом */
+#jd .lab{display:inline-flex;align-items:center;gap:12px;font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--acc)}
+#jd .lab:before{content:"";width:28px;height:1px;background:var(--gray);box-shadow:none}
+#jd .lab i{display:inline-block;width:6px;height:6px;background:var(--gray);margin-left:-12px;margin-right:2px}
+#jd .code{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+
+#jd .head{display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:end;margin-bottom:52px}
+#jd .head h2{margin-top:20px}
+#jd .head .lead{font-size:16.5px}
+
+/* точечный узор как в каталоге */
+#jd .dots{position:relative;overflow:hidden}
+#jd .dots:after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.9) 1.3px,transparent 1.8px);background-size:10px 10px;-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.08) 0%,#000 65%,transparent 90%);mask-image:linear-gradient(90deg,rgba(0,0,0,.08) 0%,#000 65%,transparent 90%)}
+#jd .dots>*{position:relative;z-index:1}
+
+/* кнопки */
+#jd .btns{display:flex;gap:12px;flex-wrap:wrap}
+#jd .btn{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;height:56px;padding:0 26px;border-radius:12px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:background .3s,color .3s,border-color .3s}
+#jd .btn-a{background:var(--acc);color:#fff}
+#jd .btn-a:hover{background:var(--acc-h)}
+#jd .btn-o{border:1px solid var(--ink);color:var(--ink)}
+#jd .btn-o:hover{background:var(--ink);color:#fff}
+#jd .btn-w{background:#fff;color:var(--ink)}
+#jd .btn-w:hover{background:var(--ink);color:#fff}
+#jd .btn-ow{border:1px solid rgba(255,255,255,.6);color:#fff}
+#jd .btn-ow:hover{background:#fff;color:var(--ink)}
+#jd .btn svg{width:16px;height:16px;transition:transform .3s}
+#jd .btn:hover svg{transform:translateX(4px)}
+#jd .link{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);transition:color .3s}
+#jd .link:after{content:"→";color:var(--acc);transition:transform .3s}
+#jd .link:hover{color:var(--acc)}
+#jd .link:hover:after{transform:translateX(4px)}
+
+/* ===== HERO ===== */
+#jd .hero{padding:64px 0 0}
+#jd .hero-g{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+#jd .hero h1{margin:26px 0 24px}
+#jd .hero .lead{margin-bottom:40px}
+#jd .hero-v{position:relative;padding:0 0 40px 40px}
+#jd .hero-v .tab{position:absolute;left:0;bottom:0;width:62%;height:58%;background:var(--acc);border-radius:0 28px 28px 28px}
+#jd .hero-img{position:relative;z-index:1;border-radius:24px;overflow:hidden;background:var(--soft);aspect-ratio:4/5}
+#jd .hero-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.05);transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}
+#jd .hero-v.in .hero-img img{transform:scale(1)}
+#jd .spec{position:absolute;z-index:2;right:-24px;top:40px;width:290px;background:#fff;border-radius:16px;padding:20px 22px;font-size:13px;box-shadow:0 24px 60px -24px rgba(0,0,0,.28)}
+#jd .spec .t{display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;margin-bottom:8px;border-bottom:1px solid var(--line)}
+#jd .spec .t span:first-child{font-family:var(--hf);font-size:17px;color:var(--ink)}
+#jd .spec .t span:last-child{width:9px;height:9px;background:var(--acc)}
+#jd .spec dl{display:grid;grid-template-columns:auto 1fr;gap:8px 14px}
+#jd .spec dt{color:var(--gray);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding-top:2px}
+#jd .spec dd{color:var(--ink);font-weight:500;text-align:right}
+
+#jd .spectrum{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:84px}
+#jd .spectrum i{height:6px;border-radius:0 6px 6px 0;transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+#jd .spectrum.in i{transform:none}
+#jd .stats{display:grid;grid-template-columns:repeat(3,1fr)}
+#jd .stat{padding:30px 28px 10px 0}
+#jd .stat+.stat{padding-left:28px;border-left:1px solid var(--line)}
+#jd .num{font-family:var(--hf);font-size:clamp(40px,4.4vw,60px);color:var(--ink);line-height:1}
+#jd .num sup{font-size:.42em;color:var(--acc);vertical-align:top;margin-left:3px}
+#jd .stat p{font-size:14px;margin-top:12px;max-width:250px;line-height:1.5}
+
+/* ===== 3 опоры ===== */
+#jd .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+#jd .pill{--c:var(--acc);background:var(--soft);border-radius:24px;padding:0 32px 32px;display:flex;flex-direction:column;min-height:380px;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+#jd .pill:hover{transform:translateY(-4px)}
+#jd .pill .sw{width:120px;height:56px;margin-left:-32px;margin-top:32px;background:var(--c);border-radius:0 14px 14px 0;display:flex;align-items:center;justify-content:flex-end;padding-right:16px;color:#fff;font-family:var(--hf);font-size:18px}
+#jd .pill h3{margin:32px 0 14px}
+#jd .pill p{font-size:15px;flex:1}
+#jd .pill .link{margin-top:28px;align-self:flex-start}
+
+/* ===== Два направления ===== */
+#jd .dir{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+#jd .dcard{border-radius:24px;padding:44px 40px;display:flex;flex-direction:column;min-height:420px}
+#jd .dcard.pro{background:var(--ink);color:rgba(255,255,255,.75)}
+#jd .dcard.home{background:var(--soft)}
+#jd .dcard.pro h3,#jd .dcard.pro .link{color:#fff}
+#jd .dcard.pro .code{color:rgba(255,255,255,.55)}
+#jd .dcard h3{font-size:clamp(26px,2.5vw,34px);margin:18px 0 16px}
+#jd .dcard p{font-size:15.5px;max-width:440px;flex:1}
+#jd .dcard ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 32px}
+#jd .dcard li a{display:block;font-size:12.5px;font-weight:500;padding:9px 14px;border-radius:10px;background:#fff;color:var(--ink);transition:all .3s}
+#jd .dcard.pro li a{background:rgba(255,255,255,.1);color:#fff}
+#jd .dcard li a:hover{background:var(--acc);color:#fff}
+#jd .dcard li a[style]:before{content:"";display:inline-block;width:8px;height:8px;background:var(--c);margin-right:8px;vertical-align:0}
+#jd .dcard li a[style]:hover:before{background:#fff}
+#jd .dcard.pro.dots:after{-webkit-mask-image:radial-gradient(circle at 100% 0%,#000 0%,transparent 55%);mask-image:radial-gradient(circle at 100% 0%,#000 0%,transparent 55%);opacity:.55}
+
+/* ===== Линейки — цветовая система каталога ===== */
+#jd .cat{display:grid;gap:12px}
+#jd .ln{--c:var(--gray);display:grid;grid-template-columns:150px 1fr 1.25fr 110px 44px;gap:32px;align-items:center;padding:12px 0}
+#jd .sw{position:relative;height:76px;background:var(--c);border-radius:0 16px 16px 0;transform-origin:left;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+#jd .ln:hover .sw{transform:scaleX(1.12)}
+#jd .ln .en{display:block;font-size:21px;font-weight:500;text-transform:uppercase;color:var(--c);line-height:1.2}
+#jd .ln .ru{display:block;margin-top:6px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+#jd .ln p{font-size:15px;color:var(--ink);line-height:1.55}
+#jd .ln .rule{position:relative;display:flex;align-items:center;gap:14px;font-family:var(--tf);font-size:26px;color:var(--gray);font-weight:400}
+#jd .ln .rule:before{content:"";flex:1;height:1px;background:var(--gray)}
+#jd .ln .rule:after{content:"";position:absolute;right:42px;top:50%;width:6px;height:6px;margin-top:-4px;background:var(--gray)}
+#jd .ln .arr{width:44px;height:44px;border-radius:12px;background:var(--soft);display:grid;place-items:center;color:var(--c);transition:all .35s}
+#jd .ln:hover .arr{background:var(--c);color:#fff}
+#jd .arr svg{width:15px;height:15px}
+#jd .extra{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
+#jd .ex{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 30px;background:var(--soft);border-radius:20px;transition:transform .4s}
+#jd .ex:hover{transform:translateY(-3px)}
+#jd .ex h3{font-size:19px;margin:6px 0 4px}
+#jd .ex p{font-size:14px}
+#jd .ex .arr{flex:none;width:44px;height:44px;border-radius:12px;background:#fff;display:grid;place-items:center;color:var(--acc)}
+
+/* ===== Почему с нами ===== */
+#jd .why{background:var(--soft)}
+#jd .why-g{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
+#jd .why-g h2{margin:20px 0 22px}
+#jd .offer{display:flex;align-items:center;gap:22px;margin:40px 0 32px}
+#jd .offer b{font-family:var(--hf);font-weight:400;font-size:72px;color:var(--acc);line-height:1}
+#jd .offer span{font-size:14px;line-height:1.5;color:var(--ink)}
+#jd .rows{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#jd .row{--c:var(--acc);background:#fff;border-radius:20px;padding:30px 28px;min-height:230px;display:flex;flex-direction:column}
+#jd .row .k{display:flex;align-items:center;gap:10px}
+#jd .row .k:before{content:"";width:10px;height:10px;background:var(--c)}
+#jd .row h3{margin:26px 0 10px;font-size:19px}
+#jd .row p{font-size:14.5px}
+
+/* ===== Вебинары ===== */
+#jd .web{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+#jd .wc{--c:var(--acc);display:flex;flex-direction:column;border-radius:22px;background:var(--soft);overflow:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+#jd .wc:hover{transform:translateY(-4px)}
+#jd .wc .band{height:120px;background:var(--c);display:flex;justify-content:space-between;align-items:flex-end;padding:18px 20px;color:#fff}
+#jd .wc .band .code{color:rgba(255,255,255,.85)}
+#jd .play{width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--c);transition:transform .35s}
+#jd .wc:hover .play{transform:scale(1.1)}
+#jd .play svg{width:12px;height:12px;margin-left:2px}
+#jd .wc .bd{padding:24px 22px 26px;display:flex;flex-direction:column;flex:1}
+#jd .wc h3{font-size:19px;margin-bottom:12px}
+#jd .wc p{font-size:14px;flex:1;line-height:1.55}
+#jd .wc .link{margin-top:22px}
+#jd .web-f{margin-top:24px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+#jd .web-f p{font-size:15px;max-width:660px}
+
+/* ===== Эксперт и обучение ===== */
+#jd .exp{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
+#jd .quote{background:var(--lift);color:#fff;border-radius:24px;padding:52px 48px;display:flex;flex-direction:column;justify-content:space-between;min-height:460px}
+#jd .quote.dots:after{-webkit-mask-image:radial-gradient(circle at 100% 100%,#000 0%,transparent 60%);mask-image:radial-gradient(circle at 100% 100%,#000 0%,transparent 60%);opacity:.5}
+#jd .quote .code{color:rgba(255,255,255,.65)}
+#jd .quote blockquote{font-family:var(--hf);font-size:clamp(20px,1.9vw,25px);line-height:1.5;margin:30px 0 40px}
+#jd .quote .who{padding-top:24px;border-top:1px solid rgba(255,255,255,.25)}
+#jd .quote .who b{display:block;font-weight:600;font-size:15px}
+#jd .quote .who span{font-size:13px;color:rgba(255,255,255,.7)}
+#jd .study{background:var(--soft);border-radius:24px;padding:44px 40px;display:flex;flex-direction:column}
+#jd .study h3{font-size:clamp(24px,2.2vw,30px);margin:20px 0 22px}
+#jd .study ol{list-style:none;counter-reset:s;margin:0 0 34px;flex:1}
+#jd .study li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink)}
+#jd .study li:before{content:counter(s,decimal-leading-zero);color:var(--acc);font-weight:600;font-size:13px;padding-top:2px}
+
+/* ===== FAQ ===== */
+#jd .faq-g{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
+#jd .faq-g h2{margin-top:20px}
+#jd details{background:var(--soft);border-radius:18px;margin-bottom:10px;transition:background .3s}
+#jd details[open]{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+#jd summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 34px;align-items:center;gap:16px;padding:24px 26px;font-family:var(--hf);font-size:19px;color:var(--ink)}
+#jd summary::-webkit-details-marker{display:none}
+#jd summary i{position:relative;width:34px;height:34px;border-radius:10px;background:#fff;transition:transform .35s,background .3s}
+#jd details[open] summary i{background:var(--acc);transform:rotate(180deg)}
+#jd summary i:before,#jd summary i:after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%)}
+#jd summary i:after{transform:translate(-50%,-50%) rotate(90deg);transition:opacity .3s}
+#jd details[open] summary i:before{background:#fff}
+#jd details[open] summary i:after{opacity:0}
+#jd details .a{padding:0 76px 26px 26px;font-size:15.5px}
+
+/* ===== Партнёр ===== */
+#jd .partner{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;padding:32px 36px;background:var(--soft);border-radius:24px}
+#jd .partner img{width:112px;height:112px;object-fit:contain;border-radius:16px;background:#fff}
+#jd .partner h3{margin:10px 0 8px}
+#jd .partner p{font-size:14.5px;max-width:640px}
+
+/* ===== Финальный CTA ===== */
+#jd .final{padding:0 0 110px}
+#jd .cta{background:var(--acc);color:rgba(255,255,255,.9);border-radius:28px;padding:84px 64px}
+#jd .cta.dots:after{-webkit-mask-image:linear-gradient(90deg,transparent 35%,#000 85%,transparent 100%);mask-image:linear-gradient(90deg,transparent 35%,#000 85%,transparent 100%);opacity:.7}
+#jd .cta .lab{color:#fff}
+#jd .cta .lab:before,#jd .cta .lab i{background:#fff}
+#jd .cta h2{color:#fff;max-width:680px;margin:20px 0 18px}
+#jd .cta h2 em{color:#fff;opacity:.75}
+#jd .cta p{font-size:16.5px;max-width:560px;margin-bottom:36px}
+
+/* ===== Анимации ===== */
+#jd .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+#jd .rv.in{opacity:1;transform:none}
+#jd .spectrum.rv{opacity:1;transform:none}
+#jd .d1{transition-delay:.08s}#jd .d2{transition-delay:.16s}#jd .d3{transition-delay:.24s}
+#jd .hero-v .tab{transform:scaleX(.6);transform-origin:left;transition:transform 1.4s .2s cubic-bezier(.2,.7,.2,1)}
+#jd .hero-v.in .tab{transform:none}
+@media (prefers-reduced-motion:reduce){
+  #jd .rv,#jd .hero-v .tab,#jd .spectrum i{opacity:1;transform:none;transition:none}
+  #jd .hero-img img{transform:none;transition:none}
+}
+
+/* ===== Адаптив ===== */
+@media (max-width:1100px){
+  #jd .web{grid-template-columns:repeat(2,1fr)}
+  #jd .ln{grid-template-columns:110px 1fr 1.2fr 44px;gap:24px}
+  #jd .ln .rule{display:none}
+}
+@media (max-width:960px){
+  #jd section{padding:80px 0}
+  #jd .head{grid-template-columns:1fr;gap:20px}
+  #jd .hero-g,#jd .why-g,#jd .faq-g,#jd .exp,#jd .dir{grid-template-columns:1fr;gap:40px}
+  #jd .exp,#jd .dir{gap:16px}
+  #jd .hero-v{max-width:540px}
+  #jd .hero-img{aspect-ratio:1/1}
+  #jd .spec{right:16px}
+  #jd .pillars{grid-template-columns:1fr;gap:14px}
+  #jd .pill{min-height:0}
+  #jd .partner{grid-template-columns:auto 1fr}
+  #jd .partner .link{grid-column:1/-1}
+}
+@media (max-width:640px){
+  #jd{font-size:16px}
+  #jd .w{padding:0 18px}
+  #jd section{padding:64px 0}
+  #jd .hero{padding-top:32px}
+  #jd .lab{display:block;line-height:1.8}
+  #jd .lab:before{display:inline-block;vertical-align:middle;margin-right:12px}
+  #jd .lab i{vertical-align:middle;margin-left:-14px;margin-right:12px}
+  #jd .lead{font-size:16.5px}
+  #jd .head{margin-bottom:34px}
+  #jd .btns{flex-direction:column}
+  #jd .btn{width:100%}
+  #jd .hero-v{padding:0 0 24px 18px}
+  #jd .spec{position:relative;right:auto;top:auto;width:auto;margin:-70px 12px 0 12px}
+  #jd .spectrum{margin-top:56px;gap:4px}
+  #jd .stats{grid-template-columns:1fr}
+  #jd .stat,#jd .stat+.stat{padding:22px 0;border-left:0;border-bottom:1px solid var(--line)}
+  #jd .ln{grid-template-columns:56px 1fr 40px;gap:6px 16px;padding:8px 0}
+  #jd .sw{grid-row:1/3;height:100%;min-height:72px;border-radius:0 12px 12px 0}
+  #jd .ln .en{font-size:17px}
+  #jd .ln p{grid-column:2/3;grid-row:2;font-size:14px}
+  #jd .ln .arr{grid-row:1/3;grid-column:3;width:40px;height:40px}
+  #jd .extra,#jd .rows,#jd .web{grid-template-columns:1fr}
+  #jd .row{min-height:0}
+  #jd .wc .band{height:96px}
+  #jd .dcard,#jd .study{padding:34px 24px}
+  #jd .quote{padding:38px 26px;min-height:0}
+  #jd .pill{padding:0 24px 28px}
+  #jd .pill .sw{margin-left:-24px}
+  #jd summary{font-size:17px;padding:20px 20px}
+  #jd details .a{padding:0 20px 22px}
+  #jd .partner{grid-template-columns:1fr;padding:26px 22px;gap:18px}
+  #jd .partner img{width:88px;height:88px}
+  #jd .cta{padding:48px 24px}
+  #jd .final{padding-bottom:64px}
+  #jd .offer b{font-size:60px}
+}
+</style>
+
+<div id="jd">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="w">
+    <div class="hero-g">
+      <div>
+        <span class="lab rv"><i></i>Профессиональная космецевтика · Южная Корея</span>
+        <h1 class="rv d1">Пептидные формулы ЖеДерм для&nbsp;косметологов и&nbsp;<em>клиник</em></h1>
+        <p class="lead rv d2">Лабораторная космецевтика на основе биотехнологий и дерматологических исследований. Профессиональные протоколы для кабинета и домашний уход — напрямую от официального дистрибьютора в России.</p>
+        <div class="btns rv d3">
+          <a class="btn btn-a" href="#getprice_main">Запросить цены <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+          <a class="btn btn-o" href="https://jeuderm-russia.ru/study">Записаться на обучение</a>
+        </div>
+      </div>
+      <div class="hero-v rv d2">
+        <span class="tab dots"></span>
+        <div class="hero-img">
+          <img src="https://static.tildacdn.com/tild6330-6136-4433-a134-336463336138/Copilot_20260526_132.png" alt="Пептидная сыворотка ЖеДерм JeuDérm" loading="eager">
+        </div>
+        <div class="spec">
+          <div class="t"><span>JeuDérm</span><span></span></div>
+          <dl>
+            <dt>Основа</dt><dd>Пептиды, пробиотики</dd>
+            <dt>Исследования</dt><dd>Чунгнам · Ханнам</dd>
+            <dt>Происхождение</dt><dd>Южная Корея</dd>
+            <dt>Статус</dt><dd>Офиц. дистрибьютор</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="spectrum rv"><i style="background:#ab0a3d"></i><i style="background:#76bc21;transition-delay:.1s"></i><i style="background:#2a7de1;transition-delay:.2s"></i><i style="background:#623a2c;transition-delay:.3s"></i><i style="background:#000;transition-delay:.4s"></i><i style="background:#cd555b;transition-delay:.5s"></i><i style="background:#7f2346;transition-delay:.6s"></i></div>
+    <div class="stats">
+      <div class="stat rv"><div class="num"><span data-count="50000">50 000</span><sup>+</sup></div><p>процедур в клиниках и косметологических центрах</p></div>
+      <div class="stat rv d1"><div class="num"><span data-count="20">20</span><sup>+</sup></div><p>стран, где с ЖеДерм работают специалисты</p></div>
+      <div class="stat rv d2"><div class="num"><span data-count="7">7</span></div><p>профессиональных линеек под разные задачи кожи</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ОПОРЫ ================= -->
+<section>
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab rv"><i></i>Почему ЖеДерм</span>
+        <h2 class="rv d1">Наука, подтверждённая <em>практикой</em></h2>
+      </div>
+      <p class="lead rv d2">Три основания для выбора бренда: клинические исследования, полная система линеек под любую задачу и опыт тысяч специалистов.</p>
+    </div>
+    <div class="pillars">
+      <div class="pill rv" style="--c:var(--adapt)">
+        <span class="sw dots">01</span>
+        <h3>Клинически протестированные формулы</h3>
+        <p>Эффективность подтверждена исследованиями в Дерматологическом центре Национального университета Чунгнам и в Университете Ханнам.</p>
+        <a class="link" href="#getprice_main">Получить каталог</a>
+      </div>
+      <div class="pill rv d1" style="--c:var(--reform)">
+        <span class="sw dots">02</span>
+        <h3>Решение для каждого типа кожи</h3>
+        <p>Чувствительная, возрастная, склонная к акне — у косметолога под рукой полный набор средств для процедуры и домашнего ухода между визитами.</p>
+        <a class="link" href="#getprotocol">Получить протоколы</a>
+      </div>
+      <div class="pill rv d2" style="--c:var(--lift)">
+        <span class="sw dots">03</span>
+        <h3>Проверено на практике</h3>
+        <p>Более 50 000 процедур в клиниках и косметологических центрах более чем 20 стран — и стабильно высокие отзывы специалистов и пациентов.</p>
+        <a class="link" href="#getconsult">Стать партнёром</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ДВА НАПРАВЛЕНИЯ ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="dir">
+      <div class="dcard pro dots rv">
+        <span class="code">Серия · Professional</span>
+        <h3>Профессиональный уход</h3>
+        <p>Средства для процедур с пептидами и пробиотиками: восстанавливают, увлажняют и омолаживают кожу, усиливают результат аппаратных и ручных методик.</p>
+        <ul>
+          <li><a href="https://jeuderm-russia.ru/pro-jeuderm">ПРО</a></li>
+          <li><a style="--c:#cd555b" href="https://jeuderm-russia.ru/reformage-pro">30+</a></li>
+          <li><a style="--c:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm">Акне</a></li>
+          <li><a style="--c:#76bc21" href="https://jeuderm-russia.ru/atocare-pro">Чувствительная кожа</a></li>
+          <li><a href="https://jeuderm-russia.ru/novazymo-exfoliation">Эксфолиация</a></li>
+        </ul>
+        <a class="link" href="https://jeuderm-russia.ru/pro-jeuderm">Смотреть линейки</a>
+      </div>
+      <div class="dcard home rv d1">
+        <span class="code">Серия · Homecare</span>
+        <h3>Домашний уход</h3>
+        <p>Профессиональные формулы в формате ежедневного ухода: очищение, увлажнение и антивозрастной эффект, которые продлевают результат процедуры дома.</p>
+        <ul>
+          <li><a href="https://jeuderm-russia.ru/homecare-jeuderm">Все средства</a></li>
+          <li><a style="--c:#cd555b" href="https://jeuderm-russia.ru/reformage-homecare">30+</a></li>
+          <li><a style="--c:#ab0a3d" href="https://jeuderm-russia.ru/acnohome">Жирная и проблемная</a></li>
+          <li><a style="--c:#76bc21" href="https://jeuderm-russia.ru/atocare-home">Чувствительная кожа</a></li>
+          <li><a href="https://jeuderm-russia.ru/hairgenesis">Волосы</a></li>
+        </ul>
+        <a class="link" href="https://jeuderm-russia.ru/homecare-jeuderm">Смотреть средства</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ЛИНЕЙКИ ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab rv"><i></i>Каталог линеек</span>
+        <h2 class="rv d1">Семь линеек — <em>семь задач</em> кожи</h2>
+      </div>
+      <p class="lead rv d2">У каждой линейки свой цвет, как в профессиональном каталоге ЖеДерм. Внутри — средства для процедуры, протоколы и домашний уход.</p>
+    </div>
+    <div class="cat">
+      <a class="ln rv" style="--c:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm"><span class="sw dots"></span><div><span class="en">Acno Active</span><span class="ru">Проблемная кожа</span></div><p>Пептидная терапия акне и уход за жирной и проблемной кожей.</p><span class="rule">01</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
+      <a class="ln rv" style="--c:#76bc21" href="https://jeuderm-russia.ru/atocare-pro"><span class="sw dots"></span><div><span class="en">Ato Care</span><span class="ru">Чувствительная кожа</span></div><p>Пептидная терапия и уход за атопичной, сухой и чувствительной кожей.</p><span class="rule">02</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
+      <a class="ln rv" style="--c:#2a7de1" href="https://jeuderm-russia.ru/pro"><span class="sw dots"></span><div><span class="en">Adaptive Skin</span><span class="ru">Увлажнение · микробиом</span></div><p>Интенсивное увлажнение кожи, восстановление микробиома и защитных свойств кожи.</p><span class="rule">03</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
+      <a class="ln rv" style="--c:#623a2c" href="https://jeuderm-russia.ru/pro"><span class="sw dots"></span><div><span class="en">Молекулярное обновление</span><span class="ru">Ровный тон</span></div><p>Мягкое выравнивание тона лица — процедура «на выход».</p><span class="rule">04</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
+      <a class="ln rv" style="--c:#000000" href="https://jeuderm-russia.ru/pro"><span class="sw dots"></span><div><span class="en">Renew</span><span class="ru">Увлажнение · кислород</span></div><p>Многоуровневое увлажнение и оксигенация кожи.</p><span class="rule">05</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
+      <a class="ln rv" style="--c:#cd555b" href="https://jeuderm-russia.ru/reformage-pro"><span class="sw dots"></span><div><span class="en">Reform Age</span><span class="ru">Возрастная кожа 30+</span></div><p>Противовозрастной уход и активное омоложение.</p><span class="rule">06</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
+      <a class="ln rv" style="--c:#7f2346" href="https://jeuderm-russia.ru/pro"><span class="sw dots"></span><div><span class="en">Lift Intense Viso Contour</span><span class="ru">Лифтинг</span></div><p>Мгновенный лифтинг-эффект и контурное моделирование.</p><span class="rule">07</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
+    </div>
+    <div class="extra">
+      <a class="ex rv" href="https://jeuderm-russia.ru/novazymo-exfoliation"><div><span class="code">Nova · Zymo</span><h3>Эксфолиация</h3><p>Трёхуровневые системы обновления Нова Комплекс и Зимо Комплекс.</p></div><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
+      <a class="ex rv d1" href="https://jeuderm-russia.ru/hairgenesis"><div><span class="code">Hairgenesis</span><h3>Уход за волосами</h3><p>Восстановление волос и кожи головы — в кабинете и дома.</p></div><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПОЧЕМУ С НАМИ ================= -->
+<section class="why">
+  <div class="w">
+    <div class="why-g">
+      <div>
+        <span class="lab rv"><i></i>Работа с Революшн Био</span>
+        <h2 class="rv d1">Больше, чем <em>поставка</em> косметики</h2>
+        <p class="lead rv d2">Сопровождаем специалиста на каждом этапе: от выбора линейки до первых результатов пациентов.</p>
+        <div class="offer rv d3"><b>−15%</b><span>на первый заказ<br>для новых клиентов</span></div>
+        <a class="btn btn-a rv d3" href="#get15%discount">Получить скидку <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      </div>
+      <div class="rows">
+        <div class="row rv" style="--c:var(--reform)"><span class="k code">Эффективность</span><h3>Результат, который видно</h3><p>Тысячи специалистов уже работают с ЖеДерм — их практика подтверждает эффективность и качество продукции.</p></div>
+        <div class="row rv d1" style="--c:var(--adapt)"><span class="k code">Обучение</span><h3>Знания без перерыва</h3><p>Семинары, мастер-классы и вебинары: механизмы, показания и протоколы для уверенной работы с новыми техниками.</p></div>
+        <div class="row rv" style="--c:var(--lift)"><span class="k code">Лояльность</span><h3>Выгода постоянным клиентам</h3><p>Чем больше закупок — тем больше бонусов. Условия растут вместе с вашей практикой.</p></div>
+        <div class="row rv d1" style="--c:var(--mol)"><span class="k code">Оригинальность</span><h3>Прямые поставки</h3><p>Официальный дистрибьютор в России: оригинальная продукция без посредников.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ВЕБИНАРЫ ================= -->
+<section>
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab rv"><i></i>Вебинары для профи</span>
+        <h2 class="rv d1">Один вебинар объяснит <em>больше</em> тысячи слов</h2>
+      </div>
+      <p class="lead rv d2">Экспертное погружение в медицинскую косметологию и пептидные протоколы. Бесплатно на Рутуб.</p>
+    </div>
+    <div class="web">
+      <a class="wc rv" style="--c:var(--mol)" href="https://rutube.ru/video/d7302347806e412731e8452d92509b13/" target="_blank" rel="noopener">
+        <div class="band dots"><span class="code">Вебинар 01</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
+        <div class="bd"><h3>Обновляющая система Нова Комплекс</h3><p>Механизм действия, показания и ограничения, выбор пациента и ключевые этапы процедуры.</p><span class="link">Смотреть</span></div>
+      </a>
+      <a class="wc rv d1" style="--c:var(--acno)" href="https://rutube.ru/video/c266156ecd63023ff5dcac2c25901baf/" target="_blank" rel="noopener">
+        <div class="band dots"><span class="code">Вебинар 02</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
+        <div class="bd"><h3>Обновляющая система Зимо Комплекс</h3><p>Действие Zymo, протокол и нюансы для разного возраста и типа кожи, включая чувствительную и реактивную.</p><span class="link">Смотреть</span></div>
+      </a>
+      <a class="wc rv d2" style="--c:var(--reform)" href="https://rutube.ru/video/be7dc7a49613fefc73a1bb21cc9b99ec/" target="_blank" rel="noopener">
+        <div class="band dots"><span class="code">Вебинар 03</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
+        <div class="bd"><h3>Пептидные решения для здоровья и молодости кожи</h3><p>Для специалистов, которые хотят расширить арсенал проверенными и безопасными препаратами.</p><span class="link">Смотреть</span></div>
+      </a>
+      <a class="wc rv d3" style="--c:var(--lift)" href="https://rutube.ru/video/ecc180120e27f8f7743990dc621770f4/" target="_blank" rel="noopener">
+        <div class="band dots"><span class="code">Вебинар 04</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
+        <div class="bd"><h3>Ангельское совершенство кожи</h3><p>Система мягкого молекулярного обновления: гладкость, ровный тон и сияние без раздражения и реабилитации.</p><span class="link">Смотреть</span></div>
+      </a>
+    </div>
+    <div class="web-f rv">
+      <p>ЖеДерм — южнокорейский бренд профессиональной косметики на основе биотехнологий и дерматологических исследований. Начните с обзорного вебинара о бренде.</p>
+      <a class="btn btn-o" href="https://rutube.ru/channel/42947212/" target="_blank" rel="noopener">Все вебинары</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ЭКСПЕРТ + ОБУЧЕНИЕ ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="exp">
+      <div class="quote dots rv">
+        <div>
+          <span class="code">Мнение эксперта</span>
+          <blockquote>«Работая в эстетической медицине более 20 лет, я перепробовала множество брендов, но именно ЖеДерм стал для меня настоящим открытием. Это не просто качественная косметика — это инструмент, который помогает достигать видимых и устойчивых результатов у клиентов».</blockquote>
+        </div>
+        <div class="who"><b>Лилия Мукарамова</b><span>Научный руководитель Revolution Bio, международный тренер</span></div>
+      </div>
+      <div class="study rv d1">
+        <span class="lab"><i></i>Обучение</span>
+        <h3>Бесплатное обучение в малых группах</h3>
+        <ol>
+          <li>Практика с продуктами ЖеДерм в комфортной атмосфере</li>
+          <li>Вопросы напрямую экспертам и тренерам</li>
+          <li>Протоколы, которые можно применить сразу</li>
+          <li>Участие по предварительной регистрации</li>
+        </ol>
+        <div class="btns">
+          <a class="btn btn-a" href="#stadyjeuderm">Записаться <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+          <a class="btn btn-o" href="https://jeuderm-russia.ru/study">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="faq-g">
+      <div>
+        <span class="lab rv"><i></i>FAQ</span>
+        <h2 class="rv d1">Частые <em>вопросы</em></h2>
+        <p class="lead rv d2" style="margin-top:20px;font-size:16.5px">Не нашли ответ? Оставьте заявку — специалист свяжется с вами и подберёт решение.</p>
+        <div class="btns rv d3" style="margin-top:28px"><a class="btn btn-o" href="#getconsult">Задать вопрос</a></div>
+      </div>
+      <div class="rv d1">
+        <details>
+          <summary>Революшн Био — официальный дистрибьютор в России?<i></i></summary>
+          <div class="a">Да. ООО «Революшн Био» — официальный дистрибьютор ЖеДерм (JeuDérm) в России. Вся продукция поставляется напрямую и является оригинальной.</div>
+        </details>
+        <details>
+          <summary>Когда будет виден результат?<i></i></summary>
+          <div class="a">Зависит от задачи, состояния кожи и выбранного протокола. Сроки и количество процедур для конкретного случая определяет специалист — запросите протоколы, и мы подскажем схему.</div>
+        </details>
+        <details>
+          <summary>Есть ли противопоказания?<i></i></summary>
+          <div class="a">Как и у любой профессиональной косметики, у отдельных средств могут быть ограничения: индивидуальная непереносимость компонентов, острые воспаления и другие состояния кожи. Перед процедурой специалист оценивает показания и противопоказания.</div>
+        </details>
+        <details>
+          <summary>Что входит в составы?<i></i></summary>
+          <div class="a">Основа формул ЖеДерм — пептиды, пробиотики и другие активные компоненты, разработанные на базе биотехнологий и дерматологических исследований. Состав каждого средства указан на странице линейки и на упаковке.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПАРТНЁР ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <span class="lab rv" style="margin-bottom:24px"><i></i>Наши партнёры</span>
+    <div class="partner rv">
+      <img src="https://static.tildacdn.com/tild6539-3739-4963-b264-393861653362/1.jpg" alt="Дом Русской Косметики" loading="lazy">
+      <div>
+        <span class="code">С 1989 года</span>
+        <h3>Институт косметологии «Дом Русской Косметики»</h3>
+        <p>Обучение специалистов косметологии и beauty-сферы. Программы для врачей, косметологов и новичков, документы государственного образца, внесение в ФИС ФРДО, регистрация в НМО Минздрава.</p>
+      </div>
+      <a class="link" href="https://jeuderm-russia.ru/cosmeticru">Подробнее</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ФИНАЛ ================= -->
+<section class="final">
+  <div class="w">
+    <div class="cta dots rv">
+      <div>
+        <span class="lab"><i></i>Сотрудничество</span>
+        <h2>Станьте партнёром <em>ЖеДерм</em> в вашем регионе</h2>
+        <p>Работаем с дистрибьюторами, клиниками эстетической медицины и косметологическими центрами. Оставьте заявку — расскажем об условиях и преимуществах партнёрства.</p>
+        <div class="btns">
+          <a class="btn btn-w" href="#getconsult">Оставить заявку <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+          <a class="btn btn-ow" href="https://jeuderm-russia.ru/partners-distributors-jeuderm">Условия для дистрибьюторов</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('jd'); if(!root) return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
+  function count(el){
+    var to=+el.getAttribute('data-count'); if(reduce){el.textContent=fmt(to);return;}
+    var t0=null,d=1600;
+    function step(t){ if(!t0)t0=t; var p=Math.min((t-t0)/d,1); var e=1-Math.pow(1-p,3);
+      el.textContent=fmt(Math.round(to*e)); if(p<1)requestAnimationFrame(step); }
+    el.textContent='0'; requestAnimationFrame(step);
+  }
+  var items=root.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){ items.forEach(function(el){el.classList.add('in');}); return; }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el=e.target; el.classList.add('in');
+      el.querySelectorAll('[data-count]').forEach(count);
+      io.unobserve(el);
+    });
+  },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+  items.forEach(function(el){io.observe(el);});
+})();
+</script>
