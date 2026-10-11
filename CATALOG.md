@@ -137,7 +137,7 @@ Adaptive Skin, «Молекулярное обновление» и Lift Intense
 |---|---|---|---|
 | Очищающий гель для всех типов чувствительной кожи | Ato Care Mild Cleanser | `ato-care-mild-cleanser.webp` | да |
 | Тонер-мусс для всех типов чувствительной кожи | Ato Care Toner Mousse | `ato-care-toner-mousse.webp` | да |
-| Увлажняющая эмульсия для всех типов чувствительной кожи | Ato Care Moist Emulsion, туба 120 мл | `ato-care-moist-emulsion-120ml.webp` | да, в ПРО — флакон 150 мл |
+| Увлажняющая эмульсия для всех типов чувствительной кожи | Ato Care Moist Emulsion, туба 100 мл | `ato-care-moist-emulsion-120ml.webp` | да, в ПРО — флакон 150 мл |
 | Интенсивный крем для сухой и чувствительной кожи | Ato Care Intensive Cream, 50 мл | `ato-care-intensive-cream.webp` | нет, только домашний |
 
 ### Hair Genesis · уход за кожей головы (/hairgenesis)
@@ -170,7 +170,7 @@ Ato Care `#76bc21`, Lift Intense `#7f2346`, PRO `#65666b`, Hair Genesis `#ae57b9
    | Acno Mild Cleanser | 250 мл | 264 мл |
    | Acno Clay Mask | 250 мл | 204 мл |
    | Acno Active Gel (дом.) | 100 мл | туба 120 мл |
-   | Ato Care Moist Emulsion (дом.) | 100 мл | туба 120 мл |
+   | Ato Care Moist Emulsion (дом.) | 100 мл | туба 120 мл → **100 мл** (решено) |
    | Lift Intense Viso Contour | 110 мл | 130 мл |
    | Zymo Complex | 3 × 10 мл | флаконы 5 мл |
 4. **Опечатки в PDF:** «VISO COUNTOUR / COUNTUR» (верно Contour); «Cooper» вместо Copper (Hair Genesis);
@@ -207,14 +207,14 @@ Hair Genesis: Stimulator 140 — домашний, Concentrate 20 — ПРО.
 
 ### Расхождения — уточнить
 
-1. **Reform Age DNA Cream** — на групповом фото линейки (стр. 19) есть «REFORM AGE DNA CREAM» (airless и красная баночка). В PDF-каталоге и на сайте его нет. Фото нет.
+1. ~~Reform Age DNA Cream~~ — в России не продаётся, на сайт не ставим (решено).
 2. **Объёмы на новых фото упаковок.** В протоколах Lift Intense — 110 мл (как в PDF-каталоге), на нашем фото — 130 мл.
    Вместе с расхождениями из сверки PDF (Micro Touch Mask 285/250, Acno Mild Cleanser 264/250, Clay Mask 204/250, Zymo 5/10 мл)
    похоже, что на части новых фото подписи объёмов неверные — уточнить, рендеры ли это.
-   Ato Care Moist Emulsion: в протоколах на фото туба 120 мл — совпадает с нашим фото (в PDF-каталоге 100 мл).
+   Ato Care Moist Emulsion домашний — **100 мл** (решено, по каталогу).
 3. **Названия средств.** В протоколе Acno: «ACNO TREATMENT GEL / TREATMENT EMULSION», на упаковке и в каталоге — Active Gel / Active Emulsion.
-4. **Описание Renew.** На стр. 14–16 подзаголовок «Многоуровневое увлажнение и оксигенация кожи» (так же в старой палитре на главной),
-   на стр. 17–18 и в PDF-каталоге — «интеллектуальная система / многоуровневое обновление». Для эксфолиантов верно второе.
+4. **Описание Renew** — противоречия нет (решено): в протоколах Renew кроме эксфолиантов Nova и Zymo идут маски,
+   которые насыщают кожу кислородом и увлажняют. Для Nova/Zymo пишем «обновление», для процедуры в целом — «обновление, увлажнение и оксигенация».
 5. **Опечатки:** Reform Age Intensive Eye Cream подписан «крем для лица»; «VISO COUNTOUR»; «ACNOMULTI-ACID PAD».
 6. **Формулировки:** шаг «Активное лечение» (Acno), «SOS-терапия», «кислородная терапия» — на сайте пишем как уход.
 
