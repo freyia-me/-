@@ -459,6 +459,13 @@
 #jd .res-note{margin-top:18px;font-size:12.5px;color:var(--gray)}
 #jd .cta{position:relative;isolation:isolate}
 #jd .cta-art{position:absolute;right:4%;top:50%;width:min(280px,30%);aspect-ratio:1;transform:translateY(-50%);background:url('https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/decor/molecule-atom.webp') center/contain no-repeat;opacity:.55;pointer-events:none;z-index:0}
+#jd .res-wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:center;gap:clamp(24px,4vw,56px);margin-top:18px;padding:0;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+#jd .res-wide img{width:100%;aspect-ratio:1/1;object-fit:cover}
+#jd .res-wide figcaption{padding:28px clamp(22px,3vw,44px) 28px 0}
+#jd .res-wide h3{margin:10px 0 12px}
+#jd .res-wide p{font-size:15px;color:var(--text)}
+#jd .res-warn{margin-top:18px;padding:14px 16px;border-left:3px solid var(--ato);background:#f6faf1;font-size:13.5px;line-height:1.5;color:var(--ink)}
+@media(max-width:640px){#jd .res-wide{grid-template-columns:1fr;gap:0}#jd .res-wide figcaption{padding:20px 18px 22px}}
 @media(max-width:1100px){#jd .res-g{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){
  #jd .dcard-img{margin:0 -24px 26px}
@@ -632,6 +639,7 @@
       <figure class="res rv d2"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/results/molecular-twin-exfoliant-cheek.webp" alt="Molecular Twin Exfoliant: до и после, тон и текстура кожи" loading="lazy"><figcaption><span class="code">ПРО · Molecular Twin</span>Ровный тон и текстура кожи</figcaption></figure>
       <figure class="res rv d3"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/results/molecular-twin-exfoliant-profile.webp" alt="Molecular Twin Exfoliant: до и после, профиль" loading="lazy"><figcaption><span class="code">ПРО · Molecular Twin</span>Обновление кожи, профиль</figcaption></figure>
     </div>
+    <figure class="res-wide rv" style="--c:var(--ato)"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@94a30c3/images/results/clinical-neck-before-after.webp" alt="Ato Care: состояние кожи шеи до и после курса ухода" loading="lazy"><figcaption><span class="code">Ato Care · чувствительная кожа</span><h3>Уход за кожей при дерматите</h3><p>Курс ухода Ato Care: кожа становится спокойнее, уходят покраснение и шелушение, восстанавливается барьер.</p><p class="res-warn">Средства Ato Care — это уход за кожей. Они не заменяют лечение у врача и при дерматите применяются только по согласованию с лечащим врачом.</p></figcaption></figure>
     <p class="res-note rv">Результат зависит от состояния кожи и протокола, который подбирает специалист.</p>
   </div>
 </section>
