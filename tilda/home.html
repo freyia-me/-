@@ -409,6 +409,39 @@
  #jd .pill .sw{min-height:0;height:36px}
 }
 
+/* ===== Линейки: галерея панелей — ч/б, при наведении раскрывается в цвете ===== */
+#jd .cats{display:flex;gap:6px;height:clamp(440px,42vw,580px)}
+#jd .ct{--c:var(--gray);position:relative;flex:1 1 0;min-width:0;overflow:hidden;border-radius:4px;background:#2a292b;color:#fff;isolation:isolate;transition:flex-grow .7s cubic-bezier(.2,.7,.2,1)}
+#jd .ct img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.02) brightness(.74);transform:scale(1.06);transition:filter .7s,transform 1.2s cubic-bezier(.2,.7,.2,1);z-index:-2}
+#jd .ct:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,17,19,.08) 0%,rgba(18,17,19,.1) 50%,rgba(18,17,19,.82) 100%);transition:background .7s}
+#jd .ct:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--c);transform:scaleX(.18);transform-origin:left;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+#jd .ct-t{position:absolute;left:10px;right:10px;bottom:30px;text-align:center;font-family:var(--hf);font-size:clamp(13px,1.1vw,17px);letter-spacing:.03em;text-transform:uppercase;line-height:1.3;transition:opacity .4s}
+#jd .ct-b{position:absolute;left:0;bottom:0;width:max(100%,380px);padding:28px 30px 30px;opacity:0;transform:translateY(14px);transition:opacity .5s .1s,transform .6s .1s cubic-bezier(.2,.7,.2,1)}
+#jd .ct-b .code{color:rgba(255,255,255,.7)}
+#jd .ct-b h3{color:#fff;font-size:clamp(24px,2.2vw,32px);margin:10px 0 10px}
+#jd .ct-b p{font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.86);max-width:340px}
+#jd .ct-b .link{color:#fff;margin-top:20px}
+#jd .ct-b .link:after{color:#fff}
+@media (hover:hover) and (min-width:961px){
+  #jd .ct:hover,#jd .ct:focus-visible{flex-grow:4.2}
+  #jd .ct:hover img,#jd .ct:focus-visible img{filter:none;transform:scale(1)}
+  #jd .ct:hover:before,#jd .ct:focus-visible:before{transform:none}
+  #jd .ct:hover .ct-t,#jd .ct:focus-visible .ct-t{opacity:0}
+  #jd .ct:hover .ct-b,#jd .ct:focus-visible .ct-b{opacity:1;transform:none}
+  #jd .ct:hover:after,#jd .ct:focus-visible:after{background:linear-gradient(180deg,rgba(18,17,19,0) 35%,rgba(18,17,19,.72) 100%)}
+}
+@media (max-width:960px),(hover:none){
+  #jd .cats{height:auto;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1*clamp(20px,4vw,58px));padding:0 clamp(20px,4vw,58px) 6px;scrollbar-width:none}
+  #jd .cats::-webkit-scrollbar{display:none}
+  #jd .ct{flex:0 0 min(78%,340px);aspect-ratio:3/4.4;scroll-snap-align:start}
+  #jd .ct:after{background:linear-gradient(180deg,rgba(18,17,19,0) 30%,rgba(18,17,19,.62) 58%,rgba(18,17,19,.88) 100%)}
+  #jd .ct img{filter:none;transform:none}
+  #jd .ct:before{transform:none}
+  #jd .ct-t{display:none}
+  #jd .ct-b{opacity:1;transform:none;width:100%;padding:22px 22px 24px}
+  #jd .ct-b p{font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){#jd .ct,#jd .ct img,#jd .ct-b{transition:none}}
 </style>
 
 <div id="jd">
@@ -546,14 +579,14 @@
       </div>
       <p class="lead rv d2">У каждой линейки свой цвет, как в профессиональном каталоге ЖеДерм. Внутри — средства для процедуры, протоколы и домашний уход.</p>
     </div>
-    <div class="cat">
-      <a class="ln rv" style="--c:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm"><span class="sw dots"></span><div><span class="en">Acno Active</span><span class="ru">Проблемная кожа</span></div><p>Пептидная терапия акне и уход за жирной и проблемной кожей.</p><span class="rule">01</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
-      <a class="ln rv" style="--c:#76bc21" href="https://jeuderm-russia.ru/atocare-pro"><span class="sw dots"></span><div><span class="en">Ato Care</span><span class="ru">Чувствительная кожа</span></div><p>Пептидная терапия и уход за атопичной, сухой и чувствительной кожей.</p><span class="rule">02</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
-      <a class="ln rv" style="--c:#2a7de1" href="https://jeuderm-russia.ru/pro"><span class="sw dots"></span><div><span class="en">Adaptive Skin</span><span class="ru">Увлажнение · микробиом</span></div><p>Интенсивное увлажнение кожи, восстановление микробиома и защитных свойств кожи.</p><span class="rule">03</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
-      <a class="ln rv" style="--c:#623a2c" href="https://jeuderm-russia.ru/pro"><span class="sw dots"></span><div><span class="en">Молекулярное обновление</span><span class="ru">Ровный тон</span></div><p>Мягкое выравнивание тона лица — процедура «на выход».</p><span class="rule">04</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
-      <a class="ln rv" style="--c:#000000" href="https://jeuderm-russia.ru/pro"><span class="sw dots"></span><div><span class="en">Renew</span><span class="ru">Увлажнение · кислород</span></div><p>Многоуровневое увлажнение и оксигенация кожи.</p><span class="rule">05</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
-      <a class="ln rv" style="--c:#cd555b" href="https://jeuderm-russia.ru/reformage-pro"><span class="sw dots"></span><div><span class="en">Reform Age</span><span class="ru">Возрастная кожа 30+</span></div><p>Противовозрастной уход и активное омоложение.</p><span class="rule">06</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
-      <a class="ln rv" style="--c:#7f2346" href="https://jeuderm-russia.ru/pro"><span class="sw dots"></span><div><span class="en">Lift Intense Viso Contour</span><span class="ru">Лифтинг</span></div><p>Мгновенный лифтинг-эффект и контурное моделирование.</p><span class="rule">07</span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
+    <div class="cats rv">
+      <a class="ct" style="--c:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@f888773/images/products/acno-active-emulsion-150ml.webp" alt="Acno Active — ЖеДерм" loading="lazy"><span class="ct-t">Acno Active</span><div class="ct-b"><span class="code">01 · Проблемная кожа</span><h3>Acno Active</h3><p>Пептидная терапия акне и уход за жирной и проблемной кожей.</p><span class="link">Смотреть линейку</span></div></a>
+      <a class="ct" style="--c:#76bc21" href="https://jeuderm-russia.ru/atocare-pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@f888773/images/products/ato-care-mild-cleanser.webp" alt="Ato Care — ЖеДерм" loading="lazy"><span class="ct-t">Ato Care</span><div class="ct-b"><span class="code">02 · Чувствительная кожа</span><h3>Ato Care</h3><p>Пептидная терапия и уход за атопичной, сухой и чувствительной кожей.</p><span class="link">Смотреть линейку</span></div></a>
+      <a class="ct" style="--c:#2a7de1" href="https://jeuderm-russia.ru/pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@f888773/images/products/adaptive-skin-detox-mask.webp" alt="Adaptive Skin — ЖеДерм" loading="lazy"><span class="ct-t">Adaptive Skin</span><div class="ct-b"><span class="code">03 · Увлажнение · микробиом</span><h3>Adaptive Skin</h3><p>Интенсивное увлажнение кожи, восстановление микробиома и защитных свойств кожи.</p><span class="link">Смотреть линейку</span></div></a>
+      <a class="ct" style="--c:#623a2c" href="https://jeuderm-russia.ru/pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@f888773/images/products/molecular-twin-exfoliant.webp" alt="Молекулярное обновление — ЖеДерм" loading="lazy"><span class="ct-t">Молеку&shy;лярное обнов&shy;ление</span><div class="ct-b"><span class="code">04 · Ровный тон</span><h3>Молекулярное обновление</h3><p>Мягкое выравнивание тона лица — процедура «на выход».</p><span class="link">Смотреть линейку</span></div></a>
+      <a class="ct" style="--c:#000000" href="https://jeuderm-russia.ru/pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@f888773/images/products/o2-therapy-active-gel.webp" alt="Renew — ЖеДерм" loading="lazy"><span class="ct-t">Renew</span><div class="ct-b"><span class="code">05 · Увлажнение · кислород</span><h3>Renew</h3><p>Многоуровневое увлажнение и оксигенация кожи.</p><span class="link">Смотреть линейку</span></div></a>
+      <a class="ct" style="--c:#cd555b" href="https://jeuderm-russia.ru/reformage-pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@f888773/images/products/reform-age-o2-boto-fluid.webp" alt="Reform Age — ЖеДерм" loading="lazy"><span class="ct-t">Reform Age</span><div class="ct-b"><span class="code">06 · Возрастная кожа 30+</span><h3>Reform Age</h3><p>Противовозрастной уход и активное омоложение.</p><span class="link">Смотреть линейку</span></div></a>
+      <a class="ct" style="--c:#7f2346" href="https://jeuderm-russia.ru/pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@f888773/images/products/lift-intense-viso-contour.webp" alt="Lift Intense Viso Contour — ЖеДерм" loading="lazy"><span class="ct-t">Lift Intense Viso Contour</span><div class="ct-b"><span class="code">07 · Лифтинг</span><h3>Lift Intense Viso Contour</h3><p>Мгновенный лифтинг-эффект и контурное моделирование.</p><span class="link">Смотреть линейку</span></div></a>
     </div>
     <div class="extra">
       <a class="ex rv" href="https://jeuderm-russia.ru/novazymo-exfoliation"><div><span class="code">Nova · Zymo</span><h3>Эксфолиация</h3><p>Трёхуровневые системы обновления Нова Комплекс и Зимо Комплекс.</p></div><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a>
