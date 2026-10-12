@@ -1,0 +1,230 @@
+<!-- ЖеДерм · страница партнёра «Дом Русской Косметики» (/cosmeticru) · блок T123. Собрано tools/build_drk.py. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+#jds{
+  --c:#cd555b;          /* цвет линейки */
+  --c-soft:#fbf1f1;
+  --ink:#201f20;--text:#595959;--gray:#65666b;--soft:#faf9f7;--line:#ebe8e4;
+  --hf:'Tenor Sans',Georgia,serif;--tf:'Montserrat',Arial,sans-serif;
+  font-family:var(--tf);color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.68;font-size:17px;overflow:hidden
+}
+#jds *{box-sizing:border-box;margin:0;padding:0}
+#jds a{color:inherit;text-decoration:none}
+#jds img{display:block;max-width:100%}
+#jds button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+#jds .w{max-width:1320px;margin:0 auto;padding:0 clamp(20px,4vw,58px)}
+#jds section{padding:clamp(64px,7vw,110px) 0}
+#jds h1,#jds h2,#jds h3{font-family:var(--hf);color:var(--ink);font-weight:400;line-height:1.15;letter-spacing:-.03em}
+#jds h1{font-size:clamp(34px,4.4vw,62px)}
+#jds h2{font-size:clamp(28px,3.2vw,46px)}
+#jds h3{font-size:clamp(19px,1.5vw,22px);line-height:1.3}
+#jds h1 em,#jds h2 em{font-style:normal;color:var(--c)}
+#jds .lead{font-size:18px;max-width:600px}
+#jds .lab{display:inline-flex;align-items:center;gap:12px;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#807578}
+#jds .lab:before{content:"";width:28px;height:1px;background:#b4a5a9}
+#jds .lab i{display:inline-block;width:6px;height:6px;background:var(--c);margin-left:-12px;margin-right:2px}
+#jds .code{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+#jds .btns{display:flex;gap:12px;flex-wrap:wrap}
+#jds .btn{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;height:54px;padding:0 26px;border-radius:3px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:background .3s,color .3s,border-color .3s}
+#jds .btn-a{background:#29282a;color:#fff}
+#jds .btn-a:hover{background:var(--c)}
+#jds .btn-o{border:1px solid #c8c1bf;color:var(--ink)}
+#jds .btn-o:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+#jds .btn svg{width:16px;height:16px;transition:transform .3s}
+#jds .btn:hover svg{transform:translateX(4px)}
+
+/* ===== Шапка линейки ===== */
+
+/* ===== Фильтр и сетка товаров ===== */
+#jds .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+#jds .head h2{margin-top:18px}
+
+/* ===== Результаты ===== */
+@media (max-width:1000px){#jds .res-g,#jds .res-g.r3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){#jds .res-g,#jds .res-g.r3,#jds .res-g.r2{grid-template-columns:1fr 1fr;gap:10px}#jds .res-g.r1{grid-template-columns:1fr}#jds .res figcaption{padding:12px;font-size:13px}}
+
+/* ===== Процедуры ===== */
+
+/* ===== CTA ===== */
+#jds .cta{background:var(--ink);color:rgba(255,255,255,.82);border-radius:4px;padding:clamp(40px,5vw,72px) clamp(24px,5vw,64px);display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+#jds .cta h2{color:#fff;margin-bottom:12px}
+#jds .cta .btn-a{background:var(--c)}
+#jds .cta .btn-a:hover{background:#fff;color:var(--ink)}
+#jds .cta .btn-o{border-color:rgba(255,255,255,.45);color:#fff}
+#jds .cta .btn-o:hover{background:#fff;color:var(--ink)}
+
+#jds .cta-img{background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.94) 40%,rgba(255,255,255,.2) 78%,rgba(255,255,255,0) 100%),var(--bg) right center/cover;color:var(--text);border:1px solid var(--line)}
+#jds .cta-img h2{color:var(--ink)}
+#jds .cta-img .btn-a{background:var(--ink);color:#fff}
+#jds .cta-img .btn-a:hover{background:var(--c)}
+#jds .cta-img .btn-o{border-color:#c8c1bf;color:var(--ink)}
+#jds .cta-img .btn-o:hover{background:var(--ink);color:#fff}
+@media (max-width:1000px){#jds .cta-img{background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.9) 55%,rgba(255,255,255,.55) 100%),var(--bg) center/cover}}
+
+/* ===== Окно товара ===== */
+
+/* ===== Анимация появления ===== */
+#jds .rv{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+#jds .rv.in{opacity:1;transform:none}
+
+/* ===== Адаптив ===== */
+
+
+@media (max-width:640px){
+  #jds{font-size:16px}
+  #jds .lead{font-size:16.5px}
+  #jds .btns{flex-direction:column}
+  #jds .btn{width:100%}
+}
+
+/* ===== Дом Русской Косметики ===== */
+#jds{--c:#2b35d6;--c-soft:#eef0ff}
+#jds .head{display:block;margin-bottom:36px}
+#jds .head h2{margin-top:16px}
+#jds .dk-top{padding-top:clamp(40px,5vw,72px)}
+#jds .dk-g{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,5vw,80px);align-items:center}
+#jds .dk-top h1{font-size:clamp(30px,3.4vw,50px);margin:20px 0 18px}
+#jds .dk-top .lead{font-size:16.5px;max-width:560px;margin-bottom:28px}
+#jds .dk-card{position:relative;overflow:hidden;border-radius:6px;padding:clamp(32px,4vw,52px);background:linear-gradient(135deg,#2b35d6 0%,#4652ea 100%);color:#fff;isolation:isolate}
+#jds .dk-card:after{content:"Курсы косметологии";position:absolute;left:-4%;bottom:-8%;z-index:-1;font-family:var(--hf);font-size:clamp(48px,6vw,92px);line-height:1;white-space:nowrap;color:rgba(255,255,255,.1)}
+#jds .dk-card .code{color:rgba(255,255,255,.7)}
+#jds .dk-card b{display:block;font-family:var(--hf);font-weight:400;font-size:clamp(56px,6vw,88px);line-height:1;margin:14px 0 6px}
+#jds .dk-card p{color:rgba(255,255,255,.85);font-size:15px;max-width:360px}
+#jds .dk-card ul{list-style:none;margin-top:26px;border-top:1px solid rgba(255,255,255,.25)}
+#jds .dk-card li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.25);font-size:14px}
+#jds .aud{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:a}
+#jds .au{counter-increment:a;padding:26px 24px;border:1px solid var(--line);border-radius:4px;background:#fff}
+#jds .au:before{content:counter(a);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--c-soft);color:var(--c);font-weight:600;margin-bottom:18px}
+#jds .au h3{font-size:18px;margin-bottom:10px;color:var(--c)}
+#jds .au p{font-size:14px}
+#jds .why{background:var(--soft)}
+#jds .wg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+#jds .wi{padding:28px 26px;background:#fff;border:1px solid var(--line);border-radius:4px}
+#jds .wi .k{font-family:var(--hf);font-size:30px;color:var(--c);line-height:1.1}
+#jds .wi h3{margin:12px 0 8px;font-size:18px}
+#jds .wi p{font-size:14px}
+#jds .duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+#jds .duo>div{padding:clamp(28px,3.5vw,44px);border:1px solid var(--line);border-radius:4px;background:#fff}
+#jds .duo h3{margin:12px 0 12px}
+#jds .duo p{font-size:14.5px;margin-bottom:20px}
+#jds .dk-cta{border-radius:6px;padding:clamp(40px,5vw,72px) clamp(24px,5vw,64px);background:linear-gradient(135deg,#2b35d6 0%,#4652ea 100%);color:rgba(255,255,255,.88);display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+#jds .dk-cta h2{color:#fff;margin-bottom:12px}
+#jds .dk-cta .btn-a{background:#fff;color:#2b35d6}
+#jds .dk-cta .btn-a:hover{background:#201f20;color:#fff}
+#jds .dk-cta .btn-o{border-color:rgba(255,255,255,.55);color:#fff}
+#jds .dk-cta .btn-o:hover{background:#fff;color:#2b35d6}
+#jds .src{margin-top:18px;font-size:12px;color:var(--gray)}
+@media (max-width:1000px){
+  #jds .dk-g,#jds .duo,#jds .dk-cta{grid-template-columns:1fr}
+  #jds .aud{grid-template-columns:repeat(2,1fr)}
+  #jds .wg{grid-template-columns:1fr}
+}
+@media (max-width:640px){#jds .aud{grid-template-columns:1fr}}
+</style>
+
+<div id="jds">
+
+<!-- ================= ПЕРВЫЙ ЭКРАН ================= -->
+<section class="dk-top">
+  <div class="w dk-g">
+    <div>
+      <span class="lab rv"><i></i>Партнёр ЖеДерм по обучению</span>
+      <h1 class="rv">Институт косметологии <em>«Дом Русской Косметики»</em></h1>
+      <p class="lead rv">Обучение специалистов косметологии и сферы красоты. Программы для любого уровня подготовки — от базового до профессионального совершенствования. Курсы зарегистрированы в системе НМО Минздрава, а документы об окончании вносятся в ФИС ФРДО.</p>
+      <div class="btns rv">
+        <a class="btn btn-a" href="https://cosmeticru.com/kursy-kosmetologii" target="_blank" rel="noopener">Курсы и стоимость <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="#popup:ask">Задать вопрос</a>
+      </div>
+    </div>
+    <div class="dk-card rv">
+      <span class="code">Учебный центр в Москве</span>
+      <b>с 1989</b>
+      <p>Более 35 лет готовит врачей, косметологов и специалистов beauty-сферы.</p>
+      <ul>
+        <li>Документы государственного образца</li>
+        <li>Внесение в ФИС ФРДО</li>
+        <li>Регистрация программ в НМО Минздрава</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ДЛЯ КОГО ================= -->
+<section>
+  <div class="w">
+    <div class="head">
+      <span class="lab"><i></i>Для кого</span>
+      <h2>Программы для <em>любого уровня</em> подготовки</h2>
+    </div>
+    <div class="aud">
+      <div class="au rv"><h3>Для врачей-дерматологов</h3><p>Программы профессиональной переподготовки и повышения квалификации по косметологии для врачей.</p></div>
+      <div class="au rv"><h3>Для практикующих косметологов</h3><p>Повышение квалификации, новые методики и аппаратные технологии для тех, кто уже работает в профессии.</p></div>
+      <div class="au rv"><h3>Для специалистов с медицинским образованием</h3><p>Программы для медсестёр и специалистов со средним медицинским образованием.</p></div>
+      <div class="au rv"><h3>Для слушателей без медицинского образования</h3><p>Курсы эстетической косметологии и beauty-сферы для старта в профессии.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПОЧЕМУ ================= -->
+<section class="why">
+  <div class="w">
+    <div class="head">
+      <span class="lab"><i></i>Почему «Дом Русской Косметики»</span>
+      <h2>Обучение с <em>официальными документами</em></h2>
+    </div>
+    <div class="wg">
+      <div class="wi rv"><span class="k">НМО</span><h3>Баллы непрерывного образования</h3><p>Курсы зарегистрированы в системе непрерывного медицинского образования Минздрава — для врачей и специалистов с медицинским образованием.</p></div>
+      <div class="wi rv"><span class="k">ФИС ФРДО</span><h3>Документы в федеральном реестре</h3><p>Сведения о выданных документах вносятся в Федеральный реестр документов об образовании — их легко проверить.</p></div>
+      <div class="wi rv"><span class="k">Очно и онлайн</span><h3>Удобный формат</h3><p>Очные занятия в учебных классах и дистанционные программы повышения квалификации и вебинары.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ЖЕДЕРМ + ДРК ================= -->
+<section>
+  <div class="w duo">
+    <div class="rv">
+      <span class="code">Обучение ЖеДерм</span>
+      <h3>Работа с препаратами ЖеДерм</h3>
+      <p>Бесплатные занятия по продукции ЖеДерм в малых группах, обучение в клиниках при запуске линии и вебинары по протоколам — от тренеров Революшн Био.</p>
+      <a class="btn btn-o" href="https://jeuderm-russia.ru/study">Обучение ЖеДерм</a>
+    </div>
+    <div class="rv">
+      <span class="code">Дом Русской Косметики</span>
+      <h3>Базовое и дополнительное образование</h3>
+      <p>Профессия косметолога с нуля, переподготовка и повышение квалификации с документами государственного образца — на программах института.</p>
+      <a class="btn btn-o" href="https://cosmeticru.com/kursy-kosmetologii" target="_blank" rel="noopener">Все программы института</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="dk-cta rv">
+      <div>
+        <h2>Курсы косметологии</h2>
+        <p>Посмотрите актуальные программы и их стоимость на сайте института «Дом Русской Косметики».</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-a" href="https://cosmeticru.com/kursy-kosmetologii" target="_blank" rel="noopener">Перейти на сайт <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="#popup:ask">Задать вопрос</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('jds'); if(!root) return;
+  var items=root.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){[].forEach.call(items,function(el){el.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -30px 0px'});
+  [].forEach.call(items,function(el){io.observe(el);});
+})();
+</script>
