@@ -1,0 +1,263 @@
+<!-- ЖеДерм · общая страница «Профессиональный уход / Домашний уход» · блок T123 «HTML-код».
+     Один и тот же код ставится на /pro-jeuderm и /homecare-jeuderm: режим выбирается сам по адресу
+     (или ?care=pro / ?care=home). Собрано tools/build_hub.py — правки текстов вносите там. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+#jdh{
+  --c:#cd555b;          /* цвет линейки */
+  --c-soft:#fbf1f1;
+  --ink:#201f20;--text:#595959;--gray:#65666b;--soft:#faf9f7;--line:#ebe8e4;
+  --hf:'Tenor Sans',Georgia,serif;--tf:'Montserrat',Arial,sans-serif;
+  font-family:var(--tf);color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.68;font-size:17px;overflow:hidden
+}
+#jdh *{box-sizing:border-box;margin:0;padding:0}
+#jdh a{color:inherit;text-decoration:none}
+#jdh img{display:block;max-width:100%}
+#jdh button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+#jdh .w{max-width:1320px;margin:0 auto;padding:0 clamp(20px,4vw,58px)}
+#jdh section{padding:clamp(64px,7vw,110px) 0}
+#jdh h1,#jdh h2,#jdh h3{font-family:var(--hf);color:var(--ink);font-weight:400;line-height:1.15;letter-spacing:-.03em}
+#jdh h1{font-size:clamp(34px,4.4vw,62px)}
+#jdh h2{font-size:clamp(28px,3.2vw,46px)}
+#jdh h3{font-size:clamp(19px,1.5vw,22px);line-height:1.3}
+#jdh h1 em,#jdh h2 em{font-style:normal;color:var(--c)}
+#jdh .lead{font-size:18px;max-width:600px}
+#jdh .lab{display:inline-flex;align-items:center;gap:12px;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#807578}
+#jdh .lab:before{content:"";width:28px;height:1px;background:#b4a5a9}
+#jdh .lab i{display:inline-block;width:6px;height:6px;background:var(--c);margin-left:-12px;margin-right:2px}
+#jdh .code{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+#jdh .btns{display:flex;gap:12px;flex-wrap:wrap}
+#jdh .btn{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;height:54px;padding:0 26px;border-radius:3px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:background .3s,color .3s,border-color .3s}
+#jdh .btn-a{background:#29282a;color:#fff}
+#jdh .btn-a:hover{background:var(--c)}
+#jdh .btn-o{border:1px solid #c8c1bf;color:var(--ink)}
+#jdh .btn-o:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+#jdh .btn svg{width:16px;height:16px;transition:transform .3s}
+#jdh .btn:hover svg{transform:translateX(4px)}
+
+/* ===== Шапка линейки ===== */
+
+/* ===== Фильтр и сетка товаров ===== */
+#jdh .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+#jdh .head h2{margin-top:18px}
+
+/* ===== Процедуры ===== */
+
+/* ===== CTA ===== */
+#jdh .cta{background:var(--ink);color:rgba(255,255,255,.82);border-radius:4px;padding:clamp(40px,5vw,72px) clamp(24px,5vw,64px);display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+#jdh .cta h2{color:#fff;margin-bottom:12px}
+#jdh .cta .btn-a{background:var(--c)}
+#jdh .cta .btn-a:hover{background:#fff;color:var(--ink)}
+#jdh .cta .btn-o{border-color:rgba(255,255,255,.45);color:#fff}
+#jdh .cta .btn-o:hover{background:#fff;color:var(--ink)}
+
+#jdh .cta-img{background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.94) 40%,rgba(255,255,255,.2) 78%,rgba(255,255,255,0) 100%),var(--bg) right center/cover;color:var(--text);border:1px solid var(--line)}
+#jdh .cta-img h2{color:var(--ink)}
+#jdh .cta-img .btn-a{background:var(--ink);color:#fff}
+#jdh .cta-img .btn-a:hover{background:var(--c)}
+#jdh .cta-img .btn-o{border-color:#c8c1bf;color:var(--ink)}
+#jdh .cta-img .btn-o:hover{background:var(--ink);color:#fff}
+@media (max-width:1000px){#jdh .cta-img{background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.9) 55%,rgba(255,255,255,.55) 100%),var(--bg) center/cover}}
+
+/* ===== Окно товара ===== */
+
+/* ===== Анимация появления ===== */
+#jdh .rv{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+#jdh .rv.in{opacity:1;transform:none}
+
+/* ===== Адаптив ===== */
+
+
+@media (max-width:640px){
+  #jdh{font-size:16px}
+  #jdh .lead{font-size:16.5px}
+  #jdh .btns{flex-direction:column}
+  #jdh .btn{width:100%}
+}
+
+/* ===== Хаб «Профессиональный / Домашний уход» ===== */
+#jdh .hb{padding-top:clamp(40px,5vw,72px)}
+#jdh .hb-g{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(32px,5vw,80px);align-items:center}
+#jdh .hb h1{font-size:clamp(32px,3.6vw,52px);margin:20px 0 18px}
+#jdh .hb .lead{font-size:16.5px;max-width:520px;margin-bottom:28px}
+#jdh .hb-img{border-radius:4px;overflow:hidden;aspect-ratio:4/3;background:var(--soft)}
+#jdh .hb-img img{width:100%;height:100%;object-fit:cover}
+#jdh .sw{display:inline-flex;padding:4px;border:1px solid var(--line);border-radius:999px;margin-bottom:30px}
+#jdh .sw a{padding:10px 20px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);transition:background .3s,color .3s}
+#jdh .sw a[aria-current="page"]{background:var(--ink);color:#fff}
+#jdh .sw a:not([aria-current="page"]):hover{color:var(--ink)}
+#jdh[data-mode="pro"] [data-show="home"],#jdh[data-mode="home"] [data-show="pro"]{display:none!important}
+#jdh .tls{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+#jdh[data-mode="home"] .tls{grid-template-columns:repeat(4,1fr)}
+#jdh .tl{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+#jdh .tl[hidden]{display:none}
+#jdh .tl:hover{transform:translateY(-4px);box-shadow:0 22px 50px -40px rgba(60,40,40,.45)}
+#jdh .tl:before{content:"";display:block;height:3px;background:var(--c)}
+#jdh .tl-ph{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;background:var(--soft)}
+#jdh .tl-ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+#jdh .tl:hover .tl-ph img{transform:scale(1.05)}
+#jdh .tl-chip{position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.9);font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+#jdh .tl-chip i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+#jdh .tl-bd{display:flex;flex-direction:column;flex:1;padding:22px 22px 24px}
+#jdh .tl-bd h3{margin:8px 0 10px}
+#jdh .tl-bd p{font-size:14.5px;line-height:1.55;flex:1}
+#jdh .tl .more{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+#jdh .tl .more:after{content:"→";color:var(--c);transition:transform .3s}
+#jdh .tl:hover .more:after{transform:translateX(4px)}
+#jdh .tl:hover .tl-chip{background:var(--c);color:#fff}
+#jdh .tl:hover .tl-chip i{background:#fff}
+#jdh .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+#jdh .st{counter-increment:s;padding:28px 26px;border:1px solid var(--line);border-radius:4px;background:#fff}
+#jdh .st:before{content:counter(s,decimal-leading-zero);display:block;font-family:var(--hf);font-size:30px;color:var(--c);margin-bottom:14px}
+#jdh .st h3{margin-bottom:8px}
+#jdh .st p{font-size:14.5px}
+#jdh .head{display:block;margin-bottom:34px}
+#jdh .head h2{margin-top:16px}
+#jdh .cta-img{--bg:url('https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/skin-renewal.webp')}
+@media (max-width:1000px){
+  #jdh .hb-g,#jdh .cta{grid-template-columns:1fr}
+  #jdh .tls,#jdh[data-mode="home"] .tls{grid-template-columns:repeat(2,1fr)}
+  #jdh .steps{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  #jdh .tls,#jdh[data-mode="home"] .tls{grid-template-columns:1fr 1fr;gap:12px}
+  #jdh .tl-bd{padding:14px}
+  #jdh .tl-bd h3{font-size:16px}
+  #jdh .tl-bd p{display:none}
+  #jdh .tl-chip{left:8px;bottom:8px;padding:5px 8px;font-size:9px}
+  #jdh .tl .more{margin-top:10px;font-size:11px}
+  #jdh .sw{display:flex}
+  #jdh .sw a{flex:1;text-align:center;padding:10px 6px;font-size:11px}
+}
+</style>
+
+<div id="jdh" data-mode="pro">
+
+<!-- ================= ШАПКА ================= -->
+<section class="hb">
+  <div class="w hb-g">
+    <div>
+      <nav class="sw rv" aria-label="Тип ухода">
+        <a href="https://jeuderm-russia.ru/pro-jeuderm" data-sw="pro">Профессиональный</a>
+        <a href="https://jeuderm-russia.ru/homecare-jeuderm" data-sw="home">Домашний</a>
+      </nav>
+      <span class="lab rv" data-show="pro"><i></i>Серия · Professional</span>
+      <span class="lab rv" data-show="home"><i></i>Серия · Homecare</span>
+      <h1 class="rv" data-show="pro">Профессиональный уход <em>ЖеДерм</em></h1>
+      <h1 class="rv" data-show="home">Домашний уход <em>ЖеДерм</em></h1>
+      <p class="lead rv" data-show="pro">Средства для процедур с пептидами и пробиотиками: восстанавливают, увлажняют и омолаживают кожу, усиливают результат аппаратных и ручных методик. Выберите задачу кожи — внутри препараты для кабинета и протоколы.</p>
+      <p class="lead rv" data-show="home">Профессиональные формулы в формате ежедневного ухода: очищение, увлажнение и антивозрастной эффект. Средства продлевают результат процедуры дома и подходят для разных типов кожи, включая чувствительную.</p>
+      <div class="btns rv">
+        <a class="btn btn-a" href="#getprice_main">Запросить цены <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="#getconsult" data-show="home">Подобрать уход</a>
+        <a class="btn btn-o" href="#getprotocol" data-show="pro">Получить протоколы</a>
+      </div>
+    </div>
+    <div class="hb-img rv">
+      <img data-show="pro" src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/banner-professional.webp" alt="Профессиональный уход ЖеДерм: средства для процедур в кабинете" loading="eager">
+      <img data-show="home" src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/banner-homecare.webp" alt="Домашний уход ЖеДерм: кремы, эмульсии и сыворотка для волос" loading="eager">
+    </div>
+  </div>
+</section>
+
+<!-- ================= НАПРАВЛЕНИЯ ================= -->
+<section style="padding-top:clamp(48px,5vw,80px)">
+  <div class="w">
+    <div class="head">
+      <span class="lab"><i></i>Уход по задачам</span>
+      <h2 data-show="pro">Выберите <em>задачу кожи</em></h2>
+      <h2 data-show="home">Подберите <em>уход дома</em></h2>
+    </div>
+    <div class="tls">
+      <a class="tl rv" style="--c:#cd555b" data-care="pro home" href="https://jeuderm-russia.ru/reformage-pro" data-pro-href="https://jeuderm-russia.ru/reformage-pro" data-pro-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/reform-age-micro-touch-mask.webp" data-pro-n="6 средств" data-home-href="https://jeuderm-russia.ru/reformage-homecare" data-home-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/reform-age-intensive-eye-cream.webp" data-home-n="5 средств">
+        <span class="tl-ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/reform-age-micro-touch-mask.webp" alt="Возрастной уход — ЖеДерм Reform Age" loading="lazy"><span class="tl-chip"><i></i>Reform Age</span></span>
+        <span class="tl-bd"><span class="code tl-n">6 средств</span><h3>Возрастной уход</h3><p>Антивозрастной уход с пептидами и факторами роста: упругость, плотность и сияние кожи 30+.</p><span class="more">Смотреть средства</span></span>
+      </a>
+      <a class="tl rv" style="--c:#ab0a3d" data-care="pro home" href="https://jeuderm-russia.ru/acnopro-jeuderm" data-pro-href="https://jeuderm-russia.ru/acnopro-jeuderm" data-pro-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/acno-clay-mask.webp" data-pro-n="5 средств" data-home-href="https://jeuderm-russia.ru/acnohome" data-home-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/acno-active-gel-120ml.webp" data-home-n="4 средства">
+        <span class="tl-ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/acno-clay-mask.webp" alt="Проблемная кожа — ЖеДерм Acno Active" loading="lazy"><span class="tl-chip"><i></i>Acno Active</span></span>
+        <span class="tl-bd"><span class="code tl-n">5 средств</span><h3>Проблемная кожа</h3><p>Уход за жирной и проблемной кожей, склонной к акне: очищение, баланс себума, ровный тон.</p><span class="more">Смотреть средства</span></span>
+      </a>
+      <a class="tl rv" style="--c:#76bc21" data-care="pro home" href="https://jeuderm-russia.ru/atocare-pro" data-pro-href="https://jeuderm-russia.ru/atocare-pro" data-pro-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/ato-care-moist-emulsion-150ml.webp" data-pro-n="3 средства" data-home-href="https://jeuderm-russia.ru/atocare-home" data-home-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/ato-care-intensive-cream.webp" data-home-n="4 средства">
+        <span class="tl-ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/ato-care-moist-emulsion-150ml.webp" alt="Чувствительная кожа — ЖеДерм Ato Care" loading="lazy"><span class="tl-chip"><i></i>Ato Care</span></span>
+        <span class="tl-bd"><span class="code tl-n">3 средства</span><h3>Чувствительная кожа</h3><p>Негормональный уход за сухой, чувствительной и реактивной кожей, в том числе склонной к дерматитам.</p><span class="more">Смотреть средства</span></span>
+      </a>
+      <a class="tl rv" style="--c:#65666b" data-care="pro" href="https://jeuderm-russia.ru/pro" data-pro-href="https://jeuderm-russia.ru/pro" data-pro-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/lift-intense-viso-contour.webp" data-pro-n="7 средств">
+        <span class="tl-ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/lift-intense-viso-contour.webp" alt="ПРО-уход — ЖеДерм ПРО" loading="lazy"><span class="tl-chip"><i></i>ПРО</span></span>
+        <span class="tl-bd"><span class="code tl-n">7 средств</span><h3>ПРО-уход</h3><p>Препараты для кабинета вне линеек: маски, массажное масло, эксфолиант и гели для аппаратных процедур.</p><span class="more">Смотреть средства</span></span>
+      </a>
+      <a class="tl rv" style="--c:#2b2a2c" data-care="pro" href="https://jeuderm-russia.ru/novazymo-exfoliation" data-pro-href="https://jeuderm-russia.ru/novazymo-exfoliation" data-pro-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/nova-complex.webp" data-pro-n="2 средства">
+        <span class="tl-ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/nova-complex.webp" alt="Обновление кожи — ЖеДерм Nova · Zymo" loading="lazy"><span class="tl-chip"><i></i>Nova · Zymo</span></span>
+        <span class="tl-bd"><span class="code tl-n">2 средства</span><h3>Обновление кожи</h3><p>Трёхэтапные системы обновления с кислотами и энзимами — без агрессивного повреждения и реабилитации.</p><span class="more">Смотреть средства</span></span>
+      </a>
+      <a class="tl rv" style="--c:#ae57b9" data-care="pro home" href="https://jeuderm-russia.ru/hairgenesis?care=pro" data-pro-href="https://jeuderm-russia.ru/hairgenesis?care=pro" data-pro-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/hair-growth-concentrate.webp" data-pro-n="1 средство" data-home-href="https://jeuderm-russia.ru/hairgenesis?care=home" data-home-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/hair-genesis-stimulator.webp" data-home-n="1 средство">
+        <span class="tl-ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/hair-growth-concentrate.webp" alt="Кожа головы — ЖеДерм Hair Genesis" loading="lazy"><span class="tl-chip"><i></i>Hair Genesis</span></span>
+        <span class="tl-bd"><span class="code tl-n">1 средство</span><h3>Кожа головы</h3><p>Пептидный уход за кожей головы и волосами: при выпадении, истончении и замедленном росте волос.</p><span class="more">Смотреть средства</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= КАК РАБОТАЕМ ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <span class="lab"><i></i>Как это работает</span>
+      <h2 data-show="pro">Для <em>косметологов</em> и клиник</h2>
+      <h2 data-show="home">Уход <em>между визитами</em></h2>
+    </div>
+    <div class="steps" data-show="pro">
+      <div class="st rv"><h3>Выберите линию</h3><p>Под задачу кожи: возрастной уход, проблемная или чувствительная кожа, обновление, кожа головы — или препараты ПРО.</p></div>
+      <div class="st rv"><h3>Получите протоколы</h3><p>Пошаговые процедуры с дозировками и временем каждого шага — от атравматичной чистки до лифтинга 40+.</p></div>
+      <div class="st rv"><h3>Пройдите обучение</h3><p>Бесплатные занятия в малых группах и вебинары: механизмы, показания и практика с продуктами ЖеДерм.</p></div>
+    </div>
+    <div class="steps" data-show="home">
+      <div class="st rv"><h3>Процедура в кабинете</h3><p>Косметолог проводит процедуру на профессиональных средствах ЖеДерм.</p></div>
+      <div class="st rv"><h3>Подбор домашнего ухода</h3><p>Специалист подбирает средства той же линии — для ежедневного очищения, увлажнения и защиты.</p></div>
+      <div class="st rv"><h3>Результат держится дольше</h3><p>Домашний уход поддерживает кожу между визитами и продлевает эффект процедуры.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="cta cta-img rv">
+      <div>
+        <h2 data-show="pro">Подберём средства для вашего кабинета</h2>
+        <h2 data-show="home">Не знаете, с чего начать?</h2>
+        <p data-show="pro">Пришлём прайс и протоколы, расскажем о бесплатном обучении. Новым клиентам — −15% на первый заказ.</p>
+        <p data-show="home">Оставьте заявку — специалист подберёт домашний уход под задачу вашей кожи.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-a" href="#getprice_main">Запросить цены</a>
+        <a class="btn btn-o" href="#getconsult">Консультация</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('jdh'); if(!root) return;
+  var q=(location.search.match(/[?&]care=(pro|home)/)||[])[1];
+  var page=location.pathname.replace(/\/+$/,'').split('/').pop();
+  var mode=q||(/home/.test(page)?'home':'pro');
+  root.setAttribute('data-mode',mode);
+  [].forEach.call(root.querySelectorAll('[data-sw]'),function(a){ if(a.dataset.sw===mode) a.setAttribute('aria-current','page'); });
+  [].forEach.call(root.querySelectorAll('.tl'),function(t){
+    if(t.dataset.care.split(' ').indexOf(mode)<0){ t.hidden=true; return; }
+    t.href=t.getAttribute('data-'+mode+'-href');
+    var img=t.querySelector('img'); img.src=t.getAttribute('data-'+mode+'-img');
+    t.querySelector('.tl-n').textContent=t.getAttribute('data-'+mode+'-n');
+  });
+  var items=root.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){[].forEach.call(items,function(el){el.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -30px 0px'});
+  [].forEach.call(items,function(el){io.observe(el);});
+})();
+</script>

@@ -35,6 +35,7 @@
 
 | Файл | Куда ставить в Tilda |
 |---|---|
+| `care` (общая страница категорий, `tools/build_hub.py`) | /pro-jeuderm и /homecare-jeuderm |
 | `reformage` | /reformage-pro и /reformage-homecare |
 | `acno` | /acnopro-jeuderm и /acnohome |
 | `atocare` | /atocare-pro и /atocare-home |
