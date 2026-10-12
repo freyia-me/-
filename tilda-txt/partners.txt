@@ -1,0 +1,316 @@
+<!-- ЖеДерм · страница для дистрибьюторов (/partners-distributors-jeuderm) · блок T123. Собрано tools/build_partners.py.
+     Попапы: #getprice_partner, #getprotocol_partner. Блок октябрьской акции скрывается сам после срока. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+#jds{
+  --c:#cd555b;          /* цвет линейки */
+  --c-soft:#fbf1f1;
+  --ink:#201f20;--text:#595959;--gray:#65666b;--soft:#faf9f7;--line:#ebe8e4;
+  --hf:'Tenor Sans',Georgia,serif;--tf:'Montserrat',Arial,sans-serif;
+  font-family:var(--tf);color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.68;font-size:17px;overflow:hidden
+}
+#jds *{box-sizing:border-box;margin:0;padding:0}
+#jds a{color:inherit;text-decoration:none}
+#jds img{display:block;max-width:100%}
+#jds button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+#jds .w{max-width:1320px;margin:0 auto;padding:0 clamp(20px,4vw,58px)}
+#jds section{padding:clamp(64px,7vw,110px) 0}
+#jds h1,#jds h2,#jds h3{font-family:var(--hf);color:var(--ink);font-weight:400;line-height:1.15;letter-spacing:-.03em}
+#jds h1{font-size:clamp(34px,4.4vw,62px)}
+#jds h2{font-size:clamp(28px,3.2vw,46px)}
+#jds h3{font-size:clamp(19px,1.5vw,22px);line-height:1.3}
+#jds h1 em,#jds h2 em{font-style:normal;color:var(--c)}
+#jds .lead{font-size:18px;max-width:600px}
+#jds .lab{display:inline-flex;align-items:center;gap:12px;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#807578}
+#jds .lab:before{content:"";width:28px;height:1px;background:#b4a5a9}
+#jds .lab i{display:inline-block;width:6px;height:6px;background:var(--c);margin-left:-12px;margin-right:2px}
+#jds .code{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+#jds .btns{display:flex;gap:12px;flex-wrap:wrap}
+#jds .btn{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;height:54px;padding:0 26px;border-radius:3px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:background .3s,color .3s,border-color .3s}
+#jds .btn-a{background:#29282a;color:#fff}
+#jds .btn-a:hover{background:var(--c)}
+#jds .btn-o{border:1px solid #c8c1bf;color:var(--ink)}
+#jds .btn-o:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+#jds .btn svg{width:16px;height:16px;transition:transform .3s}
+#jds .btn:hover svg{transform:translateX(4px)}
+
+/* ===== Шапка линейки ===== */
+
+/* ===== Фильтр и сетка товаров ===== */
+#jds .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+#jds .head h2{margin-top:18px}
+
+/* ===== Результаты ===== */
+@media (max-width:1000px){#jds .res-g,#jds .res-g.r3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){#jds .res-g,#jds .res-g.r3,#jds .res-g.r2{grid-template-columns:1fr 1fr;gap:10px}#jds .res-g.r1{grid-template-columns:1fr}#jds .res figcaption{padding:12px;font-size:13px}}
+
+/* ===== Процедуры ===== */
+
+/* ===== CTA ===== */
+#jds .cta{background:var(--ink);color:rgba(255,255,255,.82);border-radius:4px;padding:clamp(40px,5vw,72px) clamp(24px,5vw,64px);display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+#jds .cta h2{color:#fff;margin-bottom:12px}
+#jds .cta .btn-a{background:var(--c)}
+#jds .cta .btn-a:hover{background:#fff;color:var(--ink)}
+#jds .cta .btn-o{border-color:rgba(255,255,255,.45);color:#fff}
+#jds .cta .btn-o:hover{background:#fff;color:var(--ink)}
+
+#jds .cta-img{background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.94) 40%,rgba(255,255,255,.2) 78%,rgba(255,255,255,0) 100%),var(--bg) right center/cover;color:var(--text);border:1px solid var(--line)}
+#jds .cta-img h2{color:var(--ink)}
+#jds .cta-img .btn-a{background:var(--ink);color:#fff}
+#jds .cta-img .btn-a:hover{background:var(--c)}
+#jds .cta-img .btn-o{border-color:#c8c1bf;color:var(--ink)}
+#jds .cta-img .btn-o:hover{background:var(--ink);color:#fff}
+@media (max-width:1000px){#jds .cta-img{background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.9) 55%,rgba(255,255,255,.55) 100%),var(--bg) center/cover}}
+
+/* ===== Окно товара ===== */
+
+/* ===== Анимация появления ===== */
+#jds .rv{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+#jds .rv.in{opacity:1;transform:none}
+
+/* ===== Адаптив ===== */
+
+
+@media (max-width:640px){
+  #jds{font-size:16px}
+  #jds .lead{font-size:16.5px}
+  #jds .btns{flex-direction:column}
+  #jds .btn{width:100%}
+}
+
+/* ===== Дистрибьюторам ===== */
+#jds .head{display:block;margin-bottom:36px}
+#jds .head h2{margin-top:16px}
+#jds .head .lead{margin-top:14px;font-size:16.5px}
+#jds .pt-top{padding-top:clamp(40px,5vw,72px)}
+#jds .pt-g{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(32px,5vw,80px);align-items:center}
+#jds .pt-top h1{font-size:clamp(32px,3.6vw,54px);margin:20px 0 18px}
+#jds .pt-top .lead{font-size:16.5px;max-width:540px;margin-bottom:28px}
+#jds .pt-ph{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/3.4;background:var(--soft)}
+#jds .pt-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+#jds .pt-ph span{position:absolute;left:14px;bottom:14px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.92);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+#jds .nums{display:grid;grid-template-columns:repeat(3,1fr);margin-top:34px;border-top:1px solid var(--line)}
+#jds .nums div{padding:18px 14px 0 0}
+#jds .nums div+div{padding-left:18px;border-left:1px solid var(--line)}
+#jds .nums b{display:block;font-family:var(--hf);font-weight:400;font-size:clamp(30px,3vw,42px);line-height:1;color:var(--ink)}
+#jds .nums b sup{font-size:.45em;color:var(--c);vertical-align:top}
+#jds .nums span{display:block;margin-top:8px;font-size:12.5px;line-height:1.4;color:var(--gray)}
+/* октябрьская акция */
+#jds .deal{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;padding:clamp(28px,4vw,44px) clamp(24px,4vw,52px);border-radius:6px;background:#29282a;color:rgba(255,255,255,.82);position:relative;overflow:hidden;isolation:isolate}
+#jds .deal:after{content:"";position:absolute;right:-70px;top:-90px;width:280px;height:280px;border-radius:50%;border:1px solid rgba(255,255,255,.16);box-shadow:0 0 0 34px rgba(255,255,255,.04);z-index:-1}
+#jds .deal[hidden]{display:none}
+#jds .deal .tag{display:inline-block;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+#jds .deal h2{color:#fff;margin:16px 0 10px;font-size:clamp(24px,2.6vw,36px)}
+#jds .deal p{font-size:15px;max-width:620px}
+#jds .deal .left{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:12.5px;color:rgba(255,255,255,.7)}
+#jds .deal .left b{font-family:var(--hf);font-weight:400;font-size:22px;color:#fff}
+#jds .deal .btn-a{background:var(--c)}
+#jds .deal .btn-a:hover{background:#fff;color:var(--ink)}
+#jds .deal .btn-o{border-color:rgba(255,255,255,.45);color:#fff}
+#jds .deal .btn-o:hover{background:#fff;color:var(--ink)}
+/* выгоды */
+#jds .bn{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+#jds .bi{padding:28px 26px;border:1px solid var(--line);border-radius:4px;background:#fff}
+#jds .bi:before{content:"";display:block;width:36px;height:3px;background:var(--c);margin-bottom:20px}
+#jds .bi h3{font-size:18px;margin-bottom:8px}
+#jds .bi p{font-size:14px}
+/* портфель */
+#jds .pf{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+#jds .pfi{--k:var(--gray);display:flex;flex-direction:column;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#fff;transition:transform .45s}
+#jds .pfi:hover{transform:translateY(-3px)}
+#jds .pfi:before{content:"";height:3px;background:var(--k)}
+#jds .pfi img{width:100%;aspect-ratio:1/1;object-fit:cover}
+#jds .pfi span{padding:12px 14px 14px;font-size:13.5px;line-height:1.35;color:var(--ink)}
+#jds .pfi small{display:block;margin-top:3px;font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--k)}
+/* шаги */
+#jds .steps-s{background:var(--soft)}
+#jds .sg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+#jds .si{counter-increment:s;padding:26px 22px;background:#fff;border:1px solid var(--line);border-radius:4px}
+#jds .si:before{content:counter(s,decimal-leading-zero);display:block;font-family:var(--hf);font-size:30px;color:var(--c);margin-bottom:12px}
+#jds .si h3{font-size:18px;margin-bottom:8px}
+#jds .si p{font-size:14px}
+/* связь */
+#jds .cn{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+#jds .ci{display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:22px 20px;border:1px solid var(--line);border-radius:4px;background:#fff;transition:transform .4s,border-color .3s}
+#jds .ci:hover{transform:translateY(-3px);border-color:var(--k)}
+#jds .ci i{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--k);color:#fff}
+#jds .ci svg{width:22px;height:22px;fill:currentColor}
+#jds .ci b{font-weight:600;font-size:15px;color:var(--ink)}
+#jds .ci span{font-size:13px;color:var(--gray);word-break:break-word}
+#jds .cta-img{background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.95) 40%,rgba(255,255,255,.2) 78%,rgba(255,255,255,0) 100%),url('https://cdn.jsdelivr.net/gh/freyia-me/-@a886d1a/images/home/skin-renewal.webp') right center/cover;color:var(--text);border:1px solid var(--line)}
+#jds .cta-img h2{color:var(--ink)}
+#jds .cta-img .btn-a{background:var(--ink);color:#fff}
+#jds .cta-img .btn-a:hover{background:var(--c)}
+#jds .cta-img .btn-o{border-color:#c8c1bf;color:var(--ink)}
+#jds .cta-img .btn-o:hover{background:var(--ink);color:#fff}
+@media (max-width:1000px){
+  #jds .pt-g,#jds .deal,#jds .cta{grid-template-columns:1fr}
+  #jds .bn{grid-template-columns:1fr 1fr}
+  #jds .pf{grid-template-columns:repeat(3,1fr)}
+  #jds .sg{grid-template-columns:1fr 1fr}
+  #jds .cn{grid-template-columns:repeat(3,1fr)}
+  #jds .cta-img{background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.9) 60%,rgba(255,255,255,.6) 100%),url('https://cdn.jsdelivr.net/gh/freyia-me/-@a886d1a/images/home/skin-renewal.webp') center/cover}
+}
+@media (max-width:640px){
+  #jds .nums{grid-template-columns:1fr}
+  #jds .nums div,#jds .nums div+div{padding:14px 0;border-left:0;border-bottom:1px solid var(--line)}
+  #jds .bn,#jds .sg{grid-template-columns:1fr}
+  #jds .pf{grid-template-columns:1fr 1fr;gap:10px}
+  #jds .cn{grid-template-columns:1fr 1fr;gap:10px}
+  #jds .ci{padding:16px 14px}
+}
+</style>
+
+<div id="jds">
+
+<!-- ================= ПЕРВЫЙ ЭКРАН ================= -->
+<section class="pt-top">
+  <div class="w pt-g">
+    <div>
+      <span class="lab rv"><i></i>Дистрибьюторам и партнёрам</span>
+      <h1 class="rv">Станьте партнёром <em>ЖеДерм</em> в вашем регионе</h1>
+      <p class="lead rv">Южнокорейская профессиональная космецевтика на основе пептидов и биотехнологий. Работаем с дистрибьюторами, клиниками эстетической медицины и косметологическими центрами — напрямую от официального дистрибьютора в России, ООО «Революшн Био».</p>
+      <div class="btns rv">
+        <a class="btn btn-a" href="#getprice_partner">Получить прайс для партнёров <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="#getprotocol_partner">Протоколы и материалы</a>
+      </div>
+      <div class="nums rv">
+        <div><b>50 000<sup>+</sup></b><span>процедур в клиниках и центрах</span></div>
+        <div><b>20<sup>+</sup></b><span>стран, где работают с ЖеДерм</span></div>
+        <div><b>6</b><span>направлений ухода — ПРО и домашний</span></div>
+      </div>
+    </div>
+    <div class="pt-ph rv">
+      <img src="https://cdn.jsdelivr.net/gh/freyia-me/-@a886d1a/images/study/symposium-group-dubrovnik.webp" alt="Партнёры и специалисты ЖеДерм на международном симпозиуме в Дубровнике" loading="eager">
+      <span>International Aesthetic Symposium · 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= АКЦИЯ ОКТЯБРЯ ================= -->
+<section style="padding-top:0;padding-bottom:0" data-until-wrap>
+  <div class="w">
+    <div class="deal rv" data-until="2026-10-31">
+      <div>
+        <span class="tag">До 31 октября</span>
+        <h2>Специальные условия для новых дистрибьюторов</h2>
+        <p>До конца октября — особые условия старта для новых партнёров. Оставьте заявку: менеджер расскажет подробности и подготовит предложение для вашего региона.</p>
+        <span class="left" data-left hidden>Осталось <b></b></span>
+      </div>
+      <div class="btns">
+        <a class="btn btn-a" href="#getprice_partner">Узнать условия <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="https://wa.me/79253428202" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ВЫГОДЫ ================= -->
+<section>
+  <div class="w">
+    <div class="head">
+      <span class="lab"><i></i>Что получает партнёр</span>
+      <h2>Почему <em>ЖеДерм</em></h2>
+    </div>
+    <div class="bn">
+      <div class="bi rv"><h3>Оригинальная продукция</h3><p>Прямые поставки от официального дистрибьютора в России — без посредников, с документами на всю продукцию.</p></div>
+      <div class="bi rv"><h3>Полный портфель</h3><p>Шесть направлений ухода: препараты для кабинета и домашний уход. Клиенты возвращаются за средствами между процедурами.</p></div>
+      <div class="bi rv"><h3>Доказанная эффективность</h3><p>Формулы протестированы в Дерматологическом центре Национального университета Чунгнам и в Университете Ханнам.</p></div>
+      <div class="bi rv"><h3>Обучение вашей команды</h3><p>Бесплатное обучение специалистов, протоколы процедур, вебинары и участие в международных симпозиумах ЖеДерм.</p></div>
+      <div class="bi rv"><h3>Маркетинговая поддержка</h3><p>Фото продуктов, описания, материалы для соцсетей и презентации для работы с клиниками и косметологами.</p></div>
+      <div class="bi rv"><h3>Персональный менеджер</h3><p>Помогаем с запуском, ассортиментом и первыми продажами в регионе. Условия растут вместе с объёмом закупок.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПОРТФЕЛЬ ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <span class="lab"><i></i>Портфель</span>
+      <h2>Шесть направлений <em>ухода</em></h2>
+    </div>
+    <div class="pf">
+      <a class="pfi rv" style="--k:#cd555b" href="https://jeuderm-russia.ru/reformage-pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@a886d1a/images/products/reform-age-o2-boto-fluid-110ml.webp" alt="Возрастной уход — ЖеДерм Reform Age" loading="lazy"><span>Возрастной уход<small>Reform Age</small></span></a>
+      <a class="pfi rv" style="--k:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@a886d1a/images/products/acno-active-emulsion-150ml.webp" alt="Проблемная кожа — ЖеДерм Acno Active" loading="lazy"><span>Проблемная кожа<small>Acno Active</small></span></a>
+      <a class="pfi rv" style="--k:#76bc21" href="https://jeuderm-russia.ru/atocare-pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@a886d1a/images/products/ato-care-mild-cleanser.webp" alt="Чувствительная кожа — ЖеДерм Ato Care" loading="lazy"><span>Чувствительная кожа<small>Ato Care</small></span></a>
+      <a class="pfi rv" style="--k:#65666b" href="https://jeuderm-russia.ru/pro"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@a886d1a/images/products/lift-intense-viso-contour.webp" alt="ПРО-уход — ЖеДерм ПРО" loading="lazy"><span>ПРО-уход<small>ПРО</small></span></a>
+      <a class="pfi rv" style="--k:#2b2a2c" href="https://jeuderm-russia.ru/novazymo-exfoliation"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@a886d1a/images/products/nova-complex.webp" alt="Обновление кожи — ЖеДерм Nova · Zymo" loading="lazy"><span>Обновление кожи<small>Nova · Zymo</small></span></a>
+      <a class="pfi rv" style="--k:#ae57b9" href="https://jeuderm-russia.ru/hairgenesis"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@a886d1a/images/products/hair-genesis-stimulator.webp" alt="Кожа головы — ЖеДерм Hair Genesis" loading="lazy"><span>Кожа головы<small>Hair Genesis</small></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ШАГИ ================= -->
+<section class="steps-s">
+  <div class="w">
+    <div class="head">
+      <span class="lab"><i></i>Как начать</span>
+      <h2>Четыре шага до <em>партнёрства</em></h2>
+    </div>
+    <div class="sg">
+      <div class="si rv"><h3>Заявка</h3><p>Оставьте заявку или напишите в мессенджер — расскажите о регионе и вашей компании.</p></div>
+      <div class="si rv"><h3>Предложение</h3><p>Менеджер пришлёт прайс для партнёров и условия сотрудничества.</p></div>
+      <div class="si rv"><h3>Договор и первая поставка</h3><p>Подбираем стартовый ассортимент под рынок региона и оформляем поставку.</p></div>
+      <div class="si rv"><h3>Обучение и запуск</h3><p>Обучаем команду, передаём протоколы и материалы, сопровождаем первые продажи.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= СВЯЗЬ ================= -->
+<section>
+  <div class="w">
+    <div class="head">
+      <span class="lab"><i></i>Прямая связь</span>
+      <h2>Обсудим <em>партнёрство</em></h2>
+    </div>
+    <div class="cn">
+      <a class="ci rv" style="--k:#25d366" href="https://wa.me/79253428202" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></i><b>WhatsApp</b><span>+7 925 342-82-02</span></a>
+      <a class="ci rv" style="--k:#229ed9" href="https://t.me/+79250843090" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 3c.9-.3 1.6.2 1.4 1.3z"/></svg></i><b>Telegram</b><span>+7 925 084-30-90</span></a>
+      <a class="ci rv" style="--k:#6d43f5" href="https://max.ru/u/f9LHodD0cOLKBWLODghgiSo7Io7UdoSgD9WyEFyj38AwuRwPD6M5HL3syog" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.6 1.2 5 3.1 6.7L4.5 22l4-2.1c1.1.3 2.3.5 3.5.5 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm-4.6 12.4V8.1h1.5l2.1 3 2.1-3h1.5v6.3h-1.6v-3.7l-2 2.8-2-2.8v3.7H7.4z"/></svg></i><b>MAX</b><span>Написать в MAX</span></a>
+      <a class="ci rv" style="--k:#29282a" href="tel:+79253428202"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></i><b>Позвонить</b><span>+7 925 342-82-02</span></a>
+      <a class="ci rv" style="--k:#cd555b" href="mailto:info@revolution.bio"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6c0-.6.4-1 1-1zm9 7.2L4 7.3V17h16V7.3l-8 4.9zM19.1 7H4.9l7.1 4.3L19.1 7z"/></svg></i><b>E-mail</b><span>info@revolution.bio</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="cta cta-img rv">
+      <div>
+        <h2>Получите прайс для партнёров</h2>
+        <p>Пришлём условия сотрудничества, прайс и материалы о бренде — и подберём стартовый ассортимент для вашего региона.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-a" href="#getprice_partner">Получить прайс <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="#getprotocol_partner">Протоколы</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('jds'); if(!root) return;
+  var d=root.querySelector('[data-until]');
+  if(d){
+    var end=new Date(d.getAttribute('data-until')+'T23:59:59+03:00'), now=new Date();
+    if(now>end){ root.querySelector('[data-until-wrap]').hidden=true; }
+    else{
+      var days=Math.ceil((end-now)/864e5), el=d.querySelector('[data-left]');
+      var w=(days%10===1&&days%100!==11)?'день':((days%10>=2&&days%10<=4&&(days%100<10||days%100>=20))?'дня':'дней');
+      el.querySelector('b').textContent=days+' '+w; el.hidden=false;
+    }
+  }
+  var items=root.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){[].forEach.call(items,function(el){el.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -30px 0px'});
+  [].forEach.call(items,function(el){io.observe(el);});
+})();
+</script>
