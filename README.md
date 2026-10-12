@@ -40,6 +40,7 @@
 | `cosmeticru` (`tools/build_drk.py`) | /cosmeticru |
 | `promo` (`tools/build_promo.py`) | страница акций |
 | `partners` (`tools/build_partners.py`) | /partners-distributors-jeuderm |
+| `footer` (`tools/build_footer.py`) | последним блоком на всех страницах |
 | `reformage` | /reformage-pro и /reformage-homecare |
 | `acno` | /acnopro-jeuderm и /acnohome |
 | `atocare` | /atocare-pro и /atocare-home |
