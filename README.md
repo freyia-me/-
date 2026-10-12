@@ -38,6 +38,7 @@
 | `care` (общая страница категорий, `tools/build_hub.py`) | /pro-jeuderm и /homecare-jeuderm |
 | `study` (`tools/build_study.py`) | /study |
 | `cosmeticru` (`tools/build_drk.py`) | /cosmeticru |
+| `promo` (`tools/build_promo.py`) | страница акций |
 | `reformage` | /reformage-pro и /reformage-homecare |
 | `acno` | /acnopro-jeuderm и /acnohome |
 | `atocare` | /atocare-pro и /atocare-home |
