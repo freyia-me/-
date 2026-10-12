@@ -83,6 +83,19 @@
 #jdl .card:hover .more:after{transform:translateX(4px)}
 #jdl .pd{display:none}
 
+/* ===== Результаты ===== */
+#jdl .res-g{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+#jdl .res-g.r3{grid-template-columns:repeat(3,1fr)}
+#jdl .res-g.r2{grid-template-columns:repeat(2,1fr);max-width:900px}
+#jdl .res-g.r1{grid-template-columns:minmax(0,560px)}
+#jdl .res{margin:0;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+#jdl .res img{width:100%;aspect-ratio:1/1;object-fit:cover}
+#jdl .res figcaption{padding:16px 18px 18px;font-size:14px;line-height:1.45;color:var(--ink)}
+#jdl .res figcaption .code{display:block;margin-bottom:6px;color:var(--c)}
+#jdl .res-note{margin-top:16px;font-size:12.5px;color:var(--gray)}
+@media (max-width:1000px){#jdl .res-g,#jdl .res-g.r3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){#jdl .res-g,#jdl .res-g.r3,#jdl .res-g.r2{grid-template-columns:1fr 1fr;gap:10px}#jdl .res-g.r1{grid-template-columns:1fr}#jdl .res figcaption{padding:12px;font-size:13px}}
+
 /* ===== Процедуры ===== */
 #jdl .procs{background:var(--soft)}
 #jdl .pr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -227,7 +240,7 @@
     <div class="grid g4">
 
       <a class="card rv" href="#p-mild-cleanser" data-id="mild-cleanser" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/ato-care-mild-cleanser.webp" alt="Ato Care Mild Cleanser — очищающий гель для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/ato-care-mild-cleanser.webp" alt="Ato Care Mild Cleanser — очищающий гель для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Ato Care Mild Cleanser</span><h3>Очищающий гель для всех типов чувствительной кожи</h3><p>Деликатно очищает, не нарушая барьер и микрофлору, поддерживает pH-баланс, увлажняет и освежает.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Мягкие ПАВ, β-глюкан, фитокомплекс успокаивающих экстрактов, ниацинамид.</p>
@@ -236,7 +249,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-toner-mousse" data-id="toner-mousse" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/ato-care-toner-mousse.webp" alt="Ato Care Toner Mousse — тонер-мусс для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/ato-care-toner-mousse.webp" alt="Ato Care Toner Mousse — тонер-мусс для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Ato Care Toner Mousse</span><h3>Тонер-мусс для всех типов чувствительной кожи</h3><p>Мягко тонизирует и увлажняет, укрепляет сосуды, уменьшает покраснение и восстанавливает pH-баланс.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Пантенол, трипептид меди-1, аллантоин, фитоэкстракты.</p>
@@ -245,7 +258,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-moist-emulsion" data-id="moist-emulsion" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/ato-care-moist-emulsion-150ml.webp" alt="Ato Care Moist Emulsion — увлажняющая эмульсия для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/ato-care-moist-emulsion-150ml.webp" alt="Ato Care Moist Emulsion — увлажняющая эмульсия для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Ato Care Moist Emulsion</span><h3>Увлажняющая эмульсия для всех типов чувствительной кожи</h3><p>Интенсивно увлажняет, питает и восстанавливает липидный барьер, снимает раздражение и зуд.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл · ПРО / 100 мл · дом" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Triple M Complex™, трипептид меди-1, Serilesine™, β-глюкан, церамиды, фитокомплекс шлемника, коптиса и хауттюйнии.</p>
@@ -254,7 +267,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-intensive-cream" data-id="intensive-cream" data-care="home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/ato-care-intensive-cream.webp" alt="Ato Care Intensive Cream — интенсивный крем для сухой и чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/ato-care-intensive-cream.webp" alt="Ato Care Intensive Cream — интенсивный крем для сухой и чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Ato Care Intensive Cream</span><h3>Интенсивный крем для сухой и чувствительной кожи</h3><p>Питает и защищает очень сухую, раздражённую и повреждённую кожу, снижает зуд, предотвращает шелушение.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="50 мл" data-care-t="Домашний уход">
           <p data-k="Активные ингредиенты">Пантенол, трипептид меди-1, аллантоин, фитоэкстракты, Triple M Complex™, Serilesine™, β-глюкан, витамин E.</p>
@@ -263,6 +276,23 @@
       </a>
 
     </div>
+  </div>
+</section>
+
+<!-- ================= РЕЗУЛЬТАТЫ ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab"><i></i>Результаты процедур</span>
+        <h2>До и после — <em>фото специалистов</em></h2>
+      </div>
+    </div>
+    <div class="res-g r1">
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/clinical-neck-before-after.webp" alt="Ato Care: до и после — Кожа спокойнее: меньше покраснения и шелушения" loading="lazy"><figcaption><span class="code">Ato Care</span>Кожа спокойнее: меньше покраснения и шелушения</figcaption></figure>
+    </div>
+    <p class="note rv" style="margin:18px 0 0">Средства Ato Care — это уход за кожей. Они не заменяют лечение у врача и при дерматите применяются только по согласованию с лечащим врачом.</p>
+    <p class="res-note rv">Результат зависит от состояния кожи и протокола, который подбирает специалист.</p>
   </div>
 </section>
 

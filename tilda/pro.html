@@ -83,6 +83,19 @@
 #jdl .card:hover .more:after{transform:translateX(4px)}
 #jdl .pd{display:none}
 
+/* ===== Результаты ===== */
+#jdl .res-g{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+#jdl .res-g.r3{grid-template-columns:repeat(3,1fr)}
+#jdl .res-g.r2{grid-template-columns:repeat(2,1fr);max-width:900px}
+#jdl .res-g.r1{grid-template-columns:minmax(0,560px)}
+#jdl .res{margin:0;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+#jdl .res img{width:100%;aspect-ratio:1/1;object-fit:cover}
+#jdl .res figcaption{padding:16px 18px 18px;font-size:14px;line-height:1.45;color:var(--ink)}
+#jdl .res figcaption .code{display:block;margin-bottom:6px;color:var(--c)}
+#jdl .res-note{margin-top:16px;font-size:12.5px;color:var(--gray)}
+@media (max-width:1000px){#jdl .res-g,#jdl .res-g.r3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){#jdl .res-g,#jdl .res-g.r3,#jdl .res-g.r2{grid-template-columns:1fr 1fr;gap:10px}#jdl .res-g.r1{grid-template-columns:1fr}#jdl .res figcaption{padding:12px;font-size:13px}}
+
 /* ===== Процедуры ===== */
 #jdl .procs{background:var(--soft)}
 #jdl .pr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -221,7 +234,7 @@
     <div class="grid g4">
 
       <a class="card rv" href="#p-detox-mask" data-id="detox-mask" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/adaptive-skin-detox-mask.webp" alt="Adaptive Skin Detox Mask — детокс-маска с водорослями" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/adaptive-skin-detox-mask.webp" alt="Adaptive Skin Detox Mask — детокс-маска с водорослями" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Adaptive Skin Detox Mask</span><h3>Детокс-маска с водорослями</h3><p>Очищает, освежает, тонизирует и уменьшает отёчность.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный уход">
           <p data-k="Активные ингредиенты">Пептиды, спирулина, жемчуг, витамины C и B3.</p>
@@ -230,7 +243,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-o2-therapy-gel" data-id="o2-therapy-gel" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/o2-therapy-active-gel.webp" alt="O₂ Therapy Active Gel — активный гель «Кислородная терапия»" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/o2-therapy-active-gel.webp" alt="O₂ Therapy Active Gel — активный гель «Кислородная терапия»" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">O₂ Therapy Active Gel</span><h3>Активный гель «Кислородная терапия»</h3><p>Насыщает кожу кислородом, очищает поры, выравнивает тон и придаёт сияние.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный уход">
           <p data-k="Активные ингредиенты">Пептиды, β-глюкан, ниацинамид, фитокомплекс 7 трав, MultiEx, витамины B3, B5, E, экстракты алоэ, алтея, аниса.</p>
@@ -239,7 +252,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-repair-mask" data-id="repair-mask" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/repair-mask-post-procedure.webp" alt="Repair Post-Procedure Mask — пост-процедурная восстанавливающая маска" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/repair-mask-post-procedure.webp" alt="Repair Post-Procedure Mask — пост-процедурная восстанавливающая маска" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Repair Post-Procedure Mask</span><h3>Пост-процедурная восстанавливающая маска</h3><p>Успокаивает, увлажняет, снимает раздражение и покраснение. «Маска мгновенной красоты» — сияние и свежесть.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный уход">
           <p data-k="Активные ингредиенты">Пептиды до 550 ppm, Hydro-GF3, Acell 300, гиалуроновая кислота, аллантоин, трегалоза, пантенол, стабилизированный витамин C, экстракты граната, женьшеня, папайи, портулака.</p>
@@ -248,7 +261,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-lift-intense" data-id="lift-intense" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/lift-intense-viso-contour.webp" alt="Lift Intense Viso Contour — маска с подтягивающим эффектом" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/lift-intense-viso-contour.webp" alt="Lift Intense Viso Contour — маска с подтягивающим эффектом" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Lift Intense Viso Contour</span><h3>Маска с подтягивающим эффектом</h3><p>Моментальный лифтинг-эффект и моделирование овала лица за один сеанс. Экспресс-процедура «на выход».</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="110 мл" data-care-t="Профессиональный уход">
           <p data-k="Syn®-Ake">Пептид, созданный по образцу вещества из яда храмовой гадюки: ботулоподобное действие, расслабляет мимические мышцы.</p>
@@ -258,7 +271,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-twin-exfoliant" data-id="twin-exfoliant" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/molecular-twin-exfoliant.webp" alt="Molecular Twin Exfoliant — молекулярный эксфолиант" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/molecular-twin-exfoliant.webp" alt="Molecular Twin Exfoliant — молекулярный эксфолиант" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Molecular Twin Exfoliant</span><h3>Молекулярный эксфолиант</h3><p>Обновляет кожу, выравнивает микрорельеф и тон — процедура «на выход».</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл" data-care-t="Профессиональный уход">
           <p data-k="Активные ингредиенты">AHA/BHA 18 %, арбутин, центелла, пептиды. pH 2,9.</p>
@@ -267,7 +280,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-twin-oil" data-id="twin-oil" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/molecular-twin-oil.webp" alt="Molecular Twin Oil — молекулярное масло для массажа лица" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/molecular-twin-oil.webp" alt="Molecular Twin Oil — молекулярное масло для массажа лица" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Molecular Twin Oil</span><h3>Молекулярное масло для массажа лица</h3><p>Питает, смягчает и выравнивает тон. Вторая фаза пилинга: мягкие «шарики» убирают отмершие клетки, не затрагивая здоровые.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл" data-care-t="Профессиональный уход">
           <p data-k="Активные ингредиенты">Трипептид меди, арбутин, масла жожоба, камелии и виноградных косточек.</p>
@@ -276,7 +289,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-drainage-gel" data-id="drainage-gel" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/drainage-physio-gel.webp" alt="Drainage Physio Gel — лимфодренажный гель для аппаратных процедур" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/drainage-physio-gel.webp" alt="Drainage Physio Gel — лимфодренажный гель для аппаратных процедур" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Drainage Physio Gel</span><h3>Лимфодренажный гель для аппаратных процедур</h3><p>Усиливает выведение лимфы, обладает высокой токопроводностью — подходит для всех аппаратных методик.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="470 мл" data-care-t="Профессиональный уход">
           <p data-k="Активные ингредиенты">Пептиды 300 ppm, Hydro-GF3, Acell 300, цветочная вода розы, гиалуронат натрия, аллантоин, аскорбилфосфат натрия, токоферил ацетат, пантенол, ментол.</p>
@@ -286,6 +299,25 @@
       </a>
 
     </div>
+  </div>
+</section>
+
+<!-- ================= РЕЗУЛЬТАТЫ ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab"><i></i>Результаты процедур</span>
+        <h2>До и после — <em>фото специалистов</em></h2>
+      </div>
+    </div>
+    <div class="res-g">
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/lift-intense-front.webp" alt="Lift Intense: до и после — Лифтинг и контур лица, анфас" loading="lazy"><figcaption><span class="code">Lift Intense</span>Лифтинг и контур лица, анфас</figcaption></figure>
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/lift-intense-profile.webp" alt="Lift Intense: до и после — Лифтинг и контур лица, профиль" loading="lazy"><figcaption><span class="code">Lift Intense</span>Лифтинг и контур лица, профиль</figcaption></figure>
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/molecular-twin-exfoliant-cheek.webp" alt="Molecular Twin: до и после — Ровный тон и текстура кожи" loading="lazy"><figcaption><span class="code">Molecular Twin</span>Ровный тон и текстура кожи</figcaption></figure>
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/molecular-twin-exfoliant-profile.webp" alt="Molecular Twin: до и после — Обновление кожи, профиль" loading="lazy"><figcaption><span class="code">Molecular Twin</span>Обновление кожи, профиль</figcaption></figure>
+    </div>
+    <p class="res-note rv">Результат зависит от состояния кожи и протокола, который подбирает специалист.</p>
   </div>
 </section>
 

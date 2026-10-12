@@ -83,6 +83,19 @@
 #jdl .card:hover .more:after{transform:translateX(4px)}
 #jdl .pd{display:none}
 
+/* ===== Результаты ===== */
+#jdl .res-g{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+#jdl .res-g.r3{grid-template-columns:repeat(3,1fr)}
+#jdl .res-g.r2{grid-template-columns:repeat(2,1fr);max-width:900px}
+#jdl .res-g.r1{grid-template-columns:minmax(0,560px)}
+#jdl .res{margin:0;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+#jdl .res img{width:100%;aspect-ratio:1/1;object-fit:cover}
+#jdl .res figcaption{padding:16px 18px 18px;font-size:14px;line-height:1.45;color:var(--ink)}
+#jdl .res figcaption .code{display:block;margin-bottom:6px;color:var(--c)}
+#jdl .res-note{margin-top:16px;font-size:12.5px;color:var(--gray)}
+@media (max-width:1000px){#jdl .res-g,#jdl .res-g.r3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){#jdl .res-g,#jdl .res-g.r3,#jdl .res-g.r2{grid-template-columns:1fr 1fr;gap:10px}#jdl .res-g.r1{grid-template-columns:1fr}#jdl .res figcaption{padding:12px;font-size:13px}}
+
 /* ===== Процедуры ===== */
 #jdl .procs{background:var(--soft)}
 #jdl .pr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -223,7 +236,7 @@
     <div class="grid g2">
 
       <a class="card rv" href="#p-zymo" data-id="zymo" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/zymo-complex.webp" alt="Zymo Complex · pH 2,5 — зимо Комплекс — энзимно-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/zymo-complex.webp" alt="Zymo Complex · pH 2,5 — зимо Комплекс — энзимно-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Zymo Complex · pH 2,5</span><h3>Зимо Комплекс — энзимно-кислотное обновление</h3><p>Очищает, обновляет и придаёт коже сияние без раздражения. Подходит для очень чувствительной кожи.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="3 × 10 мл" data-care-t="Профессиональный уход">
           <p data-k="Состав набора">AHA Primer (10 %, pH 3,5) — фитокомплекс и масла, 6 кислот, витамины. Zymo Active (25 % AHA 7 кислот / BHA + энзимы 1000 ppm, pH 2,5). pH Reductant (pH 5,0) — 9 пептидов 350 ppm, энзимы 2000 ppm, увлажняющие компоненты.</p>
@@ -232,7 +245,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-nova" data-id="nova" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/nova-complex.webp" alt="Nova Complex · pH 1,5 — нова Комплекс — 9-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/nova-complex.webp" alt="Nova Complex · pH 1,5 — нова Комплекс — 9-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Nova Complex · pH 1,5</span><h3>Нова Комплекс — 9-кислотное обновление</h3><p>Глубоко обновляет кожу, выравнивает тон и морщины, улучшает эластичность, сияние и проникновение активов.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="3 × 10 мл" data-care-t="Профессиональный уход">
           <p data-k="Состав набора">AHA Primer (10 %, pH 3,5) — фитокомплекс и масла, 6 кислот, витамины. Nova Active (35 % раствор AHA 7 кислот / BHA / PHA, pH 1,5). pH Reductant (pH 5,0) — 9 пептидов 350 ppm, энзимы 2000 ppm, увлажняющие компоненты.</p>

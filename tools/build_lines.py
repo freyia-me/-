@@ -14,7 +14,8 @@ import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-IMG = 'https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/'
+IMG = 'https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/'
+IMG_RES = 'https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/'
 IMG_HOME = 'https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/'
 ARROW = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg>'
 
@@ -137,6 +138,9 @@ LINES = [
      'Чистка кожи <span>— санация пор</span>', '[[clay-mask|Clay Mask]] <span>— очищающая маска</span>',
      '[[active-gel|Active Gel]] <span>— на воспалённые участки</span>', '[[active-emulsion|Active Emulsion]] <span>— завершающий уход</span>']),
   ],
+  results=[('acno-cheek-1.webp', 'Acno Active', 'Меньше воспалений, ровнее тон и текстура'),
+           ('acno-cheek-2.webp', 'Acno Active', 'Чистая кожа без высыпаний и покраснения'),
+           ('acno-face-front.webp', 'Acno Active', 'Спокойная кожа и ровный тон лица')],
   cta=('Работаете с проблемной кожей?', 'Пришлём прайс и протокол атравматичной чистки, подберём средства Acno Active для кабинета и домашнего ухода клиентов.'),
  ),
 
@@ -184,6 +188,8 @@ LINES = [
      'Adaptive Skin Detox Mask <span>— детокс-маска</span>', 'O₂ Therapy Active Gel <span>— кислородный гель</span>',
      '[[toner-mousse|Toner Mousse]] <span>— тонизация</span>', '[[moist-emulsion|Moist Emulsion]] <span>— завершающий уход</span>']),
   ],
+  results=[('clinical-neck-before-after.webp', 'Ato Care', 'Кожа спокойнее: меньше покраснения и шелушения')],
+  results_note='Средства Ato Care — это уход за кожей. Они не заменяют лечение у врача и при дерматите применяются только по согласованию с лечащим врачом.',
   cta=('Работаете с чувствительной кожей?', 'Пришлём прайс и протоколы, подберём средства Ato Care для кабинета и домашнего ухода клиентов.'),
  ),
 
@@ -251,6 +257,10 @@ LINES = [
      '[[twin-oil|Molecular Twin Oil]] <span>— миофасциальный массаж</span>', '[[lift-intense|Lift Intense Viso Contour]] <span>— лифтинг-маска</span>',
      'Reform Age Collagen Tonic, Intensive Cream и Eye Cream <span>— завершение</span>']),
   ],
+  results=[('lift-intense-front.webp', 'Lift Intense', 'Лифтинг и контур лица, анфас'),
+           ('lift-intense-profile.webp', 'Lift Intense', 'Лифтинг и контур лица, профиль'),
+           ('molecular-twin-exfoliant-cheek.webp', 'Molecular Twin', 'Ровный тон и текстура кожи'),
+           ('molecular-twin-exfoliant-profile.webp', 'Molecular Twin', 'Обновление кожи, профиль')],
   cta=('Подобрать препараты для кабинета?', 'Расскажем, как сочетать средства ПРО с линиями ЖеДерм, пришлём прайс и протоколы.'),
  ),
 
@@ -361,6 +371,32 @@ def proc(pr):
       </div>'''
 
 
+def results(d):
+    rs = d.get('results')
+    if not rs:
+        return ''
+    figs = '\n'.join(f'''      <figure class="res rv"><img src="{IMG_RES}{img}" alt="{e(lab)}: до и после — {e(cap)}" loading="lazy"><figcaption><span class="code">{lab}</span>{cap}</figcaption></figure>''' for img, lab, cap in rs)
+    cls = {1: ' r1', 2: ' r2', 3: ' r3'}.get(len(rs), '')
+    note = '\n    <p class="note rv" style="margin:18px 0 0">%s</p>' % d['results_note'] if d.get('results_note') else ''
+    return f'''
+<!-- ================= РЕЗУЛЬТАТЫ ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab"><i></i>Результаты процедур</span>
+        <h2>До и после — <em>фото специалистов</em></h2>
+      </div>
+    </div>
+    <div class="res-g{cls}">
+{figs}
+    </div>{note}
+    <p class="res-note rv">Результат зависит от состояния кожи и протокола, который подбирает специалист.</p>
+  </div>
+</section>
+'''
+
+
 def build(d):
     css = CSS.replace('--c:#cd555b;', '--c:%s;' % d['c']).replace('--c-soft:#fbf1f1;', '--c-soft:%s;' % d['soft'])
     extra = []
@@ -457,7 +493,7 @@ def build(d):
     </div>
   </div>
 </section>
-{procs}
+{results(d)}{procs}
 <!-- ================= CTA ================= -->
 <section>
   <div class="w">

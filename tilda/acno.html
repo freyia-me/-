@@ -83,6 +83,19 @@
 #jdl .card:hover .more:after{transform:translateX(4px)}
 #jdl .pd{display:none}
 
+/* ===== Результаты ===== */
+#jdl .res-g{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+#jdl .res-g.r3{grid-template-columns:repeat(3,1fr)}
+#jdl .res-g.r2{grid-template-columns:repeat(2,1fr);max-width:900px}
+#jdl .res-g.r1{grid-template-columns:minmax(0,560px)}
+#jdl .res{margin:0;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+#jdl .res img{width:100%;aspect-ratio:1/1;object-fit:cover}
+#jdl .res figcaption{padding:16px 18px 18px;font-size:14px;line-height:1.45;color:var(--ink)}
+#jdl .res figcaption .code{display:block;margin-bottom:6px;color:var(--c)}
+#jdl .res-note{margin-top:16px;font-size:12.5px;color:var(--gray)}
+@media (max-width:1000px){#jdl .res-g,#jdl .res-g.r3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){#jdl .res-g,#jdl .res-g.r3,#jdl .res-g.r2{grid-template-columns:1fr 1fr;gap:10px}#jdl .res-g.r1{grid-template-columns:1fr}#jdl .res figcaption{padding:12px;font-size:13px}}
+
 /* ===== Процедуры ===== */
 #jdl .procs{background:var(--soft)}
 #jdl .pr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -226,7 +239,7 @@
     <div class="grid">
 
       <a class="card rv" href="#p-mild-cleanser" data-id="mild-cleanser" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/acno-mild-cleanser.webp" alt="Acno Mild Cleanser — очищающий гель для жирной и проблемной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/acno-mild-cleanser.webp" alt="Acno Mild Cleanser — очищающий гель для жирной и проблемной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Acno Mild Cleanser</span><h3>Очищающий гель для жирной и проблемной кожи</h3><p>Мягко очищает, регулирует себо-продукцию, уменьшает воспаление и сужает поры, не нарушая pH и микробиом.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">AHA/BHA, комплекс Acnotide, пептиды меди, глутатион, фитокомплекс мирта и настурции.</p>
@@ -235,7 +248,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-multi-acid-pad" data-id="multi-acid-pad" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/acno-multi-acid-pad.webp" alt="Acno Multi-Acid Pad — мультикислотные пады для жирной и проблемной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/acno-multi-acid-pad.webp" alt="Acno Multi-Acid Pad — мультикислотные пады для жирной и проблемной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Acno Multi-Acid Pad</span><h3>Мультикислотные пады для жирной и проблемной кожи</h3><p>Очищают и обновляют кожу, снижают воспаление и убирают жирный блеск.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="50 шт" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">AHA/BHA, цинк, пантенол, экстракты чайного дерева и гамамелиса.</p>
@@ -244,7 +257,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-clay-mask" data-id="clay-mask" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/acno-clay-mask.webp" alt="Acno Clay Mask — очищающая маска с глиной для проблемной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/acno-clay-mask.webp" alt="Acno Clay Mask — очищающая маска с глиной для проблемной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Acno Clay Mask</span><h3>Очищающая маска с глиной для проблемной кожи</h3><p>Глубоко очищает поры, регулирует себо-продукцию, снижает воспаление, придаёт коже матовость и свежесть.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный уход">
           <p data-k="Активные ингредиенты">Белая глина, пептиды 250 ppm, растительный мультикомплекс, антисептики.</p>
@@ -253,7 +266,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-active-gel" data-id="active-gel" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/acno-active-gel-150ml.webp" alt="Acno Active Gel — противовоспалительный гель" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/acno-active-gel-150ml.webp" alt="Acno Active Gel — противовоспалительный гель" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Acno Active Gel</span><h3>Противовоспалительный гель</h3><p>Успокаивает кожу, снижает воспаление и высыпания, регулирует себо-продукцию и выравнивает тон.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл · ПРО / 100 мл · дом" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Пептиды 330 ppm, лизат бифидобактерий, ниацинамид, ретинил пальмитат, пантенол, фитокомплекс мирта и гамамелиса.</p>
@@ -262,7 +275,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-active-emulsion" data-id="active-emulsion" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/acno-active-emulsion-150ml.webp" alt="Acno Active Emulsion — противовоспалительная эмульсия" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/acno-active-emulsion-150ml.webp" alt="Acno Active Emulsion — противовоспалительная эмульсия" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Acno Active Emulsion</span><h3>Противовоспалительная эмульсия</h3><p>Увлажняет, успокаивает и матирует кожу, снижает воспаление и помогает предотвратить высыпания.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл · ПРО / 100 мл · дом" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Пептидный комплекс, фитокомплекс мирта и настурции, ниацинамид, пантенол, аденозин, гиалуроновая кислота, лизаты бифидобактерий.</p>
@@ -272,6 +285,24 @@
       </a>
 
     </div>
+  </div>
+</section>
+
+<!-- ================= РЕЗУЛЬТАТЫ ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab"><i></i>Результаты процедур</span>
+        <h2>До и после — <em>фото специалистов</em></h2>
+      </div>
+    </div>
+    <div class="res-g r3">
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/acno-cheek-1.webp" alt="Acno Active: до и после — Меньше воспалений, ровнее тон и текстура" loading="lazy"><figcaption><span class="code">Acno Active</span>Меньше воспалений, ровнее тон и текстура</figcaption></figure>
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/acno-cheek-2.webp" alt="Acno Active: до и после — Чистая кожа без высыпаний и покраснения" loading="lazy"><figcaption><span class="code">Acno Active</span>Чистая кожа без высыпаний и покраснения</figcaption></figure>
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/acno-face-front.webp" alt="Acno Active: до и после — Спокойная кожа и ровный тон лица" loading="lazy"><figcaption><span class="code">Acno Active</span>Спокойная кожа и ровный тон лица</figcaption></figure>
+    </div>
+    <p class="res-note rv">Результат зависит от состояния кожи и протокола, который подбирает специалист.</p>
   </div>
 </section>
 

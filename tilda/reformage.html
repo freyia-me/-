@@ -83,6 +83,19 @@
 #jdl .card:hover .more:after{transform:translateX(4px)}
 #jdl .pd{display:none}
 
+/* ===== Результаты ===== */
+#jdl .res-g{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+#jdl .res-g.r3{grid-template-columns:repeat(3,1fr)}
+#jdl .res-g.r2{grid-template-columns:repeat(2,1fr);max-width:900px}
+#jdl .res-g.r1{grid-template-columns:minmax(0,560px)}
+#jdl .res{margin:0;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+#jdl .res img{width:100%;aspect-ratio:1/1;object-fit:cover}
+#jdl .res figcaption{padding:16px 18px 18px;font-size:14px;line-height:1.45;color:var(--ink)}
+#jdl .res figcaption .code{display:block;margin-bottom:6px;color:var(--c)}
+#jdl .res-note{margin-top:16px;font-size:12.5px;color:var(--gray)}
+@media (max-width:1000px){#jdl .res-g,#jdl .res-g.r3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){#jdl .res-g,#jdl .res-g.r3,#jdl .res-g.r2{grid-template-columns:1fr 1fr;gap:10px}#jdl .res-g.r1{grid-template-columns:1fr}#jdl .res figcaption{padding:12px;font-size:13px}}
+
 /* ===== Процедуры ===== */
 #jdl .procs{background:var(--soft)}
 #jdl .pr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -226,7 +239,7 @@
     <div class="grid">
 
       <a class="card rv" href="#p-mild-cleanser" data-id="mild-cleanser" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/reform-age-mild-cleanser.webp" alt="Reform Age Mild Cleanser — омолаживающая нежная пенка" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/reform-age-mild-cleanser.webp" alt="Reform Age Mild Cleanser — омолаживающая нежная пенка" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Mild Cleanser</span><h3>Омолаживающая нежная пенка</h3><p>Мягко очищает, поддерживает микробиом, сохраняет влагу и баланс pH.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Пробиотики, пептиды, центелла, витамин E.</p>
@@ -235,7 +248,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-collagen-tonic" data-id="collagen-tonic" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/reform-age-collagen-tonic.webp" alt="Reform Age Collagen Tonic — омолаживающий коллагеновый тоник" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/reform-age-collagen-tonic.webp" alt="Reform Age Collagen Tonic — омолаживающий коллагеновый тоник" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Collagen Tonic</span><h3>Омолаживающий коллагеновый тоник</h3><p>Восстанавливает pH, насыщает влагой и придаёт коже тонус и гладкость.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Трипептид меди, гиалуроновый комплекс MOIST-HA5, центелла, ниацинамид.</p>
@@ -244,7 +257,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-micro-touch-mask" data-id="micro-touch-mask" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/reform-age-micro-touch-mask.webp" alt="Reform Age Micro Touch Mask — омолаживающая маска со спикулами" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/reform-age-micro-touch-mask.webp" alt="Reform Age Micro Touch Mask — омолаживающая маска со спикулами" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Micro Touch Mask</span><h3>Омолаживающая маска со спикулами</h3><p>Активирует обновление клеток, улучшает тонус и сияние уже после первого применения.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный уход">
           <p data-k="Что такое спикулы">Микроскопические минеральные «иголочки» из морских губок: мягко стимулируют обновление кожи.</p>
@@ -254,7 +267,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-intensive-cream" data-id="intensive-cream" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/reform-age-intensive-cream.webp" alt="Reform Age Intensive Cream — омолаживающий интенсивный крем" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/reform-age-intensive-cream.webp" alt="Reform Age Intensive Cream — омолаживающий интенсивный крем" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Intensive Cream</span><h3>Омолаживающий интенсивный крем</h3><p>Уплотняет кожу, сокращает морщины, возвращает мягкость и сияние.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="50 мл" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Матриксил®, улиточный муцин, конское масло, витамины E и B3, Dermaflux.</p>
@@ -263,7 +276,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-intensive-eye-cream" data-id="intensive-eye-cream" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/reform-age-intensive-eye-cream.webp" alt="Reform Age Intensive Eye Cream — омолаживающий крем для кожи вокруг глаз" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/reform-age-intensive-eye-cream.webp" alt="Reform Age Intensive Eye Cream — омолаживающий крем для кожи вокруг глаз" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Intensive Eye Cream</span><h3>Омолаживающий крем для кожи вокруг глаз</h3><p>Уменьшает отёчность и морщины, повышает эластичность, придаёт свежесть взгляду.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="30 мл" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Пептиды, BOTANICEUTICAL Plus 10, Pheohydrane, Dermaflux, гиалуронат натрия.</p>
@@ -272,7 +285,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-o2-boto-fluid" data-id="o2-boto-fluid" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/reform-age-o2-boto-fluid-110ml.webp" alt="Reform Age O₂ Boto Fluid — кислородный омолаживающий флюид" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/reform-age-o2-boto-fluid-110ml.webp" alt="Reform Age O₂ Boto Fluid — кислородный омолаживающий флюид" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">O₂ Boto Fluid</span><h3>Кислородный омолаживающий флюид</h3><p>Активирует клеточное дыхание, разглаживает мимические морщины.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="50 мл · дом / 110 мл · ПРО" data-care-t="Профессиональный и домашний уход">
           <p data-k="Активные ингредиенты">Перфторуглероды, Syn®-Ake, Argireline, трипептид меди, ниацинамид.</p>
