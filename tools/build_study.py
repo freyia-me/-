@@ -11,7 +11,9 @@ import re
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 IMG = 'https://cdn.jsdelivr.net/gh/freyia-me/-@a886d1a/images/'
 SITE = 'https://jeuderm-russia.ru/'
-FORM = '#stadyjeuderm'
+FORM = '#popup:registerstudy'      # запись в малые группы / график семинаров
+CLINIC = '#popup:studyclinic'     # обучение в клинике
+ASK = '#popup:ask'                # задать вопрос
 ARROW = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg>'
 PLAY = '<svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg>'
 
@@ -183,6 +185,7 @@ def build():
         <h3>Обучение в клиниках</h3>
         <p>При запуске препаратов ЖеДерм проводим бесплатное обучение и сопровождение на базе партнёрских клиник. Практические занятия под руководством опытных тренеров.</p>
         <ul><li>Запуск линии в кабинете</li><li>Отработка протоколов на практике</li><li>Сопровождение после старта</li></ul>
+        <a class="more" href="{CLINIC}">Заявка на обучение в клинике</a>
       </div>
       <div class="fc rv" style="--c:#76bc21">
         <span class="code">Очно</span>
@@ -287,7 +290,7 @@ def build():
       </div>
       <div class="btns">
         <a class="btn btn-a" href="{FORM}">Узнать график {ARROW}</a>
-        <a class="btn btn-o" href="#getconsult">Задать вопрос</a>
+        <a class="btn btn-o" href="{ASK}">Задать вопрос</a>
       </div>
     </div>
   </div>
@@ -306,7 +309,7 @@ def build():
 </script>'''
 
     head = '''<!-- ЖеДерм · страница «Обучение» (/study) · блок T123 «HTML-код». Собрано tools/build_study.py.
-     Кнопки «Узнать график» ведут на форму Tilda #stadyjeuderm. -->
+     Кнопки ведут на попапы Tilda: #popup:registerstudy (график / запись), #popup:studyclinic (обучение в клинике), #popup:ask (вопрос). -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">

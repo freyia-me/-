@@ -1,5 +1,5 @@
 <!-- ЖеДерм · страница «Обучение» (/study) · блок T123 «HTML-код». Собрано tools/build_study.py.
-     Кнопки «Узнать график» ведут на форму Tilda #stadyjeuderm. -->
+     Кнопки ведут на попапы Tilda: #popup:registerstudy (график / запись), #popup:studyclinic (обучение в клинике), #popup:ask (вопрос). -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -186,7 +186,7 @@
       <h1 class="rv">Обучение для <em>косметологов</em> и клиник</h1>
       <p class="lead rv">Многоуровневая система профессионального обучения для косметологов, трихологов и специалистов эстетической медицины: от первого знакомства с препаратами ЖеДерм до уверенной работы по протоколам.</p>
       <div class="btns rv">
-        <a class="btn btn-a" href="#stadyjeuderm">Узнать график семинаров <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-a" href="#popup:registerstudy">Узнать график семинаров <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
         <a class="btn btn-o" href="#webinars">Смотреть вебинары</a>
       </div>
       <ul class="facts rv">
@@ -215,13 +215,14 @@
         <h3>Обучение в клиниках</h3>
         <p>При запуске препаратов ЖеДерм проводим бесплатное обучение и сопровождение на базе партнёрских клиник. Практические занятия под руководством опытных тренеров.</p>
         <ul><li>Запуск линии в кабинете</li><li>Отработка протоколов на практике</li><li>Сопровождение после старта</li></ul>
+        <a class="more" href="#popup:studyclinic">Заявка на обучение в клинике</a>
       </div>
       <div class="fc rv" style="--c:#76bc21">
         <span class="code">Очно</span>
         <h3>Обучение в малых группах</h3>
         <p>Очные занятия в учебном центре ЖеДерм. В небольшой группе тренер уделяет внимание каждому, а вы отрабатываете навыки в комфортной обстановке.</p>
         <ul><li>Практика с продуктами ЖеДерм</li><li>Вопросы напрямую экспертам</li><li>Участие по предварительной записи</li></ul>
-        <a class="more" href="#stadyjeuderm">Узнать график</a>
+        <a class="more" href="#popup:registerstudy">Узнать график</a>
       </div>
       <div class="fc rv" style="--c:#2a7de1">
         <span class="code">Онлайн</span>
@@ -259,7 +260,7 @@
         <h2>JeuDérm International <em>Aesthetic Symposium</em></h2>
         <p class="lead">Дубровник, Хорватия · 19–21 мая 2026. Доклады экспертов, разборы клинических случаев и новые протоколы — вместе с косметологами из разных стран.</p>
       </div>
-      <a class="btn btn-o" href="#stadyjeuderm">Узнать о ближайших событиях</a>
+      <a class="btn btn-o" href="#popup:registerstudy">Узнать о ближайших событиях</a>
     </div>
     <div class="sym">
       <figure class="rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@a886d1a/images/study/symposium-group-dubrovnik.webp" alt="Участники симпозиума JeuDérm в Дубровнике" loading="lazy"><figcaption>Дубровник · 2026</figcaption></figure>
@@ -333,8 +334,8 @@
         <p>Расписание обучения формируется по запросу. Оставьте заявку — менеджер пришлёт даты, программу и подтвердит участие. Количество мест в группе ограничено.</p>
       </div>
       <div class="btns">
-        <a class="btn btn-a" href="#stadyjeuderm">Узнать график <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-        <a class="btn btn-o" href="#getconsult">Задать вопрос</a>
+        <a class="btn btn-a" href="#popup:registerstudy">Узнать график <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-o" href="#popup:ask">Задать вопрос</a>
       </div>
     </div>
   </div>
