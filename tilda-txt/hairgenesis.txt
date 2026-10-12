@@ -259,6 +259,22 @@
   </div>
 </section>
 
+<!-- ================= РЕЗУЛЬТАТЫ ================= -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <div>
+        <span class="lab"><i></i>Результаты процедур</span>
+        <h2>До и после — <em>фото специалистов</em></h2>
+      </div>
+    </div>
+    <div class="res-g r1">
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@17caa35/images/results/hair-genesis-crown.webp" alt="Hair Genesis: до и после — Гуще волосы в теменной зоне, меньше просветов кожи головы" loading="lazy"><figcaption><span class="code">Hair Genesis</span>Гуще волосы в теменной зоне, меньше просветов кожи головы</figcaption></figure>
+    </div>
+    <p class="res-note rv">Результат зависит от состояния кожи и протокола, который подбирает специалист.</p>
+  </div>
+</section>
+
 <!-- ================= CTA ================= -->
 <section>
   <div class="w">

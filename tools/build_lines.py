@@ -15,7 +15,7 @@ import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 IMG = 'https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/'
-IMG_RES = 'https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/'
+IMG_RES = 'https://cdn.jsdelivr.net/gh/freyia-me/-@17caa35/images/results/'
 IMG_HOME = 'https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/'
 ARROW = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg>'
 
@@ -326,6 +326,7 @@ LINES = [
               ('Особенности', 'Спрей для ежедневного домашнего ухода. Подходит для волосистой части головы, зоны бороды и бровей. Без синдрома отмены.')]),
   ],
   procs=[],
+  results=[('hair-genesis-crown.webp', 'Hair Genesis', 'Гуще волосы в теменной зоне, меньше просветов кожи головы')],
   cta=('Хотите добавить трихологию в кабинет?', 'Пришлём прайс и материалы по Hair Genesis, расскажем, как сочетать процедуры в кабинете и домашний уход.'),
  ),
 ]

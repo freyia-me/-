@@ -312,10 +312,10 @@
       </div>
     </div>
     <div class="res-g">
-      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/lift-intense-front.webp" alt="Lift Intense: до и после — Лифтинг и контур лица, анфас" loading="lazy"><figcaption><span class="code">Lift Intense</span>Лифтинг и контур лица, анфас</figcaption></figure>
-      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/lift-intense-profile.webp" alt="Lift Intense: до и после — Лифтинг и контур лица, профиль" loading="lazy"><figcaption><span class="code">Lift Intense</span>Лифтинг и контур лица, профиль</figcaption></figure>
-      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/molecular-twin-exfoliant-cheek.webp" alt="Molecular Twin: до и после — Ровный тон и текстура кожи" loading="lazy"><figcaption><span class="code">Molecular Twin</span>Ровный тон и текстура кожи</figcaption></figure>
-      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/results/molecular-twin-exfoliant-profile.webp" alt="Molecular Twin: до и после — Обновление кожи, профиль" loading="lazy"><figcaption><span class="code">Molecular Twin</span>Обновление кожи, профиль</figcaption></figure>
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@17caa35/images/results/lift-intense-front.webp" alt="Lift Intense: до и после — Лифтинг и контур лица, анфас" loading="lazy"><figcaption><span class="code">Lift Intense</span>Лифтинг и контур лица, анфас</figcaption></figure>
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@17caa35/images/results/lift-intense-profile.webp" alt="Lift Intense: до и после — Лифтинг и контур лица, профиль" loading="lazy"><figcaption><span class="code">Lift Intense</span>Лифтинг и контур лица, профиль</figcaption></figure>
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@17caa35/images/results/molecular-twin-exfoliant-cheek.webp" alt="Molecular Twin: до и после — Ровный тон и текстура кожи" loading="lazy"><figcaption><span class="code">Molecular Twin</span>Ровный тон и текстура кожи</figcaption></figure>
+      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@17caa35/images/results/molecular-twin-exfoliant-profile.webp" alt="Molecular Twin: до и после — Обновление кожи, профиль" loading="lazy"><figcaption><span class="code">Molecular Twin</span>Обновление кожи, профиль</figcaption></figure>
     </div>
     <p class="res-note rv">Результат зависит от состояния кожи и протокола, который подбирает специалист.</p>
   </div>
