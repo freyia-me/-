@@ -42,6 +42,7 @@
 | `partners` (`tools/build_partners.py`) | /partners-distributors-jeuderm |
 | `footer` (`tools/build_footer.py`) | последним блоком на всех страницах |
 | `contacts` (`tools/build_contacts.py`) | страница контактов |
+| `about` (`tools/build_about.py`) | «О компании» |
 | `reformage` | /reformage-pro и /reformage-homecare |
 | `acno` | /acnopro-jeuderm и /acnohome |
 | `atocare` | /atocare-pro и /atocare-home |
