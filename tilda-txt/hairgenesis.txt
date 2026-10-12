@@ -108,6 +108,14 @@
 #jdl .cta .btn-o{border-color:rgba(255,255,255,.45);color:#fff}
 #jdl .cta .btn-o:hover{background:#fff;color:var(--ink)}
 
+#jdl .cta-img{background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.94) 40%,rgba(255,255,255,.2) 78%,rgba(255,255,255,0) 100%),var(--bg) right center/cover;color:var(--text);border:1px solid var(--line)}
+#jdl .cta-img h2{color:var(--ink)}
+#jdl .cta-img .btn-a{background:var(--ink);color:#fff}
+#jdl .cta-img .btn-a:hover{background:var(--c)}
+#jdl .cta-img .btn-o{border-color:#c8c1bf;color:var(--ink)}
+#jdl .cta-img .btn-o:hover{background:var(--ink);color:#fff}
+@media (max-width:1000px){#jdl .cta-img{background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.9) 55%,rgba(255,255,255,.55) 100%),var(--bg) center/cover}}
+
 /* ===== Окно товара ===== */
 #jdl dialog{margin:auto;width:min(980px,calc(100% - 32px));max-height:calc(100% - 32px);border:0;border-radius:6px;padding:0;background:#fff;color:var(--text);box-shadow:0 40px 120px -40px rgba(0,0,0,.45);overflow:auto}
 #jdl dialog::backdrop{background:rgba(25,22,23,.55);backdrop-filter:blur(3px)}
@@ -218,7 +226,7 @@
     <div class="grid g2">
 
       <a class="card rv" href="#p-concentrate" data-id="concentrate" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/hair-growth-concentrate.webp" alt="Hair-Growth Concentrate — стерильная концентрированная сыворотка для роста волос" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/hair-growth-concentrate.webp" alt="Hair-Growth Concentrate — стерильная концентрированная сыворотка для роста волос" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Hair-Growth Concentrate</span><h3>Стерильная концентрированная сыворотка для роста волос</h3><p>Профессиональный пептидный стимулятор роста волос с высокой концентрацией активов — при выпадении, истончении и замедленном росте волос.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="20 мл" data-care-t="Профессиональный уход">
           <p data-k="Активные ингредиенты">Пептиды 3000 ppm, гиалуроновая кислота, аргинин, аллантоин, витамин C, пантенол, экстракты алоэ, портулака, годжи, гинкго, хвоща, фитокомплекс, церамиды.</p>
@@ -226,7 +234,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-stimulator" data-id="stimulator" data-care="home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/home/banner-homecare.webp" alt="Hair Growth Stimulator — пептидная сыворотка-спрей для роста волос" loading="lazy" style="object-position:100% 50%"><span class="tags"><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/hair-genesis-stimulator.webp" alt="Hair Growth Stimulator — пептидная сыворотка-спрей для роста волос" loading="lazy"><span class="tags"><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Hair Growth Stimulator</span><h3>Пептидная сыворотка-спрей для роста волос</h3><p>Уменьшает выпадение, активирует «спящие» фолликулы, усиливает микроциркуляцию и продлевает фазу роста волос.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="140 мл" data-care-t="Домашний уход">
           <p data-k="Активные ингредиенты">HairGenesis 1.1 (Copper Tetrapeptide-52 Dimer), Copper Tripeptide-1, Triple M Complex (аланин, аргинин, глицин, глутаминовая кислота, серин), β-глюкан, фермент лактобактерий, гликолевая кислота, 16 растительных экстрактов. Пептиды 300 ppm.</p>

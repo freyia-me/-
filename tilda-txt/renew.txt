@@ -108,6 +108,14 @@
 #jdl .cta .btn-o{border-color:rgba(255,255,255,.45);color:#fff}
 #jdl .cta .btn-o:hover{background:#fff;color:var(--ink)}
 
+#jdl .cta-img{background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.94) 40%,rgba(255,255,255,.2) 78%,rgba(255,255,255,0) 100%),var(--bg) right center/cover;color:var(--text);border:1px solid var(--line)}
+#jdl .cta-img h2{color:var(--ink)}
+#jdl .cta-img .btn-a{background:var(--ink);color:#fff}
+#jdl .cta-img .btn-a:hover{background:var(--c)}
+#jdl .cta-img .btn-o{border-color:#c8c1bf;color:var(--ink)}
+#jdl .cta-img .btn-o:hover{background:var(--ink);color:#fff}
+@media (max-width:1000px){#jdl .cta-img{background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.9) 55%,rgba(255,255,255,.55) 100%),var(--bg) center/cover}}
+
 /* ===== Окно товара ===== */
 #jdl dialog{margin:auto;width:min(980px,calc(100% - 32px));max-height:calc(100% - 32px);border:0;border-radius:6px;padding:0;background:#fff;color:var(--text);box-shadow:0 40px 120px -40px rgba(0,0,0,.45);overflow:auto}
 #jdl dialog::backdrop{background:rgba(25,22,23,.55);backdrop-filter:blur(3px)}
@@ -164,7 +172,6 @@
 }
 /* цвета линейки */
 #jdl h1 em,#jdl h2 em{color:#65666b}
-#jdl .cta .btn-a{background:#ffffff;color:#201f20}
 </style>
 
 <div id="jdl">
@@ -216,7 +223,7 @@
     <div class="grid g2">
 
       <a class="card rv" href="#p-zymo" data-id="zymo" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/zymo-complex.webp" alt="Zymo Complex · pH 2,5 — зимо Комплекс — энзимно-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/zymo-complex.webp" alt="Zymo Complex · pH 2,5 — зимо Комплекс — энзимно-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Zymo Complex · pH 2,5</span><h3>Зимо Комплекс — энзимно-кислотное обновление</h3><p>Очищает, обновляет и придаёт коже сияние без раздражения. Подходит для очень чувствительной кожи.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="3 × 10 мл" data-care-t="Профессиональный уход">
           <p data-k="Состав набора">AHA Primer (10 %, pH 3,5) — фитокомплекс и масла, 6 кислот, витамины. Zymo Active (25 % AHA 7 кислот / BHA + энзимы 1000 ppm, pH 2,5). pH Reductant (pH 5,0) — 9 пептидов 350 ppm, энзимы 2000 ppm, увлажняющие компоненты.</p>
@@ -225,7 +232,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-nova" data-id="nova" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/nova-complex.webp" alt="Nova Complex · pH 1,5 — нова Комплекс — 9-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/nova-complex.webp" alt="Nova Complex · pH 1,5 — нова Комплекс — 9-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Nova Complex · pH 1,5</span><h3>Нова Комплекс — 9-кислотное обновление</h3><p>Глубоко обновляет кожу, выравнивает тон и морщины, улучшает эластичность, сияние и проникновение активов.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="3 × 10 мл" data-care-t="Профессиональный уход">
           <p data-k="Состав набора">AHA Primer (10 %, pH 3,5) — фитокомплекс и масла, 6 кислот, витамины. Nova Active (35 % раствор AHA 7 кислот / BHA / PHA, pH 1,5). pH Reductant (pH 5,0) — 9 пептидов 350 ppm, энзимы 2000 ppm, увлажняющие компоненты.</p>
@@ -294,7 +301,7 @@
 <!-- ================= CTA ================= -->
 <section>
   <div class="w">
-    <div class="cta rv">
+    <div class="cta rv cta-img" style="--bg:url('https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/skin-renewal.webp')">
       <div>
         <h2>Хотите внедрить пилинги Nova и Zymo?</h2>
         <p>Пришлём прайс и протоколы, проведём бесплатное обучение и посмотрим вебинары по системам вместе.</p>

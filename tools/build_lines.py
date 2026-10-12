@@ -14,8 +14,8 @@ import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-IMG = 'https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/products/'
-IMG_HOME = 'https://cdn.jsdelivr.net/gh/freyia-me/-@751fe4d/images/home/'
+IMG = 'https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/'
+IMG_HOME = 'https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/'
 ARROW = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg>'
 
 NUM_WORDS = {1: 'Одно средство', 2: 'Два средства', 3: 'Три средства', 4: 'Четыре средства',
@@ -256,7 +256,7 @@ LINES = [
 
  dict(
   slug='renew', name='Nova · Zymo', pages='/novazymo-exfoliation',
-  c='#2b2a2c', soft='#f0f0f0', em='#65666b', cta_btn='#ffffff', cta_btn_t='#201f20',
+  c='#2b2a2c', soft='#f0f0f0', em='#65666b', cta_bg=IMG_HOME + 'skin-renewal.webp',
   lab='Обновление кожи · Renew',
   h1='Nova и Zymo — <em>обновление кожи</em> без&nbsp;реабилитации',
   lead='Эксфолианты нового поколения: деликатное и эффективное обновление кожи без агрессивного повреждения и долгой реабилитации. Кислоты, энзимы и пептиды мягко растворяют ороговевшие клетки, выравнивают текстуру и тон, уменьшают проявления постакне и пигментации и возвращают коже сияние. Подходят для разных типов кожи, включая чувствительную.',
@@ -310,7 +310,7 @@ LINES = [
         short='Профессиональный пептидный стимулятор роста волос с высокой концентрацией активов — при выпадении, истончении и замедленном росте волос.',
         rows=[('Активные ингредиенты', 'Пептиды 3000 ppm, гиалуроновая кислота, аргинин, аллантоин, витамин C, пантенол, экстракты алоэ, портулака, годжи, гинкго, хвоща, фитокомплекс, церамиды.'),
               ('Особенности', 'Стерильная формула для процедур в кабинете. Подходит для волосистой части головы, зоны бороды и бровей. Без синдрома отмены.')]),
-   dict(id='stimulator', en='Hair Growth Stimulator', ru='Пептидная сыворотка-спрей для роста волос', img_url=IMG_HOME + 'banner-homecare.webp', img_pos='100% 50%', care='home', vol='140 мл',
+   dict(id='stimulator', en='Hair Growth Stimulator', ru='Пептидная сыворотка-спрей для роста волос', img='hair-genesis-stimulator.webp', care='home', vol='140 мл',
         short='Уменьшает выпадение, активирует «спящие» фолликулы, усиливает микроциркуляцию и продлевает фазу роста волос.',
         rows=[('Активные ингредиенты', 'HairGenesis 1.1 (Copper Tetrapeptide-52 Dimer), Copper Tripeptide-1, Triple M Complex (аланин, аргинин, глицин, глутаминовая кислота, серин), β-глюкан, фермент лактобактерий, гликолевая кислота, 16 растительных экстрактов. Пептиды 300 ppm.'),
               ('Особенности', 'Спрей для ежедневного домашнего ухода. Подходит для волосистой части головы, зоны бороды и бровей. Без синдрома отмены.')]),
@@ -418,6 +418,8 @@ def build(d):
 '''
 
     cta_t, cta_p = d['cta']
+    cta_cls = ' cta-img' if d.get('cta_bg') else ''
+    cta_attr = ' style="--bg:url(\'%s\')"' % d['cta_bg'] if d.get('cta_bg') else ''
     body = f'''<div id="jdl">
 
 <!-- ================= ШАПКА ================= -->
@@ -459,7 +461,7 @@ def build(d):
 <!-- ================= CTA ================= -->
 <section>
   <div class="w">
-    <div class="cta rv">
+    <div class="cta rv{cta_cls}"{cta_attr}>
       <div>
         <h2>{cta_t}</h2>
         <p>{cta_p}</p>
