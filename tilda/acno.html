@@ -150,6 +150,29 @@
 #jdl .dlg-bd dt{margin-top:16px;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
 #jdl .dlg-bd dd{margin-top:6px;font-size:15px;color:var(--ink)}
 #jdl .dlg-bd .btns{margin-top:28px}
+#jdl .dlg{grid-template-columns:.8fr 1.2fr}
+#jdl .dlg-ph{position:sticky;top:0;align-self:start}
+#jdl .dlg-ph img{height:auto;aspect-ratio:1/1}
+#jdl .info .about{font-size:15.5px;color:var(--text)}
+#jdl .info .sec{margin-top:22px}
+#jdl .info h4{font-family:var(--tf);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
+#jdl .info .chips{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+#jdl .info .chips li{padding:6px 11px;border:1px solid var(--line);border-radius:999px;font-size:12.5px;color:var(--ink)}
+#jdl .info .acts{list-style:none;display:grid;gap:0;border-top:1px solid var(--line)}
+#jdl .info .acts li{display:grid;grid-template-columns:minmax(120px,.85fr) 1.15fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45}
+#jdl .info .acts b{font-weight:600;color:var(--ink)}
+#jdl .info .acts span{color:var(--text)}
+#jdl .info .how{list-style:none;counter-reset:h}
+#jdl .info .how li{counter-increment:h;position:relative;padding:4px 0 8px 34px;font-size:14.5px;line-height:1.5;color:var(--ink)}
+#jdl .info .how li:before{content:counter(h);position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:var(--c-soft);color:var(--c);font-size:12px;font-weight:600;display:grid;place-items:center}
+#jdl .info dl{margin-top:18px}
+#jdl .info .warn{margin-top:18px;padding:12px 14px;border-left:3px solid var(--c);background:var(--c-soft);font-size:13px;line-height:1.5;color:var(--ink)}
+#jdl .info .full{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+#jdl .info .full summary{cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);list-style:none}
+#jdl .info .full summary::-webkit-details-marker{display:none}
+#jdl .info .full summary:after{content:" +";color:var(--c)}
+#jdl .info .full[open] summary:after{content:" −"}
+#jdl .info .full p{margin-top:10px;font-size:12.5px;line-height:1.6;color:var(--gray)}
 
 /* ===== Анимация появления ===== */
 #jdl .rv{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
@@ -163,6 +186,8 @@
 }
 @media (max-width:760px){
   #jdl .dlg{grid-template-columns:1fr}
+  #jdl .dlg-ph{position:relative}
+  #jdl .info .acts li{grid-template-columns:1fr;gap:2px}
   #jdl .dlg-ph img{aspect-ratio:4/3}
   #jdl .dlg-bd{padding:26px 22px 28px}
 }
@@ -242,45 +267,56 @@
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/acno-mild-cleanser.webp" alt="Acno Mild Cleanser — очищающий гель для жирной и проблемной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Acno Mild Cleanser</span><h3>Очищающий гель для жирной и проблемной кожи</h3><p>Мягко очищает, регулирует себо-продукцию, уменьшает воспаление и сужает поры, не нарушая pH и микробиом.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный и домашний уход">
-          <p data-k="Активные ингредиенты">AHA/BHA, комплекс Acnotide, пептиды меди, глутатион, фитокомплекс мирта и настурции.</p>
-          <p data-k="Как применять">Нанесите 1,0–1,5 мл на кожу, вспеньте с водой нежными массирующими движениями и тщательно смойте.</p>
-          <p data-k="В процедурах">Атравматичная чистка.</p>
+          <p class="about">Очищающий гель для жирной и проблемной кожи. Мягко снимает загрязнения и излишки себума, сужает поры и уменьшает воспаления — без пересушивания и нарушения pH. Подходит для ежедневного ухода и как первый шаг процедуры.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Жирная и комбинированная кожа</li><li>Кожа, склонная к акне</li><li>Расширенные поры</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>AHA/BHA-кислоты</b><span>очищают поры и обновляют кожу</span></li><li><b>Acnotide™</b><span>пептид против бактерий и воспалений</span></li><li><b>Пептиды меди</b><span>поддерживают восстановление</span></li><li><b>Глутатион</b><span>антиоксидант, выравнивает тон</span></li><li><b>Мирт и настурция</b><span>растительные антисептики</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите 1–1,5 мл на влажную кожу.</li><li>Вспеньте нежными массирующими движениями.</li><li>Тщательно смойте водой. Утром и вечером.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Атравматичная чистка.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-multi-acid-pad" data-id="multi-acid-pad" data-care="pro home">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/acno-multi-acid-pad.webp" alt="Acno Multi-Acid Pad — мультикислотные пады для жирной и проблемной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Acno Multi-Acid Pad</span><h3>Мультикислотные пады для жирной и проблемной кожи</h3><p>Очищают и обновляют кожу, снижают воспаление и убирают жирный блеск.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="50 шт" data-care-t="Профессиональный и домашний уход">
-          <p data-k="Активные ингредиенты">AHA/BHA, цинк, пантенол, экстракты чайного дерева и гамамелиса.</p>
-          <p data-k="Как применять">Протрите лицо и шею одной подушечкой по направлению текстуры кожи: рифлёная сторона — для механического очищения, гладкая — для мягкого пилинга. Затем смойте водой.</p>
-          <p data-k="В процедурах">Атравматичная чистка.</p>
+          <p class="about">Мультикислотные диски для ежедневного обновления проблемной кожи. Две стороны — рифлёная для механического очищения и гладкая для мягкого пилинга. Снижают воспаления, убирают жирный блеск и выравнивают текстуру.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Жирная кожа с блеском</li><li>Чёрные точки и высыпания</li><li>Неровная текстура</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>AHA/BHA</b><span>отшелушивают и очищают поры</span></li><li><b>Цинк</b><span>регулирует себум</span></li><li><b>Пантенол</b><span>успокаивает</span></li><li><b>Чайное дерево и гамамелис</b><span>антисептик и сужение пор</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Протрите лицо и шею одним диском по направлению текстуры кожи.</li><li>Рифлёная сторона — для очищения, гладкая — для мягкого пилинга.</li><li>Затем смойте водой и нанесите гель или эмульсию.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Атравматичная чистка.</dd></dl>
+          <p class="warn">В период активной инсоляции используйте средства с SPF.</p>
         </div>
       </a>
       <a class="card rv" href="#p-clay-mask" data-id="clay-mask" data-care="pro">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/acno-clay-mask.webp" alt="Acno Clay Mask — очищающая маска с глиной для проблемной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Acno Clay Mask</span><h3>Очищающая маска с глиной для проблемной кожи</h3><p>Глубоко очищает поры, регулирует себо-продукцию, снижает воспаление, придаёт коже матовость и свежесть.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный уход">
-          <p data-k="Активные ингредиенты">Белая глина, пептиды 250 ppm, растительный мультикомплекс, антисептики.</p>
-          <p data-k="Как применять">Нанесите видимым слоем (5,0 мл) на 15 минут, затем тщательно смойте водой.</p>
-          <p data-k="В процедурах">Атравматичная чистка.</p>
+          <p class="about">Профессиональная маска с белой глиной для глубокого очищения пор. Регулирует себо-продукцию, снижает воспаление и придаёт коже матовость и свежесть. Используется в процедуре атравматичной чистки.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Жирная и проблемная кожа</li><li>Расширенные поры</li><li>Процедуры в кабинете</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Белая глина</b><span>вытягивает загрязнения и излишки себума</span></li><li><b>Пептиды 250 ppm</b><span>успокаивают и восстанавливают</span></li><li><b>Растительный мультикомплекс</b><span>противовоспалительное действие</span></li><li><b>Антисептики</b><span>очищают кожу</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите видимым слоем — около 5 мл — на очищенную кожу.</li><li>Оставьте на 15 минут.</li><li>Тщательно смойте водой.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Атравматичная чистка.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-active-gel" data-id="active-gel" data-care="pro home">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/acno-active-gel-150ml.webp" alt="Acno Active Gel — противовоспалительный гель" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Acno Active Gel</span><h3>Противовоспалительный гель</h3><p>Успокаивает кожу, снижает воспаление и высыпания, регулирует себо-продукцию и выравнивает тон.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл · ПРО / 100 мл · дом" data-care-t="Профессиональный и домашний уход">
-          <p data-k="Активные ингредиенты">Пептиды 330 ppm, лизат бифидобактерий, ниацинамид, ретинил пальмитат, пантенол, фитокомплекс мирта и гамамелиса.</p>
-          <p data-k="Как применять">Нанесите 1,0 мл на воспалённые участки и помассируйте до полного впитывания.</p>
-          <p data-k="В процедурах">Атравматичная чистка.</p>
+          <p class="about">Лёгкий противовоспалительный гель точечного и общего ухода. Успокаивает кожу, уменьшает воспаления и высыпания, регулирует себо-продукцию и выравнивает тон, помогая предотвратить постакне.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Воспаления и высыпания</li><li>Жирная кожа</li><li>Профилактика постакне</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Пептиды 330 ppm</b><span>успокаивают и восстанавливают</span></li><li><b>Лизат бифидобактерий</b><span>поддерживает микробиом</span></li><li><b>Ниацинамид</b><span>регулирует себум, выравнивает тон</span></li><li><b>Ретинил пальмитат</b><span>обновляет кожу</span></li><li><b>Мирт и гамамелис</b><span>антисептик, сужение пор</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите 1 мл на воспалённые участки или всё лицо.</li><li>Помассируйте до полного впитывания.</li><li>Утром и вечером после очищения.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Атравматичная чистка.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-active-emulsion" data-id="active-emulsion" data-care="pro home">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/acno-active-emulsion-150ml.webp" alt="Acno Active Emulsion — противовоспалительная эмульсия" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Acno Active Emulsion</span><h3>Противовоспалительная эмульсия</h3><p>Увлажняет, успокаивает и матирует кожу, снижает воспаление и помогает предотвратить высыпания.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл · ПРО / 100 мл · дом" data-care-t="Профессиональный и домашний уход">
-          <p data-k="Активные ингредиенты">Пептидный комплекс, фитокомплекс мирта и настурции, ниацинамид, пантенол, аденозин, гиалуроновая кислота, лизаты бифидобактерий.</p>
-          <p data-k="Как применять">Нанесите 1,0 мл массажными движениями до полного впитывания.</p>
-          <p data-k="В процедурах">Атравматичная чистка.</p>
+          <p class="about">Матирующая эмульсия для ежедневного ухода за проблемной кожей. Увлажняет без жирного блеска, успокаивает, снижает воспаления и помогает предотвратить новые высыпания. Подходит и как завершающий шаг процедуры.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Жирная и комбинированная кожа</li><li>Склонность к высыпаниям</li><li>Нужна матовость без пересушивания</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Пептидный комплекс</b><span>восстанавливает и успокаивает</span></li><li><b>Мирт и настурция</b><span>противовоспалительный фитокомплекс</span></li><li><b>Ниацинамид и пантенол</b><span>укрепляют барьер, выравнивают тон</span></li><li><b>Гиалуроновая кислота</b><span>лёгкое увлажнение</span></li><li><b>Лизаты бифидобактерий</b><span>баланс микрофлоры</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите 1 мл на очищенную кожу.</li><li>Распределите массажными движениями до впитывания.</li><li>Утром и вечером, утром — под SPF.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Атравматичная чистка.</dd></dl>
         </div>
       </a>
 
@@ -365,8 +401,7 @@
       <span class="en"></span>
       <h3 id="jdl-dt"></h3>
       <div class="meta"></div>
-      <p class="desc"></p>
-      <dl></dl>
+      <div class="info"></div>
       <div class="btns">
         <a class="btn btn-a" href="#getprice_main">Запросить цену <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
         <a class="btn btn-o" href="#getprotocol">Протокол</a>
@@ -401,10 +436,8 @@
     var ph=dlg.querySelector('.dlg-ph img'); ph.src=img.src; ph.alt=img.alt; ph.style.objectPosition=img.style.objectPosition||'';
     dlg.querySelector('.en').textContent=card.querySelector('.en').textContent;
     dlg.querySelector('h3').textContent=card.querySelector('h3').textContent;
-    dlg.querySelector('.desc').textContent=card.querySelector('.bd p').textContent;
     dlg.querySelector('.meta').innerHTML='<span>'+esc(pd.dataset.vol)+'</span><span>'+esc(pd.dataset.careT)+'</span>';
-    dlg.querySelector('dl').innerHTML=[].map.call(pd.querySelectorAll('[data-k]'),function(r){
-      return '<dt>'+esc(r.dataset.k)+'</dt><dd>'+esc(r.textContent)+'</dd>';}).join('');
+    dlg.querySelector('.info').innerHTML=pd.innerHTML;
   }
   function open(id,push){
     var card=root.querySelector('.card[data-id="'+id+'"]'); if(!card) return;

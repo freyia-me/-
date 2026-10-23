@@ -10,10 +10,13 @@
 Формулировки — «уход», без «лечения» и «терапии» (см. CATALOG.md).
 """
 import html
+import sys
 import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / 'tools'))
+from product_info import INFO  # noqa: E402
 IMG = 'https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/'
 IMG_RES = 'https://cdn.jsdelivr.net/gh/freyia-me/-@17caa35/images/results/'
 IMG_HOME = 'https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/'
@@ -275,6 +278,8 @@ LINES = [
    ('Кислоты', 'Nova — синергия 9 кислот AHA/BHA/PHA, глюконолактон, бетаин-салицилат. Zymo — гликолевая, молочная и лимонная кислоты.'),
    ('Энзимы', 'Энзимы сахаромицетов мягко растворяют ороговевшие клетки — поэтому Zymo подходит даже для очень чувствительной кожи.'),
    ('Фито комплекс', 'Алоэ, ламинария, корень диоскореи, пантенол, аллантоин и растительные масла — комфорт кожи во время и после процедуры.'),
+   ('Преимущества', 'Несколько задач за одну процедуру, неинвазивная методика, короткий восстановительный период, минимальный риск побочных эффектов, подходит для чувствительной кожи.'),
+   ('Показания', 'Фотостарение и усталость кожи, возрастные изменения, гиперпигментация и постакне, подготовка к пластическим операциям.'),
   ],
   products=[
    dict(id='zymo', en='Zymo Complex · pH 2,5', ru='Зимо Комплекс — энзимно-кислотное обновление', img='zymo-complex.webp', care='pro', vol='3 × 10 мл',
@@ -345,17 +350,38 @@ def link_steps(step):
     return re.sub(r'\[\[([\w-]+)\|([^\]]+)\]\]', r'<a href="#p-\1">\2</a>', step)
 
 
+def info_html(p, d):
+    """Содержимое окна товара: описание, подходит для, активы, применение, прочие строки, полный состав."""
+    inf = INFO.get((d['slug'], p['id']), {})
+    out = ['<p class="about">%s</p>' % inf.get('about', p['short'])]
+    if inf.get('suits'):
+        out.append('<div class="sec"><h4>Подходит для</h4><ul class="chips">%s</ul></div>' % ''.join('<li>%s</li>' % x for x in inf['suits']))
+    if inf.get('actives'):
+        out.append('<div class="sec"><h4>Ключевые активы</h4><ul class="acts">%s</ul></div>' % ''.join('<li><b>%s</b><span>%s</span></li>' % a for a in inf['actives']))
+    if inf.get('how'):
+        out.append('<div class="sec"><h4>Как применять</h4><ol class="how">%s</ol></div>' % ''.join('<li>%s</li>' % x for x in inf['how']))
+    skip = {'Активные ингредиенты', 'Как применять', 'Состав набора'} if inf else set()
+    rows = [(k, v) for k, v in p['rows'] if k not in skip]
+    if rows:
+        out.append('<dl>%s</dl>' % ''.join('<dt>%s</dt><dd>%s</dd>' % (e(k), v) for k, v in rows))
+    if inf.get('note'):
+        out.append('<p class="warn">%s</p>' % inf['note'])
+    if inf.get('full'):
+        out.append('<details class="full"><summary>Полный состав</summary><p>%s</p></details>' % inf['full'])
+    return '\n          '.join(out)
+
+
 def card(p, d):
     tags = ''.join('<span class="tag">%s</span>' % t for t, k in (('ПРО', 'pro'), ('Дом', 'home')) if k in p['care'].split())
     care_t = {'pro home': 'Профессиональный и домашний уход', 'pro': 'Профессиональный уход', 'home': 'Домашний уход'}[p['care']]
     src = p.get('img_url') or IMG + p['img']
     style = ' style="object-position:%s"' % p['img_pos'] if p.get('img_pos') else ''
     alt = '%s %s — %s' % (d.get('brand', ''), p['en'], p['ru'][0].lower() + p['ru'][1:])
-    rows = ''.join('\n          <p data-k="%s">%s</p>' % (e(k), v) for k, v in p['rows'])
     return f'''      <a class="card rv" href="#p-{p['id']}" data-id="{p['id']}" data-care="{p['care']}">
         <span class="ph"><img src="{src}" alt="{e(alt.strip())}" loading="lazy"{style}><span class="tags">{tags}</span></span>
         <div class="bd"><span class="en">{p['en']}</span><h3>{p['ru']}</h3><p>{p['short']}</p><span class="more">Подробнее</span></div>
-        <div class="pd" data-vol="{e(p['vol'])}" data-care-t="{care_t}">{rows}
+        <div class="pd" data-vol="{e(p['vol'])}" data-care-t="{care_t}">
+          {info_html(p, d)}
         </div>
       </a>'''
 
@@ -520,8 +546,7 @@ def build(d):
       <span class="en"></span>
       <h3 id="jdl-dt"></h3>
       <div class="meta"></div>
-      <p class="desc"></p>
-      <dl></dl>
+      <div class="info"></div>
       <div class="btns">
         <a class="btn btn-a" href="#getprice_main">Запросить цену {ARROW}</a>
         <a class="btn btn-o" href="#getprotocol">Протокол</a>

@@ -150,6 +150,29 @@
 #jdl .dlg-bd dt{margin-top:16px;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
 #jdl .dlg-bd dd{margin-top:6px;font-size:15px;color:var(--ink)}
 #jdl .dlg-bd .btns{margin-top:28px}
+#jdl .dlg{grid-template-columns:.8fr 1.2fr}
+#jdl .dlg-ph{position:sticky;top:0;align-self:start}
+#jdl .dlg-ph img{height:auto;aspect-ratio:1/1}
+#jdl .info .about{font-size:15.5px;color:var(--text)}
+#jdl .info .sec{margin-top:22px}
+#jdl .info h4{font-family:var(--tf);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
+#jdl .info .chips{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+#jdl .info .chips li{padding:6px 11px;border:1px solid var(--line);border-radius:999px;font-size:12.5px;color:var(--ink)}
+#jdl .info .acts{list-style:none;display:grid;gap:0;border-top:1px solid var(--line)}
+#jdl .info .acts li{display:grid;grid-template-columns:minmax(120px,.85fr) 1.15fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45}
+#jdl .info .acts b{font-weight:600;color:var(--ink)}
+#jdl .info .acts span{color:var(--text)}
+#jdl .info .how{list-style:none;counter-reset:h}
+#jdl .info .how li{counter-increment:h;position:relative;padding:4px 0 8px 34px;font-size:14.5px;line-height:1.5;color:var(--ink)}
+#jdl .info .how li:before{content:counter(h);position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:var(--c-soft);color:var(--c);font-size:12px;font-weight:600;display:grid;place-items:center}
+#jdl .info dl{margin-top:18px}
+#jdl .info .warn{margin-top:18px;padding:12px 14px;border-left:3px solid var(--c);background:var(--c-soft);font-size:13px;line-height:1.5;color:var(--ink)}
+#jdl .info .full{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+#jdl .info .full summary{cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);list-style:none}
+#jdl .info .full summary::-webkit-details-marker{display:none}
+#jdl .info .full summary:after{content:" +";color:var(--c)}
+#jdl .info .full[open] summary:after{content:" −"}
+#jdl .info .full p{margin-top:10px;font-size:12.5px;line-height:1.6;color:var(--gray)}
 
 /* ===== Анимация появления ===== */
 #jdl .rv{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
@@ -163,6 +186,8 @@
 }
 @media (max-width:760px){
   #jdl .dlg{grid-template-columns:1fr}
+  #jdl .dlg-ph{position:relative}
+  #jdl .info .acts li{grid-template-columns:1fr;gap:2px}
   #jdl .dlg-ph img{aspect-ratio:4/3}
   #jdl .dlg-bd{padding:26px 22px 28px}
 }
@@ -243,35 +268,44 @@
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/ato-care-mild-cleanser.webp" alt="Ato Care Mild Cleanser — очищающий гель для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Ato Care Mild Cleanser</span><h3>Очищающий гель для всех типов чувствительной кожи</h3><p>Деликатно очищает, не нарушая барьер и микрофлору, поддерживает pH-баланс, увлажняет и освежает.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный и домашний уход">
-          <p data-k="Активные ингредиенты">Мягкие ПАВ, β-глюкан, фитокомплекс успокаивающих экстрактов, ниацинамид.</p>
-          <p data-k="Как применять">Нанесите 1,0–1,5 мл на кожу, вспеньте с водой нежными массирующими движениями и тщательно смойте.</p>
-          <p data-k="В процедурах">Детокс-чистка, Экстренный детокс, а также процедуры Molecular Twin и Nova · Zymo.</p>
+          <p class="about">Деликатный гель для очищения сухой, чувствительной и реактивной кожи. Мягкие ПАВ не нарушают барьер и микрофлору, поддерживают pH-баланс и оставляют ощущение комфорта. Подходит и для кожи, склонной к дерматитам.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Сухая и чувствительная кожа</li><li>Реактивная, склонная к покраснениям</li><li>Кожа при дерматитах</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Мягкие ПАВ</b><span>бережно очищают без пересушивания</span></li><li><b>β-глюкан</b><span>успокаивает и восстанавливает</span></li><li><b>Ниацинамид</b><span>укрепляет барьер</span></li><li><b>Фитокомплекс</b><span>снимает раздражение</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите 1–1,5 мл на влажную кожу.</li><li>Вспеньте нежными движениями.</li><li>Тщательно смойте прохладной водой.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Детокс-чистка, Экстренный детокс, а также процедуры Molecular Twin и Nova · Zymo.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-toner-mousse" data-id="toner-mousse" data-care="pro home">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/ato-care-toner-mousse.webp" alt="Ato Care Toner Mousse — тонер-мусс для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Ato Care Toner Mousse</span><h3>Тонер-мусс для всех типов чувствительной кожи</h3><p>Мягко тонизирует и увлажняет, укрепляет сосуды, уменьшает покраснение и восстанавливает pH-баланс.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл" data-care-t="Профессиональный и домашний уход">
-          <p data-k="Активные ингредиенты">Пантенол, трипептид меди-1, аллантоин, фитоэкстракты.</p>
-          <p data-k="Как применять">Нанесите 1,0–1,5 мл и помассируйте до полного впитывания.</p>
-          <p data-k="В процедурах">Детокс-чистка, Экстренный детокс.</p>
+          <p class="about">Тонер в формате мусса мягко тонизирует и увлажняет чувствительную кожу. Укрепляет сосуды, уменьшает покраснение и восстанавливает pH после очищения — без спирта и ощущения стянутости.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Чувствительная кожа</li><li>Покраснения и купероз</li><li>Сухость после умывания</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Трипептид меди-1</b><span>поддерживает восстановление</span></li><li><b>Пантенол</b><span>успокаивает и увлажняет</span></li><li><b>Аллантоин</b><span>смягчает раздражение</span></li><li><b>Фитоэкстракты</b><span>укрепляют сосуды, снижают покраснение</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите 1–1,5 мл мусса на кожу.</li><li>Помассируйте до полного впитывания.</li><li>Не смывайте — переходите к эмульсии или крему.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Детокс-чистка, Экстренный детокс.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-moist-emulsion" data-id="moist-emulsion" data-care="pro home">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/ato-care-moist-emulsion-150ml.webp" alt="Ato Care Moist Emulsion — увлажняющая эмульсия для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Ato Care Moist Emulsion</span><h3>Увлажняющая эмульсия для всех типов чувствительной кожи</h3><p>Интенсивно увлажняет, питает и восстанавливает липидный барьер, снимает раздражение и зуд.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл · ПРО / 100 мл · дом" data-care-t="Профессиональный и домашний уход">
-          <p data-k="Активные ингредиенты">Triple M Complex™, трипептид меди-1, Serilesine™, β-глюкан, церамиды, фитокомплекс шлемника, коптиса и хауттюйнии.</p>
-          <p data-k="Как применять">Нанесите 1,0 мл массажными движениями до полного впитывания.</p>
-          <p data-k="В процедурах">Завершающий уход почти во всех процедурах ЖеДерм.</p>
+          <p class="about">Увлажняющая эмульсия для всех типов чувствительной кожи. Восстанавливает липидный барьер, снимает раздражение и зуд, надолго удерживает влагу. В кабинете — завершающий уход почти во всех процедурах ЖеДерм.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Сухая, чувствительная, повреждённая кожа</li><li>Зуд и шелушение</li><li>После процедур</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Triple M Complex™</b><span>пептиды для восстановления барьера</span></li><li><b>Церамиды</b><span>восполняют липидный слой</span></li><li><b>β-глюкан</b><span>успокаивает</span></li><li><b>Serilesine™</b><span>поддерживает упругость</span></li><li><b>Шлемник, коптис, хауттюйния</b><span>снимают покраснение</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите 1 мл на очищенную кожу.</li><li>Распределите массажными движениями до впитывания.</li><li>Утром и вечером, утром — под SPF.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Завершающий уход почти во всех процедурах ЖеДерм.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-intensive-cream" data-id="intensive-cream" data-care="home">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/ato-care-intensive-cream.webp" alt="Ato Care Intensive Cream — интенсивный крем для сухой и чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Ato Care Intensive Cream</span><h3>Интенсивный крем для сухой и чувствительной кожи</h3><p>Питает и защищает очень сухую, раздражённую и повреждённую кожу, снижает зуд, предотвращает шелушение.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="50 мл" data-care-t="Домашний уход">
-          <p data-k="Активные ингредиенты">Пантенол, трипептид меди-1, аллантоин, фитоэкстракты, Triple M Complex™, Serilesine™, β-глюкан, витамин E.</p>
-          <p data-k="Особенности">Без парабенов и отдушек, гипоаллергенно, одобрено дерматологами и педиатрами.</p>
+          <p class="about">Плотный крем для очень сухой, раздражённой и повреждённой кожи. Питает, защищает, снижает зуд и предотвращает шелушение. Без парабенов и отдушек, гипоаллергенно.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Очень сухая кожа</li><li>Шелушение и зуд</li><li>Кожа при дерматитах — по согласованию с врачом</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Triple M Complex™ и Serilesine™</b><span>восстанавливают барьер и упругость</span></li><li><b>Трипептид меди-1</b><span>поддерживает восстановление</span></li><li><b>Пантенол и аллантоин</b><span>успокаивают и смягчают</span></li><li><b>β-глюкан</b><span>снимает раздражение</span></li><li><b>Витамин E</b><span>защищает от сухости</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите на очищенную кожу лица или тела.</li><li>Распределите мягкими движениями.</li><li>Используйте 1–2 раза в день или по мере необходимости.</li></ol></div>
+          <dl><dt>Особенности</dt><dd>Без парабенов и отдушек, гипоаллергенно, одобрено дерматологами и педиатрами.</dd></dl>
         </div>
       </a>
 
@@ -368,8 +402,7 @@
       <span class="en"></span>
       <h3 id="jdl-dt"></h3>
       <div class="meta"></div>
-      <p class="desc"></p>
-      <dl></dl>
+      <div class="info"></div>
       <div class="btns">
         <a class="btn btn-a" href="#getprice_main">Запросить цену <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
         <a class="btn btn-o" href="#getprotocol">Протокол</a>
@@ -404,10 +437,8 @@
     var ph=dlg.querySelector('.dlg-ph img'); ph.src=img.src; ph.alt=img.alt; ph.style.objectPosition=img.style.objectPosition||'';
     dlg.querySelector('.en').textContent=card.querySelector('.en').textContent;
     dlg.querySelector('h3').textContent=card.querySelector('h3').textContent;
-    dlg.querySelector('.desc').textContent=card.querySelector('.bd p').textContent;
     dlg.querySelector('.meta').innerHTML='<span>'+esc(pd.dataset.vol)+'</span><span>'+esc(pd.dataset.careT)+'</span>';
-    dlg.querySelector('dl').innerHTML=[].map.call(pd.querySelectorAll('[data-k]'),function(r){
-      return '<dt>'+esc(r.dataset.k)+'</dt><dd>'+esc(r.textContent)+'</dd>';}).join('');
+    dlg.querySelector('.info').innerHTML=pd.innerHTML;
   }
   function open(id,push){
     var card=root.querySelector('.card[data-id="'+id+'"]'); if(!card) return;

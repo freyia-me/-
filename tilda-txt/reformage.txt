@@ -150,6 +150,29 @@
 #jdl .dlg-bd dt{margin-top:16px;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
 #jdl .dlg-bd dd{margin-top:6px;font-size:15px;color:var(--ink)}
 #jdl .dlg-bd .btns{margin-top:28px}
+#jdl .dlg{grid-template-columns:.8fr 1.2fr}
+#jdl .dlg-ph{position:sticky;top:0;align-self:start}
+#jdl .dlg-ph img{height:auto;aspect-ratio:1/1}
+#jdl .info .about{font-size:15.5px;color:var(--text)}
+#jdl .info .sec{margin-top:22px}
+#jdl .info h4{font-family:var(--tf);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
+#jdl .info .chips{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+#jdl .info .chips li{padding:6px 11px;border:1px solid var(--line);border-radius:999px;font-size:12.5px;color:var(--ink)}
+#jdl .info .acts{list-style:none;display:grid;gap:0;border-top:1px solid var(--line)}
+#jdl .info .acts li{display:grid;grid-template-columns:minmax(120px,.85fr) 1.15fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45}
+#jdl .info .acts b{font-weight:600;color:var(--ink)}
+#jdl .info .acts span{color:var(--text)}
+#jdl .info .how{list-style:none;counter-reset:h}
+#jdl .info .how li{counter-increment:h;position:relative;padding:4px 0 8px 34px;font-size:14.5px;line-height:1.5;color:var(--ink)}
+#jdl .info .how li:before{content:counter(h);position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:var(--c-soft);color:var(--c);font-size:12px;font-weight:600;display:grid;place-items:center}
+#jdl .info dl{margin-top:18px}
+#jdl .info .warn{margin-top:18px;padding:12px 14px;border-left:3px solid var(--c);background:var(--c-soft);font-size:13px;line-height:1.5;color:var(--ink)}
+#jdl .info .full{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+#jdl .info .full summary{cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);list-style:none}
+#jdl .info .full summary::-webkit-details-marker{display:none}
+#jdl .info .full summary:after{content:" +";color:var(--c)}
+#jdl .info .full[open] summary:after{content:" −"}
+#jdl .info .full p{margin-top:10px;font-size:12.5px;line-height:1.6;color:var(--gray)}
 
 /* ===== Анимация появления ===== */
 #jdl .rv{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
@@ -163,6 +186,8 @@
 }
 @media (max-width:760px){
   #jdl .dlg{grid-template-columns:1fr}
+  #jdl .dlg-ph{position:relative}
+  #jdl .info .acts li{grid-template-columns:1fr;gap:2px}
   #jdl .dlg-ph img{aspect-ratio:4/3}
   #jdl .dlg-bd{padding:26px 22px 28px}
 }
@@ -242,55 +267,67 @@
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/reform-age-mild-cleanser.webp" alt="Reform Age Mild Cleanser — омолаживающая нежная пенка" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Mild Cleanser</span><h3>Омолаживающая нежная пенка</h3><p>Мягко очищает, поддерживает микробиом, сохраняет влагу и баланс pH.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл" data-care-t="Профессиональный и домашний уход">
-          <p data-k="Активные ингредиенты">Пробиотики, пептиды, центелла, витамин E.</p>
-          <p data-k="Как применять">Нанесите 1,5 мл на влажную кожу, помассируйте и тщательно смойте водой.</p>
-          <p data-k="В процедурах">Моментальное преображение, Гидробаланс лифт, Viso-Sculpt.</p>
+          <p class="about">Деликатная пенка открывает антивозрастной ритуал: снимает загрязнения и остатки макияжа, не пересушивая и не стягивая зрелую кожу. Пробиотики и пептиды поддерживают микробиом и барьер, поэтому кожа после умывания остаётся мягкой и увлажнённой.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Зрелая и возрастная кожа</li><li>Сухая и обезвоженная</li><li>Чувствительная</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Пробиотики</b><span>поддерживают микробиом и защитный барьер</span></li><li><b>Пептиды</b><span>помогают сохранить упругость кожи</span></li><li><b>Центелла</b><span>успокаивает и смягчает</span></li><li><b>Витамин E</b><span>антиоксидантная защита</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите 1,5 мл на влажную кожу лица.</li><li>Вспеньте лёгкими массирующими движениями.</li><li>Тщательно смойте тёплой водой. Утром и вечером.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Моментальное преображение, Гидробаланс лифт, Viso-Sculpt.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-collagen-tonic" data-id="collagen-tonic" data-care="pro home">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/reform-age-collagen-tonic.webp" alt="Reform Age Collagen Tonic — омолаживающий коллагеновый тоник" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Collagen Tonic</span><h3>Омолаживающий коллагеновый тоник</h3><p>Восстанавливает pH, насыщает влагой и придаёт коже тонус и гладкость.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный и домашний уход">
-          <p data-k="Активные ингредиенты">Трипептид меди, гиалуроновый комплекс MOIST-HA5, центелла, ниацинамид.</p>
-          <p data-k="Как применять">Одно нажатие на ватный диск — протрите кожу для тонизации.</p>
-          <p data-k="В процедурах">Моментальное преображение, Гидробаланс лифт, Viso-Sculpt.</p>
+          <p class="about">Тоник завершает очищение и готовит кожу к следующим этапам ухода. Восстанавливает pH, насыщает влагой и возвращает тонус — кожа выглядит более гладкой и свежей, а активы сыворотки и крема распределяются лучше.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Возрастная кожа</li><li>Обезвоженная, потерявшая тонус</li><li>Все типы кожи 30+</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Трипептид меди</b><span>поддерживает восстановление и упругость</span></li><li><b>MOIST-HA5</b><span>гиалуроновый комплекс для глубокого увлажнения</span></li><li><b>Центелла</b><span>успокаивает и укрепляет</span></li><li><b>Ниацинамид</b><span>выравнивает тон и укрепляет барьер</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите одно нажатие на ватный диск.</li><li>Протрите кожу лица и шеи.</li><li>Не смывайте — переходите к сыворотке или крему.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Моментальное преображение, Гидробаланс лифт, Viso-Sculpt.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-micro-touch-mask" data-id="micro-touch-mask" data-care="pro">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/reform-age-micro-touch-mask.webp" alt="Reform Age Micro Touch Mask — омолаживающая маска со спикулами" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Micro Touch Mask</span><h3>Омолаживающая маска со спикулами</h3><p>Активирует обновление клеток, улучшает тонус и сияние уже после первого применения.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный уход">
-          <p data-k="Что такое спикулы">Микроскопические минеральные «иголочки» из морских губок: мягко стимулируют обновление кожи.</p>
-          <p data-k="Активные ингредиенты">Пептиды, морские минералы, HERBAL Complex, жемчуг, ламинария.</p>
-          <p data-k="Как применять">Нанесите видимым слоем (5,0 мл) на 15–20 минут, затем тщательно смойте водой.</p>
-          <p data-k="В процедурах">Гидробаланс лифт.</p>
+          <p class="about">Профессиональная маска с морскими спикулами — микроскопическими минеральными «иголочками». Они мягко стимулируют обновление кожи и помогают активам проникнуть глубже. Тонус и сияние заметны уже после первого применения.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Возрастная кожа с потерей тонуса</li><li>Тусклый цвет лица</li><li>Процедуры в кабинете</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Спикулы морских губок</b><span>мягко стимулируют обновление кожи</span></li><li><b>Пептиды</b><span>поддерживают упругость</span></li><li><b>Морские минералы и ламинария</b><span>тонизируют и насыщают кожу</span></li><li><b>Жемчуг</b><span>придаёт сияние</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите видимым слоем — около 5 мл — на очищенную кожу.</li><li>Оставьте на 15–20 минут.</li><li>Тщательно смойте водой и нанесите завершающий уход.</li></ol></div>
+          <dl><dt>Что такое спикулы</dt><dd>Микроскопические минеральные «иголочки» из морских губок: мягко стимулируют обновление кожи.</dd><dt>В процедурах</dt><dd>Гидробаланс лифт.</dd></dl>
+          <p class="warn">После маски возможно лёгкое покалывание — это нормальная реакция на спикулы.</p>
         </div>
       </a>
       <a class="card rv" href="#p-intensive-cream" data-id="intensive-cream" data-care="pro home">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/reform-age-intensive-cream.webp" alt="Reform Age Intensive Cream — омолаживающий интенсивный крем" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Intensive Cream</span><h3>Омолаживающий интенсивный крем</h3><p>Уплотняет кожу, сокращает морщины, возвращает мягкость и сияние.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="50 мл" data-care-t="Профессиональный и домашний уход">
-          <p data-k="Активные ингредиенты">Матриксил®, улиточный муцин, конское масло, витамины E и B3, Dermaflux.</p>
-          <p data-k="Как применять">Нанесите 1,0 мл на кожу лица и помассируйте до полного впитывания.</p>
-          <p data-k="В процедурах">Viso-Sculpt.</p>
+          <p class="about">Насыщенный крем для ежедневного антивозрастного ухода. Уплотняет кожу, смягчает морщины и возвращает мягкость и сияние. Конское масло и улиточный муцин питают и восстанавливают, Матриксил® поддерживает упругость.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Зрелая кожа 30+</li><li>Сухая, потерявшая упругость</li><li>Утренний и вечерний уход</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Матриксил®</b><span>пептид для упругости и разглаживания морщин</span></li><li><b>Улиточный муцин</b><span>восстанавливает и увлажняет</span></li><li><b>Конское масло</b><span>питает и смягчает</span></li><li><b>Витамины E и B3</b><span>антиоксидантная защита, ровный тон</span></li><li><b>Dermaflux</b><span>поддерживает плотность кожи</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите 1 мл на очищенную кожу лица.</li><li>Распределите массажными движениями до полного впитывания.</li><li>Утром и вечером, утром — под SPF.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Viso-Sculpt.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-intensive-eye-cream" data-id="intensive-eye-cream" data-care="pro home">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/reform-age-intensive-eye-cream.webp" alt="Reform Age Intensive Eye Cream — омолаживающий крем для кожи вокруг глаз" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Intensive Eye Cream</span><h3>Омолаживающий крем для кожи вокруг глаз</h3><p>Уменьшает отёчность и морщины, повышает эластичность, придаёт свежесть взгляду.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="30 мл" data-care-t="Профессиональный и домашний уход">
-          <p data-k="Активные ингредиенты">Пептиды, BOTANICEUTICAL Plus 10, Pheohydrane, Dermaflux, гиалуронат натрия.</p>
-          <p data-k="Как применять">Нанесите 0,2 мл на кожу вокруг глаз и помассируйте до полного впитывания.</p>
-          <p data-k="В процедурах">Моментальное преображение, Гидробаланс лифт, Viso-Sculpt.</p>
+          <p class="about">Крем для деликатной кожи вокруг глаз. Уменьшает отёчность и выраженность морщин, повышает эластичность и придаёт взгляду свежесть. Лёгкая текстура не утяжеляет веки.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Морщины вокруг глаз</li><li>Отёки и усталый взгляд</li><li>Тонкая, потерявшая упругость кожа</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Пептиды</b><span>разглаживают и укрепляют</span></li><li><b>BOTANICEUTICAL Plus 10</b><span>растительный комплекс для свежести</span></li><li><b>Pheohydrane</b><span>глубоко увлажняет</span></li><li><b>Гиалуронат натрия</b><span>удерживает влагу</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите 0,2 мл на кожу вокруг глаз по костной границе глазницы.</li><li>Распределите подушечками пальцев похлопывающими движениями.</li><li>Утром и вечером.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Моментальное преображение, Гидробаланс лифт, Viso-Sculpt.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-o2-boto-fluid" data-id="o2-boto-fluid" data-care="pro home">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/reform-age-o2-boto-fluid-110ml.webp" alt="Reform Age O₂ Boto Fluid — кислородный омолаживающий флюид" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">O₂ Boto Fluid</span><h3>Кислородный омолаживающий флюид</h3><p>Активирует клеточное дыхание, разглаживает мимические морщины.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="50 мл · дом / 110 мл · ПРО" data-care-t="Профессиональный и домашний уход">
-          <p data-k="Активные ингредиенты">Перфторуглероды, Syn®-Ake, Argireline, трипептид меди, ниацинамид.</p>
-          <p data-k="Как применять">Нанесите 1,0 мл на кожу: через несколько секунд начнётся «пузырение» и образуется «облако». Помассируйте до полного впитывания.</p>
-          <p data-k="В процедурах">Моментальное преображение, Гидробаланс лифт.</p>
+          <p class="about">Кислородный флюид с эффектом расслабления мимических морщин. Перфторуглероды насыщают кожу кислородом — на коже образуется «пузырящееся облако», а нейропептиды Syn®-Ake и Argireline смягчают мимические линии. Кожа выглядит отдохнувшей и сияющей.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Мимические морщины</li><li>Тусклая, уставшая кожа</li><li>Кабинет и домашний уход</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Перфторуглероды</b><span>насыщают кожу кислородом</span></li><li><b>Syn®-Ake</b><span>расслабляет мимические мышцы</span></li><li><b>Argireline</b><span>смягчает мимические морщины</span></li><li><b>Трипептид меди</b><span>поддерживает восстановление</span></li><li><b>Ниацинамид</b><span>выравнивает тон</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите 1 мл на очищенную кожу.</li><li>Через несколько секунд начнётся «пузырение» и образуется «облако».</li><li>Помассируйте до полного впитывания.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Моментальное преображение, Гидробаланс лифт.</dd></dl>
         </div>
       </a>
 
@@ -381,8 +418,7 @@
       <span class="en"></span>
       <h3 id="jdl-dt"></h3>
       <div class="meta"></div>
-      <p class="desc"></p>
-      <dl></dl>
+      <div class="info"></div>
       <div class="btns">
         <a class="btn btn-a" href="#getprice_main">Запросить цену <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
         <a class="btn btn-o" href="#getprotocol">Протокол</a>
@@ -417,10 +453,8 @@
     var ph=dlg.querySelector('.dlg-ph img'); ph.src=img.src; ph.alt=img.alt; ph.style.objectPosition=img.style.objectPosition||'';
     dlg.querySelector('.en').textContent=card.querySelector('.en').textContent;
     dlg.querySelector('h3').textContent=card.querySelector('h3').textContent;
-    dlg.querySelector('.desc').textContent=card.querySelector('.bd p').textContent;
     dlg.querySelector('.meta').innerHTML='<span>'+esc(pd.dataset.vol)+'</span><span>'+esc(pd.dataset.careT)+'</span>';
-    dlg.querySelector('dl').innerHTML=[].map.call(pd.querySelectorAll('[data-k]'),function(r){
-      return '<dt>'+esc(r.dataset.k)+'</dt><dd>'+esc(r.textContent)+'</dd>';}).join('');
+    dlg.querySelector('.info').innerHTML=pd.innerHTML;
   }
   function open(id,push){
     var card=root.querySelector('.card[data-id="'+id+'"]'); if(!card) return;

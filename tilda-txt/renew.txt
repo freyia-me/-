@@ -150,6 +150,29 @@
 #jdl .dlg-bd dt{margin-top:16px;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
 #jdl .dlg-bd dd{margin-top:6px;font-size:15px;color:var(--ink)}
 #jdl .dlg-bd .btns{margin-top:28px}
+#jdl .dlg{grid-template-columns:.8fr 1.2fr}
+#jdl .dlg-ph{position:sticky;top:0;align-self:start}
+#jdl .dlg-ph img{height:auto;aspect-ratio:1/1}
+#jdl .info .about{font-size:15.5px;color:var(--text)}
+#jdl .info .sec{margin-top:22px}
+#jdl .info h4{font-family:var(--tf);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
+#jdl .info .chips{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+#jdl .info .chips li{padding:6px 11px;border:1px solid var(--line);border-radius:999px;font-size:12.5px;color:var(--ink)}
+#jdl .info .acts{list-style:none;display:grid;gap:0;border-top:1px solid var(--line)}
+#jdl .info .acts li{display:grid;grid-template-columns:minmax(120px,.85fr) 1.15fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45}
+#jdl .info .acts b{font-weight:600;color:var(--ink)}
+#jdl .info .acts span{color:var(--text)}
+#jdl .info .how{list-style:none;counter-reset:h}
+#jdl .info .how li{counter-increment:h;position:relative;padding:4px 0 8px 34px;font-size:14.5px;line-height:1.5;color:var(--ink)}
+#jdl .info .how li:before{content:counter(h);position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:var(--c-soft);color:var(--c);font-size:12px;font-weight:600;display:grid;place-items:center}
+#jdl .info dl{margin-top:18px}
+#jdl .info .warn{margin-top:18px;padding:12px 14px;border-left:3px solid var(--c);background:var(--c-soft);font-size:13px;line-height:1.5;color:var(--ink)}
+#jdl .info .full{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+#jdl .info .full summary{cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);list-style:none}
+#jdl .info .full summary::-webkit-details-marker{display:none}
+#jdl .info .full summary:after{content:" +";color:var(--c)}
+#jdl .info .full[open] summary:after{content:" −"}
+#jdl .info .full p{margin-top:10px;font-size:12.5px;line-height:1.6;color:var(--gray)}
 
 /* ===== Анимация появления ===== */
 #jdl .rv{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
@@ -163,6 +186,8 @@
 }
 @media (max-width:760px){
   #jdl .dlg{grid-template-columns:1fr}
+  #jdl .dlg-ph{position:relative}
+  #jdl .info .acts li{grid-template-columns:1fr;gap:2px}
   #jdl .dlg-ph img{aspect-ratio:4/3}
   #jdl .dlg-bd{padding:26px 22px 28px}
 }
@@ -219,6 +244,14 @@
         <summary>Фито комплекс<i></i></summary>
         <div class="a">Алоэ, ламинария, корень диоскореи, пантенол, аллантоин и растительные масла — комфорт кожи во время и после процедуры.</div>
       </details>
+      <details>
+        <summary>Преимущества<i></i></summary>
+        <div class="a">Несколько задач за одну процедуру, неинвазивная методика, короткий восстановительный период, минимальный риск побочных эффектов, подходит для чувствительной кожи.</div>
+      </details>
+      <details>
+        <summary>Показания<i></i></summary>
+        <div class="a">Фотостарение и усталость кожи, возрастные изменения, гиперпигментация и постакне, подготовка к пластическим операциям.</div>
+      </details>
     </div>
   </div>
 </section>
@@ -239,18 +272,26 @@
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/zymo-complex.webp" alt="Zymo Complex · pH 2,5 — зимо Комплекс — энзимно-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Zymo Complex · pH 2,5</span><h3>Зимо Комплекс — энзимно-кислотное обновление</h3><p>Очищает, обновляет и придаёт коже сияние без раздражения. Подходит для очень чувствительной кожи.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="3 × 10 мл" data-care-t="Профессиональный уход">
-          <p data-k="Состав набора">AHA Primer (10 %, pH 3,5) — фитокомплекс и масла, 6 кислот, витамины. Zymo Active (25 % AHA 7 кислот / BHA + энзимы 1000 ppm, pH 2,5). pH Reductant (pH 5,0) — 9 пептидов 350 ppm, энзимы 2000 ppm, увлажняющие компоненты.</p>
-          <p data-k="Как применять">Каждый этап — 1,0 мл на 5–10 минут. AHA Primer и Reductant не смываются, Zymo Active смывается прохладной водой.</p>
-          <p data-k="В процедурах">Zymo Complex, Возрождение кожи, Моментальное преображение.</p>
+          <p class="about">Трёхэтапная система энзимно-кислотного обновления: 25 % AHA/BHA и энзимы 1000 ppm при pH 2,5 деликатно обновляют кожу, а пребиотики и пептиды поддерживают её барьер. Zymo от лат. enzyme — фермент. Подходит для всех типов кожи, включая очень чувствительную.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Чувствительная и реактивная кожа</li><li>Тусклый, неровный тон</li><li>Фотостарение и усталость кожи</li><li>Пигментация и постакне</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Энзимы сахаромицетов</b><span>мягко растворяют ороговевшие клетки</span></li><li><b>7 AHA + салициловая кислота</b><span>обновляют и выравнивают тон</span></li><li><b>9 пептидов 350 ppm</b><span>в pH Reductant: упругость, ровный тон, снижение раздражения</span></li><li><b>Пребиотики</b><span>поддерживают микрофлору кожи</span></li><li><b>Ива, солодка, пион, шлемник</b><span>фитокомплекс: успокаивает и защищает</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>AHA Primer: 1 мл на лицо и шею, помассируйте 5–10 минут. Не смывать.</li><li>Zymo Active: 1 мл, время подбирается индивидуально — оптимально 7–10 минут. Смыть прохладной водой.</li><li>pH Reductant: 1 мл, помассируйте 5–10 минут. Не смывать.</li><li>Завершение: крем по типу кожи, при необходимости SPF.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Zymo Complex, Возрождение кожи, Моментальное преображение.</dd></dl>
+          <p class="warn">Профессиональное средство — только для специалистов. Возможны лёгкое покалывание и покраснение. После процедуры обязательна защита кожи средствами с SPF. Zymo в период активной инсоляции — только по показаниям и с обязательным SPF. Противопоказания: индивидуальная непереносимость кислот, повреждения кожи и герпетические высыпания, тяжёлые соматические заболевания, беременность и лактация.</p>
+          <details class="full"><summary>Полный состав</summary><p>AHA Primer — AHA 10 %, pH 3,5: молочная, лимонная, яблочная, пировиноградная, винная, гликолевая кислоты; пантенол (B5), токоферил ацетат (E); масла бергамота, подсолнечника, апельсина, эвкалипта, мяты, лаванды, ромашки, лимона; экстракты мари белой, индийского латука, хохлатки, дубравной крупки, аниса; аллантоин. Zymo Active — 25 % AHA/BHA, pH 2,5, энзимы 1000 ppm: гликолевая, молочная, лимонная, яблочная, пировиноградная, винная кислоты, лактат натрия, салициловая кислота; фильтраты лизата сахаромицетов (полынь, виноград, императа, женьшень, рис); пантенол; экстракты коры ивы, солодки, пиона, горца, санхвана, софоры, цимицифуги, ангелики, шлемника, белой шелковицы, кунжута; аллантоин. pH Reductant — pH 5,0. Пептиды 350 ppm: ацетил гексапептид-8, трипептид меди-1, пальмитоил трипептид-1, трипептид-1, ацетил октапептид-3, гексапептид-9, пальмитоил гексапептид-12, пальмитоил тетрапептид-7, нонапептид-1. Энзимы 2000 ppm (фильтраты лизата сахаромицетов). Увлажнение: бетаин, трегалоза, натрий PCA, гиалуронат натрия. Регенерация: фильтрат секреции улитки. Пантенол. Фитокомплекс: алоэ, брокколи, камелия, центелла, гамамелис, облепиха, чайное дерево, портулак, гранат, роза, анис; аллантоин.</p></details>
         </div>
       </a>
       <a class="card rv" href="#p-nova" data-id="nova" data-care="pro">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/nova-complex.webp" alt="Nova Complex · pH 1,5 — нова Комплекс — 9-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Nova Complex · pH 1,5</span><h3>Нова Комплекс — 9-кислотное обновление</h3><p>Глубоко обновляет кожу, выравнивает тон и морщины, улучшает эластичность, сияние и проникновение активов.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="3 × 10 мл" data-care-t="Профессиональный уход">
-          <p data-k="Состав набора">AHA Primer (10 %, pH 3,5) — фитокомплекс и масла, 6 кислот, витамины. Nova Active (35 % раствор AHA 7 кислот / BHA / PHA, pH 1,5). pH Reductant (pH 5,0) — 9 пептидов 350 ppm, энзимы 2000 ppm, увлажняющие компоненты.</p>
-          <p data-k="Как применять">Каждый этап — 1,0 мл на 5–10 минут. AHA Primer и Reductant не смываются, Nova Active смывается прохладной водой.</p>
-          <p data-k="В процедурах">Nova Complex.</p>
+          <p class="about">Трёхэтапная система глубокого обновления: синергия 9 кислот AHA/BHA/PHA — 35 % раствор с pH 1,5. Nova от лат. novem — девять. Глубоко, но деликатно обновляет кожу, выравнивает тон, текстуру и морщины, улучшает проникновение активов.</p>
+          <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Возрастные изменения и фотостарение</li><li>Гиперпигментация</li><li>Постакне и неровный рельеф</li><li>Подготовка к пластическим операциям</li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>9 кислот AHA/BHA/PHA</b><span>мощная стимуляция обновления кожи</span></li><li><b>Бетаин-салицилат</b><span>салициловая кислота с увлажняющим бетаином</span></li><li><b>Глюконолактон (PHA)</b><span>мягкое обновление и увлажнение</span></li><li><b>9 пептидов 350 ppm</b><span>в pH Reductant: восстановление и упругость</span></li><li><b>Алоэ, ламинария, дикий ямс</b><span>фитокомплекс: комфорт кожи</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>AHA Primer: 1 мл на лицо и шею, помассируйте 5–10 минут. Не смывать.</li><li>Nova Active: 1 мл, время подбирается индивидуально — оптимально 7–10 минут. Смыть прохладной водой.</li><li>pH Reductant: 1 мл, помассируйте 5–10 минут. Не смывать.</li><li>Завершение: крем по типу кожи, при необходимости SPF.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Nova Complex.</dd></dl>
+          <p class="warn">Профессиональное средство — только для специалистов. Возможны лёгкое покалывание и покраснение. После процедуры обязательна защита кожи средствами с SPF. Противопоказания: индивидуальная непереносимость кислот, повреждения кожи и герпетические высыпания, тяжёлые соматические заболевания, беременность и лактация.</p>
+          <details class="full"><summary>Полный состав</summary><p>AHA Primer — AHA 10 %, pH 3,5: молочная, лимонная, яблочная, пировиноградная, винная, гликолевая кислоты; пантенол (B5), токоферил ацетат (E); масла бергамота, подсолнечника, апельсина, эвкалипта, мяты, лаванды, ромашки, лимона; экстракты мари белой, индийского латука, хохлатки, дубравной крупки, аниса; аллантоин. Nova Active — 35 % AHA/BHA/PHA, pH 1,5: молочная, лимонная, яблочная, гликолевая, пировиноградная, винная кислоты, лактат натрия; бетаин салицилат; глюконолактон; энзимы — экстракт лактобацилл/соевой закваски; фитокомплекс: алоэ барбаденсис, корень диоскореи японской, ламинария, корень вяза Давида, виола маньчжурская, кипарисовик, душица, кора ивы, корица, ластовень, портулак, шлемник байкальский; аллантоин. pH Reductant — pH 5,0. Пептиды 350 ppm: ацетил гексапептид-8, трипептид меди-1, пальмитоил трипептид-1, трипептид-1, ацетил октапептид-3, гексапептид-9, пальмитоил гексапептид-12, пальмитоил тетрапептид-7, нонапептид-1. Энзимы 2000 ppm (фильтраты лизата сахаромицетов). Увлажнение: бетаин, трегалоза, натрий PCA, гиалуронат натрия. Регенерация: фильтрат секреции улитки. Пантенол. Фитокомплекс: алоэ, брокколи, камелия, центелла, гамамелис, облепиха, чайное дерево, портулак, гранат, роза, анис; аллантоин.</p></details>
         </div>
       </a>
 
@@ -336,8 +377,7 @@
       <span class="en"></span>
       <h3 id="jdl-dt"></h3>
       <div class="meta"></div>
-      <p class="desc"></p>
-      <dl></dl>
+      <div class="info"></div>
       <div class="btns">
         <a class="btn btn-a" href="#getprice_main">Запросить цену <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
         <a class="btn btn-o" href="#getprotocol">Протокол</a>
@@ -372,10 +412,8 @@
     var ph=dlg.querySelector('.dlg-ph img'); ph.src=img.src; ph.alt=img.alt; ph.style.objectPosition=img.style.objectPosition||'';
     dlg.querySelector('.en').textContent=card.querySelector('.en').textContent;
     dlg.querySelector('h3').textContent=card.querySelector('h3').textContent;
-    dlg.querySelector('.desc').textContent=card.querySelector('.bd p').textContent;
     dlg.querySelector('.meta').innerHTML='<span>'+esc(pd.dataset.vol)+'</span><span>'+esc(pd.dataset.careT)+'</span>';
-    dlg.querySelector('dl').innerHTML=[].map.call(pd.querySelectorAll('[data-k]'),function(r){
-      return '<dt>'+esc(r.dataset.k)+'</dt><dd>'+esc(r.textContent)+'</dd>';}).join('');
+    dlg.querySelector('.info').innerHTML=pd.innerHTML;
   }
   function open(id,push){
     var card=root.querySelector('.card[data-id="'+id+'"]'); if(!card) return;
