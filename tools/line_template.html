@@ -447,7 +447,7 @@
     var ph=dlg.querySelector('.dlg-ph img'); ph.src=img.src; ph.alt=img.alt; ph.style.objectPosition=img.style.objectPosition||'';
     dlg.querySelector('.en').textContent=card.querySelector('.en').textContent;
     dlg.querySelector('h3').textContent=card.querySelector('h3').textContent;
-    dlg.querySelector('.meta').innerHTML='<span>'+esc(pd.dataset.vol)+'</span><span>'+esc(pd.dataset.careT)+'</span>';
+    dlg.querySelector('.meta').innerHTML='<span>'+esc(pd.dataset.vol)+'</span>'+(pd.dataset.ppm?'<span>Пептиды '+esc(pd.dataset.ppm)+'</span>':'')+'<span>'+esc(pd.dataset.careT)+'</span>';
     dlg.querySelector('.info').innerHTML=pd.innerHTML;
   }
   function open(id,push){

@@ -266,22 +266,22 @@
       <a class="card rv" href="#p-concentrate" data-id="concentrate" data-care="pro">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/hair-growth-concentrate.webp" alt="Hair-Growth Concentrate — стерильная концентрированная сыворотка для роста волос" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Hair-Growth Concentrate</span><h3>Стерильная концентрированная сыворотка для роста волос</h3><p>Профессиональный пептидный стимулятор роста волос с высокой концентрацией активов — при выпадении, истончении и замедленном росте волос.</p><span class="more">Подробнее</span></div>
-        <div class="pd" data-vol="20 мл" data-care-t="Профессиональный уход">
-          <p class="about">Стерильная концентрированная сыворотка для процедур в кабинете. Высокая концентрация пептидов — 3000 ppm — укрепляет фолликулы, стимулирует рост и уменьшает выпадение. Используется в курсе процедур трихолога или косметолога.</p>
+        <div class="pd" data-vol="20 мл" data-care-t="Профессиональный уход" data-ppm="3000 ppm">
+          <p class="about">Концентрат-стимулятор роста волос: биологические пептидные стимуляторы, β-глюкан и комплекс из 16 растительных экстрактов. По данным исследований производителя — рост диаметра волос на 89 %, больше новых фолликулов и выше их плотность. Безопасен, без аллергических реакций.</p>
           <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Выпадение и истончение волос</li><li>Замедленный рост</li><li>Кожа головы, борода, брови</li></ul></div>
           <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Пептиды 3000 ppm</b><span>укрепляют фолликулы и стимулируют рост</span></li><li><b>Гиалуроновая кислота и церамиды</b><span>увлажняют кожу головы</span></li><li><b>Аргинин</b><span>усиливает микроциркуляцию</span></li><li><b>Гинкго, годжи, хвощ</b><span>питают и укрепляют</span></li></ul></div>
-          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Применяется специалистом в кабинете по протоколу Hair Genesis.</li><li>Курс и частота процедур подбираются индивидуально.</li><li>Между визитами — домашний спрей Hair Growth Stimulator.</li></ol></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите 1–2 мл на кожу волосистой части головы и помассируйте.</li><li>Не смывайте.</li><li>В кабинете — по показаниям, можно с аппаратными и массажными техниками; дома — утром и вечером.</li></ol></div>
           <dl><dt>Особенности</dt><dd>Стерильная формула для процедур в кабинете. Подходит для волосистой части головы, зоны бороды и бровей. Без синдрома отмены.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-stimulator" data-id="stimulator" data-care="home">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/hair-genesis-stimulator.webp" alt="Hair Growth Stimulator — пептидная сыворотка-спрей для роста волос" loading="lazy"><span class="tags"><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Hair Growth Stimulator</span><h3>Пептидная сыворотка-спрей для роста волос</h3><p>Уменьшает выпадение, активирует «спящие» фолликулы, усиливает микроциркуляцию и продлевает фазу роста волос.</p><span class="more">Подробнее</span></div>
-        <div class="pd" data-vol="140 мл" data-care-t="Домашний уход">
-          <p class="about">Пептидная сыворотка-спрей для ежедневного домашнего ухода. Уменьшает выпадение, активирует «спящие» фолликулы, усиливает микроциркуляцию и продлевает фазу роста волос. Без синдрома отмены.</p>
+        <div class="pd" data-vol="140 мл" data-care-t="Домашний уход" data-ppm="300 ppm">
+          <p class="about">Спрей-стимулятор роста волос: пептиды, β-глюкан и 16 растительных экстрактов (FitoGenesis). Уменьшает выпадение, восстанавливает активность фолликулов, улучшает микроциркуляцию, снижает влияние андрогенов, продлевает фазу роста. По данным производителя — диаметр волос +89 %. Удобный спрей-флакон.</p>
           <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Выпадение и редеющие волосы</li><li>Домашний уход между процедурами</li><li>Кожа головы, борода, брови</li></ul></div>
           <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>HairGenesis 1.1</b><span>Copper Tetrapeptide-52 Dimer — стимулирует рост</span></li><li><b>Copper Tripeptide-1</b><span>укрепляет фолликулы</span></li><li><b>Triple M Complex</b><span>аминокислоты для структуры волоса</span></li><li><b>β-глюкан и фермент лактобактерий</b><span>здоровье кожи головы</span></li><li><b>16 растительных экстрактов</b><span>питание и тонус</span></li></ul></div>
-          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Распылите на сухую или влажную кожу головы в зонах выпадения.</li><li>Помассируйте кончиками пальцев 1–2 минуты.</li><li>Не смывайте. Ежедневно, 1–2 раза в день.</li></ol></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Кожа головы: распределите спрей по проборам и помассируйте до впитывания, 1–2 раза в день ежедневно или через день. Курс — от 3 месяцев, по назначению специалиста.</li><li>Борода: нанесите на кожу, помассируйте несколько минут, не смывайте — утром и вечером.</li><li>Брови: наносите щёточкой 2 раза в день, расчёсывая и массируя корни.</li></ol></div>
           <dl><dt>Особенности</dt><dd>Спрей для ежедневного домашнего ухода. Подходит для волосистой части головы, зоны бороды и бровей. Без синдрома отмены.</dd></dl>
         </div>
       </a>
@@ -366,7 +366,7 @@
     var ph=dlg.querySelector('.dlg-ph img'); ph.src=img.src; ph.alt=img.alt; ph.style.objectPosition=img.style.objectPosition||'';
     dlg.querySelector('.en').textContent=card.querySelector('.en').textContent;
     dlg.querySelector('h3').textContent=card.querySelector('h3').textContent;
-    dlg.querySelector('.meta').innerHTML='<span>'+esc(pd.dataset.vol)+'</span><span>'+esc(pd.dataset.careT)+'</span>';
+    dlg.querySelector('.meta').innerHTML='<span>'+esc(pd.dataset.vol)+'</span>'+(pd.dataset.ppm?'<span>Пептиды '+esc(pd.dataset.ppm)+'</span>':'')+'<span>'+esc(pd.dataset.careT)+'</span>';
     dlg.querySelector('.info').innerHTML=pd.innerHTML;
   }
   function open(id,push){

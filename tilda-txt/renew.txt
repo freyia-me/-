@@ -271,7 +271,7 @@
       <a class="card rv" href="#p-zymo" data-id="zymo" data-care="pro">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/zymo-complex.webp" alt="Zymo Complex · pH 2,5 — зимо Комплекс — энзимно-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Zymo Complex · pH 2,5</span><h3>Зимо Комплекс — энзимно-кислотное обновление</h3><p>Очищает, обновляет и придаёт коже сияние без раздражения. Подходит для очень чувствительной кожи.</p><span class="more">Подробнее</span></div>
-        <div class="pd" data-vol="3 × 10 мл" data-care-t="Профессиональный уход">
+        <div class="pd" data-vol="3 × 10 мл" data-care-t="Профессиональный уход" data-ppm="">
           <p class="about">Трёхэтапная система энзимно-кислотного обновления: 25 % AHA/BHA и энзимы 1000 ppm при pH 2,5 деликатно обновляют кожу, а пребиотики и пептиды поддерживают её барьер. Zymo от лат. enzyme — фермент. Подходит для всех типов кожи, включая очень чувствительную.</p>
           <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Чувствительная и реактивная кожа</li><li>Тусклый, неровный тон</li><li>Фотостарение и усталость кожи</li><li>Пигментация и постакне</li></ul></div>
           <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Энзимы сахаромицетов</b><span>мягко растворяют ороговевшие клетки</span></li><li><b>7 AHA + салициловая кислота</b><span>обновляют и выравнивают тон</span></li><li><b>9 пептидов 350 ppm</b><span>в pH Reductant: упругость, ровный тон, снижение раздражения</span></li><li><b>Пребиотики</b><span>поддерживают микрофлору кожи</span></li><li><b>Ива, солодка, пион, шлемник</b><span>фитокомплекс: успокаивает и защищает</span></li></ul></div>
@@ -284,7 +284,7 @@
       <a class="card rv" href="#p-nova" data-id="nova" data-care="pro">
         <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/nova-complex.webp" alt="Nova Complex · pH 1,5 — нова Комплекс — 9-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Nova Complex · pH 1,5</span><h3>Нова Комплекс — 9-кислотное обновление</h3><p>Глубоко обновляет кожу, выравнивает тон и морщины, улучшает эластичность, сияние и проникновение активов.</p><span class="more">Подробнее</span></div>
-        <div class="pd" data-vol="3 × 10 мл" data-care-t="Профессиональный уход">
+        <div class="pd" data-vol="3 × 10 мл" data-care-t="Профессиональный уход" data-ppm="">
           <p class="about">Трёхэтапная система глубокого обновления: синергия 9 кислот AHA/BHA/PHA — 35 % раствор с pH 1,5. Nova от лат. novem — девять. Глубоко, но деликатно обновляет кожу, выравнивает тон, текстуру и морщины, улучшает проникновение активов.</p>
           <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Возрастные изменения и фотостарение</li><li>Гиперпигментация</li><li>Постакне и неровный рельеф</li><li>Подготовка к пластическим операциям</li></ul></div>
           <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>9 кислот AHA/BHA/PHA</b><span>мощная стимуляция обновления кожи</span></li><li><b>Бетаин-салицилат</b><span>салициловая кислота с увлажняющим бетаином</span></li><li><b>Глюконолактон (PHA)</b><span>мягкое обновление и увлажнение</span></li><li><b>9 пептидов 350 ppm</b><span>в pH Reductant: восстановление и упругость</span></li><li><b>Алоэ, ламинария, дикий ямс</b><span>фитокомплекс: комфорт кожи</span></li></ul></div>
@@ -412,7 +412,7 @@
     var ph=dlg.querySelector('.dlg-ph img'); ph.src=img.src; ph.alt=img.alt; ph.style.objectPosition=img.style.objectPosition||'';
     dlg.querySelector('.en').textContent=card.querySelector('.en').textContent;
     dlg.querySelector('h3').textContent=card.querySelector('h3').textContent;
-    dlg.querySelector('.meta').innerHTML='<span>'+esc(pd.dataset.vol)+'</span><span>'+esc(pd.dataset.careT)+'</span>';
+    dlg.querySelector('.meta').innerHTML='<span>'+esc(pd.dataset.vol)+'</span>'+(pd.dataset.ppm?'<span>Пептиды '+esc(pd.dataset.ppm)+'</span>':'')+'<span>'+esc(pd.dataset.careT)+'</span>';
     dlg.querySelector('.info').innerHTML=pd.innerHTML;
   }
   function open(id,push){

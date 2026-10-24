@@ -380,7 +380,7 @@ def card(p, d):
     return f'''      <a class="card rv" href="#p-{p['id']}" data-id="{p['id']}" data-care="{p['care']}">
         <span class="ph"><img src="{src}" alt="{e(alt.strip())}" loading="lazy"{style}><span class="tags">{tags}</span></span>
         <div class="bd"><span class="en">{p['en']}</span><h3>{p['ru']}</h3><p>{p['short']}</p><span class="more">Подробнее</span></div>
-        <div class="pd" data-vol="{e(p['vol'])}" data-care-t="{care_t}">
+        <div class="pd" data-vol="{e(p['vol'])}" data-care-t="{care_t}" data-ppm="{e(INFO.get((d['slug'], p['id']), {}).get('ppm', ''))}">
           {info_html(p, d)}
         </div>
       </a>'''
