@@ -43,6 +43,7 @@
 | `footer` (`tools/build_footer.py`) | последним блоком на всех страницах |
 | `contacts` (`tools/build_contacts.py`) | страница контактов |
 | `about` (`tools/build_about.py`) | «О компании» |
+| `404` (`tools/build_404.py`) | Настройки сайта → Ещё → Страница 404 |
 | `reformage` | /reformage-pro и /reformage-homecare |
 | `acno` | /acnopro-jeuderm и /acnohome |
 | `atocare` | /atocare-pro и /atocare-home |
