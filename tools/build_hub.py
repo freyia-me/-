@@ -9,7 +9,7 @@ import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-IMG = 'https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/'
+IMG = 'https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/'
 SITE = 'https://jeuderm-russia.ru/'
 ARROW = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg>'
 

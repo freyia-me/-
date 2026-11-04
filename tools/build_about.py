@@ -11,7 +11,7 @@ from build_study import base_css, IMG, ARROW  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://jeuderm-russia.ru/'
-LETTER = 'https://cdn.jsdelivr.net/gh/freyia-me/-@16606b2/images/home/distributor-letter.webp'
+LETTER = 'https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/distributor-letter.webp'
 
 CSS = '''
 /* ===== О компании ===== */

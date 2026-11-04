@@ -269,7 +269,7 @@
     <div class="grid g2">
 
       <a class="card rv" href="#p-zymo" data-id="zymo" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/zymo-complex.webp" alt="Zymo Complex · pH 2,5 — зимо Комплекс — энзимно-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/zymo-complex.webp" alt="Zymo Complex · pH 2,5 — зимо Комплекс — энзимно-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Zymo Complex · pH 2,5</span><h3>Зимо Комплекс — энзимно-кислотное обновление</h3><p>Очищает, обновляет и придаёт коже сияние без раздражения. Подходит для очень чувствительной кожи.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="3 × 10 мл" data-care-t="Профессиональный уход" data-ppm="">
           <p class="about">Трёхэтапная система энзимно-кислотного обновления: 25 % AHA/BHA и энзимы 1000 ppm при pH 2,5 деликатно обновляют кожу, а пребиотики и пептиды поддерживают её барьер. Zymo от лат. enzyme — фермент. Подходит для всех типов кожи, включая очень чувствительную.</p>
@@ -282,7 +282,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-nova" data-id="nova" data-care="pro">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/nova-complex.webp" alt="Nova Complex · pH 1,5 — нова Комплекс — 9-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/nova-complex.webp" alt="Nova Complex · pH 1,5 — нова Комплекс — 9-кислотное обновление" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
         <div class="bd"><span class="en">Nova Complex · pH 1,5</span><h3>Нова Комплекс — 9-кислотное обновление</h3><p>Глубоко обновляет кожу, выравнивает тон и морщины, улучшает эластичность, сияние и проникновение активов.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="3 × 10 мл" data-care-t="Профессиональный уход" data-ppm="">
           <p class="about">Трёхэтапная система глубокого обновления: синергия 9 кислот AHA/BHA/PHA — 35 % раствор с pH 1,5. Nova от лат. novem — девять. Глубоко, но деликатно обновляет кожу, выравнивает тон, текстуру и морщины, улучшает проникновение активов.</p>
@@ -355,7 +355,7 @@
 <!-- ================= CTA ================= -->
 <section>
   <div class="w">
-    <div class="cta rv cta-img" style="--bg:url('https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/skin-renewal.webp')">
+    <div class="cta rv cta-img" style="--bg:url('https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/skin-renewal.webp')">
       <div>
         <h2>Хотите внедрить пилинги Nova и Zymo?</h2>
         <p>Пришлём прайс и протоколы, проведём бесплатное обучение и посмотрим вебинары по системам вместе.</p>

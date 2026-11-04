@@ -44,6 +44,19 @@
 #jdh .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
 #jdh .head h2{margin-top:18px}
 
+/* ===== Результаты ===== */
+#jdh .res-g{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+#jdh .res-g.r3{grid-template-columns:repeat(3,1fr)}
+#jdh .res-g.r2{grid-template-columns:repeat(2,1fr);max-width:900px}
+#jdh .res-g.r1{grid-template-columns:minmax(0,560px)}
+#jdh .res{margin:0;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+#jdh .res img{width:100%;aspect-ratio:1/1;object-fit:cover}
+#jdh .res figcaption{padding:16px 18px 18px;font-size:14px;line-height:1.45;color:var(--ink)}
+#jdh .res figcaption .code{display:block;margin-bottom:6px;color:var(--c)}
+#jdh .res-note{margin-top:16px;font-size:12.5px;color:var(--gray)}
+@media (max-width:1000px){#jdh .res-g,#jdh .res-g.r3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){#jdh .res-g,#jdh .res-g.r3,#jdh .res-g.r2{grid-template-columns:1fr 1fr;gap:10px}#jdh .res-g.r1{grid-template-columns:1fr}#jdh .res figcaption{padding:12px;font-size:13px}}
+
 /* ===== Процедуры ===== */
 
 /* ===== CTA ===== */
@@ -63,6 +76,26 @@
 @media (max-width:1000px){#jdh .cta-img{background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.9) 55%,rgba(255,255,255,.55) 100%),var(--bg) center/cover}}
 
 /* ===== Окно товара ===== */
+#jdh .info .about{font-size:15.5px;color:var(--text)}
+#jdh .info .sec{margin-top:22px}
+#jdh .info h4{font-family:var(--tf);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
+#jdh .info .chips{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+#jdh .info .chips li{padding:6px 11px;border:1px solid var(--line);border-radius:999px;font-size:12.5px;color:var(--ink)}
+#jdh .info .acts{list-style:none;display:grid;gap:0;border-top:1px solid var(--line)}
+#jdh .info .acts li{display:grid;grid-template-columns:minmax(120px,.85fr) 1.15fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45}
+#jdh .info .acts b{font-weight:600;color:var(--ink)}
+#jdh .info .acts span{color:var(--text)}
+#jdh .info .how{list-style:none;counter-reset:h}
+#jdh .info .how li{counter-increment:h;position:relative;padding:4px 0 8px 34px;font-size:14.5px;line-height:1.5;color:var(--ink)}
+#jdh .info .how li:before{content:counter(h);position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:var(--c-soft);color:var(--c);font-size:12px;font-weight:600;display:grid;place-items:center}
+#jdh .info dl{margin-top:18px}
+#jdh .info .warn{margin-top:18px;padding:12px 14px;border-left:3px solid var(--c);background:var(--c-soft);font-size:13px;line-height:1.5;color:var(--ink)}
+#jdh .info .full{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+#jdh .info .full summary{cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);list-style:none}
+#jdh .info .full summary::-webkit-details-marker{display:none}
+#jdh .info .full summary:after{content:" +";color:var(--c)}
+#jdh .info .full[open] summary:after{content:" −"}
+#jdh .info .full p{margin-top:10px;font-size:12.5px;line-height:1.6;color:var(--gray)}
 
 /* ===== Анимация появления ===== */
 #jdh .rv{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
@@ -70,7 +103,9 @@
 
 /* ===== Адаптив ===== */
 
-
+@media (max-width:760px){
+  #jdh .info .acts li{grid-template-columns:1fr;gap:2px}
+}
 @media (max-width:640px){
   #jdh{font-size:16px}
   #jdh .lead{font-size:16.5px}
@@ -116,7 +151,7 @@
 #jdh .st p{font-size:14.5px}
 #jdh .head{display:block;margin-bottom:34px}
 #jdh .head h2{margin-top:16px}
-#jdh .cta-img{--bg:url('https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/skin-renewal.webp')}
+#jdh .cta-img{--bg:url('https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/skin-renewal.webp')}
 @media (max-width:1000px){
   #jdh .hb-g,#jdh .cta{grid-template-columns:1fr}
   #jdh .tls,#jdh[data-mode="home"] .tls{grid-template-columns:repeat(2,1fr)}
@@ -157,8 +192,8 @@
       </div>
     </div>
     <div class="hb-img rv">
-      <img data-show="pro" src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/banner-professional.webp" alt="Профессиональный уход ЖеДерм: средства для процедур в кабинете" loading="eager">
-      <img data-show="home" src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/banner-homecare.webp" alt="Домашний уход ЖеДерм: кремы, эмульсии и сыворотка для волос" loading="eager">
+      <img data-show="pro" src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/banner-professional.webp" alt="Профессиональный уход ЖеДерм: средства для процедур в кабинете" loading="eager">
+      <img data-show="home" src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/banner-homecare.webp" alt="Домашний уход ЖеДерм: кремы, эмульсии и сыворотка для волос" loading="eager">
     </div>
   </div>
 </section>
@@ -172,28 +207,28 @@
       <h2 data-show="home">Подберите <em>уход дома</em></h2>
     </div>
     <div class="tls">
-      <a class="tl rv" style="--c:#cd555b" data-care="pro home" href="https://jeuderm-russia.ru/reformage-pro" data-pro-href="https://jeuderm-russia.ru/reformage-pro" data-pro-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/reform-age-micro-touch-mask.webp" data-pro-n="6 средств" data-home-href="https://jeuderm-russia.ru/reformage-homecare" data-home-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/reform-age-intensive-eye-cream.webp" data-home-n="5 средств">
-        <span class="tl-ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/reform-age-micro-touch-mask.webp" alt="Возрастной уход — ЖеДерм Reform Age" loading="lazy"><span class="tl-chip"><i></i>Reform Age</span></span>
+      <a class="tl rv" style="--c:#cd555b" data-care="pro home" href="https://jeuderm-russia.ru/reformage-pro" data-pro-href="https://jeuderm-russia.ru/reformage-pro" data-pro-img="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/reform-age-micro-touch-mask.webp" data-pro-n="6 средств" data-home-href="https://jeuderm-russia.ru/reformage-homecare" data-home-img="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/reform-age-intensive-eye-cream.webp" data-home-n="5 средств">
+        <span class="tl-ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/reform-age-micro-touch-mask.webp" alt="Возрастной уход — ЖеДерм Reform Age" loading="lazy"><span class="tl-chip"><i></i>Reform Age</span></span>
         <span class="tl-bd"><span class="code tl-n">6 средств</span><h3>Возрастной уход</h3><p>Антивозрастной уход с пептидами и факторами роста: упругость, плотность и сияние кожи 30+.</p><span class="more">Смотреть средства</span></span>
       </a>
-      <a class="tl rv" style="--c:#ab0a3d" data-care="pro home" href="https://jeuderm-russia.ru/acnopro-jeuderm" data-pro-href="https://jeuderm-russia.ru/acnopro-jeuderm" data-pro-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/acno-clay-mask.webp" data-pro-n="5 средств" data-home-href="https://jeuderm-russia.ru/acnohome" data-home-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/acno-active-gel-120ml.webp" data-home-n="4 средства">
-        <span class="tl-ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/acno-clay-mask.webp" alt="Проблемная кожа — ЖеДерм Acno Active" loading="lazy"><span class="tl-chip"><i></i>Acno Active</span></span>
+      <a class="tl rv" style="--c:#ab0a3d" data-care="pro home" href="https://jeuderm-russia.ru/acnopro-jeuderm" data-pro-href="https://jeuderm-russia.ru/acnopro-jeuderm" data-pro-img="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/acno-clay-mask.webp" data-pro-n="5 средств" data-home-href="https://jeuderm-russia.ru/acnohome" data-home-img="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/acno-active-gel-120ml.webp" data-home-n="4 средства">
+        <span class="tl-ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/acno-clay-mask.webp" alt="Проблемная кожа — ЖеДерм Acno Active" loading="lazy"><span class="tl-chip"><i></i>Acno Active</span></span>
         <span class="tl-bd"><span class="code tl-n">5 средств</span><h3>Проблемная кожа</h3><p>Уход за жирной и проблемной кожей, склонной к акне: очищение, баланс себума, ровный тон.</p><span class="more">Смотреть средства</span></span>
       </a>
-      <a class="tl rv" style="--c:#76bc21" data-care="pro home" href="https://jeuderm-russia.ru/atocare-pro" data-pro-href="https://jeuderm-russia.ru/atocare-pro" data-pro-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/ato-care-moist-emulsion-150ml.webp" data-pro-n="3 средства" data-home-href="https://jeuderm-russia.ru/atocare-home" data-home-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/ato-care-intensive-cream.webp" data-home-n="4 средства">
-        <span class="tl-ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/ato-care-moist-emulsion-150ml.webp" alt="Чувствительная кожа — ЖеДерм Ato Care" loading="lazy"><span class="tl-chip"><i></i>Ato Care</span></span>
+      <a class="tl rv" style="--c:#76bc21" data-care="pro home" href="https://jeuderm-russia.ru/atocare-pro" data-pro-href="https://jeuderm-russia.ru/atocare-pro" data-pro-img="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/ato-care-moist-emulsion-150ml.webp" data-pro-n="3 средства" data-home-href="https://jeuderm-russia.ru/atocare-home" data-home-img="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/ato-care-intensive-cream.webp" data-home-n="4 средства">
+        <span class="tl-ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/ato-care-moist-emulsion-150ml.webp" alt="Чувствительная кожа — ЖеДерм Ato Care" loading="lazy"><span class="tl-chip"><i></i>Ato Care</span></span>
         <span class="tl-bd"><span class="code tl-n">3 средства</span><h3>Чувствительная кожа</h3><p>Негормональный уход за сухой, чувствительной и реактивной кожей, в том числе склонной к дерматитам.</p><span class="more">Смотреть средства</span></span>
       </a>
-      <a class="tl rv" style="--c:#65666b" data-care="pro" href="https://jeuderm-russia.ru/pro" data-pro-href="https://jeuderm-russia.ru/pro" data-pro-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/lift-intense-viso-contour.webp" data-pro-n="7 средств">
-        <span class="tl-ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/lift-intense-viso-contour.webp" alt="ПРО-уход — ЖеДерм ПРО" loading="lazy"><span class="tl-chip"><i></i>ПРО</span></span>
+      <a class="tl rv" style="--c:#65666b" data-care="pro" href="https://jeuderm-russia.ru/pro" data-pro-href="https://jeuderm-russia.ru/pro" data-pro-img="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/lift-intense-viso-contour.webp" data-pro-n="7 средств">
+        <span class="tl-ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/lift-intense-viso-contour.webp" alt="ПРО-уход — ЖеДерм ПРО" loading="lazy"><span class="tl-chip"><i></i>ПРО</span></span>
         <span class="tl-bd"><span class="code tl-n">7 средств</span><h3>ПРО-уход</h3><p>Препараты для кабинета вне линеек: маски, массажное масло, эксфолиант и гели для аппаратных процедур.</p><span class="more">Смотреть средства</span></span>
       </a>
-      <a class="tl rv" style="--c:#2b2a2c" data-care="pro" href="https://jeuderm-russia.ru/novazymo-exfoliation" data-pro-href="https://jeuderm-russia.ru/novazymo-exfoliation" data-pro-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/nova-complex.webp" data-pro-n="2 средства">
-        <span class="tl-ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/nova-complex.webp" alt="Обновление кожи — ЖеДерм Nova · Zymo" loading="lazy"><span class="tl-chip"><i></i>Nova · Zymo</span></span>
+      <a class="tl rv" style="--c:#2b2a2c" data-care="pro" href="https://jeuderm-russia.ru/novazymo-exfoliation" data-pro-href="https://jeuderm-russia.ru/novazymo-exfoliation" data-pro-img="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/nova-complex.webp" data-pro-n="2 средства">
+        <span class="tl-ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/nova-complex.webp" alt="Обновление кожи — ЖеДерм Nova · Zymo" loading="lazy"><span class="tl-chip"><i></i>Nova · Zymo</span></span>
         <span class="tl-bd"><span class="code tl-n">2 средства</span><h3>Обновление кожи</h3><p>Трёхэтапные системы обновления с кислотами и энзимами — без агрессивного повреждения и реабилитации.</p><span class="more">Смотреть средства</span></span>
       </a>
-      <a class="tl rv" style="--c:#ae57b9" data-care="pro home" href="https://jeuderm-russia.ru/hairgenesis?care=pro" data-pro-href="https://jeuderm-russia.ru/hairgenesis?care=pro" data-pro-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/hair-growth-concentrate.webp" data-pro-n="1 средство" data-home-href="https://jeuderm-russia.ru/hairgenesis?care=home" data-home-img="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/hair-genesis-stimulator.webp" data-home-n="1 средство">
-        <span class="tl-ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/products/hair-growth-concentrate.webp" alt="Кожа головы — ЖеДерм Hair Genesis" loading="lazy"><span class="tl-chip"><i></i>Hair Genesis</span></span>
+      <a class="tl rv" style="--c:#ae57b9" data-care="pro home" href="https://jeuderm-russia.ru/hairgenesis?care=pro" data-pro-href="https://jeuderm-russia.ru/hairgenesis?care=pro" data-pro-img="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/hair-growth-concentrate.webp" data-pro-n="1 средство" data-home-href="https://jeuderm-russia.ru/hairgenesis?care=home" data-home-img="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/hair-genesis-stimulator.webp" data-home-n="1 средство">
+        <span class="tl-ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/hair-growth-concentrate.webp" alt="Кожа головы — ЖеДерм Hair Genesis" loading="lazy"><span class="tl-chip"><i></i>Hair Genesis</span></span>
         <span class="tl-bd"><span class="code tl-n">1 средство</span><h3>Кожа головы</h3><p>Пептидный уход за кожей головы и волосами: при выпадении, истончении и замедленном росте волос.</p><span class="more">Смотреть средства</span></span>
       </a>
     </div>

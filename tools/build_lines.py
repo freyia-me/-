@@ -17,9 +17,9 @@ import re
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'tools'))
 from product_info import INFO  # noqa: E402
-IMG = 'https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/'
-IMG_RES = 'https://cdn.jsdelivr.net/gh/freyia-me/-@17caa35/images/results/'
-IMG_HOME = 'https://cdn.jsdelivr.net/gh/freyia-me/-@c5739fe/images/home/'
+IMG = 'https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/'
+IMG_RES = 'https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/'
+IMG_HOME = 'https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/'
 ARROW = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg>'
 
 NUM_WORDS = {1: 'Одно средство', 2: 'Два средства', 3: 'Три средства', 4: 'Четыре средства',

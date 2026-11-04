@@ -9,7 +9,7 @@ import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-IMG = 'https://cdn.jsdelivr.net/gh/freyia-me/-@a886d1a/images/'
+IMG = 'https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/'
 SITE = 'https://jeuderm-russia.ru/'
 FORM = '#popup:registerstudy'      # запись в малые группы / график семинаров
 CLINIC = '#popup:studyclinic'     # обучение в клинике

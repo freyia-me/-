@@ -265,7 +265,7 @@
     <div class="grid g4">
 
       <a class="card rv" href="#p-mild-cleanser" data-id="mild-cleanser" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/ato-care-mild-cleanser.webp" alt="Ato Care Mild Cleanser — очищающий гель для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/ato-care-mild-cleanser.webp" alt="Ato Care Mild Cleanser — очищающий гель для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Ato Care Mild Cleanser</span><h3>Очищающий гель для всех типов чувствительной кожи</h3><p>Деликатно очищает, не нарушая барьер и микрофлору, поддерживает pH-баланс, увлажняет и освежает.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный и домашний уход" data-ppm="50 ppm">
           <p class="about">Деликатный очищающий гель мягко удаляет загрязнения, макияж и излишки себума — без стянутости и жирной плёнки. Сверхмягкие ПАВ не нарушают барьер, pH и микрофлору; фитокомпоненты успокаивают уже на этапе очищения. Лёгкая воздушная пена, гипоаллергенно и некомедогенно.</p>
@@ -276,7 +276,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-toner-mousse" data-id="toner-mousse" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/ato-care-toner-mousse.webp" alt="Ato Care Toner Mousse — тонер-мусс для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/ato-care-toner-mousse.webp" alt="Ato Care Toner Mousse — тонер-мусс для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Ato Care Toner Mousse</span><h3>Тонер-мусс для всех типов чувствительной кожи</h3><p>Мягко тонизирует и увлажняет, укрепляет сосуды, уменьшает покраснение и восстанавливает pH-баланс.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл" data-care-t="Профессиональный и домашний уход" data-ppm="150 ppm">
           <p class="about">Тонер-мусс для чувствительной, реактивной кожи, склонной к покраснениям и куперозу. Восстанавливает комфорт, укрепляет сосудистую стенку, интенсивно увлажняет и восстанавливает pH после умывания. Воздушная текстура равномерно распределяет активы. Гипоаллергенно, некомедогенно.</p>
@@ -287,7 +287,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-moist-emulsion" data-id="moist-emulsion" data-care="pro home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/ato-care-moist-emulsion-150ml.webp" alt="Ato Care Moist Emulsion — увлажняющая эмульсия для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/ato-care-moist-emulsion-150ml.webp" alt="Ato Care Moist Emulsion — увлажняющая эмульсия для всех типов чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">ПРО</span><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Ato Care Moist Emulsion</span><h3>Увлажняющая эмульсия для всех типов чувствительной кожи</h3><p>Интенсивно увлажняет, питает и восстанавливает липидный барьер, снимает раздражение и зуд.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл · ПРО / 100 мл · дом" data-care-t="Профессиональный и домашний уход" data-ppm="450 ppm">
           <p class="about">Мягкая эмульсия для чувствительной, очень сухой, шершавой, потрескавшейся и раздражённой кожи. Уменьшает сухость, восстанавливает барьер, успокаивает и глубоко увлажняет — без липкости и блеска. Подходит при выраженной сухости, в том числе для кожи при атопическом и себорейном дерматите, псориазе, куперозе. Подходит детям и беременным.</p>
@@ -298,7 +298,7 @@
         </div>
       </a>
       <a class="card rv" href="#p-intensive-cream" data-id="intensive-cream" data-care="home">
-        <span class="ph"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@42cb449/images/products/ato-care-intensive-cream.webp" alt="Ato Care Intensive Cream — интенсивный крем для сухой и чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">Дом</span></span></span>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/ato-care-intensive-cream.webp" alt="Ato Care Intensive Cream — интенсивный крем для сухой и чувствительной кожи" loading="lazy"><span class="tags"><span class="tag">Дом</span></span></span>
         <div class="bd"><span class="en">Ato Care Intensive Cream</span><h3>Интенсивный крем для сухой и чувствительной кожи</h3><p>Питает и защищает очень сухую, раздражённую и повреждённую кожу, снижает зуд, предотвращает шелушение.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="50 мл" data-care-t="Домашний уход" data-ppm="900 ppm">
           <p class="about">Интенсивный крем для чувствительной, очень сухой, шершавой и потрескавшейся кожи. Быстро возвращает комфорт, уменьшает раздражение и укрепляет барьер; при регулярном применении помогает дольше сохранять ремиссию. Подходит детям и беременным, успокаивает кожу после бритья.</p>
@@ -323,7 +323,7 @@
       </div>
     </div>
     <div class="res-g r1">
-      <figure class="res rv"><img src="https://cdn.jsdelivr.net/gh/freyia-me/-@17caa35/images/results/clinical-neck-before-after.webp" alt="Ato Care: до и после — Кожа спокойнее: меньше покраснения и шелушения" loading="lazy"><figcaption><span class="code">Ato Care</span>Кожа спокойнее: меньше покраснения и шелушения</figcaption></figure>
+      <figure class="res rv"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/clinical-neck-before-after.webp" alt="Ato Care: до и после — Кожа спокойнее: меньше покраснения и шелушения" loading="lazy"><figcaption><span class="code">Ato Care</span>Кожа спокойнее: меньше покраснения и шелушения</figcaption></figure>
     </div>
     <p class="note rv" style="margin:18px 0 0">Средства Ato Care — это уход за кожей. Они не заменяют лечение у врача и при дерматите применяются только по согласованию с лечащим врачом.</p>
     <p class="res-note rv">Результат зависит от состояния кожи и протокола, который подбирает специалист.</p>
