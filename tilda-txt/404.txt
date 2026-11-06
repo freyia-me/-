@@ -1,4 +1,4 @@
-<!-- ЖеДерм · страница 404 · блок T123. Собрано tools/build_404.py. -->
+<!-- JeuDérm · страница 404 · блок T123. Собрано tools/build_404.py. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -140,14 +140,14 @@
       <div>
         <div class="num rv" aria-hidden="true">4<em>0</em>4</div>
         <h1 class="rv">Страница не найдена</h1>
-        <p class="lead rv">Возможно, она переехала после обновления сайта или в адресе опечатка. Всё о профессиональной космецевтике ЖеДерм — на главной и в разделах ухода.</p>
+        <p class="lead rv">Возможно, она переехала после обновления сайта или в адресе опечатка. Всё о профессиональной космецевтике JeuDérm — на главной и в разделах ухода.</p>
         <div class="btns rv">
           <a class="btn btn-a" href="https://jeuderm-russia.ru/">На главную <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
           <a class="btn btn-o" href="https://jeuderm-russia.ru/pro-jeuderm">Профессиональный уход</a>
         </div>
       </div>
       <div class="eph rv">
-        <img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/skin-renewal.webp" alt="ЖеДерм — обновление кожи" loading="eager">
+        <img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/skin-renewal.webp" alt="JeuDérm — обновление кожи" loading="eager">
         <span>JeuDérm · Южная Корея</span>
       </div>
     </div>
@@ -156,12 +156,12 @@
       <span class="lab rv"><i></i>Куда перейти</span>
       <h2 class="rv">Выберите <em>задачу кожи</em></h2>
       <div class="dl">
-      <a class="di rv" style="--k:#cd555b" href="https://jeuderm-russia.ru/reformage-pro"><span>Reform Age</span><b>Возрастной уход</b></a>
-      <a class="di rv" style="--k:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm"><span>Acno Active</span><b>Проблемная кожа</b></a>
-      <a class="di rv" style="--k:#76bc21" href="https://jeuderm-russia.ru/atocare-pro"><span>Ato Care</span><b>Чувствительная кожа</b></a>
+      <a class="di rv" style="--k:#cd555b" href="https://jeuderm-russia.ru/reformage-pro"><span>Реформэйдж</span><b>Возрастной уход</b></a>
+      <a class="di rv" style="--k:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm"><span>Акно Актив</span><b>Проблемная кожа</b></a>
+      <a class="di rv" style="--k:#76bc21" href="https://jeuderm-russia.ru/atocare-pro"><span>Ато Кэр</span><b>Чувствительная кожа</b></a>
       <a class="di rv" style="--k:#65666b" href="https://jeuderm-russia.ru/pro"><span>ПРО</span><b>ПРО-уход</b></a>
-      <a class="di rv" style="--k:#2b2a2c" href="https://jeuderm-russia.ru/novazymo-exfoliation"><span>Nova · Zymo</span><b>Обновление кожи</b></a>
-      <a class="di rv" style="--k:#ae57b9" href="https://jeuderm-russia.ru/hairgenesis"><span>Hair Genesis</span><b>Кожа головы</b></a>
+      <a class="di rv" style="--k:#2b2a2c" href="https://jeuderm-russia.ru/novazymo-exfoliation"><span>Нова · Зимо</span><b>Обновление кожи</b></a>
+      <a class="di rv" style="--k:#ae57b9" href="https://jeuderm-russia.ru/hairgenesis"><span>Хэйр Генезис</span><b>Кожа головы</b></a>
       </div>
       <div class="links rv">
         <a href="https://jeuderm-russia.ru/homecare-jeuderm">Домашний уход</a>

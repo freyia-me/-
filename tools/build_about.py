@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Страница «О компании» — ООО «Революшн Био», официальный дистрибьютор ЖеДерм. Блок T123.
+"""Страница «О компании» — ООО «Революшн Био», официальный дистрибьютор JeuDérm. Блок T123.
 
 Запуск:  python3 tools/build_about.py  →  tilda/about.html и tilda-txt/about.txt
 """
@@ -9,6 +9,9 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from build_study import base_css, IMG, ARROW  # noqa: E402
 
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from localize import ru  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://jeuderm-russia.ru/'
 LETTER = 'https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/distributor-letter.webp'
@@ -106,14 +109,14 @@ def build():
   <div class="w ab-g">
     <div>
       <span class="lab rv"><i></i>О компании</span>
-      <h1 class="rv">«Революшн Био» — официальный дистрибьютор <em>ЖеДерм</em> в России</h1>
+      <h1 class="rv">«Революшн Био» — официальный дистрибьютор <em>JeuDérm</em> в России</h1>
       <p class="lead rv">ООО «Революшн Био» представляет южнокорейский бренд профессиональной космецевтики JeuDérm на территории Российской Федерации: поставки, маркетинговая поддержка, логистика и обучение специалистов — напрямую от производителя, без посредников.</p>
       <div class="btns rv">
         <a class="btn btn-a" href="#getprice_main">Запросить цены {ARROW}</a>
         <a class="btn btn-o" href="#letter">Письмо производителя</a>
       </div>
       <div class="nums rv">
-        <div><b>50 000<sup>+</sup></b><span>процедур на ЖеДерм в клиниках</span></div>
+        <div><b>50 000<sup>+</sup></b><span>процедур на JeuDérm в клиниках</span></div>
         <div><b>20<sup>+</sup></b><span>стран, где работают с брендом</span></div>
         <div><b>6</b><span>направлений ухода — ПРО и домашний</span></div>
       </div>
@@ -167,7 +170,7 @@ def build():
     <div class="quote rv">
       <div>
         <span class="code">Научный руководитель</span>
-        <blockquote>«Работая в эстетической медицине более 20 лет, я перепробовала множество брендов, но именно ЖеДерм стал для меня настоящим открытием. Это не просто качественная косметика — это инструмент, который помогает достигать видимых и устойчивых результатов у клиентов».</blockquote>
+        <blockquote>«Работая в эстетической медицине более 20 лет, я перепробовала множество брендов, но именно JeuDérm стал для меня настоящим открытием. Это не просто качественная косметика — это инструмент, который помогает достигать видимых и устойчивых результатов у клиентов».</blockquote>
       </div>
       <div class="who"><b>Лилия Мукарамова</b><span>Научный руководитель Revolution Bio, международный тренер</span></div>
     </div>
@@ -237,7 +240,7 @@ def build():
   [].forEach.call(items,function(el){io.observe(el);});
 })();
 </script>'''
-    head = '''<!-- ЖеДерм · страница «О компании» (Революшн Био) · блок T123. Собрано tools/build_about.py. -->
+    head = '''<!-- JeuDérm · страница «О компании» (Революшн Био) · блок T123. Собрано tools/build_about.py. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -248,6 +251,6 @@ def build():
 
 if __name__ == '__main__':
     out = build()
-    (ROOT / 'tilda' / 'about.html').write_text(out, encoding='utf-8')
-    (ROOT / 'tilda-txt' / 'about.txt').write_text(out, encoding='utf-8')
+    (ROOT / 'tilda' / 'about.html').write_text(ru(out), encoding='utf-8')
+    (ROOT / 'tilda-txt' / 'about.txt').write_text(ru(out), encoding='utf-8')
     print('about.html', len(out))

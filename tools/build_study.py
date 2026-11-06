@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Страница «Обучение» ЖеДерм (/study) для Tilda, блок T123.
+"""Страница «Обучение» JeuDérm (/study) для Tilda, блок T123.
 
 Запуск:  python3 tools/build_study.py  →  tilda/study.html и tilda-txt/study.txt
 Общие стили (шрифты, кнопки, метки, анимация) берутся из tools/line_template.html.
@@ -8,6 +8,9 @@
 import pathlib
 import re
 
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from localize import ru  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 IMG = 'https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/'
 SITE = 'https://jeuderm-russia.ru/'
@@ -152,21 +155,21 @@ def build():
 <section class="st-top">
   <div class="w st-g">
     <div>
-      <span class="lab rv"><i></i>Обучение · Революшн Био — ЖеДерм</span>
+      <span class="lab rv"><i></i>Обучение · Революшн Био — JeuDérm</span>
       <h1 class="rv">Обучение для <em>косметологов</em> и клиник</h1>
-      <p class="lead rv">Многоуровневая система профессионального обучения для косметологов, трихологов и специалистов эстетической медицины: от первого знакомства с препаратами ЖеДерм до уверенной работы по протоколам.</p>
+      <p class="lead rv">Многоуровневая система профессионального обучения для косметологов, трихологов и специалистов эстетической медицины: от первого знакомства с препаратами JeuDérm до уверенной работы по протоколам.</p>
       <div class="btns rv">
         <a class="btn btn-a" href="{FORM}">Узнать график семинаров {ARROW}</a>
         <a class="btn btn-o" href="#webinars">Смотреть вебинары</a>
       </div>
       <ul class="facts rv">
-        <li><b>Бесплатно</b>для специалистов, работающих с ЖеДерм</li>
+        <li><b>Бесплатно</b>для специалистов, работающих с JeuDérm</li>
         <li><b>Малые группы</b>практика и вопросы тренеру</li>
         <li><b>Протоколы</b>которые можно применить сразу</li>
       </ul>
     </div>
     <div class="st-ph rv">
-      <img src="{IMG}study/symposium-hall-bags.webp" alt="Обучение ЖеДерм: зал международного симпозиума" loading="eager">
+      <img src="{IMG}study/symposium-hall-bags.webp" alt="Обучение JeuDérm: зал международного симпозиума" loading="eager">
       <span class="st-badge">International Aesthetic Symposium · 2026</span>
     </div>
   </div>
@@ -183,15 +186,15 @@ def build():
       <div class="fc rv" style="--c:#cd555b">
         <span class="code">В клинике</span>
         <h3>Обучение в клиниках</h3>
-        <p>При запуске препаратов ЖеДерм проводим бесплатное обучение и сопровождение на базе партнёрских клиник. Практические занятия под руководством опытных тренеров.</p>
+        <p>При запуске препаратов JeuDérm проводим бесплатное обучение и сопровождение на базе партнёрских клиник. Практические занятия под руководством опытных тренеров.</p>
         <ul><li>Запуск линии в кабинете</li><li>Отработка протоколов на практике</li><li>Сопровождение после старта</li></ul>
         <a class="more" href="{CLINIC}">Заявка на обучение в клинике</a>
       </div>
       <div class="fc rv" style="--c:#76bc21">
         <span class="code">Очно</span>
         <h3>Обучение в малых группах</h3>
-        <p>Очные занятия в учебном центре ЖеДерм. В небольшой группе тренер уделяет внимание каждому, а вы отрабатываете навыки в комфортной обстановке.</p>
-        <ul><li>Практика с продуктами ЖеДерм</li><li>Вопросы напрямую экспертам</li><li>Участие по предварительной записи</li></ul>
+        <p>Очные занятия в учебном центре JeuDérm. В небольшой группе тренер уделяет внимание каждому, а вы отрабатываете навыки в комфортной обстановке.</p>
+        <ul><li>Практика с продуктами JeuDérm</li><li>Вопросы напрямую экспертам</li><li>Участие по предварительной записи</li></ul>
         <a class="more" href="{FORM}">Узнать график</a>
       </div>
       <div class="fc rv" style="--c:#2a7de1">
@@ -213,7 +216,7 @@ def build():
       <h2>Программа <em>обучения</em></h2>
     </div>
     <div class="pg">
-      <div class="pi rv"><h3>Наука формул</h3><p>Пептиды, пробиотики и биотехнологии: как работают средства ЖеДерм и почему.</p></div>
+      <div class="pi rv"><h3>Наука формул</h3><p>Пептиды, пробиотики и биотехнологии: как работают средства JeuDérm и почему.</p></div>
       <div class="pi rv"><h3>Подбор под задачу</h3><p>Возрастная, проблемная, чувствительная кожа, обновление и кожа головы — какую линию выбрать.</p></div>
       <div class="pi rv"><h3>Протоколы процедур</h3><p>Пошаговые процедуры с дозировками и временем каждого шага — от чистки до лифтинга 40+.</p></div>
       <div class="pi rv"><h3>Домашний уход</h3><p>Как подобрать клиенту уход между визитами, чтобы результат держался дольше.</p></div>
@@ -227,7 +230,7 @@ def build():
     <div class="sym-t">
       <div class="head" style="margin-bottom:0">
         <span class="lab"><i></i>Международные мероприятия</span>
-        <h2>JeuDérm International <em>Aesthetic Symposium</em></h2>
+        <h2>Международный <em>эстетический симпозиум</em> JeuDérm</h2>
         <p class="lead">Дубровник, Хорватия · 19–21 мая 2026. Доклады экспертов, разборы клинических случаев и новые протоколы — вместе с косметологами из разных стран.</p>
       </div>
       <a class="btn btn-o" href="{FORM}">Узнать о ближайших событиях</a>
@@ -247,10 +250,10 @@ def build():
   <div class="w exp">
     <div class="quote rv">
       <div>
-        <span class="code">Тренер ЖеДерм</span>
-        <blockquote>«Работая в эстетической медицине более 20 лет, я перепробовала множество брендов, но именно ЖеДерм стал для меня настоящим открытием. Это не просто качественная косметика — это инструмент, который помогает достигать видимых и устойчивых результатов у клиентов».</blockquote>
+        <span class="code">Тренер JeuDérm</span>
+        <blockquote>«Работая в эстетической медицине более 20 лет, я перепробовала множество брендов, но именно JeuDérm стал для меня настоящим открытием. Это не просто качественная косметика — это инструмент, который помогает достигать видимых и устойчивых результатов у клиентов».</blockquote>
       </div>
-      <div class="who"><b>Лилия Мукарамова</b><span>Научный руководитель Revolution Bio, сертифицированный тренер по продукции ЖеДерм</span></div>
+      <div class="who"><b>Лилия Мукарамова</b><span>Научный руководитель Revolution Bio, сертифицированный тренер по продукции JeuDérm</span></div>
     </div>
     <div class="partner rv">
       <div>
@@ -308,7 +311,7 @@ def build():
 })();
 </script>'''
 
-    head = '''<!-- ЖеДерм · страница «Обучение» (/study) · блок T123 «HTML-код». Собрано tools/build_study.py.
+    head = '''<!-- JeuDérm · страница «Обучение» (/study) · блок T123 «HTML-код». Собрано tools/build_study.py.
      Кнопки ведут на попапы Tilda: #popup:registerstudy (график / запись), #popup:studyclinic (обучение в клинике), #popup:ask (вопрос). -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -320,6 +323,6 @@ def build():
 
 if __name__ == '__main__':
     out = build()
-    (ROOT / 'tilda' / 'study.html').write_text(out, encoding='utf-8')
-    (ROOT / 'tilda-txt' / 'study.txt').write_text(out, encoding='utf-8')
+    (ROOT / 'tilda' / 'study.html').write_text(ru(out), encoding='utf-8')
+    (ROOT / 'tilda-txt' / 'study.txt').write_text(ru(out), encoding='utf-8')
     print('study.html', len(out))

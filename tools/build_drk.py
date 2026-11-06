@@ -11,6 +11,9 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from build_study import base_css, IMG, ARROW  # noqa: E402
 
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from localize import ru  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DRK = 'https://cosmeticru.com/kursy-kosmetologii'
 ASK = '#popup:ask'
@@ -78,7 +81,7 @@ def build():
 <section class="dk-top">
   <div class="w dk-g">
     <div>
-      <span class="lab rv"><i></i>Партнёр ЖеДерм по обучению</span>
+      <span class="lab rv"><i></i>Партнёр JeuDérm по обучению</span>
       <h1 class="rv">Институт косметологии <em>«Дом Русской Косметики»</em></h1>
       <p class="lead rv">Обучение специалистов косметологии и сферы красоты. Программы для любого уровня подготовки — от базового до профессионального совершенствования. Курсы зарегистрированы в системе НМО Минздрава, а документы об окончании вносятся в ФИС ФРДО.</p>
       <div class="btns rv">
@@ -131,10 +134,10 @@ def build():
 <section>
   <div class="w duo">
     <div class="rv">
-      <span class="code">Обучение ЖеДерм</span>
-      <h3>Работа с препаратами ЖеДерм</h3>
-      <p>Бесплатные занятия по продукции ЖеДерм в малых группах, обучение в клиниках при запуске линии и вебинары по протоколам — от тренеров Революшн Био.</p>
-      <a class="btn btn-o" href="https://jeuderm-russia.ru/study">Обучение ЖеДерм</a>
+      <span class="code">Обучение JeuDérm</span>
+      <h3>Работа с препаратами JeuDérm</h3>
+      <p>Бесплатные занятия по продукции JeuDérm в малых группах, обучение в клиниках при запуске линии и вебинары по протоколам — от тренеров Революшн Био.</p>
+      <a class="btn btn-o" href="https://jeuderm-russia.ru/study">Обучение JeuDérm</a>
     </div>
     <div class="rv">
       <span class="code">Дом Русской Косметики</span>
@@ -171,7 +174,7 @@ def build():
   [].forEach.call(items,function(el){io.observe(el);});
 })();
 </script>'''
-    head = '''<!-- ЖеДерм · страница партнёра «Дом Русской Косметики» (/cosmeticru) · блок T123. Собрано tools/build_drk.py. -->
+    head = '''<!-- JeuDérm · страница партнёра «Дом Русской Косметики» (/cosmeticru) · блок T123. Собрано tools/build_drk.py. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -182,6 +185,6 @@ def build():
 
 if __name__ == '__main__':
     out = build()
-    (ROOT / 'tilda' / 'cosmeticru.html').write_text(out, encoding='utf-8')
-    (ROOT / 'tilda-txt' / 'cosmeticru.txt').write_text(out, encoding='utf-8')
+    (ROOT / 'tilda' / 'cosmeticru.html').write_text(ru(out), encoding='utf-8')
+    (ROOT / 'tilda-txt' / 'cosmeticru.txt').write_text(ru(out), encoding='utf-8')
     print('cosmeticru.html', len(out))

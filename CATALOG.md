@@ -224,3 +224,25 @@ Hair Genesis: Stimulator 140 — домашний, Concentrate 20 — ПРО.
 Ato Care — Mild Cleanser 250, Moist Emulsion, Toner Mousse; Adaptive Skin — O2 Therapy Gel, Repair Mask, Detox Mask (250 мл);
 Molecular Twin Oil и Exfoliant 150 мл (pH 2,9); Nova (pH 1,5) и Zymo (pH 2,5): AHA Primer 10 % pH 3,5 → Active → Reductant pH 5,0;
 Reform Age — Mild Cleanser, Collagen Tonic, O2 Boto Fluid, Micro Touch Mask, Intensive Cream, Eye Cream; Lift Intense Viso Contour.
+
+## Названия на сайте (закон о государственном языке)
+
+Латиницей — только зарегистрированный товарный знак **JeuDérm** (и названия сервисов WhatsApp, Telegram, MAX, адреса почты/сайта).
+Всё остальное по-русски. Словарь — `tools/localize.py`, применяется автоматически при сборке всех страниц.
+
+| Было | На сайте |
+|---|---|
+| ЖеДерм / JeuDerm | JeuDérm |
+| Reform Age | Реформэйдж |
+| Acno Active | Акно Актив |
+| Ato Care | Ато Кэр |
+| Adaptive Skin | Адаптив Скин |
+| Lift Intense Viso Contour | Лифт Интенс Визо Контур |
+| Molecular Twin | Молекулярный Твин |
+| Nova / Zymo Complex | Нова / Зимо Комплекс |
+| Hair Genesis | Хэйр Генезис |
+| Revolution Bio | Революшн Био |
+| Argireline, Syn®-Ake, Matrixyl®, Acnotide™ … | Аргирелин, Син-Эйк, Матриксил, Акнотайд … |
+| AHA / BHA / PHA | АНА / ВНА / РНА |
+
+Оставлены как единицы и обозначения: pH, ppm, SPF, витамины B3/B5/C/E, O₂.

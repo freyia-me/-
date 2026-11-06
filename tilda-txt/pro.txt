@@ -1,4 +1,4 @@
-<!-- ЖеДерм · линейка ПРО · блок T123 «HTML-код». Собрано tools/build_lines.py — правки текстов вносите там.
+<!-- JeuDérm · линейка ПРО · блок T123 «HTML-код». Собрано tools/build_lines.py — правки текстов вносите там.
      Код ставится на /pro: фильтр «Профессиональный / Домашний» выбирается сам по адресу страницы (или ?care=pro / ?care=home).
      Карточка товара открывается окном внутри страницы, ссылка на товар: адрес#p-<id>, например #p-detox-mask. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -219,7 +219,7 @@
       <span class="lab rv"><i></i>Профессиональный уход</span>
       <h1 class="rv">ПРО — препараты <em>для кабинета</em></h1>
       <div class="bar rv"></div>
-      <p class="lead rv">Профессиональные средства вне линеек: маски, массажное масло, молекулярный эксфолиант и гели для аппаратных процедур. Косметолог подбирает их под задачу кожи и сочетает с любой линией ЖеДерм.</p>
+      <p class="lead rv">Профессиональные средства вне линеек: маски, массажное масло, молекулярный эксфолиант и гели для аппаратных процедур. Косметолог подбирает их под задачу кожи и сочетает с любой линией JeuDérm.</p>
       <div class="btns rv">
         <a class="btn btn-a" href="#getprice_main">Запросить цены <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
         <a class="btn btn-o" href="#getprotocol">Получить протоколы</a>
@@ -228,19 +228,19 @@
     <div class="keys rv">
       <details open>
         <summary>Маски<i></i></summary>
-        <div class="a">Детокс-маска с водорослями, пост-процедурная восстанавливающая маска и лифтинг-маска Lift Intense Viso Contour.</div>
+        <div class="a">Детокс-маска с водорослями, пост-процедурная восстанавливающая маска и лифтинг-маска Лифт Интенс Визо Контур.</div>
       </details>
       <details>
         <summary>Молекулярное обновление<i></i></summary>
-        <div class="a">Molecular Twin Exfoliant и Molecular Twin Oil — мягкая эксфолиация, ровный тон и сияние, процедура «на выход».</div>
+        <div class="a">Молекулярный Твин эксфолиант и Молекулярный Твин масло — мягкая эксфолиация, ровный тон и сияние, процедура «на выход».</div>
       </details>
       <details>
         <summary>Для аппаратных методик<i></i></summary>
-        <div class="a">Drainage Physio Gel с высокой токопроводностью и O₂ Therapy Active Gel, который насыщает кожу кислородом.</div>
+        <div class="a">дренажный физиогель с высокой токопроводностью и кислородный активный гель, который насыщает кожу кислородом.</div>
       </details>
       <details>
         <summary>Пептиды и факторы роста<i></i></summary>
-        <div class="a">Hydro-GF3 (EGF, FGF, TGF), Acell 300, Syn®-Ake, трипептид меди — в основе формул серии.</div>
+        <div class="a">Гидро-GF3 (факторы роста), Ацелл 300, Син-Эйк, трипептид меди — в основе формул серии.</div>
       </details>
     </div>
   </div>
@@ -259,79 +259,79 @@
     <div class="grid g4">
 
       <a class="card rv" href="#p-detox-mask" data-id="detox-mask" data-care="pro">
-        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/adaptive-skin-detox-mask.webp" alt="Adaptive Skin Detox Mask — детокс-маска с водорослями" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
-        <div class="bd"><span class="en">Adaptive Skin Detox Mask</span><h3>Детокс-маска с водорослями</h3><p>Очищает, освежает, тонизирует и уменьшает отёчность.</p><span class="more">Подробнее</span></div>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/adaptive-skin-detox-mask.webp" alt="Адаптив Скин детокс-маска — детокс-маска с водорослями" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <div class="bd"><span class="en">Адаптив Скин детокс-маска</span><h3>Детокс-маска с водорослями</h3><p>Очищает, освежает, тонизирует и уменьшает отёчность.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный уход" data-ppm="300 ppm">
           <p class="about">Детокс-маска с пептидами и водорослями мягко очищает, сужает поры, тонизирует, выравнивает цвет лица и насыщает кожу витаминами и микроэлементами. Эффект сразу: уходит отёчность, кожа свежая и подтянутая. Восстанавливает микробиом, гидролипидную мантию и pH. Для всех типов кожи.</p>
           <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Тусклая, уставшая кожа</li><li>Отёчность</li><li>Чувствительная и обезвоженная кожа</li></ul></div>
           <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Спирулина</b><span>насыщает кожу и выводит токсины</span></li><li><b>Пептиды</b><span>поддерживают восстановление</span></li><li><b>Жемчуг</b><span>придаёт сияние</span></li><li><b>Витамины C и B3</b><span>выравнивают тон</span></li></ul></div>
           <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите тонкий слой на очищенную кожу; вокруг глаз — по костной границе глазницы, не заходя на подвижное веко.</li><li>Через 15 минут смойте водой.</li><li>1–2 раза в неделю.</li></ol></div>
-          <dl><dt>В процедурах</dt><dd>Экстренный детокс — SOS для кожи.</dd></dl>
+          <dl><dt>В процедурах</dt><dd>Экстренный детокс — скорая помощь для кожи.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-o2-therapy-gel" data-id="o2-therapy-gel" data-care="pro">
-        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/o2-therapy-active-gel.webp" alt="O₂ Therapy Active Gel — активный гель «Кислородная терапия»" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
-        <div class="bd"><span class="en">O₂ Therapy Active Gel</span><h3>Активный гель «Кислородная терапия»</h3><p>Насыщает кожу кислородом, очищает поры, выравнивает тон и придаёт сияние.</p><span class="more">Подробнее</span></div>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/o2-therapy-active-gel.webp" alt="кислородный активный гель — активный гель «Кислородная терапия»" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <div class="bd"><span class="en">Кислородный активный гель</span><h3>Активный гель «Кислородная терапия»</h3><p>Насыщает кожу кислородом, очищает поры, выравнивает тон и придаёт сияние.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный уход" data-ppm="150 ppm">
           <p class="about">При контакте с воздухом гель превращается в пену-«облако» из мелких пузырьков кислорода. Оксигенация повышает энергию клеток, улучшает микроциркуляцию и обмен веществ. Гель удаляет токсины и загрязнения, сужает поры, борется с чёрными точками и блеском, выравнивает тон и придаёт сияние.</p>
           <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Тусклый цвет лица</li><li>Загрязнённые поры</li><li>Перед и после пилингов</li></ul></div>
-          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Кислородный комплекс</b><span>насыщает кожу кислородом</span></li><li><b>Пептиды и β-глюкан</b><span>восстанавливают и успокаивают</span></li><li><b>Ниацинамид</b><span>выравнивает тон</span></li><li><b>Фитокомплекс 7 трав, MultiEx</b><span>тонизируют кожу</span></li><li><b>Витамины B3, B5, E</b><span>питание и защита</span></li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Кислородный комплекс</b><span>насыщает кожу кислородом</span></li><li><b>Пептиды и β-глюкан</b><span>восстанавливают и успокаивают</span></li><li><b>Ниацинамид</b><span>выравнивает тон</span></li><li><b>Фитокомплекс 7 трав, МультиЭкс</b><span>тонизируют кожу</span></li><li><b>витамины B3, B5, E</b><span>питание и защита</span></li></ul></div>
           <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите кисточкой тонким слоем на очищенную кожу лица и шеи.</li><li>Дождитесь «пузырения» и «облака»; через 10–15 минут помассируйте до впитывания.</li><li>Смойте липкий слой водой. 1–3 раза в неделю.</li></ol></div>
           <dl><dt>В процедурах</dt><dd>Экстренный детокс, Молекулярное обновление кожи, Возрождение кожи.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-repair-mask" data-id="repair-mask" data-care="pro">
-        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/repair-mask-post-procedure.webp" alt="Repair Post-Procedure Mask — пост-процедурная восстанавливающая маска" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
-        <div class="bd"><span class="en">Repair Post-Procedure Mask</span><h3>Пост-процедурная восстанавливающая маска</h3><p>Успокаивает, увлажняет, снимает раздражение и покраснение. «Маска мгновенной красоты» — сияние и свежесть.</p><span class="more">Подробнее</span></div>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/repair-mask-post-procedure.webp" alt="восстанавливающая маска — пост-процедурная восстанавливающая маска" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <div class="bd"><span class="en">Восстанавливающая маска</span><h3>Пост-процедурная восстанавливающая маска</h3><p>Успокаивает, увлажняет, снимает раздражение и покраснение. «Маска мгновенной красоты» — сияние и свежесть.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="250 мл" data-care-t="Профессиональный уход" data-ppm="550 ppm">
           <p class="about">Восстанавливающая пост-процедурная маска интенсивно успокаивает и увлажняет: уменьшает покраснение, снимает раздражение и жжение, смягчает кожу, улучшает текстуру и выравнивает цвет лица. В бьюти-процедуре «на выход» — «маска мгновенной красоты» для сияния.</p>
           <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>После пилингов и аппаратных процедур</li><li>Раздражение и покраснение</li><li>Обезвоженная кожа</li></ul></div>
-          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Пептиды до 550 ppm</b><span>ускоряют восстановление</span></li><li><b>Hydro-GF3 и Acell 300</b><span>факторы роста и трансдермальные пептиды</span></li><li><b>Гиалуроновая кислота и трегалоза</b><span>глубокое увлажнение</span></li><li><b>Витамин C</b><span>сияние и ровный тон</span></li><li><b>Гранат, женьшень, портулак</b><span>успокаивают</span></li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Пептиды до 550 ppm</b><span>ускоряют восстановление</span></li><li><b>Гидро-GF3 и Ацелл 300</b><span>факторы роста и трансдермальные пептиды</span></li><li><b>Гиалуроновая кислота и трегалоза</b><span>глубокое увлажнение</span></li><li><b>Витамин C</b><span>сияние и ровный тон</span></li><li><b>Гранат, женьшень, портулак</b><span>успокаивают</span></li></ul></div>
           <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите равномерно на подготовленную кожу лица и шеи.</li><li>Через 15–20 минут смойте тёплой водой.</li><li>1–2 раза в неделю.</li></ol></div>
-          <dl><dt>В процедурах</dt><dd>Молекулярное обновление, Ангельское совершенство, Возрождение кожи, Моментальное преображение, Детокс-чистка Ato Care.</dd></dl>
+          <dl><dt>В процедурах</dt><dd>Молекулярное обновление, Ангельское совершенство, Возрождение кожи, Моментальное преображение, Детокс-чистка Ато Кэр.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-lift-intense" data-id="lift-intense" data-care="pro">
-        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/lift-intense-viso-contour.webp" alt="Lift Intense Viso Contour — маска с подтягивающим эффектом" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
-        <div class="bd"><span class="en">Lift Intense Viso Contour</span><h3>Маска с подтягивающим эффектом</h3><p>Моментальный лифтинг-эффект и моделирование овала лица за один сеанс. Экспресс-процедура «на выход».</p><span class="more">Подробнее</span></div>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/lift-intense-viso-contour.webp" alt="Лифт Интенс Визо Контур — маска с подтягивающим эффектом" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <div class="bd"><span class="en">Лифт Интенс Визо Контур</span><h3>Маска с подтягивающим эффектом</h3><p>Моментальный лифтинг-эффект и моделирование овала лица за один сеанс. Экспресс-процедура «на выход».</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="110 мл" data-care-t="Профессиональный уход" data-ppm="1000 ppm">
           <p class="about">Маска с мгновенным лифтинг-эффектом и моделированием овала лица, шеи и декольте. Ферменты, пептиды и кислоты сразу очищают, увлажняют, обновляют кожу и визуально подтягивают контуры. Эффект «на выход» после одной процедуры: морщины менее заметны, тон ровнее, кожа гладкая и подтянутая. Можно за день до важного события.</p>
           <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Потеря чёткости овала</li><li>Мимические морщины</li><li>Экспресс-уход перед событием</li></ul></div>
-          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Syn®-Ake 500 ppm</b><span>по образцу пептида яда храмовой гадюки: «ботокс-эффект», глубина морщин на лбу −52 % за 28 дней</span></li><li><b>Лифтинг-пептиды 500 ppm</b><span>ацетил гексапептид-8, трипептид меди-1, пентапептид-19 и другие — коллаген и эластин</span></li><li><b>Гликолевая кислота</b><span>лёгкий пилинг, ровный тон</span></li><li><b>Ферменты и β-глюкан</b><span>микробиом и защита кожи</span></li><li><b>Фитокомплекс</b><span>боярышник, солодка, шлемник, фукус и другие</span></li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Син-Эйк 500 ppm</b><span>по образцу пептида яда храмовой гадюки: «ботокс-эффект», глубина морщин на лбу −52 % за 28 дней</span></li><li><b>Лифтинг-пептиды 500 ppm</b><span>ацетил гексапептид-8, трипептид меди-1, пентапептид-19 и другие — коллаген и эластин</span></li><li><b>Гликолевая кислота</b><span>лёгкий пилинг, ровный тон</span></li><li><b>Ферменты и β-глюкан</b><span>микробиом и защита кожи</span></li><li><b>Фитокомплекс</b><span>боярышник, солодка, шлемник, фукус и другие</span></li></ul></div>
           <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите 10 мл (около 20 нажатий) тонким слоем на лицо и декольте, включая область вокруг глаз.</li><li>Через 5 минут маска подсохнет и слегка стянет кожу — это лифтинг-эффект.</li><li>Через 20–30 минут смойте тёплой водой. Курс 6–10 процедур с интервалом 7–10 дней.</li></ol></div>
-          <dl><dt>Syn®-Ake</dt><dd>Пептид, созданный по образцу вещества из яда храмовой гадюки: ботулоподобное действие, расслабляет мимические мышцы.</dd><dt>В процедурах</dt><dd>Viso-Sculpt — активный лифтинг 40+.</dd></dl>
+          <dl><dt>Син-Эйк</dt><dd>Пептид, созданный по образцу вещества из яда храмовой гадюки: ботулоподобное действие, расслабляет мимические мышцы.</dd><dt>В процедурах</dt><dd>Визо-скульпт — активный лифтинг 40+.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-twin-exfoliant" data-id="twin-exfoliant" data-care="pro">
-        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/molecular-twin-exfoliant.webp" alt="Molecular Twin Exfoliant — молекулярный эксфолиант" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
-        <div class="bd"><span class="en">Molecular Twin Exfoliant</span><h3>Молекулярный эксфолиант</h3><p>Обновляет кожу, выравнивает микрорельеф и тон — процедура «на выход».</p><span class="more">Подробнее</span></div>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/molecular-twin-exfoliant.webp" alt="Молекулярный Твин эксфолиант — молекулярный эксфолиант" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <div class="bd"><span class="en">Молекулярный Твин эксфолиант</span><h3>Молекулярный эксфолиант</h3><p>Обновляет кожу, выравнивает микрорельеф и тон — процедура «на выход».</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл" data-care-t="Профессиональный уход" data-ppm="10 ppm">
-          <p class="about">Осветляющий молекулярный гель-пилинг с арбутином для качества кожи, осветления и плотности. Сбалансированные кислоты, пептиды и фитокомпоненты стимулируют обновление эпидермиса без дискомфорта и побочных явлений. В паре с Molecular Twin Oil — «Ангельский пилинг».</p>
+          <p class="about">Осветляющий молекулярный гель-пилинг с арбутином для качества кожи, осветления и плотности. Сбалансированные кислоты, пептиды и фитокомпоненты стимулируют обновление эпидермиса без дискомфорта и побочных явлений. В паре с Молекулярный Твин масло — «Ангельский пилинг».</p>
           <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Неровный тон и текстура</li><li>Тусклая кожа</li><li>Подготовка к процедурам</li></ul></div>
-          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>AHA/BHA 18 %</b><span>обновляют и выравнивают рельеф</span></li><li><b>Арбутин</b><span>выравнивает тон</span></li><li><b>Центелла</b><span>успокаивает</span></li><li><b>Пептиды</b><span>поддерживают восстановление</span></li></ul></div>
-          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите тонкий слой на очищенную кожу; на периорбитальную зону — исключая подвижное веко.</li><li>Смойте водой через 7–10 минут (вокруг глаз — через 5–7).</li><li>«Ангельский пилинг»: 2 мл геля, через 7–10 минут после высыхания — 1–2 мл Molecular Oil, скатайте и снимите салфетками. 1 раз в неделю, курс 5 процедур.</li></ol></div>
-          <dl><dt>В процедурах</dt><dd>Молекулярное обновление, Ангельское совершенство, Экстренный детокс, Гидробаланс лифт, Viso-Sculpt.</dd></dl>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>АНА/ВНА 18 %</b><span>обновляют и выравнивают рельеф</span></li><li><b>Арбутин</b><span>выравнивает тон</span></li><li><b>Центелла</b><span>успокаивает</span></li><li><b>Пептиды</b><span>поддерживают восстановление</span></li></ul></div>
+          <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите тонкий слой на очищенную кожу; на периорбитальную зону — исключая подвижное веко.</li><li>Смойте водой через 7–10 минут (вокруг глаз — через 5–7).</li><li>«Ангельский пилинг»: 2 мл геля, через 7–10 минут после высыхания — 1–2 мл молекулярное масло, скатайте и снимите салфетками. 1 раз в неделю, курс 5 процедур.</li></ol></div>
+          <dl><dt>В процедурах</dt><dd>Молекулярное обновление, Ангельское совершенство, Экстренный детокс, Гидробаланс лифт, Визо-скульпт.</dd></dl>
           <p class="warn">pH 2,9. После процедуры используйте средства с SPF.</p>
         </div>
       </a>
       <a class="card rv" href="#p-twin-oil" data-id="twin-oil" data-care="pro">
-        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/molecular-twin-oil.webp" alt="Molecular Twin Oil — молекулярное масло для массажа лица" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
-        <div class="bd"><span class="en">Molecular Twin Oil</span><h3>Молекулярное масло для массажа лица</h3><p>Питает, смягчает и выравнивает тон. Вторая фаза пилинга: мягкие «шарики» убирают отмершие клетки, не затрагивая здоровые.</p><span class="more">Подробнее</span></div>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/molecular-twin-oil.webp" alt="Молекулярный Твин масло — молекулярное масло для массажа лица" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <div class="bd"><span class="en">Молекулярный Твин масло</span><h3>Молекулярное масло для массажа лица</h3><p>Питает, смягчает и выравнивает тон. Вторая фаза пилинга: мягкие «шарики» убирают отмершие клетки, не затрагивая здоровые.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="150 мл" data-care-t="Профессиональный уход" data-ppm="300 ppm">
           <p class="about">Осветляющее молекулярное масло двойного действия: увлажняет, питает, бережно выравнивает тон и помогает уменьшить пигментные пятна. Используется для массажа лица и как ремувер гель-пилинга в процедуре «Ангельский пилинг».</p>
           <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Сухая и тусклая кожа</li><li>Массаж лица и миофасциальные техники</li><li>Вторая фаза пилинга</li></ul></div>
           <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Трипептид меди</b><span>поддерживает восстановление</span></li><li><b>Арбутин</b><span>выравнивает тон</span></li><li><b>Масла жожоба, камелии, виноградных косточек</b><span>питают и смягчают</span></li></ul></div>
           <div class="sec"><h4>Как применять</h4><ol class="how"><li>Массаж: нанесите нужное количество на подготовленную кожу и выполните массаж.</li><li>Излишки снимите салфетками.</li><li>«Ангельский пилинг»: после высохшего гель-пилинга нанесите 1–2 мл масла, скатайте и снимите салфетками.</li></ol></div>
-          <dl><dt>В процедурах</dt><dd>Ангельское совершенство, Viso-Sculpt.</dd></dl>
+          <dl><dt>В процедурах</dt><dd>Ангельское совершенство, Визо-скульпт.</dd></dl>
         </div>
       </a>
       <a class="card rv" href="#p-drainage-gel" data-id="drainage-gel" data-care="pro">
-        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/drainage-physio-gel.webp" alt="Drainage Physio Gel — лимфодренажный гель для аппаратных процедур" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
-        <div class="bd"><span class="en">Drainage Physio Gel</span><h3>Лимфодренажный гель для аппаратных процедур</h3><p>Усиливает выведение лимфы, обладает высокой токопроводностью — подходит для всех аппаратных методик.</p><span class="more">Подробнее</span></div>
+        <span class="ph"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/drainage-physio-gel.webp" alt="дренажный физиогель — лимфодренажный гель для аппаратных процедур" loading="lazy"><span class="tags"><span class="tag">ПРО</span></span></span>
+        <div class="bd"><span class="en">Дренажный физиогель</span><h3>Лимфодренажный гель для аппаратных процедур</h3><p>Усиливает выведение лимфы, обладает высокой токопроводностью — подходит для всех аппаратных методик.</p><span class="more">Подробнее</span></div>
         <div class="pd" data-vol="470 мл" data-care-t="Профессиональный уход" data-ppm="300 ppm">
           <p class="about">Лимфодренажный аппаратный гель усиливает отток лимфы, выводит лишнюю жидкость и уменьшает отёчность. Контактный гель с высокой токопроводностью: долгое скольжение и отличный контакт манипул. Совместим со всеми аппаратными процедурами для лица и тела, слегка охлаждает.</p>
           <div class="sec"><h4>Подходит для</h4><ul class="chips"><li>Микротоки и аппаратные методики</li><li>Отёчность</li><li>Лифтинг-процедуры</li></ul></div>
-          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Пептиды 300 ppm</b><span>поддерживают тонус кожи</span></li><li><b>Hydro-GF3 и Acell 300</b><span>восстановление</span></li><li><b>Цветочная вода розы, гиалуронат натрия</b><span>увлажняют</span></li><li><b>Пантенол и ментол</b><span>успокаивают и освежают</span></li></ul></div>
+          <div class="sec"><h4>Ключевые активы</h4><ul class="acts"><li><b>Пептиды 300 ppm</b><span>поддерживают тонус кожи</span></li><li><b>Гидро-GF3 и Ацелл 300</b><span>восстановление</span></li><li><b>Цветочная вода розы, гиалуронат натрия</b><span>увлажняют</span></li><li><b>Пантенол и ментол</b><span>успокаивают и освежают</span></li></ul></div>
           <div class="sec"><h4>Как применять</h4><ol class="how"><li>Нанесите гель на очищенную кожу.</li><li>Проведите процедуру согласно инструкции к аппарату.</li><li>После процедуры смойте остатки геля водой.</li></ol></div>
           <dl><dt>В процедурах</dt><dd>Гидробаланс лифт.</dd></dl>
         </div>
@@ -351,10 +351,10 @@
       </div>
     </div>
     <div class="res-g">
-      <figure class="res rv"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/lift-intense-front.webp" alt="Lift Intense: до и после — Лифтинг и контур лица, анфас" loading="lazy"><figcaption><span class="code">Lift Intense</span>Лифтинг и контур лица, анфас</figcaption></figure>
-      <figure class="res rv"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/lift-intense-profile.webp" alt="Lift Intense: до и после — Лифтинг и контур лица, профиль" loading="lazy"><figcaption><span class="code">Lift Intense</span>Лифтинг и контур лица, профиль</figcaption></figure>
-      <figure class="res rv"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/molecular-twin-exfoliant-cheek.webp" alt="Molecular Twin: до и после — Ровный тон и текстура кожи" loading="lazy"><figcaption><span class="code">Molecular Twin</span>Ровный тон и текстура кожи</figcaption></figure>
-      <figure class="res rv"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/molecular-twin-exfoliant-profile.webp" alt="Molecular Twin: до и после — Обновление кожи, профиль" loading="lazy"><figcaption><span class="code">Molecular Twin</span>Обновление кожи, профиль</figcaption></figure>
+      <figure class="res rv"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/lift-intense-front.webp" alt="Лифт Интенс: до и после — Лифтинг и контур лица, анфас" loading="lazy"><figcaption><span class="code">Лифт Интенс</span>Лифтинг и контур лица, анфас</figcaption></figure>
+      <figure class="res rv"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/lift-intense-profile.webp" alt="Лифт Интенс: до и после — Лифтинг и контур лица, профиль" loading="lazy"><figcaption><span class="code">Лифт Интенс</span>Лифтинг и контур лица, профиль</figcaption></figure>
+      <figure class="res rv"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/molecular-twin-exfoliant-cheek.webp" alt="Молекулярный Твин: до и после — Ровный тон и текстура кожи" loading="lazy"><figcaption><span class="code">Молекулярный Твин</span>Ровный тон и текстура кожи</figcaption></figure>
+      <figure class="res rv"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/molecular-twin-exfoliant-profile.webp" alt="Молекулярный Твин: до и после — Обновление кожи, профиль" loading="lazy"><figcaption><span class="code">Молекулярный Твин</span>Обновление кожи, профиль</figcaption></figure>
     </div>
     <p class="res-note rv">Результат зависит от состояния кожи и протокола, который подбирает специалист.</p>
   </div>
@@ -371,15 +371,15 @@
     </div>
     <div class="pr-g">
       <div class="pr rv">
-        <div class="t"><span class="code">Adaptive Skin</span><span class="min">65 мин</span></div>
-        <h3>Экстренный детокс — SOS для кожи</h3>
+        <div class="t"><span class="code">Адаптив Скин</span><span class="min">65 мин</span></div>
+        <h3>Экстренный детокс — скорая помощь для кожи</h3>
         <p>Детокс-маска с водорослями и кислородный гель — когда коже нужна быстрая помощь.</p>
         <ol>
-          <li><div>Ato Care Mild Cleanser <span>— очищение</span></div></li>
-          <li><div><a href="#p-twin-exfoliant">Molecular Twin Exfoliant</a> <span>— эксфолиация</span></div></li>
-          <li><div><a href="#p-detox-mask">Detox Mask</a> <span>— детокс-маска</span></div></li>
-          <li><div><a href="#p-o2-therapy-gel">O₂ Therapy Active Gel</a> <span>— кислородный гель</span></div></li>
-          <li><div>Ato Care Toner Mousse и Moist Emulsion <span>— завершающий уход</span></div></li>
+          <li><div>Ато Кэр очищающий гель <span>— очищение</span></div></li>
+          <li><div><a href="#p-twin-exfoliant">Молекулярный эксфолиант</a> <span>— эксфолиация</span></div></li>
+          <li><div><a href="#p-detox-mask">Детокс-маска с водорослями</a></div></li>
+          <li><div><a href="#p-o2-therapy-gel">Кислородный активный гель</a></div></li>
+          <li><div>Ато Кэр тонер-мусс и увлажняющая эмульсия <span>— завершающий уход</span></div></li>
         </ol>
       </div>
       <div class="pr rv">
@@ -387,23 +387,23 @@
         <h3>Ангельское совершенство кожи</h3>
         <p>Двухфазный молекулярный пилинг — гладкость, ровный тон и сияние без раздражения и реабилитации.</p>
         <ol>
-          <li><div>Ato Care Mild Cleanser <span>— очищение</span></div></li>
-          <li><div><a href="#p-twin-exfoliant">Molecular Twin Exfoliant</a> <span>— 1 фаза пилинга</span></div></li>
-          <li><div><a href="#p-twin-oil">Molecular Twin Oil</a> <span>— 2 фаза пилинга</span></div></li>
-          <li><div><a href="#p-repair-mask">Repair Mask</a> <span>— восстанавливающая маска</span></div></li>
-          <li><div>Ato Care Moist Emulsion и Reform Age Eye Cream <span>— завершающий уход</span></div></li>
+          <li><div>Ато Кэр очищающий гель <span>— очищение</span></div></li>
+          <li><div><a href="#p-twin-exfoliant">Молекулярный эксфолиант</a> <span>— 1 фаза пилинга</span></div></li>
+          <li><div><a href="#p-twin-oil">Молекулярное масло</a> <span>— 2 фаза пилинга</span></div></li>
+          <li><div><a href="#p-repair-mask">Восстанавливающая маска</a></div></li>
+          <li><div>Ато Кэр увлажняющая эмульсия и Реформэйдж крем для век <span>— завершающий уход</span></div></li>
         </ol>
       </div>
       <div class="pr rv">
-        <div class="t"><span class="code">Lift Intense</span><span class="min">80 мин</span></div>
-        <h3>Viso-Sculpt — активный лифтинг 40+</h3>
+        <div class="t"><span class="code">Лифт Интенс</span><span class="min">80 мин</span></div>
+        <h3>Визо-скульпт — активный лифтинг 40+</h3>
         <p>Миофасциальный массаж и лифтинг-маска — подтянутый овал лица за одну процедуру.</p>
         <ol>
-          <li><div>Reform Age Mild Cleanser <span>— очищение</span></div></li>
-          <li><div><a href="#p-twin-exfoliant">Molecular Twin Exfoliant</a> <span>— эксфолиация</span></div></li>
-          <li><div><a href="#p-twin-oil">Molecular Twin Oil</a> <span>— миофасциальный массаж</span></div></li>
-          <li><div><a href="#p-lift-intense">Lift Intense Viso Contour</a> <span>— лифтинг-маска</span></div></li>
-          <li><div>Reform Age Collagen Tonic, Intensive Cream и Eye Cream <span>— завершение</span></div></li>
+          <li><div>Реформэйдж мягкая пенка <span>— очищение</span></div></li>
+          <li><div><a href="#p-twin-exfoliant">Молекулярный эксфолиант</a> <span>— эксфолиация</span></div></li>
+          <li><div><a href="#p-twin-oil">Молекулярное масло</a> <span>— миофасциальный массаж</span></div></li>
+          <li><div><a href="#p-lift-intense">Лифтинг-маска Лифт Интенс Визо Контур</a></div></li>
+          <li><div>Реформэйдж коллагеновый тоник, интенсивный крем и крем для век <span>— завершение</span></div></li>
         </ol>
       </div>
     </div>
@@ -423,7 +423,7 @@
     <div class="cta rv">
       <div>
         <h2>Подобрать препараты для кабинета?</h2>
-        <p>Расскажем, как сочетать средства ПРО с линиями ЖеДерм, пришлём прайс и протоколы.</p>
+        <p>Расскажем, как сочетать средства ПРО с линиями JeuDérm, пришлём прайс и протоколы.</p>
       </div>
       <div class="btns">
         <a class="btn btn-a" href="#getprice_main">Запросить цены</a>

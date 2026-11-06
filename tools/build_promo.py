@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Страница «Акции» ЖеДерм для Tilda, блок T123.
+"""Страница «Акции» JeuDérm для Tilda, блок T123.
 
 Запуск:  python3 tools/build_promo.py  →  tilda/promo.html и tilda-txt/promo.txt
 Срок акции для дистрибьюторов задаётся в DISTR_UNTIL; после этой даты карточка сама скрывается.
@@ -10,6 +10,9 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from build_study import base_css, IMG, ARROW  # noqa: E402
 
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from localize import ru  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://jeuderm-russia.ru/'
 DISTR_UNTIL = '2026-10-31'          # последний день акции для дистрибьюторов
@@ -82,16 +85,16 @@ def build():
 <!-- ================= ШАПКА ================= -->
 <section class="pr-top">
   <div class="w">
-    <span class="lab rv"><i></i>Акции ЖеДерм</span>
+    <span class="lab rv"><i></i>Акции JeuDérm</span>
     <h1 class="rv">Специальные условия для <em>специалистов</em> и партнёров</h1>
-    <p class="lead rv">Начните работать с профессиональной космецевтикой ЖеДерм на выгодных условиях — напрямую от официального дистрибьютора в России.</p>
+    <p class="lead rv">Начните работать с профессиональной космецевтикой JeuDérm на выгодных условиях — напрямую от официального дистрибьютора в России.</p>
 
     <div class="offers">
       <div class="of of-1 rv">
         <span class="tag">Постоянная акция</span>
         <div class="big">−15%</div>
         <h2>на первый заказ</h2>
-        <p>Скидка для новых клиентов на первую закупку профессиональных и домашних средств ЖеДерм — любых линий.</p>
+        <p>Скидка для новых клиентов на первую закупку профессиональных и домашних средств JeuDérm — любых линий.</p>
         <ul style="color:var(--ink)">
           <li style="border-color:var(--line)">Для косметологов, клиник и салонов</li>
           <li style="border-color:var(--line)">На все линии: Reform Age, Acno, Ato Care, ПРО, Nova · Zymo, Hair Genesis</li>
@@ -106,9 +109,9 @@ def build():
       <div class="of of-2 rv" data-until="{DISTR_UNTIL}">
         <span class="tag">До {DISTR_UNTIL_T}</span>
         <div class="big">Специальные условия для дистрибьюторов</div>
-        <p>Станьте партнёром ЖеДерм в своём регионе. До конца октября — особые условия для новых дистрибьюторов: расскажем подробности и подготовим предложение.</p>
+        <p>Станьте партнёром JeuDérm в своём регионе. До конца октября — особые условия для новых дистрибьюторов: расскажем подробности и подготовим предложение.</p>
         <ul>
-          <li>Официальное партнёрство с дистрибьютором ЖеДерм в России</li>
+          <li>Официальное партнёрство с дистрибьютором JeuDérm в России</li>
           <li>Обучение команды и маркетинговая поддержка</li>
           <li>Персональный менеджер</li>
         </ul>
@@ -157,7 +160,7 @@ def build():
   [].forEach.call(items,function(el){io.observe(el);});
 })();
 </script>'''
-    head = '''<!-- ЖеДерм · страница «Акции» · блок T123. Собрано tools/build_promo.py.
+    head = '''<!-- JeuDérm · страница «Акции» · блок T123. Собрано tools/build_promo.py.
      Карточка для дистрибьюторов скрывается сама после DISTR_UNTIL. Кнопки: #get15%discount и #getconsult — попапы Tilda. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -169,6 +172,6 @@ def build():
 
 if __name__ == '__main__':
     out = build()
-    (ROOT / 'tilda' / 'promo.html').write_text(out, encoding='utf-8')
-    (ROOT / 'tilda-txt' / 'promo.txt').write_text(out, encoding='utf-8')
+    (ROOT / 'tilda' / 'promo.html').write_text(ru(out), encoding='utf-8')
+    (ROOT / 'tilda-txt' / 'promo.txt').write_text(ru(out), encoding='utf-8')
     print('promo.html', len(out))

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Страница 404 ЖеДерм для Tilda, блок T123 (Настройки сайта → Ещё → Страница 404).
+"""Страница 404 JeuDérm для Tilda, блок T123 (Настройки сайта → Ещё → Страница 404).
 
 Запуск:  python3 tools/build_404.py  →  tilda/404.html и tilda-txt/404.txt
 """
@@ -10,6 +10,9 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from build_study import base_css, IMG, ARROW  # noqa: E402
 from build_promo import CONTACTS, COLORS  # noqa: E402
 
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from localize import ru  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://jeuderm-russia.ru/'
 
@@ -66,14 +69,14 @@ def build():
       <div>
         <div class="num rv" aria-hidden="true">4<em>0</em>4</div>
         <h1 class="rv">Страница не найдена</h1>
-        <p class="lead rv">Возможно, она переехала после обновления сайта или в адресе опечатка. Всё о профессиональной космецевтике ЖеДерм — на главной и в разделах ухода.</p>
+        <p class="lead rv">Возможно, она переехала после обновления сайта или в адресе опечатка. Всё о профессиональной космецевтике JeuDérm — на главной и в разделах ухода.</p>
         <div class="btns rv">
           <a class="btn btn-a" href="{SITE}">На главную {ARROW}</a>
           <a class="btn btn-o" href="{SITE}pro-jeuderm">Профессиональный уход</a>
         </div>
       </div>
       <div class="eph rv">
-        <img src="{IMG}home/skin-renewal.webp" alt="ЖеДерм — обновление кожи" loading="eager">
+        <img src="{IMG}home/skin-renewal.webp" alt="JeuDérm — обновление кожи" loading="eager">
         <span>JeuDérm · Южная Корея</span>
       </div>
     </div>
@@ -104,7 +107,7 @@ def build():
   [].forEach.call(items,function(el){io.observe(el);});
 })();
 </script>'''
-    head = '''<!-- ЖеДерм · страница 404 · блок T123. Собрано tools/build_404.py. -->
+    head = '''<!-- JeuDérm · страница 404 · блок T123. Собрано tools/build_404.py. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -115,6 +118,6 @@ def build():
 
 if __name__ == '__main__':
     out = build()
-    (ROOT / 'tilda' / '404.html').write_text(out, encoding='utf-8')
-    (ROOT / 'tilda-txt' / '404.txt').write_text(out, encoding='utf-8')
+    (ROOT / 'tilda' / '404.html').write_text(ru(out), encoding='utf-8')
+    (ROOT / 'tilda-txt' / '404.txt').write_text(ru(out), encoding='utf-8')
     print('404.html', len(out))

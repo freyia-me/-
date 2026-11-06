@@ -8,6 +8,9 @@
 import pathlib
 import re
 
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from localize import ru  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 IMG = 'https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/'
 SITE = 'https://jeuderm-russia.ru/'
@@ -58,7 +61,7 @@ def tile(i, d):
             attrs += f' data-{m}-href="{SITE}{url}" data-{m}-img="{IMG}{img}" data-{m}-n="{count_word(n)}"'
     url, n, img = first
     return f'''      <a class="tl rv" style="--c:{d['c']}" data-care="{modes}" href="{SITE}{url}"{attrs}>
-        <span class="tl-ph"><img src="{IMG}{img}" alt="{d['short']} — ЖеДерм {d['line']}" loading="lazy"><span class="tl-chip"><i></i>{d['line']}</span></span>
+        <span class="tl-ph"><img src="{IMG}{img}" alt="{d['short']} — JeuDérm {d['line']}" loading="lazy"><span class="tl-chip"><i></i>{d['line']}</span></span>
         <span class="tl-bd"><span class="code tl-n">{count_word(n)}</span><h3>{d['short']}</h3><p>{d['text']}</p><span class="more">Смотреть средства</span></span>
       </a>'''
 
@@ -146,8 +149,8 @@ def build():
       </nav>
       <span class="lab rv" data-show="pro"><i></i>Серия · Professional</span>
       <span class="lab rv" data-show="home"><i></i>Серия · Homecare</span>
-      <h1 class="rv" data-show="pro">Профессиональный уход <em>ЖеДерм</em></h1>
-      <h1 class="rv" data-show="home">Домашний уход <em>ЖеДерм</em></h1>
+      <h1 class="rv" data-show="pro">Профессиональный уход <em>JeuDérm</em></h1>
+      <h1 class="rv" data-show="home">Домашний уход <em>JeuDérm</em></h1>
       <p class="lead rv" data-show="pro">Средства для процедур с пептидами и пробиотиками: восстанавливают, увлажняют и омолаживают кожу, усиливают результат аппаратных и ручных методик. Выберите задачу кожи — внутри препараты для кабинета и протоколы.</p>
       <p class="lead rv" data-show="home">Профессиональные формулы в формате ежедневного ухода: очищение, увлажнение и антивозрастной эффект. Средства продлевают результат процедуры дома и подходят для разных типов кожи, включая чувствительную.</p>
       <div class="btns rv">
@@ -157,8 +160,8 @@ def build():
       </div>
     </div>
     <div class="hb-img rv">
-      <img data-show="pro" src="{IMG}home/banner-professional.webp" alt="Профессиональный уход ЖеДерм: средства для процедур в кабинете" loading="eager">
-      <img data-show="home" src="{IMG}home/banner-homecare.webp" alt="Домашний уход ЖеДерм: кремы, эмульсии и сыворотка для волос" loading="eager">
+      <img data-show="pro" src="{IMG}home/banner-professional.webp" alt="Профессиональный уход JeuDérm: средства для процедур в кабинете" loading="eager">
+      <img data-show="home" src="{IMG}home/banner-homecare.webp" alt="Домашний уход JeuDérm: кремы, эмульсии и сыворотка для волос" loading="eager">
     </div>
   </div>
 </section>
@@ -188,10 +191,10 @@ def build():
     <div class="steps" data-show="pro">
       <div class="st rv"><h3>Выберите линию</h3><p>Под задачу кожи: возрастной уход, проблемная или чувствительная кожа, обновление, кожа головы — или препараты ПРО.</p></div>
       <div class="st rv"><h3>Получите протоколы</h3><p>Пошаговые процедуры с дозировками и временем каждого шага — от атравматичной чистки до лифтинга 40+.</p></div>
-      <div class="st rv"><h3>Пройдите обучение</h3><p>Бесплатные занятия в малых группах и вебинары: механизмы, показания и практика с продуктами ЖеДерм.</p></div>
+      <div class="st rv"><h3>Пройдите обучение</h3><p>Бесплатные занятия в малых группах и вебинары: механизмы, показания и практика с продуктами JeuDérm.</p></div>
     </div>
     <div class="steps" data-show="home">
-      <div class="st rv"><h3>Процедура в кабинете</h3><p>Косметолог проводит процедуру на профессиональных средствах ЖеДерм.</p></div>
+      <div class="st rv"><h3>Процедура в кабинете</h3><p>Косметолог проводит процедуру на профессиональных средствах JeuDérm.</p></div>
       <div class="st rv"><h3>Подбор домашнего ухода</h3><p>Специалист подбирает средства той же линии — для ежедневного очищения, увлажнения и защиты.</p></div>
       <div class="st rv"><h3>Результат держится дольше</h3><p>Домашний уход поддерживает кожу между визитами и продлевает эффект процедуры.</p></div>
     </div>
@@ -239,7 +242,7 @@ def build():
 })();
 </script>'''
 
-    head = '''<!-- ЖеДерм · общая страница «Профессиональный уход / Домашний уход» · блок T123 «HTML-код».
+    head = '''<!-- JeuDérm · общая страница «Профессиональный уход / Домашний уход» · блок T123 «HTML-код».
      Один и тот же код ставится на /pro-jeuderm и /homecare-jeuderm: режим выбирается сам по адресу
      (или ?care=pro / ?care=home). Собрано tools/build_hub.py — правки текстов вносите там. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -252,6 +255,6 @@ def build():
 
 if __name__ == '__main__':
     out = build()
-    (ROOT / 'tilda' / 'care.html').write_text(out, encoding='utf-8')
-    (ROOT / 'tilda-txt' / 'care.txt').write_text(out, encoding='utf-8')
+    (ROOT / 'tilda' / 'care.html').write_text(ru(out), encoding='utf-8')
+    (ROOT / 'tilda-txt' / 'care.txt').write_text(ru(out), encoding='utf-8')
     print('care.html', len(out))

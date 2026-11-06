@@ -1,4 +1,4 @@
-<!-- ЖеДерм · общий подвал · блок T123 «HTML-код». Собрано tools/build_footer.py. Один код на все страницы. -->
+<!-- JeuDérm · общий подвал · блок T123 «HTML-код». Собрано tools/build_footer.py. Один код на все страницы. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -56,11 +56,11 @@
       </div>
     <div>
       <h4>Уход</h4>
-      <ul><li><a href="https://jeuderm-russia.ru/pro-jeuderm">Профессиональный уход</a></li><li><a href="https://jeuderm-russia.ru/homecare-jeuderm">Домашний уход</a></li><li><a href="https://jeuderm-russia.ru/reformage-pro">Возрастной уход · Reform Age</a></li><li><a href="https://jeuderm-russia.ru/acnopro-jeuderm">Проблемная кожа · Acno</a></li><li><a href="https://jeuderm-russia.ru/atocare-pro">Чувствительная кожа · Ato Care</a></li></ul>
+      <ul><li><a href="https://jeuderm-russia.ru/pro-jeuderm">Профессиональный уход</a></li><li><a href="https://jeuderm-russia.ru/homecare-jeuderm">Домашний уход</a></li><li><a href="https://jeuderm-russia.ru/reformage-pro">Возрастной уход · Реформэйдж</a></li><li><a href="https://jeuderm-russia.ru/acnopro-jeuderm">Проблемная кожа · Акно</a></li><li><a href="https://jeuderm-russia.ru/atocare-pro">Чувствительная кожа · Ато Кэр</a></li></ul>
     </div>
     <div>
       <h4>Ещё</h4>
-      <ul><li><a href="https://jeuderm-russia.ru/pro">ПРО-препараты</a></li><li><a href="https://jeuderm-russia.ru/novazymo-exfoliation">Обновление · Nova · Zymo</a></li><li><a href="https://jeuderm-russia.ru/hairgenesis">Кожа головы · Hair Genesis</a></li></ul>
+      <ul><li><a href="https://jeuderm-russia.ru/pro">ПРО-препараты</a></li><li><a href="https://jeuderm-russia.ru/novazymo-exfoliation">Обновление · Нова · Зимо</a></li><li><a href="https://jeuderm-russia.ru/hairgenesis">Кожа головы · Хэйр Генезис</a></li></ul>
     </div>
     <div>
       <h4>Компания</h4>

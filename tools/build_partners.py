@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Страница для дистрибьюторов ЖеДерм (/partners-distributors-jeuderm), блок T123.
+"""Страница для дистрибьюторов JeuDérm (/partners-distributors-jeuderm), блок T123.
 
 Запуск:  python3 tools/build_partners.py  →  tilda/partners.html и tilda-txt/partners.txt
 Попапы Tilda: #getprice_partner (прайс для партнёров), #getprotocol_partner (протоколы / материалы).
@@ -12,6 +12,9 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from build_study import base_css, IMG, ARROW  # noqa: E402
 from build_promo import CONTACTS, COLORS, DISTR_UNTIL, DISTR_UNTIL_T  # noqa: E402
 
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from localize import ru  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://jeuderm-russia.ru/'
 PRICE = '#getprice_partner'
@@ -112,7 +115,7 @@ CSS = '''
 
 
 def build():
-    pf = '\n'.join(f'      <a class="pfi rv" style="--k:{c}" href="{SITE}{url}"><img src="{IMG}{img}" alt="{t} — ЖеДерм {line}" loading="lazy"><span>{t}<small>{line}</small></span></a>'
+    pf = '\n'.join(f'      <a class="pfi rv" style="--k:{c}" href="{SITE}{url}"><img src="{IMG}{img}" alt="{t} — JeuDérm {line}" loading="lazy"><span>{t}<small>{line}</small></span></a>'
                    for c, t, line, url, img in DIRS)
     cn = '\n'.join(f'''      <a class="ci rv" style="--k:{COLORS[k]}" href="{url}"{'' if url.startswith(('tel:', 'mailto:')) else ' target="_blank" rel="noopener"'}><i><svg viewBox="0 0 24 24" aria-hidden="true">{svg}</svg></i><b>{t}</b><span>{sub}</span></a>'''
                    for k, t, sub, url, svg in CONTACTS)
@@ -123,7 +126,7 @@ def build():
   <div class="w pt-g">
     <div>
       <span class="lab rv"><i></i>Дистрибьюторам и партнёрам</span>
-      <h1 class="rv">Станьте партнёром <em>ЖеДерм</em> в вашем регионе</h1>
+      <h1 class="rv">Станьте партнёром <em>JeuDérm</em> в вашем регионе</h1>
       <p class="lead rv">Южнокорейская профессиональная космецевтика на основе пептидов и биотехнологий. Работаем с дистрибьюторами, клиниками эстетической медицины и косметологическими центрами — напрямую от официального дистрибьютора в России, ООО «Революшн Био».</p>
       <div class="btns rv">
         <a class="btn btn-a" href="{PRICE}">Получить прайс для партнёров {ARROW}</a>
@@ -131,12 +134,12 @@ def build():
       </div>
       <div class="nums rv">
         <div><b>50 000<sup>+</sup></b><span>процедур в клиниках и центрах</span></div>
-        <div><b>20<sup>+</sup></b><span>стран, где работают с ЖеДерм</span></div>
+        <div><b>20<sup>+</sup></b><span>стран, где работают с JeuDérm</span></div>
         <div><b>6</b><span>направлений ухода — ПРО и домашний</span></div>
       </div>
     </div>
     <div class="pt-ph rv">
-      <img src="{IMG}study/symposium-group-dubrovnik.webp" alt="Партнёры и специалисты ЖеДерм на международном симпозиуме в Дубровнике" loading="eager">
+      <img src="{IMG}study/symposium-group-dubrovnik.webp" alt="Партнёры и специалисты JeuDérm на международном симпозиуме в Дубровнике" loading="eager">
       <span>International Aesthetic Symposium · 2026</span>
     </div>
   </div>
@@ -165,13 +168,13 @@ def build():
   <div class="w">
     <div class="head">
       <span class="lab"><i></i>Что получает партнёр</span>
-      <h2>Почему <em>ЖеДерм</em></h2>
+      <h2>Почему <em>JeuDérm</em></h2>
     </div>
     <div class="bn">
       <div class="bi rv"><h3>Оригинальная продукция</h3><p>Прямые поставки от официального дистрибьютора в России — без посредников, с документами на всю продукцию.</p></div>
       <div class="bi rv"><h3>Полный портфель</h3><p>Шесть направлений ухода: препараты для кабинета и домашний уход. Клиенты возвращаются за средствами между процедурами.</p></div>
       <div class="bi rv"><h3>Доказанная эффективность</h3><p>Формулы протестированы в Дерматологическом центре Национального университета Чунгнам и в Университете Ханнам.</p></div>
-      <div class="bi rv"><h3>Обучение вашей команды</h3><p>Бесплатное обучение специалистов, протоколы процедур, вебинары и участие в международных симпозиумах ЖеДерм.</p></div>
+      <div class="bi rv"><h3>Обучение вашей команды</h3><p>Бесплатное обучение специалистов, протоколы процедур, вебинары и участие в международных симпозиумах JeuDérm.</p></div>
       <div class="bi rv"><h3>Маркетинговая поддержка</h3><p>Фото продуктов, описания, материалы для соцсетей и презентации для работы с клиниками и косметологами.</p></div>
       <div class="bi rv"><h3>Персональный менеджер</h3><p>Помогаем с запуском, ассортиментом и первыми продажами в регионе. Условия растут вместе с объёмом закупок.</p></div>
     </div>
@@ -256,7 +259,7 @@ def build():
   [].forEach.call(items,function(el){io.observe(el);});
 })();
 </script>'''
-    head = '''<!-- ЖеДерм · страница для дистрибьюторов (/partners-distributors-jeuderm) · блок T123. Собрано tools/build_partners.py.
+    head = '''<!-- JeuDérm · страница для дистрибьюторов (/partners-distributors-jeuderm) · блок T123. Собрано tools/build_partners.py.
      Попапы: #getprice_partner, #getprotocol_partner. Блок октябрьской акции скрывается сам после срока. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -268,6 +271,6 @@ def build():
 
 if __name__ == '__main__':
     out = build()
-    (ROOT / 'tilda' / 'partners.html').write_text(out, encoding='utf-8')
-    (ROOT / 'tilda-txt' / 'partners.txt').write_text(out, encoding='utf-8')
+    (ROOT / 'tilda' / 'partners.html').write_text(ru(out), encoding='utf-8')
+    (ROOT / 'tilda-txt' / 'partners.txt').write_text(ru(out), encoding='utf-8')
     print('partners.html', len(out))

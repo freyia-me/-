@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Общий подвал ЖеДерм для Tilda — отдельный блок T123, один код на все страницы.
+"""Общий подвал JeuDérm для Tilda — отдельный блок T123, один код на все страницы.
 
 Запуск:  python3 tools/build_footer.py  →  tilda/footer.html и tilda-txt/footer.txt
 Ставится последним блоком страницы (вместо стандартного подвала Tilda) или в «Подвал» в настройках сайта.
@@ -10,6 +10,9 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from build_promo import CONTACTS, COLORS  # noqa: E402
 
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from localize import ru  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://jeuderm-russia.ru/'
 
@@ -108,7 +111,7 @@ def build():
                       "#jdf .ct2 a{display:inline-block;margin-bottom:8px}\n#jdf .ct2 b{font-weight:500;font-size:16px;color:#fff}")
     css = css.replace("@media (max-width:1000px){#jdf .top{grid-template-columns:1fr 1fr 1fr}#jdf .brand,#jdf .ct{grid-column:span 3}#jdf .ct{order:-1;display:none}}",
                       "@media (max-width:1000px){#jdf .top{grid-template-columns:1fr 1fr 1fr}#jdf .brand,#jdf .cc{grid-column:1/-1}}")
-    head = '''<!-- ЖеДерм · общий подвал · блок T123 «HTML-код». Собрано tools/build_footer.py. Один код на все страницы. -->
+    head = '''<!-- JeuDérm · общий подвал · блок T123 «HTML-код». Собрано tools/build_footer.py. Один код на все страницы. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -119,6 +122,6 @@ def build():
 
 if __name__ == '__main__':
     out = build()
-    (ROOT / 'tilda' / 'footer.html').write_text(out, encoding='utf-8')
-    (ROOT / 'tilda-txt' / 'footer.txt').write_text(out, encoding='utf-8')
+    (ROOT / 'tilda' / 'footer.html').write_text(ru(out), encoding='utf-8')
+    (ROOT / 'tilda-txt' / 'footer.txt').write_text(ru(out), encoding='utf-8')
     print('footer.html', len(out))

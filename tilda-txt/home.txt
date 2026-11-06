@@ -1,11 +1,11 @@
-<!-- ЖеДерм · главная · блок T123 «HTML-код». Меню, футер и поп-апы остаются в Tilda. -->
+<!-- JeuDérm · главная · блок T123 «HTML-код». Меню, футер и поп-апы остаются в Tilda. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 #jd{
-  /* ===== Палитра каталога ЖеДерм ===== */
+  /* ===== Палитра каталога JeuDérm ===== */
   --acno:#ab0a3d;     /* Acno Active */
   --ato:#76bc21;      /* Ato Care */
   --adapt:#2a7de1;    /* Adaptive Skin */
@@ -494,7 +494,7 @@
     <div class="hero-g">
       <div class="hero-t">
         <span class="lab rv"><i></i>Профессиональная космецевтика · Южная Корея</span>
-        <h1 class="rv d1">Пептидные формулы ЖеДерм для&nbsp;косметологов и&nbsp;<em>клиник</em></h1>
+        <h1 class="rv d1">Пептидные формулы JeuDérm для&nbsp;косметологов и&nbsp;<em>клиник</em></h1>
         <p class="lead rv d2">Лабораторная космецевтика на основе биотехнологий и дерматологических исследований. Профессиональные протоколы для кабинета и домашний уход — напрямую от официального дистрибьютора в России.</p>
         <div class="btns rv d3">
           <a class="btn btn-a" href="#getprice_main">Запросить цены <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
@@ -507,9 +507,9 @@
         </ul>
       </div>
       <div class="mosaic rv d2">
-        <a class="mt mt-big" style="--c:#cd555b" href="https://jeuderm-russia.ru/reformage-pro"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/reform-age-o2-boto-fluid-110ml.webp" alt="Reform Age O2 Boto Fluid — возрастной уход ЖеДерм" loading="eager"><span class="mt-l"><i></i>Возрастной уход</span></a>
-        <a class="mt" style="--c:#76bc21" href="https://jeuderm-russia.ru/atocare-pro"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/ato-care-mild-cleanser.webp" alt="Ato Care Mild Cleanser — уход за чувствительной кожей" loading="eager"><span class="mt-l"><i></i>Чувствительная кожа</span></a>
-        <a class="mt" style="--c:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/acno-active-emulsion-150ml.webp" alt="Acno Active Emulsion — уход за проблемной кожей" loading="eager"><span class="mt-l"><i></i>Проблемная кожа</span></a>
+        <a class="mt mt-big" style="--c:#cd555b" href="https://jeuderm-russia.ru/reformage-pro"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/reform-age-o2-boto-fluid-110ml.webp" alt="Реформэйдж кислородный бото-флюид — возрастной уход JeuDérm" loading="eager"><span class="mt-l"><i></i>Возрастной уход</span></a>
+        <a class="mt" style="--c:#76bc21" href="https://jeuderm-russia.ru/atocare-pro"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/ato-care-mild-cleanser.webp" alt="Ато Кэр очищающий гель — уход за чувствительной кожей" loading="eager"><span class="mt-l"><i></i>Чувствительная кожа</span></a>
+        <a class="mt" style="--c:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/acno-active-emulsion-150ml.webp" alt="Акно Актив эмульсия — уход за проблемной кожей" loading="eager"><span class="mt-l"><i></i>Проблемная кожа</span></a>
       </div>
     </div>
 
@@ -527,7 +527,7 @@
     <div class="spectrum rv"><i style="background:#ab0a3d"></i><i style="background:#76bc21;transition-delay:.1s"></i><i style="background:#cd555b;transition-delay:.2s"></i><i style="background:#ae57b9;transition-delay:.3s"></i><i style="background:#000;transition-delay:.4s"></i><i style="background:#65666b;transition-delay:.5s"></i></div>
     <div class="stats">
       <div class="stat rv"><div class="num"><span data-count="50000">50 000</span><sup>+</sup></div><p>процедур в клиниках и косметологических центрах</p></div>
-      <div class="stat rv d1"><div class="num"><span data-count="20">20</span><sup>+</sup></div><p>стран, где с ЖеДерм работают специалисты</p></div>
+      <div class="stat rv d1"><div class="num"><span data-count="20">20</span><sup>+</sup></div><p>стран, где с JeuDérm работают специалисты</p></div>
       <div class="stat rv d2"><div class="num"><span data-count="6">6</span></div><p>направлений ухода под разные задачи кожи</p></div>
     </div>
   </div>
@@ -538,7 +538,7 @@
   <div class="w">
     <div class="head">
       <div>
-        <span class="lab rv"><i></i>Почему ЖеДерм</span>
+        <span class="lab rv"><i></i>Почему JeuDérm</span>
         <h2 class="rv d1">Наука, подтверждённая <em>практикой</em></h2>
       </div>
       <p class="lead rv d2">Три основания для выбора бренда: клинические исследования, полная система линеек под любую задачу и опыт тысяч специалистов.</p>
@@ -570,8 +570,8 @@
 <section style="padding-top:0">
   <div class="w">
     <div class="dir">
-      <div class="dcard pro rv"><div class="dcard-img"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/banner-professional.webp" alt="Профессиональный уход ЖеДерм: средства для процедур в кабинете" loading="lazy"></div>
-        <span class="code">Серия · Professional</span>
+      <div class="dcard pro rv"><div class="dcard-img"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/banner-professional.webp" alt="Профессиональный уход JeuDérm: средства для процедур в кабинете" loading="lazy"></div>
+        <span class="code">Серия · профессиональная</span>
         <h3>Профессиональный уход</h3>
         <p>Средства для процедур с пептидами и пробиотиками: восстанавливают, увлажняют и омолаживают кожу, усиливают результат аппаратных и ручных методик.</p>
         <ul>
@@ -584,8 +584,8 @@
         </ul>
         <a class="link" href="https://jeuderm-russia.ru/pro-jeuderm">Смотреть линейки</a>
       </div>
-      <div class="dcard home rv d1"><div class="dcard-img"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/banner-homecare.webp" alt="Домашний уход ЖеДерм: кремы, эмульсии и сыворотка для волос" loading="lazy"></div>
-        <span class="code">Серия · Homecare</span>
+      <div class="dcard home rv d1"><div class="dcard-img"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/home/banner-homecare.webp" alt="Домашний уход JeuDérm: кремы, эмульсии и сыворотка для волос" loading="lazy"></div>
+        <span class="code">Серия · домашний уход</span>
         <h3>Домашний уход</h3>
         <p>Профессиональные формулы в формате ежедневного ухода: очищение, увлажнение и антивозрастной эффект, которые продлевают результат процедуры дома.</p>
         <ul>
@@ -609,15 +609,15 @@
         <span class="lab rv"><i></i>Уход по задачам</span>
         <h2 class="rv d1">Подберите уход <em>по задаче</em> кожи</h2>
       </div>
-      <p class="lead rv d2">Средства ЖеДерм сгруппированы по потребности кожи. Внутри каждого направления — препараты для процедуры, протоколы и домашний уход.</p>
+      <p class="lead rv d2">Средства JeuDérm сгруппированы по потребности кожи. Внутри каждого направления — препараты для процедуры, протоколы и домашний уход.</p>
     </div>
     <div class="cats rv">
-      <a class="ct" style="--c:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/acno-active-emulsion-150ml.webp" alt="Уход за проблемной кожей — ЖеДерм Acno Active" loading="lazy"><span class="ct-t">Проблем&shy;ная кожа</span><div class="ct-b"><span class="code">01 · Acno Active</span><h3>Уход за проблемной кожей</h3><p>Пептидный уход за жирной и проблемной кожей, склонной к акне.</p><span class="link">Смотреть средства</span></div></a>
-      <a class="ct" style="--c:#76bc21" href="https://jeuderm-russia.ru/atocare-pro"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/ato-care-mild-cleanser.webp" alt="Чувствительная и реактивная кожа — ЖеДерм Ato Care" loading="lazy"><span class="ct-t">Чувстви&shy;тельная кожа</span><div class="ct-b"><span class="code">02 · Ato Care</span><h3>Чувствительная и реактивная кожа</h3><p>Пептидный уход за чувствительной и реактивной кожей. Подходит для кожи, склонной к дерматитам, и при дерматитах.</p><span class="link">Смотреть средства</span></div></a>
-      <a class="ct" style="--c:#cd555b" href="https://jeuderm-russia.ru/reformage-pro"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/reform-age-o2-boto-fluid-50ml.webp" alt="Возрастной уход — ЖеДерм Reform Age" loading="lazy"><span class="ct-t">Возраст&shy;ной уход</span><div class="ct-b"><span class="code">03 · Reform Age</span><h3>Возрастной уход</h3><p>Противовозрастной уход и активное омоложение кожи 30+.</p><span class="link">Смотреть средства</span></div></a>
-      <a class="ct" style="--c:#ae57b9" href="https://jeuderm-russia.ru/hairgenesis"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/hair-growth-concentrate.webp" alt="Уход за кожей головы — ЖеДерм Hairgenesis" loading="lazy"><span class="ct-t">Кожа головы</span><div class="ct-b"><span class="code">04 · Hairgenesis</span><h3>Уход за кожей головы</h3><p>Восстановление волос и кожи головы — в кабинете и дома.</p><span class="link">Смотреть средства</span></div></a>
-      <a class="ct" style="--c:#000000" href="https://jeuderm-russia.ru/novazymo-exfoliation"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/nova-complex.webp" alt="Обновление кожи — ЖеДерм Nova · Zymo" loading="lazy"><span class="ct-t">Обнов&shy;ление</span><div class="ct-b"><span class="code">05 · Nova · Zymo</span><h3>Обновление кожи</h3><p>Трёхуровневые системы обновления Нова Комплекс и Зимо Комплекс — без агрессивного повреждения и долгой реабилитации.</p><span class="link">Смотреть средства</span></div></a>
-      <a class="ct" style="--c:#65666b" href="https://jeuderm-russia.ru/pro"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/lift-intense-viso-contour.webp" alt="Профессиональный уход — ЖеДерм ПРО" loading="lazy"><span class="ct-t">ПРО-уход</span><div class="ct-b"><span class="code">06 · ПРО</span><h3>Профессиональный уход</h3><p>Препараты для кабинета вне линеек: маски, массажное масло, эксфолиант и дренажный гель. Косметолог подбирает их под задачу.</p><span class="link">Смотреть средства</span></div></a>
+      <a class="ct" style="--c:#ab0a3d" href="https://jeuderm-russia.ru/acnopro-jeuderm"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/acno-active-emulsion-150ml.webp" alt="Уход за проблемной кожей — JeuDérm Акно Актив" loading="lazy"><span class="ct-t">Проблем&shy;ная кожа</span><div class="ct-b"><span class="code">01 · Акно Актив</span><h3>Уход за проблемной кожей</h3><p>Пептидный уход за жирной и проблемной кожей, склонной к акне.</p><span class="link">Смотреть средства</span></div></a>
+      <a class="ct" style="--c:#76bc21" href="https://jeuderm-russia.ru/atocare-pro"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/ato-care-mild-cleanser.webp" alt="Чувствительная и реактивная кожа — JeuDérm Ато Кэр" loading="lazy"><span class="ct-t">Чувстви&shy;тельная кожа</span><div class="ct-b"><span class="code">02 · Ато Кэр</span><h3>Чувствительная и реактивная кожа</h3><p>Пептидный уход за чувствительной и реактивной кожей. Подходит для кожи, склонной к дерматитам, и при дерматитах.</p><span class="link">Смотреть средства</span></div></a>
+      <a class="ct" style="--c:#cd555b" href="https://jeuderm-russia.ru/reformage-pro"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/reform-age-o2-boto-fluid-50ml.webp" alt="Возрастной уход — JeuDérm Реформэйдж" loading="lazy"><span class="ct-t">Возраст&shy;ной уход</span><div class="ct-b"><span class="code">03 · Реформэйдж</span><h3>Возрастной уход</h3><p>Противовозрастной уход и активное омоложение кожи 30+.</p><span class="link">Смотреть средства</span></div></a>
+      <a class="ct" style="--c:#ae57b9" href="https://jeuderm-russia.ru/hairgenesis"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/hair-growth-concentrate.webp" alt="Уход за кожей головы — JeuDérm Хэйр Генезис" loading="lazy"><span class="ct-t">Кожа головы</span><div class="ct-b"><span class="code">04 · Хэйр Генезис</span><h3>Уход за кожей головы</h3><p>Восстановление волос и кожи головы — в кабинете и дома.</p><span class="link">Смотреть средства</span></div></a>
+      <a class="ct" style="--c:#000000" href="https://jeuderm-russia.ru/novazymo-exfoliation"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/nova-complex.webp" alt="Обновление кожи — JeuDérm Нова · Зимо" loading="lazy"><span class="ct-t">Обнов&shy;ление</span><div class="ct-b"><span class="code">05 · Нова · Зимо</span><h3>Обновление кожи</h3><p>Трёхуровневые системы обновления Нова Комплекс и Зимо Комплекс — без агрессивного повреждения и долгой реабилитации.</p><span class="link">Смотреть средства</span></div></a>
+      <a class="ct" style="--c:#65666b" href="https://jeuderm-russia.ru/pro"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/lift-intense-viso-contour.webp" alt="Профессиональный уход — JeuDérm ПРО" loading="lazy"><span class="ct-t">ПРО-уход</span><div class="ct-b"><span class="code">06 · ПРО</span><h3>Профессиональный уход</h3><p>Препараты для кабинета вне линеек: маски, массажное масло, эксфолиант и дренажный гель. Косметолог подбирает их под задачу.</p><span class="link">Смотреть средства</span></div></a>
     </div>
   </div>
 </section>
@@ -630,15 +630,15 @@
         <span class="lab rv"><i></i>Результаты процедур</span>
         <h2 class="rv d1">До и после — <em>фото специалистов</em></h2>
       </div>
-      <p class="lead rv d2">Результаты процедур на препаратах ЖеДерм из практики косметологов.</p>
+      <p class="lead rv d2">Результаты процедур на препаратах JeuDérm из практики косметологов.</p>
     </div>
     <div class="res-g">
-      <figure class="res rv"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/acno-cheek-2.webp" alt="Acno Active: до и после — чистая кожа без высыпаний" loading="lazy"><figcaption><span class="code">Acno Active</span>Чистая кожа без высыпаний и покраснения</figcaption></figure>
-      <figure class="res rv d1"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/lift-intense-front.webp" alt="Lift Intense Viso Contour: до и после, анфас" loading="lazy"><figcaption><span class="code">ПРО · Lift Intense</span>Лифтинг и контур лица, анфас</figcaption></figure>
-      <figure class="res rv d2"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/molecular-twin-exfoliant-cheek.webp" alt="Molecular Twin Exfoliant: до и после, тон и текстура кожи" loading="lazy"><figcaption><span class="code">ПРО · Molecular Twin</span>Ровный тон и текстура кожи</figcaption></figure>
-      <figure class="res rv d3"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/molecular-twin-exfoliant-profile.webp" alt="Molecular Twin Exfoliant: до и после, профиль" loading="lazy"><figcaption><span class="code">ПРО · Molecular Twin</span>Обновление кожи, профиль</figcaption></figure>
+      <figure class="res rv"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/acno-cheek-2.webp" alt="Акно Актив: до и после — чистая кожа без высыпаний" loading="lazy"><figcaption><span class="code">Акно Актив</span>Чистая кожа без высыпаний и покраснения</figcaption></figure>
+      <figure class="res rv d1"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/lift-intense-front.webp" alt="Лифт Интенс Визо Контур: до и после, анфас" loading="lazy"><figcaption><span class="code">ПРО · Лифт Интенс</span>Лифтинг и контур лица, анфас</figcaption></figure>
+      <figure class="res rv d2"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/molecular-twin-exfoliant-cheek.webp" alt="Молекулярный Твин эксфолиант: до и после, тон и текстура кожи" loading="lazy"><figcaption><span class="code">ПРО · Молекулярный Твин</span>Ровный тон и текстура кожи</figcaption></figure>
+      <figure class="res rv d3"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/molecular-twin-exfoliant-profile.webp" alt="Молекулярный Твин эксфолиант: до и после, профиль" loading="lazy"><figcaption><span class="code">ПРО · Молекулярный Твин</span>Обновление кожи, профиль</figcaption></figure>
     </div>
-    <figure class="res-wide rv" style="--c:var(--ato)"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/clinical-neck-before-after.webp" alt="Ato Care: состояние кожи шеи до и после курса ухода" loading="lazy"><figcaption><span class="code">Ato Care · чувствительная кожа</span><h3>Уход за кожей при дерматите</h3><p>Курс ухода Ato Care: кожа становится спокойнее, уходят покраснение и шелушение, восстанавливается барьер.</p><p class="res-warn">Средства Ato Care — это уход за кожей. Они не заменяют лечение у врача и при дерматите применяются только по согласованию с лечащим врачом.</p></figcaption></figure>
+    <figure class="res-wide rv" style="--c:var(--ato)"><img src="https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/results/clinical-neck-before-after.webp" alt="Ато Кэр: состояние кожи шеи до и после курса ухода" loading="lazy"><figcaption><span class="code">Ато Кэр · чувствительная кожа</span><h3>Уход за кожей при дерматите</h3><p>Курс ухода Ато Кэр: кожа становится спокойнее, уходят покраснение и шелушение, восстанавливается барьер.</p><p class="res-warn">Средства Ато Кэр — это уход за кожей. Они не заменяют лечение у врача и при дерматите применяются только по согласованию с лечащим врачом.</p></figcaption></figure>
     <p class="res-note rv">Результат зависит от состояния кожи и протокола, который подбирает специалист.</p>
   </div>
 </section>
@@ -655,7 +655,7 @@
         <a class="btn btn-a rv d3" href="#get15%discount">Получить скидку <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
       </div>
       <div class="rows">
-        <div class="row rv" style="--c:var(--reform)"><span class="k code">Эффективность</span><h3>Результат, который видно</h3><p>Тысячи специалистов уже работают с ЖеДерм — их практика подтверждает эффективность и качество продукции.</p></div>
+        <div class="row rv" style="--c:var(--reform)"><span class="k code">Эффективность</span><h3>Результат, который видно</h3><p>Тысячи специалистов уже работают с JeuDérm — их практика подтверждает эффективность и качество продукции.</p></div>
         <div class="row rv d1" style="--c:var(--adapt)"><span class="k code">Обучение</span><h3>Знания без перерыва</h3><p>Семинары, мастер-классы и вебинары: механизмы, показания и протоколы для уверенной работы с новыми техниками.</p></div>
         <div class="row rv" style="--c:var(--lift)"><span class="k code">Лояльность</span><h3>Выгода постоянным клиентам</h3><p>Чем больше закупок — тем больше бонусов. Условия растут вместе с вашей практикой.</p></div>
         <div class="row rv d1" style="--c:var(--mol)"><span class="k code">Оригинальность</span><h3>Прямые поставки</h3><p>Официальный дистрибьютор в России: оригинальная продукция без посредников.</p></div>
@@ -681,7 +681,7 @@
       </a>
       <a class="wc rv d1" style="--c:var(--acno)" href="https://rutube.ru/video/c266156ecd63023ff5dcac2c25901baf/" target="_blank" rel="noopener">
         <div class="band" style="--img:url('https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/zymo-complex.webp')"><span class="code">Вебинар 02</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
-        <div class="bd"><h3>Обновляющая система Зимо Комплекс</h3><p>Действие Zymo, протокол и нюансы для разного возраста и типа кожи, включая чувствительную и реактивную.</p><span class="link">Смотреть</span></div>
+        <div class="bd"><h3>Обновляющая система Зимо Комплекс</h3><p>Действие Зимо, протокол и нюансы для разного возраста и типа кожи, включая чувствительную и реактивную.</p><span class="link">Смотреть</span></div>
       </a>
       <a class="wc rv d2" style="--c:var(--reform)" href="https://rutube.ru/video/be7dc7a49613fefc73a1bb21cc9b99ec/" target="_blank" rel="noopener">
         <div class="band" style="--img:url('https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/products/reform-age-o2-boto-fluid-110ml.webp')"><span class="code">Вебинар 03</span><span class="play"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M2 1l11 6-11 6z"/></svg></span></div>
@@ -693,7 +693,7 @@
       </a>
     </div>
     <div class="web-f rv">
-      <p>ЖеДерм — южнокорейский бренд профессиональной косметики на основе биотехнологий и дерматологических исследований. Начните с обзорного вебинара о бренде.</p>
+      <p>JeuDérm — южнокорейский бренд профессиональной косметики на основе биотехнологий и дерматологических исследований. Начните с обзорного вебинара о бренде.</p>
       <a class="btn btn-o" href="https://rutube.ru/channel/42947212/" target="_blank" rel="noopener">Все вебинары</a>
     </div>
   </div>
@@ -706,15 +706,15 @@
       <div class="quote dots rv">
         <div>
           <span class="code">Мнение эксперта</span>
-          <blockquote>«Работая в эстетической медицине более 20 лет, я перепробовала множество брендов, но именно ЖеДерм стал для меня настоящим открытием. Это не просто качественная косметика — это инструмент, который помогает достигать видимых и устойчивых результатов у клиентов».</blockquote>
+          <blockquote>«Работая в эстетической медицине более 20 лет, я перепробовала множество брендов, но именно JeuDérm стал для меня настоящим открытием. Это не просто качественная косметика — это инструмент, который помогает достигать видимых и устойчивых результатов у клиентов».</blockquote>
         </div>
-        <div class="who"><b>Лилия Мукарамова</b><span>Научный руководитель Revolution Bio, международный тренер</span></div>
+        <div class="who"><b>Лилия Мукарамова</b><span>Научный руководитель Революшн Био, международный тренер</span></div>
       </div>
       <div class="study rv d1">
         <span class="lab"><i></i>Обучение</span>
         <h3>Бесплатное обучение в малых группах</h3>
         <ol>
-          <li>Практика с продуктами ЖеДерм в комфортной атмосфере</li>
+          <li>Практика с продуктами JeuDérm в комфортной атмосфере</li>
           <li>Вопросы напрямую экспертам и тренерам</li>
           <li>Протоколы, которые можно применить сразу</li>
           <li>Участие по предварительной регистрации</li>
@@ -733,7 +733,7 @@
   <div class="w">
     <div class="faq-g">
       <div>
-        <span class="lab rv"><i></i>FAQ</span>
+        <span class="lab rv"><i></i>Вопросы</span>
         <h2 class="rv d1">Частые <em>вопросы</em></h2>
         <p class="lead rv d2" style="margin-top:20px;font-size:16.5px">Не нашли ответ? Оставьте заявку — специалист свяжется с вами и подберёт решение.</p>
         <div class="btns rv d3" style="margin-top:28px"><a class="btn btn-o" href="#getconsult">Задать вопрос</a></div>
@@ -741,7 +741,7 @@
       <div class="rv d1">
         <details>
           <summary>Революшн Био — официальный дистрибьютор в России?<i></i></summary>
-          <div class="a">Да. ООО «Революшн Био» — официальный дистрибьютор ЖеДерм (JeuDérm) в России. Вся продукция поставляется напрямую и является оригинальной.</div>
+          <div class="a">Да. ООО «Революшн Био» — официальный дистрибьютор JeuDérm (JeuDérm) в России. Вся продукция поставляется напрямую и является оригинальной.</div>
         </details>
         <details>
           <summary>Когда будет виден результат?<i></i></summary>
@@ -753,7 +753,7 @@
         </details>
         <details>
           <summary>Что входит в составы?<i></i></summary>
-          <div class="a">Основа формул ЖеДерм — пептиды, пробиотики и другие активные компоненты, разработанные на базе биотехнологий и дерматологических исследований. Состав каждого средства указан на странице линейки и на упаковке.</div>
+          <div class="a">Основа формул JeuDérm — пептиды, пробиотики и другие активные компоненты, разработанные на базе биотехнологий и дерматологических исследований. Состав каждого средства указан на странице линейки и на упаковке.</div>
         </details>
       </div>
     </div>
@@ -769,7 +769,7 @@
       <div>
         <span class="code">С 1989 года</span>
         <h3>Институт косметологии «Дом Русской Косметики»</h3>
-        <p>Обучение специалистов косметологии и beauty-сферы. Программы для врачей, косметологов и новичков, документы государственного образца, внесение в ФИС ФРДО, регистрация в НМО Минздрава.</p>
+        <p>Обучение специалистов косметологии и индустрии красоты. Программы для врачей, косметологов и новичков, документы государственного образца, внесение в ФИС ФРДО, регистрация в НМО Минздрава.</p>
       </div>
       <a class="link" href="https://jeuderm-russia.ru/cosmeticru">Подробнее</a>
     </div>
@@ -782,7 +782,7 @@
     <div class="cta cta-img rv">
       <div>
         <span class="lab"><i></i>Сотрудничество</span>
-        <h2>Станьте партнёром <em>ЖеДерм</em> в вашем регионе</h2>
+        <h2>Станьте партнёром <em>JeuDérm</em> в вашем регионе</h2>
         <p>Работаем с дистрибьюторами, клиниками эстетической медицины и косметологическими центрами. Оставьте заявку — расскажем об условиях и преимуществах партнёрства.</p>
         <div class="btns">
           <a class="btn btn-w" href="#getconsult">Оставить заявку <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>

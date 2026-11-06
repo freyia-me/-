@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Собирает страницы линеек ЖеДерм для Tilda (блок T123) из данных ниже.
+"""Собирает страницы линеек JeuDérm для Tilda (блок T123) из данных ниже.
 
 Запуск:  python3 tools/build_lines.py
 Результат: tilda/<slug>.html и копия tilda-txt/<slug>.txt.
@@ -14,6 +14,9 @@ import sys
 import pathlib
 import re
 
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from localize import ru  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'tools'))
 from product_info import INFO  # noqa: E402
@@ -80,18 +83,18 @@ LINES = [
   ],
   procs=[
    ('Reform Age', 70, 'Моментальное преображение', 'Энзимно-кислотное обновление и кислородный флюид — свежесть и сияние за одну процедуру.',
-    ['[[mild-cleanser|Mild Cleanser]] <span>— очищение</span>', 'Zymo Complex <span>— энзимно-кислотное обновление, pH 2,5</span>',
-     'Repair Mask Post-Procedure <span>— восстанавливающая маска</span>', '[[collagen-tonic|Collagen Tonic]] <span>— тонизация</span>',
-     '[[o2-boto-fluid|O₂ Boto Fluid]] и [[intensive-eye-cream|Eye Cream]] <span>— завершающий уход</span>']),
+    ['[[mild-cleanser|Очищающее средство]]', 'Zymo Complex <span>— энзимно-кислотное обновление, pH 2,5</span>',
+     'Восстанавливающая пост-процедурная маска', '[[collagen-tonic|Коллагеновый тоник]] <span>— тонизация</span>',
+     '[[o2-boto-fluid|Кислородный бото-флюид]] и [[intensive-eye-cream|крем для век]] <span>— завершающий уход</span>']),
    ('Reform Age', 80, 'Гидробаланс лифт', 'Молекулярный эксфолиант, микротоки и маска со спикулами — увлажнение и подтянутый контур.',
-    ['[[mild-cleanser|Mild Cleanser]] <span>— очищение</span>', 'Molecular Twin Exfoliant <span>— эксфолиация, pH 2,9</span>',
-     '[[collagen-tonic|Collagen Tonic]] <span>— тонизация</span>', 'Drainage Physio Gel <span>— микротоки по протоколу</span>',
-     '[[micro-touch-mask|Micro Touch Mask]] <span>— маска со спикулами</span>',
-     '[[collagen-tonic|Collagen Tonic]], [[o2-boto-fluid|O₂ Boto Fluid]], [[intensive-eye-cream|Eye Cream]] <span>— завершение</span>']),
+    ['[[mild-cleanser|Очищающее средство]]', 'Molecular Twin Exfoliant <span>— эксфолиация, pH 2,9</span>',
+     '[[collagen-tonic|Коллагеновый тоник]] <span>— тонизация</span>', 'Drainage Physio Gel <span>— микротоки по протоколу</span>',
+     '[[micro-touch-mask|Маска со спикулами]]',
+     '[[collagen-tonic|Коллагеновый тоник]], [[o2-boto-fluid|Кислородный бото-флюид]], [[intensive-eye-cream|крем для век]] <span>— завершение</span>']),
    ('С Lift Intense', 80, 'Viso-Sculpt — активный лифтинг 40+', 'Миофасциальный массаж и лифтинг-маска Viso Contour с завершающим уходом Reform Age.',
-    ['[[mild-cleanser|Mild Cleanser]] <span>— очищение</span>', 'Molecular Twin Exfoliant и Oil <span>— пилинг и массаж</span>',
-     '[[collagen-tonic|Collagen Tonic]] <span>— тонизация</span>', 'Lift Intense Viso Contour <span>— лифтинг-маска</span>',
-     '[[intensive-cream|Intensive Cream]] и [[intensive-eye-cream|Eye Cream]] <span>— завершающий уход</span>']),
+    ['[[mild-cleanser|Очищающее средство]]', 'Molecular Twin Exfoliant и Oil <span>— пилинг и массаж</span>',
+     '[[collagen-tonic|Коллагеновый тоник]] <span>— тонизация</span>', 'Lift Intense Viso Contour <span>— лифтинг-маска</span>',
+     '[[intensive-cream|интенсивный крем]] и [[intensive-eye-cream|крем для век]] <span>— завершающий уход</span>']),
   ],
   cta=('Работаете с возрастной кожей?', 'Пришлём прайс, протоколы и подберём средства Reform Age для вашего кабинета и домашнего ухода клиентов.'),
  ),
@@ -137,9 +140,9 @@ LINES = [
   ],
   procs=[
    ('Acno Active', 60, 'Атравматичная чистка', 'Очищение, мультикислотные пады, санация пор и маска с глиной — чистая и спокойная кожа без травматизации.',
-    ['[[mild-cleanser|Mild Cleanser]] <span>— очищение</span>', '[[multi-acid-pad|Multi-Acid Pad]] <span>— мягкий пилинг</span>',
-     'Чистка кожи <span>— санация пор</span>', '[[clay-mask|Clay Mask]] <span>— очищающая маска</span>',
-     '[[active-gel|Active Gel]] <span>— на воспалённые участки</span>', '[[active-emulsion|Active Emulsion]] <span>— завершающий уход</span>']),
+    ['[[mild-cleanser|Очищающее средство]]', '[[multi-acid-pad|Мультикислотные диски]] <span>— мягкий пилинг</span>',
+     'Чистка кожи <span>— санация пор</span>', '[[clay-mask|Маска с белой глиной]] <span>— очищение пор</span>',
+     '[[active-gel|Противовоспалительный гель]] <span>— на воспалённые участки</span>', '[[active-emulsion|Противовоспалительная эмульсия]] <span>— завершающий уход</span>']),
   ],
   results=[('acno-cheek-1.webp', 'Acno Active', 'Меньше воспалений, ровнее тон и текстура'),
            ('acno-cheek-2.webp', 'Acno Active', 'Чистая кожа без высыпаний и покраснения'),
@@ -175,7 +178,7 @@ LINES = [
         short='Интенсивно увлажняет, питает и восстанавливает липидный барьер, снимает раздражение и зуд.',
         rows=[('Активные ингредиенты', 'Triple M Complex™, трипептид меди-1, Serilesine™, β-глюкан, церамиды, фитокомплекс шлемника, коптиса и хауттюйнии.'),
               ('Как применять', 'Нанесите 1,0 мл массажными движениями до полного впитывания.'),
-              ('В процедурах', 'Завершающий уход почти во всех процедурах ЖеДерм.')]),
+              ('В процедурах', 'Завершающий уход почти во всех процедурах JeuDérm.')]),
    dict(id='intensive-cream', en='Ato Care Intensive Cream', ru='Интенсивный крем для сухой и чувствительной кожи', img='ato-care-intensive-cream.webp', care='home', vol='50 мл',
         short='Питает и защищает очень сухую, раздражённую и повреждённую кожу, снижает зуд, предотвращает шелушение.',
         rows=[('Активные ингредиенты', 'Пантенол, трипептид меди-1, аллантоин, фитоэкстракты, Triple M Complex™, Serilesine™, β-глюкан, витамин E.'),
@@ -183,13 +186,13 @@ LINES = [
   ],
   procs=[
    ('Ato Care', 70, 'Детокс-чистка сухой и чувствительной кожи', 'Деликатная чистка для сухой и чувствительной кожи, в том числе при куперозе и розацеа.',
-    ['[[mild-cleanser|Mild Cleanser]] <span>— очищение</span>', 'Molecular Twin Exfoliant <span>— эксфолиация, pH 2,9</span>',
-     'Чистка кожи <span>— санация пор</span>', 'Repair Mask Post-Procedure <span>— восстанавливающая маска</span>',
-     '[[toner-mousse|Toner Mousse]] <span>— тонизация</span>', '[[moist-emulsion|Moist Emulsion]] <span>— завершающий уход</span>']),
+    ['[[mild-cleanser|Очищающее средство]]', 'Molecular Twin Exfoliant <span>— эксфолиация, pH 2,9</span>',
+     'Чистка кожи <span>— санация пор</span>', 'Восстанавливающая пост-процедурная маска',
+     '[[toner-mousse|Тонер-мусс]] <span>— тонизация</span>', '[[moist-emulsion|Увлажняющая эмульсия]] <span>— завершающий уход</span>']),
    ('С Adaptive Skin', 65, 'Экстренный детокс — SOS для кожи', 'Детокс-маска с водорослями и кислородный гель — когда коже нужна быстрая помощь.',
-    ['[[mild-cleanser|Mild Cleanser]] <span>— очищение</span>', 'Molecular Twin Exfoliant <span>— эксфолиация</span>',
-     'Adaptive Skin Detox Mask <span>— детокс-маска</span>', 'O₂ Therapy Active Gel <span>— кислородный гель</span>',
-     '[[toner-mousse|Toner Mousse]] <span>— тонизация</span>', '[[moist-emulsion|Moist Emulsion]] <span>— завершающий уход</span>']),
+    ['[[mild-cleanser|Очищающее средство]]', 'Molecular Twin Exfoliant <span>— эксфолиация</span>',
+     'Детокс-маска с водорослями', 'Кислородный активный гель',
+     '[[toner-mousse|Тонер-мусс]] <span>— тонизация</span>', '[[moist-emulsion|Увлажняющая эмульсия]] <span>— завершающий уход</span>']),
   ],
   results=[('clinical-neck-before-after.webp', 'Ato Care', 'Кожа спокойнее: меньше покраснения и шелушения')],
   results_note='Средства Ato Care — это уход за кожей. Они не заменяют лечение у врача и при дерматите применяются только по согласованию с лечащим врачом.',
@@ -201,7 +204,7 @@ LINES = [
   c='#65666b', soft='#f1f1f2',
   lab='Профессиональный уход',
   h1='ПРО — препараты <em>для кабинета</em>',
-  lead='Профессиональные средства вне линеек: маски, массажное масло, молекулярный эксфолиант и гели для аппаратных процедур. Косметолог подбирает их под задачу кожи и сочетает с любой линией ЖеДерм.',
+  lead='Профессиональные средства вне линеек: маски, массажное масло, молекулярный эксфолиант и гели для аппаратных процедур. Косметолог подбирает их под задачу кожи и сочетает с любой линией JeuDérm.',
   keys=[
    ('Маски', 'Детокс-маска с водорослями, пост-процедурная восстанавливающая маска и лифтинг-маска Lift Intense Viso Contour.'),
    ('Молекулярное обновление', 'Molecular Twin Exfoliant и Molecular Twin Oil — мягкая эксфолиация, ровный тон и сияние, процедура «на выход».'),
@@ -248,23 +251,23 @@ LINES = [
   ],
   procs=[
    ('Adaptive Skin', 65, 'Экстренный детокс — SOS для кожи', 'Детокс-маска с водорослями и кислородный гель — когда коже нужна быстрая помощь.',
-    ['Ato Care Mild Cleanser <span>— очищение</span>', '[[twin-exfoliant|Molecular Twin Exfoliant]] <span>— эксфолиация</span>',
-     '[[detox-mask|Detox Mask]] <span>— детокс-маска</span>', '[[o2-therapy-gel|O₂ Therapy Active Gel]] <span>— кислородный гель</span>',
+    ['Ato Care Mild Cleanser <span>— очищение</span>', '[[twin-exfoliant|Молекулярный эксфолиант]] <span>— эксфолиация</span>',
+     '[[detox-mask|Детокс-маска с водорослями]]', '[[o2-therapy-gel|Кислородный активный гель]]',
      'Ato Care Toner Mousse и Moist Emulsion <span>— завершающий уход</span>']),
    ('Молекулярное обновление', 60, 'Ангельское совершенство кожи', 'Двухфазный молекулярный пилинг — гладкость, ровный тон и сияние без раздражения и реабилитации.',
-    ['Ato Care Mild Cleanser <span>— очищение</span>', '[[twin-exfoliant|Molecular Twin Exfoliant]] <span>— 1 фаза пилинга</span>',
-     '[[twin-oil|Molecular Twin Oil]] <span>— 2 фаза пилинга</span>', '[[repair-mask|Repair Mask]] <span>— восстанавливающая маска</span>',
+    ['Ato Care Mild Cleanser <span>— очищение</span>', '[[twin-exfoliant|Молекулярный эксфолиант]] <span>— 1 фаза пилинга</span>',
+     '[[twin-oil|Молекулярное масло]] <span>— 2 фаза пилинга</span>', '[[repair-mask|Восстанавливающая маска]]',
      'Ato Care Moist Emulsion и Reform Age Eye Cream <span>— завершающий уход</span>']),
    ('Lift Intense', 80, 'Viso-Sculpt — активный лифтинг 40+', 'Миофасциальный массаж и лифтинг-маска — подтянутый овал лица за одну процедуру.',
-    ['Reform Age Mild Cleanser <span>— очищение</span>', '[[twin-exfoliant|Molecular Twin Exfoliant]] <span>— эксфолиация</span>',
-     '[[twin-oil|Molecular Twin Oil]] <span>— миофасциальный массаж</span>', '[[lift-intense|Lift Intense Viso Contour]] <span>— лифтинг-маска</span>',
+    ['Reform Age Mild Cleanser <span>— очищение</span>', '[[twin-exfoliant|Молекулярный эксфолиант]] <span>— эксфолиация</span>',
+     '[[twin-oil|Молекулярное масло]] <span>— миофасциальный массаж</span>', '[[lift-intense|Лифтинг-маска Лифт Интенс Визо Контур]]',
      'Reform Age Collagen Tonic, Intensive Cream и Eye Cream <span>— завершение</span>']),
   ],
   results=[('lift-intense-front.webp', 'Lift Intense', 'Лифтинг и контур лица, анфас'),
            ('lift-intense-profile.webp', 'Lift Intense', 'Лифтинг и контур лица, профиль'),
            ('molecular-twin-exfoliant-cheek.webp', 'Molecular Twin', 'Ровный тон и текстура кожи'),
            ('molecular-twin-exfoliant-profile.webp', 'Molecular Twin', 'Обновление кожи, профиль')],
-  cta=('Подобрать препараты для кабинета?', 'Расскажем, как сочетать средства ПРО с линиями ЖеДерм, пришлём прайс и протоколы.'),
+  cta=('Подобрать препараты для кабинета?', 'Расскажем, как сочетать средства ПРО с линиями JeuDérm, пришлём прайс и протоколы.'),
  ),
 
  dict(
@@ -295,14 +298,14 @@ LINES = [
   ],
   procs=[
    ('Nova', 40, 'Nova Complex', '9-кислотная система обновления кожи, pH 1,5.',
-    ['Ato Care Mild Cleanser <span>— очищение</span>', '[[nova|Nova Complex]] <span>— Primer → Active → Reductant</span>',
+    ['Ato Care Mild Cleanser <span>— очищение</span>', '[[nova|Нова Комплекс]] <span>— праймер → актив → редуктант</span>',
      'Ato Care Moist Emulsion <span>— завершающий уход</span>']),
    ('Zymo', 40, 'Zymo Complex', 'Энзимно-кислотное обновление кожи, pH 2,5 — мягко даже для чувствительной кожи.',
-    ['Ato Care Mild Cleanser <span>— очищение</span>', '[[zymo|Zymo Complex]] <span>— Primer → Active → Reductant</span>',
+    ['Ato Care Mild Cleanser <span>— очищение</span>', '[[zymo|Зимо Комплекс]] <span>— праймер → актив → редуктант</span>',
      'Ato Care Moist Emulsion <span>— завершающий уход</span>']),
    ('Zymo + маски', 75, 'Возрождение кожи', 'Обновление Zymo, восстанавливающая маска и кислородный гель — увлажнение и сияние.',
-    ['Ato Care Mild Cleanser <span>— очищение</span>', '[[zymo|Zymo Complex]] <span>— энзимно-кислотное обновление</span>',
-     'Repair Mask Post-Procedure <span>— восстанавливающая маска</span>', 'O₂ Therapy Active Gel <span>— кислородный гель</span>',
+    ['Ato Care Mild Cleanser <span>— очищение</span>', '[[zymo|Зимо Комплекс]] <span>— энзимно-кислотное обновление</span>',
+     'Восстанавливающая пост-процедурная маска', 'Кислородный активный гель',
      'Ato Care Moist Emulsion и Reform Age Eye Cream <span>— завершающий уход</span>']),
   ],
   cta=('Хотите внедрить пилинги Nova и Zymo?', 'Пришлём прайс и протоколы, проведём бесплатное обучение и посмотрим вебинары по системам вместе.'),
@@ -557,7 +560,7 @@ def build(d):
 
 </div>'''
 
-    head = f'''<!-- ЖеДерм · линейка {d['name']} · блок T123 «HTML-код». Собрано tools/build_lines.py — правки текстов вносите там.
+    head = f'''<!-- JeuDérm · линейка {d['name']} · блок T123 «HTML-код». Собрано tools/build_lines.py — правки текстов вносите там.
      Код ставится на {d['pages']}: фильтр «Профессиональный / Домашний» выбирается сам по адресу страницы (или ?care=pro / ?care=home).
      Карточка товара открывается окном внутри страницы, ссылка на товар: адрес#p-<id>, например #p-{prods[0]['id']}. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -571,6 +574,6 @@ def build(d):
 if __name__ == '__main__':
     for d in LINES:
         out = build(d)
-        (ROOT / 'tilda' / f"{d['slug']}.html").write_text(out, encoding='utf-8')
-        (ROOT / 'tilda-txt' / f"{d['slug']}.txt").write_text(out, encoding='utf-8')
+        (ROOT / 'tilda' / f"{d['slug']}.html").write_text(ru(out), encoding='utf-8')
+        (ROOT / 'tilda-txt' / f"{d['slug']}.txt").write_text(ru(out), encoding='utf-8')
         print(d['slug'], len(d['products']), 'products', len(d['procs']), 'procs')

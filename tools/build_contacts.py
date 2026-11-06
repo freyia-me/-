@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Страница «Контакты» ЖеДерм для Tilda, блок T123.
+"""Страница «Контакты» JeuDérm для Tilda, блок T123.
 
 Запуск:  python3 tools/build_contacts.py  →  tilda/contacts.html и tilda-txt/contacts.txt
 """
@@ -11,6 +11,9 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from build_study import base_css, ARROW  # noqa: E402
 from build_promo import CONTACTS, COLORS  # noqa: E402
 
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from localize import ru  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://jeuderm-russia.ru/'
 ADDR = '105064, Москва, улица Земляной Вал, д. 7, кв./оф. помещ. 2/4'
@@ -70,8 +73,8 @@ def build():
 <section class="ct-top">
   <div class="w">
     <span class="lab rv"><i></i>Контакты</span>
-    <h1 class="rv">Свяжитесь с <em>ЖеДерм</em></h1>
-    <p class="lead rv">ООО «Революшн Био» — официальный дистрибьютор ЖеДерм (JeuDérm) в России. Подберём средства, пришлём прайс и протоколы, запишем на обучение.</p>
+    <h1 class="rv">Свяжитесь с <em>JeuDérm</em></h1>
+    <p class="lead rv">ООО «Революшн Био» — официальный дистрибьютор JeuDérm (JeuDérm) в России. Подберём средства, пришлём прайс и протоколы, запишем на обучение.</p>
 
     <div class="main">
       <div class="card rv">
@@ -102,7 +105,7 @@ def build():
 <!-- ================= КАРТА ================= -->
 <section style="padding-top:clamp(40px,5vw,72px)">
   <div class="w">
-    <div class="map rv"><iframe src="{MAP}" title="ЖеДерм на карте: {MAP_Q}" loading="lazy" allowfullscreen></iframe></div>
+    <div class="map rv"><iframe src="{MAP}" title="JeuDérm на карте: {MAP_Q}" loading="lazy" allowfullscreen></iframe></div>
     <div class="map-f rv"><span>{ADDR}</span><a class="btn btn-o" href="{MAP_LINK}" target="_blank" rel="noopener">Открыть в Яндекс Картах</a></div>
   </div>
 </section>
@@ -138,7 +141,7 @@ def build():
   [].forEach.call(items,function(el){io.observe(el);});
 })();
 </script>'''
-    head = '''<!-- ЖеДерм · страница «Контакты» · блок T123. Собрано tools/build_contacts.py. Попапы: #popup:ask, #getprice_main, #popup:registerstudy. -->
+    head = '''<!-- JeuDérm · страница «Контакты» · блок T123. Собрано tools/build_contacts.py. Попапы: #popup:ask, #getprice_main, #popup:registerstudy. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -149,6 +152,6 @@ def build():
 
 if __name__ == '__main__':
     out = build()
-    (ROOT / 'tilda' / 'contacts.html').write_text(out, encoding='utf-8')
-    (ROOT / 'tilda-txt' / 'contacts.txt').write_text(out, encoding='utf-8')
+    (ROOT / 'tilda' / 'contacts.html').write_text(ru(out), encoding='utf-8')
+    (ROOT / 'tilda-txt' / 'contacts.txt').write_text(ru(out), encoding='utf-8')
     print('contacts.html', len(out))
