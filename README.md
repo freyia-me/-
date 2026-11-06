@@ -59,3 +59,8 @@
 `https://storage.yandexcloud.net/revolution-bio/jeuderm_site/images/…` (структура папок как в `images/`).
 Новые файлы: загрузить в бакет в ту же папку, ссылку прописать на этот адрес.
 Проверка всех ссылок: `python3 tools/switch_media.py --check`.
+
+## Страница для копирования кодов
+
+Все коды с кнопкой «Скопировать»: https://claude.ai/artifact/H6RwkTsV9FuL71Evkq13Tg
+Собирается скриптом `python3 tools/build_codes_page.py <файл.html>` из `tilda-txt/*.txt` и публикуется заново после каждого изменения кодов.
